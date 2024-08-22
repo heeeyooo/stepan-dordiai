@@ -1,0 +1,8 @@
+:root {
+  --glass-background: rgba(0, 0, 0, 0.5);
+  --color: white;
+  --semi-transparent-color: rgba(255, 255, 255, 0.5);
+  --project-background: rgba(255, 255, 255, 0.5);
+  --main-background: black;
+  --percent-background: rgba(255, 255, 255, 0.25);
+}

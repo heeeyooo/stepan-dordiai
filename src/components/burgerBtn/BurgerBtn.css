@@ -1,0 +1,62 @@
+.burger-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-info {
+  color: var(--color);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  margin: 0;
+  font-size: clamp(12px, 2vw, 16px);
+  transition: color 1s;
+}
+
+.burger-button {
+  width: 20px;
+  height: 0;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.burger-button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color);
+  transform: translateY(-5px);
+  transition: transform 0.3s 0.5s, background-color 1s;
+}
+
+.burger-button::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color);
+  transform: translateY(5px);
+  transition: transform 0.3s 0.5s, background-color 1s;
+}
+
+/* ACTIVE BURGER BTN */
+
+.active-burger-button::before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.active-burger-button::after {
+  transform: translateY(0) rotate(45deg);
+}
+
+.active-header {
+  height: 449.2px !important;
+}
+
+@media screen and (width > 1000px) {
+  .burger-container {
+    display: none;
+  }
+}

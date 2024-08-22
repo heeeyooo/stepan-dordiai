@@ -1,0 +1,57 @@
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  z-index: 100;
+  transition: all 0.3s;
+  /* box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.logo-btn-container {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  left: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER LOGO */
+
+.header-logo {
+  font-size: clamp(24px, 3vw, 30px);
+  color: var(--color);
+  font-weight: 700;
+}
+
+/* HEADER SCROLL */
+
+.header-scroll {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--glass-background);
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  border-radius: 50px;
+  /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* @media screen and (max-width: 900px) {
+  .header-nav {
+    display: none;
+  }
+} */

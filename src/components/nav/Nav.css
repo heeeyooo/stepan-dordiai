@@ -1,0 +1,93 @@
+/* HEADER NAV */
+
+.nav {
+  position: fixed;
+  left: -25px;
+  top: 25px;
+  bottom: 25px;
+  width: 25px;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  animation: moveNav 1s forwards;
+}
+
+@keyframes moveNav {
+  to {
+    left: 0;
+  }
+}
+
+.header-nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  color: white;
+  transition: height 0.5s;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -2px;
+  overflow-y: auto;
+}
+
+.link-home,
+.link-about,
+.link-skills,
+.link-portfolio,
+.link-contact {
+  font-size: 12px;
+  color: var(--color);
+  font-weight: 300;
+  padding: 0;
+  transition: color 1s;
+}
+
+@media screen and (width > 1000px) {
+  .nav {
+    top: 50px;
+    bottom: 50px;
+    z-index: 99;
+  }
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    position: fixed;
+    /*  */
+    left: -100px;
+    /*  */
+    animation: moveNav 1s forwards;
+    writing-mode: initial;
+    gap: 0;
+    text-orientation: initial;
+    letter-spacing: normal;
+  }
+  @keyframes moveNav {
+    to {
+      left: 50px;
+    }
+  }
+  .link-home,
+  .link-about,
+  .link-skills,
+  .link-portfolio,
+  .link-contact {
+    display: inline-block;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: 5px 0;
+  }
+}

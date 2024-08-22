@@ -1,0 +1,23 @@
+<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="260" height="260" fill="white"/>
+<mask id="path-1-inside-1_55_2" fill="white">
+<path d="M70 70H120V120H70V70Z"/>
+</mask>
+<path d="M70 70H120V120H70V70Z" fill="white"/>
+<path d="M70 70V60H60V70H70ZM70 80H120V60H70V80ZM80 120V70H60V120H80Z" fill="black" mask="url(#path-1-inside-1_55_2)"/>
+<mask id="path-3-inside-2_55_2" fill="white">
+<path d="M70 140H120V190H70V140Z"/>
+</mask>
+<path d="M70 140H120V190H70V140Z" fill="white"/>
+<path d="M70 190H60V200H70V190ZM120 180H70V200H120V180ZM80 190V140H60V190H80Z" fill="black" mask="url(#path-3-inside-2_55_2)"/>
+<mask id="path-5-inside-3_55_2" fill="white">
+<path d="M140 140H190V190H140V140Z"/>
+</mask>
+<path d="M140 140H190V190H140V140Z" fill="white"/>
+<path d="M190 190V200H200V190H190ZM180 140V190H200V140H180ZM190 180H140V200H190V180Z" fill="black" mask="url(#path-5-inside-3_55_2)"/>
+<mask id="path-7-inside-4_55_2" fill="white">
+<path d="M140 70H190V120H140V70Z"/>
+</mask>
+<path d="M140 70H190V120H140V70Z" fill="white"/>
+<path d="M190 70H200V60H190V70ZM140 80H190V60H140V80ZM180 70V120H200V70H180Z" fill="black" mask="url(#path-7-inside-4_55_2)"/>
+</svg>

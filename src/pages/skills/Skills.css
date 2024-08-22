@@ -1,0 +1,256 @@
+.skills-section {
+  width: 100%;
+  min-height: 100dvh;
+  color: var(--color);
+  position: relative;
+  transition: color 1s, background-color 1s;
+}
+
+.skills-container {
+  position: absolute;
+  right: 75px;
+  top: 0px;
+  bottom: 0px;
+  padding: 75px 0;
+  width: calc(50% - 75px);
+  overflow-y: scroll;
+}
+
+.skill-container {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.skill-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.skill-icon i {
+  font-size: 48px !important;
+}
+
+.line1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid var(--color);
+  border-left: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.line2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid var(--color);
+  border-right: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.line3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-right: 5px solid var(--color);
+  border-bottom: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.line4 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid var(--color);
+  border-left: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+.info-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: calc(100% - 125px);
+}
+
+.info-skill p {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 24px);
+}
+
+.python-load {
+  width: 100%;
+  height: 5px;
+  background: var(--percent-background);
+  position: relative;
+  transition: all 1s;
+}
+
+.python-perc,
+.html-perc,
+.css-perc,
+.js-perc,
+.git-perc,
+.github-perc,
+.sass-perc,
+.figma-perc,
+.react-perc {
+  position: absolute;
+  height: 5px;
+  background-color: var(--color);
+  width: 0%;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+  transition: all 1s;
+}
+
+.python-perc {
+  animation: pythonLoad 2s forwards;
+}
+
+.html-perc {
+  animation: htmlLoad 2s forwards;
+}
+
+.css-perc {
+  animation: cssLoad 2s forwards;
+}
+
+.js-perc {
+  animation: jsLoad 2s forwards;
+}
+.git-perc {
+  animation: gitLoad 2s forwards;
+}
+.github-perc {
+  animation: githubLoad 2s forwards;
+}
+.sass-perc {
+  animation: sassLoad 2s forwards;
+}
+.figma-perc {
+  animation: figmaLoad 2s forwards;
+}
+.react-perc {
+  animation: reactLoad 2s forwards;
+}
+
+@keyframes pythonLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes htmlLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 96%;
+  }
+}
+@keyframes cssLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@keyframes jsLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 87%;
+  }
+}
+@keyframes gitLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 52%;
+  }
+}
+@keyframes githubLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 52%;
+  }
+}
+@keyframes sassLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 87%;
+  }
+}
+@keyframes figmaLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+@keyframes reactLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@media screen and (width < 1000px) {
+  .skills-container {
+    padding: 50px 0;
+    right: 50px;
+    left: 50px;
+    width: calc(100% - 100px);
+  }
+  .skill-container {
+    height: 50px;
+  }
+  .skill-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .info-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(100% - 75px);
+  }
+  .line1,
+  .line2,
+  .line3,
+  .line4 {
+    width: 12.5px;
+    height: 12.5px;
+  }
+  .skill-icon i {
+    font-size: 24px !important;
+  }
+}

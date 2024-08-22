@@ -1,0 +1,68 @@
+.loading-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: var(--main-background);
+  opacity: 1;
+  animation: setLoadCont 1s 2s forwards;
+}
+
+@keyframes setLoadCont {
+  to {
+    opacity: 0;
+  }
+}
+
+.loading-title {
+  font-size: clamp(24px, 4vw, 48px);
+  color: var(--color);
+  font-weight: 300;
+  margin: 0;
+  opacity: 0;
+  animation: showTitle 1s forwards;
+}
+
+@keyframes showTitle {
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-title span {
+  font-weight: 100;
+}
+
+.percent-range-background {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 6px;
+  width: clamp(200px, 20vw, 300px);
+  background-color: var(--semi-transparent-color);
+  outline: 4px solid var(--semi-transparent-color);
+  outline-offset: 4px;
+}
+
+.percent-range {
+  width: 0px;
+  height: 6px;
+  background-color: var(--color);
+  animation: setLoading 2s forwards;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+}
+
+@keyframes setLoading {
+  to {
+    width: clamp(200px, 20vw, 300px);
+  }
+}

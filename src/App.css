@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100dvh;
+  /* DISABLE SCROLL WHEN LOADING */
+  position: fixed;
+  overflow: hidden;
+  background-color: var(--main-background);
+  transition: background-color 1s;
+}
+
+.main {
+  display: none;
+  width: 100%;
+  background-color: var(--main-background);
+  transition: background-color 1s;
+}
+
+#root {
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.shadow-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 25px 25px var(--main-background);
+  z-index: 100;
+  transition: all 1s;
+}
+
+.shadow-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 25px 25px var(--main-background);
+  z-index: 100;
+  transition: all 1s;
+}
+
+.shadow-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 25px 25px var(--main-background);
+  z-index: 100;
+  transition: all 1s;
+}
+
+.shadow-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 0 25px 25px var(--main-background);
+  z-index: 100;
+  transition: all 1s;
+}
+
+/* .cube-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 150px;
+} */
+
+.cube-top-left {
+  position: absolute;
+
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  border-left: 5px solid var(--color);
+  border-top: 5px solid var(--color);
+  box-sizing: border-box;
+  animation: setCubeLeftTop 1s 2.5s forwards;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+  transition: all 1s;
+}
+
+.cube-top-right {
+  position: absolute;
+  right: calc(50% - 75px);
+  top: calc(50% - 75px);
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  border-right: 5px solid var(--color);
+  border-top: 5px solid var(--color);
+  box-sizing: border-box;
+  animation: setCubeRightTop 1s 2.5s forwards;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+  transition: all 1s;
+}
+
+.cube-bottom-left {
+  position: fixed;
+  left: calc(50% - 75px);
+  bottom: calc(50% - 75px);
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  border-left: 5px solid var(--color);
+  border-bottom: 5px solid var(--color);
+  box-sizing: border-box;
+  animation: setCubeLeftBottom 1s 2.5s forwards;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+  transition: all 1s;
+}
+
+.cube-bottom-right {
+  position: fixed;
+  right: calc(50% - 75px);
+  bottom: calc(50% - 75px);
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  border-right: 5px solid var(--color);
+  border-bottom: 5px solid var(--color);
+  box-sizing: border-box;
+  animation: setCubeRightBottom 1s 2.5s forwards;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+
+  transition: all 1s;
+}
+
+@keyframes setCubeLeftTop {
+  to {
+    transform: none;
+    left: 50px;
+    top: 50px;
+    opacity: 1;
+  }
+}
+@keyframes setCubeLeftBottom {
+  to {
+    transform: none;
+    left: 50px;
+    bottom: 50px;
+    opacity: 1;
+  }
+}
+@keyframes setCubeRightTop {
+  to {
+    transform: none;
+    right: 50px;
+    top: 50px;
+    opacity: 1;
+  }
+}
+@keyframes setCubeRightBottom {
+  to {
+    transform: none;
+    right: 50px;
+    bottom: 50px;
+    opacity: 1;
+  }
+}
+@media screen and (width < 1000px) {
+  @keyframes setCubeLeftTop {
+    to {
+      transform: none;
+      left: 25px;
+      top: 25px;
+      opacity: 1;
+    }
+  }
+  @keyframes setCubeLeftBottom {
+    to {
+      transform: none;
+      left: 25px;
+      bottom: 25px;
+      opacity: 1;
+    }
+  }
+  @keyframes setCubeRightTop {
+    to {
+      transform: none;
+      right: 25px;
+      top: 25px;
+      opacity: 1;
+    }
+  }
+  @keyframes setCubeRightBottom {
+    to {
+      transform: none;
+      right: 25px;
+      bottom: 25px;
+      opacity: 1;
+    }
+  }
+
+  .shadow-top,
+  .shadow-right,
+  .shadow-bottom,
+  .shadow-left {
+    box-shadow: 0 0 12.5px 12.5px var(--main-background);
+  }
+}
