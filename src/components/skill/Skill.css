@@ -1,0 +1,215 @@
+.skill-container {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.skill-icon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.skill-icon-container i {
+  font-size: 36px;
+}
+
+.line1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid var(--color);
+  border-left: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.line2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 5px solid var(--color);
+  border-right: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.line3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-right: 5px solid var(--color);
+  border-bottom: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.line4 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid var(--color);
+  border-left: 5px solid var(--color);
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+.skill-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: calc(100% - 125px);
+}
+
+.skill-info-container p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+
+.skill-range {
+  width: 100%;
+  height: 5px;
+  background: var(--percent-background);
+  position: relative;
+  transition: all 1s;
+}
+
+.python-background-range,
+.html-background-range,
+.css-background-range,
+.js-background-range,
+.git-background-range,
+.github-background-range,
+.sass-background-range,
+.figma-background-range,
+.react-background-range {
+  position: absolute;
+  height: 5px;
+  background-color: var(--color);
+  width: 0%;
+  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
+  transition: all 1s;
+}
+
+.python-background-range {
+  animation: pythonLoad 2s forwards;
+}
+
+@keyframes pythonLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.html-background-range {
+  animation: htmlLoad 2s forwards;
+}
+@keyframes htmlLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 96%;
+  }
+}
+
+.css-background-range {
+  animation: cssLoad 2s forwards;
+}
+
+@keyframes cssLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+.js-background-range {
+  animation: jsLoad 2s forwards;
+}
+
+@keyframes jsLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 87%;
+  }
+}
+.git-background-range {
+  animation: gitLoad 2s forwards;
+}
+
+@keyframes gitLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 52%;
+  }
+}
+.github-background-range {
+  animation: githubLoad 2s forwards;
+}
+
+@keyframes githubLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 52%;
+  }
+}
+.sass-background-range {
+  animation: sassLoad 2s forwards;
+}
+
+@keyframes sassLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 87%;
+  }
+}
+.figma-background-range {
+  animation: figmaLoad 2s forwards;
+}
+
+@keyframes figmaLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+.react-background-range {
+  animation: reactLoad 2s forwards;
+}
+
+@keyframes reactLoad {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}

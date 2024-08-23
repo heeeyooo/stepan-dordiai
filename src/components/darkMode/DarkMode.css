@@ -32,8 +32,8 @@
   border: none;
   color: var(--color);
   cursor: pointer;
-  transition: color 1s;
   font-size: clamp(12px, 2vw, 16px);
+  transition: color 1s;
 }
 
 @media screen and (width < 1000px) {

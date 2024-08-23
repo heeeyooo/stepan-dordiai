@@ -1,8 +1,10 @@
 :root {
-  --glass-background: rgba(0, 0, 0, 0.5);
-  --color: white;
+  /* CHARCOAL GRAY */
+  --main-background: #171717;
+  /* OFF WHITE */
+  --color: #faf9f6;
   --semi-transparent-color: rgba(255, 255, 255, 0.5);
   --project-background: rgba(255, 255, 255, 0.5);
-  --main-background: black;
   --percent-background: rgba(255, 255, 255, 0.25);
+  --glass-background: rgba(0, 0, 0, 0.5);
 }

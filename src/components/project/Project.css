@@ -8,8 +8,9 @@
 }
 
 .project-number {
+  font-weight: 200;
   margin: 0;
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: 36px;
   color: var(--color);
   transition: color 1s;
 }
@@ -24,12 +25,13 @@
 
 .project-title-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
 .project-title {
+  font-family: inherit;
   margin: 0;
   font-size: 36px;
   font-weight: 200;
@@ -61,13 +63,4 @@
 
 .project-links-container a:hover {
   color: var(--color);
-}
-
-@media screen and (width < 1000px) {
-  .project-container {
-    height: 50px;
-  }
-  .project-title {
-    font-size: 24px;
-  }
 }

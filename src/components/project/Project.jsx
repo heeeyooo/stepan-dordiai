@@ -1,78 +1,36 @@
 import "./Project.css";
 
 function Project() {
-  const DATA = [
+  const projectSet = [
     {
       id: 1,
-      link: "https://yagodakarpat.netlify.app/",
-      gitHubLink: "#",
-      title: "yagodakarpat",
-      titleName: "Business website",
-      // skills: [
-      //   <i className="fa-brands fa-html5"></i>,
-      //   <i className="fa-brands fa-css3-alt"></i>,
-      //   <i className="fa-brands fa-square-js"></i>,
-      // ],
+      link: "https://stepandordiai.netlify.app/",
+      gitHubLink: "https://github.com/heeeyooo/stepan-dordiai",
+      title: "Stepan Dordiai",
+      titleName: "Portfolio website",
       number: "01",
     },
     {
       id: 2,
-      link: "https://heeeyooo-gray.netlify.app/",
+      link: "#",
       gitHubLink: "#",
-      title: "gray",
-      titleName: "Portfolio website",
-      // skills: [
-      //   <i className="fa-brands fa-html5"></i>,
-      //   <i className="fa-brands fa-css3-alt"></i>,
-      //   <i className="fa-brands fa-square-js"></i>,
-      //   <i className="fa-brands fa-sass"></i>,
-      // ],
+      title: "yagodakarpat",
+      titleName: "Business website",
       number: "02",
     },
     {
       id: 3,
-      link: "https://heeeyooo-cloud.netlify.app/",
+      link: "#",
       gitHubLink: "#",
       title: "cloud",
       titleName: "Weather website",
-      // skills: [
-      //   <i className="fa-brands fa-html5"></i>,
-      //   <i className="fa-brands fa-css3-alt"></i>,
-      //   <i className="fa-brands fa-square-js"></i>,
-      // ],
       number: "03",
-    },
-    {
-      id: 4,
-      link: "https://heeeyooo-fate.netlify.app/",
-      gitHubLink: "#",
-      title: "fate",
-      titleName: "Landing website",
-      // skills: [
-      //   <i className="fa-brands fa-html5"></i>,
-      //   <i className="fa-brands fa-css3-alt"></i>,
-      //   <i className="fa-brands fa-square-js"></i>,
-      // ],
-      number: "04",
-    },
-    {
-      id: 5,
-      link: "https://heeeyooo-tiermaker.netlify.app/",
-      gitHubLink: "#",
-      title: "tiermaker",
-      titleName: "Landing website",
-      // skills: [
-      //   <i className="fa-brands fa-html5"></i>,
-      //   <i className="fa-brands fa-css3-alt"></i>,
-      //   <i className="fa-brands fa-square-js"></i>,
-      // ],
-      number: "05",
     },
   ];
 
   return (
     <>
-      {DATA.map((el) => {
+      {projectSet.map((el) => {
         return (
           <>
             <div className="project-container" key={el.id}>
@@ -84,15 +42,15 @@ function Project() {
                 </div>
                 <div className="project-links-container">
                   <a href={el.link} target="_blank">
-                    Live demo &#129125;
+                    Live demo{" "}
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                   <a href={el.gitHubLink} target="_blank">
-                    Github code &#129125;
+                    Github code{" "}
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
               </div>
-
-              {/* <div className="project-skills">{el.skills}</div> */}
             </div>
             <hr />
           </>
