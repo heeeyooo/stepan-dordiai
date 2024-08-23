@@ -8,7 +8,7 @@
 }
 
 .project-number {
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
   font-size: 36px;
   color: var(--color);
@@ -34,7 +34,7 @@
   font-family: inherit;
   margin: 0;
   font-size: 36px;
-  font-weight: 200;
+  font-weight: 300;
   color: var(--color);
   transition: color 1s;
 }
@@ -42,7 +42,7 @@
 .project-title-name {
   margin: 0;
   color: var(--semi-transparent-color);
-  font-weight: 300;
+  font-weight: 200;
   font-size: clamp(12px, 2vw, 16px);
   transition: color 1s;
 }
@@ -56,11 +56,25 @@
 
 .project-links-container a {
   color: var(--semi-transparent-color);
-  text-decoration: none;
   transition: color 0.2s;
   font-size: clamp(12px, 2vw, 16px);
 }
 
 .project-links-container a:hover {
   color: var(--color);
+}
+
+@media screen and (width < 1000px) {
+  .project-number {
+    font-size: 28px;
+  }
+  .project-title-container {
+    flex-direction: column-reverse;
+    align-items: end;
+    gap: 0;
+  }
+
+  .project-title {
+    font-size: 28px;
+  }
 }

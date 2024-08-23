@@ -31,7 +31,7 @@
   width: calc(50% - 75px);
   overflow-y: scroll;
   opacity: 0;
-  animation: showMainInfo 1s forwards;
+  animation: revealSkillsContainer 1s forwards;
   color: var(--color);
 }
 

@@ -4,7 +4,5 @@
   /* OFF WHITE */
   --color: #faf9f6;
   --semi-transparent-color: rgba(255, 255, 255, 0.5);
-  --project-background: rgba(255, 255, 255, 0.5);
-  --percent-background: rgba(255, 255, 255, 0.25);
-  --glass-background: rgba(0, 0, 0, 0.5);
+  --glass-background: rgba(255, 255, 255, 0.25);
 }

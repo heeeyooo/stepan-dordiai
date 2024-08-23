@@ -57,8 +57,8 @@
   align-items: center;
   height: 5px;
   width: clamp(200px, 20vw, 300px);
-  background-color: var(--semi-transparent-color);
-  outline: 2.5px solid var(--semi-transparent-color);
+  background-color: var(--glass-background);
+  outline: 2.5px solid var(--glass-background);
   outline-offset: 4px;
 }
 

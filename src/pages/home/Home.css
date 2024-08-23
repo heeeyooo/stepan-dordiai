@@ -22,37 +22,42 @@
   }
 }
 
-.home-title {
+.home-container {
+  text-align: right;
   position: fixed;
-  top: 75px;
-  left: 75px;
-  font-size: clamp(30px, 6vw, 60px);
-  font-weight: 300;
-  margin: 0;
-  /* line-height: clamp(25px, 5vw, 50px); */
-  transition: all 1s;
-  opacity: 0;
-  animation: showMainInfo 1s forwards;
+  bottom: 75px;
+  right: 75px;
   color: var(--color);
+  opacity: 0;
+  animation: revealHomeContainer 1s forwards;
 }
 
-@keyframes showMainInfo {
+@keyframes revealHomeContainer {
   to {
     opacity: 1;
   }
 }
 
-.home-title span {
+.home-title-name {
   font-size: clamp(16px, 3vw, 30px);
-  font-weight: 100;
+  font-weight: 200;
+  margin: 0;
+  transition: all 1s;
+}
+
+.home-title {
+  font-size: clamp(30px, 6vw, 60px);
+  font-weight: 300;
+  margin: 0;
+  transition: all 1s;
 }
 
 @media screen and (width < 1000px) {
   .home-section {
     height: 25px;
   }
-  .home-title {
-    top: 50px;
-    left: 50px;
+  .home-container {
+    bottom: 50px;
+    right: 50px;
   }
 }
