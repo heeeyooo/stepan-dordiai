@@ -7,11 +7,19 @@ function BurgerBtn() {
   const refBurger = useRef(null);
 
   useEffect(() => {
-    refBurger.current.classList.toggle("active-burger-btn");
-    document
-      .querySelector(".nav-list-container")
-      .classList.toggle("active-nav-list-container");
-    document.querySelector(".nav").classList.toggle("active-nav");
+    if (burgerBtn === true) {
+      refBurger.current.classList.add("active-burger-btn");
+      document
+        .querySelector(".nav-list-container")
+        .classList.add("active-nav-list-container");
+      document.querySelector(".nav").classList.add("active-nav");
+    } else {
+      refBurger.current.classList.remove("active-burger-btn");
+      document
+        .querySelector(".nav-list-container")
+        .classList.remove("active-nav-list-container");
+      document.querySelector(".nav").classList.remove("active-nav");
+    }
   }, [burgerBtn]);
 
   const toggleBurgerBtn = () => {
