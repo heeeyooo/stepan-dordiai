@@ -41,7 +41,7 @@
 
 .project-title-name {
   margin: 0;
-  color: var(--semi-transparent-color);
+  color: var(--color);
   font-weight: 200;
   font-size: clamp(12px, 2vw, 16px);
   transition: color 1s;
@@ -55,13 +55,9 @@
 }
 
 .project-links-container a {
-  color: var(--semi-transparent-color);
-  transition: color 0.2s;
-  font-size: clamp(12px, 2vw, 16px);
-}
-
-.project-links-container a:hover {
   color: var(--color);
+  font-size: clamp(12px, 2vw, 16px);
+  transition: color 1s;
 }
 
 @media screen and (width < 1000px) {

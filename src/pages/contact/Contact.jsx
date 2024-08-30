@@ -13,8 +13,6 @@ function Contact() {
 
   return (
     <>
-      <p className="portfolio-section">{"<Contact />"}</p>
-
       <div className="email-container">
         <form action="mailto:stepandordiai@gmail.com">
           <input

@@ -1,27 +1,3 @@
-.portfolio-section {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 50px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--color);
-  margin: 0;
-  z-index: 101;
-  opacity: 0;
-  transition: color 1s;
-  animation: revealPortfolioSection 1s forwards;
-}
-
-@keyframes revealPortfolioSection {
-  to {
-    opacity: 1;
-  }
-}
-
 .portfolio-container {
   position: fixed;
   right: 75px;
@@ -41,9 +17,6 @@
 }
 
 @media screen and (width < 1000px) {
-  .portfolio-section {
-    height: 25px;
-  }
   .portfolio-container {
     padding: 50px 0;
     right: 50px;

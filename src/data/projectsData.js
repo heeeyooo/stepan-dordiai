@@ -8,7 +8,7 @@ const projectSet = [
   {
     title: "yagodakarpat",
     titleName: "Business website",
-    link: "#",
+    link: "https://yagodakarpat.netlify.app/",
     gitHubLink: "#",
   },
   {
@@ -19,4 +19,4 @@ const projectSet = [
   },
 ];
 
-export { projectSet };
+export default projectSet;

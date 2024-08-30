@@ -13,6 +13,7 @@
   align-items: center;
   width: 100px;
   height: 100px;
+  transition: color 1s;
 }
 
 .skill-icon-container i {
@@ -75,6 +76,7 @@
   margin: 0;
   font-size: 24px;
   font-weight: 200;
+  transition: color 1s;
 }
 
 .skill-range {
@@ -82,7 +84,7 @@
   height: 5px;
   background: var(--glass-background);
   position: relative;
-  transition: all 1s;
+  transition: background-color 1s;
 }
 
 .python-background-range,
@@ -99,7 +101,7 @@
   background-color: var(--color);
   width: 0%;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
-  transition: all 1s;
+  transition: background-color 1s;
 }
 
 .python-background-range {

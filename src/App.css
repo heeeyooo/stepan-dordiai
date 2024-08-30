@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   background-color: var(--main-background);
   transition: background-color 1s;
+  cursor: crosshair;
 }
 
 .main {
@@ -83,7 +84,6 @@ ul {
 
 .cube-top-left {
   position: absolute;
-
   left: calc(50% - 75px);
   top: calc(50% - 75px);
   width: 50px;

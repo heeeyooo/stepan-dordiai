@@ -46,4 +46,4 @@ const skillSet = [
   },
 ];
 
-export { skillSet };
+export default skillSet;

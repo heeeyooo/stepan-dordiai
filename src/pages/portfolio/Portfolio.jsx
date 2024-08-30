@@ -1,27 +1,24 @@
 import Project from "../../components/project/Project";
-import { projectSet } from "../../data/projectsData";
+import projectSet from "../../data/projectsData";
 import "./Portfolio.css";
 
 function Portfolio() {
   return (
-    <>
-      <p className="portfolio-section">{"<Portfolio />"}</p>
-      <div className="portfolio-container">
-        {projectSet.map((project, index) => {
-          return (
-            <Project
-              // BETTER TO USE UNIQUE KEY
-              key={index}
-              number={"0" + (index + 1)}
-              title={project.title}
-              titleName={project.titleName}
-              link={project.link}
-              gitHubLink={project.gitHubLink}
-            />
-          );
-        })}
-      </div>
-    </>
+    <div className="portfolio-container">
+      {projectSet.map((project, index) => {
+        return (
+          <Project
+            // BETTER TO USE UNIQUE KEY
+            key={index}
+            number={"0" + (index + 1)}
+            title={project.title}
+            titleName={project.titleName}
+            link={project.link}
+            gitHubLink={project.gitHubLink}
+          />
+        );
+      })}
+    </div>
   );
 }
 
