@@ -16,8 +16,8 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       document.querySelector(".main").style.display = "initial";
-    }, 3500);
-  });
+    }, 4000);
+  }, []);
 
   return (
     <>

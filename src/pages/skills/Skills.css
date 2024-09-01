@@ -6,16 +6,16 @@
   padding: 75px 0;
   width: calc(50% - 75px);
   overflow-y: scroll;
-  opacity: 0;
-  animation: revealSkillsContainer 1s forwards;
+  /* opacity: 0; */
+  /* animation: revealSkillsContainer 1s forwards; */
   color: var(--color);
 }
 
-@keyframes revealSkillsContainer {
+/* @keyframes revealSkillsContainer {
   to {
     opacity: 1;
   }
-}
+} */
 
 @media screen and (width < 1000px) {
   .skills-container {

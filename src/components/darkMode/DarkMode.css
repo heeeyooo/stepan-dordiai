@@ -23,6 +23,7 @@
   color: var(--color);
   font-size: clamp(12px, 2vw, 16px);
   transition: color 1s;
+  cursor: crosshair;
 }
 
 .dark-mode-btn {
@@ -31,9 +32,9 @@
   background: transparent;
   border: none;
   color: var(--color);
-  cursor: pointer;
   font-size: clamp(12px, 2vw, 16px);
   transition: color 1s;
+  cursor: crosshair;
 }
 
 @media screen and (width < 1000px) {

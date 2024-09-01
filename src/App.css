@@ -92,7 +92,7 @@ ul {
   border-left: 5px solid var(--color);
   border-top: 5px solid var(--color);
   box-sizing: border-box;
-  animation: setCubeLeftTop 1s 2.5s forwards;
+  animation: setCubeLeftTop 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
 }
@@ -107,7 +107,7 @@ ul {
   border-right: 5px solid var(--color);
   border-top: 5px solid var(--color);
   box-sizing: border-box;
-  animation: setCubeRightTop 1s 2.5s forwards;
+  animation: setCubeRightTop 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
 }
@@ -122,7 +122,7 @@ ul {
   border-left: 5px solid var(--color);
   border-bottom: 5px solid var(--color);
   box-sizing: border-box;
-  animation: setCubeLeftBottom 1s 2.5s forwards;
+  animation: setCubeLeftBottom 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
 }
@@ -137,14 +137,13 @@ ul {
   border-right: 5px solid var(--color);
   border-bottom: 5px solid var(--color);
   box-sizing: border-box;
-  animation: setCubeRightBottom 1s 2.5s forwards;
+  animation: setCubeRightBottom 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
 }
 
 @keyframes setCubeLeftTop {
   to {
-    transform: none;
     left: 50px;
     top: 50px;
     opacity: 1;
@@ -152,7 +151,6 @@ ul {
 }
 @keyframes setCubeLeftBottom {
   to {
-    transform: none;
     left: 50px;
     bottom: 50px;
     opacity: 1;
@@ -160,7 +158,6 @@ ul {
 }
 @keyframes setCubeRightTop {
   to {
-    transform: none;
     right: 50px;
     top: 50px;
     opacity: 1;
@@ -168,7 +165,6 @@ ul {
 }
 @keyframes setCubeRightBottom {
   to {
-    transform: none;
     right: 50px;
     bottom: 50px;
     opacity: 1;
@@ -177,7 +173,6 @@ ul {
 @media screen and (width < 1000px) {
   @keyframes setCubeLeftTop {
     to {
-      transform: none;
       left: 25px;
       top: 25px;
       opacity: 1;
@@ -185,7 +180,6 @@ ul {
   }
   @keyframes setCubeLeftBottom {
     to {
-      transform: none;
       left: 25px;
       bottom: 25px;
       opacity: 1;
@@ -193,7 +187,6 @@ ul {
   }
   @keyframes setCubeRightTop {
     to {
-      transform: none;
       right: 25px;
       top: 25px;
       opacity: 1;
@@ -201,7 +194,6 @@ ul {
   }
   @keyframes setCubeRightBottom {
     to {
-      transform: none;
       right: 25px;
       bottom: 25px;
       opacity: 1;

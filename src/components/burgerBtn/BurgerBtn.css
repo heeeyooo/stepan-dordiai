@@ -17,7 +17,7 @@
 .burger-btn {
   width: 20px;
   height: 0;
-  cursor: pointer;
+  cursor: crosshair;
   padding: 10px 0;
 }
 

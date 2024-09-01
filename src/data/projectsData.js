@@ -6,10 +6,10 @@ const projectSet = [
     gitHubLink: "https://github.com/heeeyooo/stepan-dordiai",
   },
   {
-    title: "yagodakarpat",
+    title: "Yagoda Karpat",
     titleName: "Business website",
     link: "https://yagodakarpat.netlify.app/",
-    gitHubLink: "#",
+    gitHubLink: "https://github.com/heeeyooo/yagoda-karpat",
   },
   {
     title: "cloud",

@@ -22,7 +22,6 @@ function Project({ title, link, gitHubLink, titleName, number }) {
           </div>
         </div>
       </div>
-      <hr />
     </>
   );
 }
