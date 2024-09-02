@@ -38,9 +38,7 @@
   background: transparent;
   color: var(--color);
   cursor: crosshair;
-  margin: 0;
   padding: 0;
-  overflow: hidden;
   font-weight: 200;
   font-size: clamp(18px, 3vw, 36px);
   transition: color 1s;
@@ -49,24 +47,16 @@
 /* SOCIALS CONTAINER */
 
 .socials-container {
-  position: absolute;
-  top: 50%;
-  right: -27px;
-  transform: translateY(-50%);
+  position: fixed;
+  bottom: 75px;
+  top: 75px;
+  right: 75px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 50%;
   font-size: 24px;
   z-index: 100;
-  animation: revealSocialsContainer 1s forwards;
-}
-
-@keyframes revealSocialsContainer {
-  to {
-    right: 50px;
-  }
 }
 
 .socials-container a {
@@ -76,13 +66,16 @@
 }
 
 @media screen and (width < 1000px) {
-  .contact-section {
-    height: 25px;
-  }
-
-  @keyframes revealSocialsContainer {
-    to {
-      right: 25px;
-    }
+  .socials-container {
+    top: auto;
+    bottom: 50px;
+    right: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    z-index: 100;
   }
 }

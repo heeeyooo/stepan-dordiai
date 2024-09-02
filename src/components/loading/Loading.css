@@ -65,7 +65,7 @@
 .percent-range {
   width: 0px;
   height: 5px;
-  background-color: var(--color);
+  background-color: greenyellow;
   animation: setPercentRange 2s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
 }

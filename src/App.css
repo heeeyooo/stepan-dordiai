@@ -95,6 +95,7 @@ ul {
   animation: setCubeLeftTop 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
+  z-index: 101;
 }
 
 .cube-top-right {
@@ -110,6 +111,7 @@ ul {
   animation: setCubeRightTop 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
+  z-index: 101;
 }
 
 .cube-bottom-left {
@@ -125,6 +127,7 @@ ul {
   animation: setCubeLeftBottom 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
+  z-index: 101;
 }
 
 .cube-bottom-right {
@@ -140,6 +143,7 @@ ul {
   animation: setCubeRightBottom 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
+  z-index: 101;
 }
 
 @keyframes setCubeLeftTop {

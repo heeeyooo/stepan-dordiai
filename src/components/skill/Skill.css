@@ -137,7 +137,7 @@
 .react-background-range {
   position: absolute;
   height: 5px;
-  background-color: var(--color);
+  background-color: greenyellow;
   width: 0%;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: background-color 1s;
