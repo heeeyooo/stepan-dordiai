@@ -69,6 +69,17 @@
   transition: color 1s;
 }
 
+.project-skills {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+  justify-content: right;
+  color: var(--color);
+  /* font-weight: 200; */
+  transition: color 1s;
+}
+
 .project-links-container {
   display: flex;
   justify-content: center;

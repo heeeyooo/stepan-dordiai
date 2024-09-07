@@ -4,10 +4,10 @@ function About() {
   return (
     <p className="about-title">
       Hi! My name is Stepan Dordiai and I am a Junior Frontend Developer
-      currently based in Ukraine
-      <br />I specialize in building good quality minimalistic projects that
-      will charm the viewer with their interactivity and ease of use.{" "}
-      {"{Gym enjoyer}"}
+      currently based in Ukraine.
+      <br />I specialize in building pixel perfect minimalistic projects that
+      will charm the viewer with their interactivity and ease of use. Gym
+      enjoyer
     </p>
   );
 }

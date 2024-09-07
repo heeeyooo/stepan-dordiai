@@ -29,7 +29,7 @@
   padding: 0;
   color: var(--color);
   transition: color 1s;
-  font-weight: 200;
+  font-weight: 110;
 }
 
 .email-copy-btn {
@@ -56,7 +56,15 @@
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
-  z-index: 100;
+  z-index: 150;
+  opacity: 0;
+  animation: revealSocialsContainer 1s forwards;
+}
+
+@keyframes revealSocialsContainer {
+  to {
+    opacity: 1;
+  }
 }
 
 .socials-container a {
@@ -76,6 +84,5 @@
     justify-content: space-between;
     align-items: center;
     font-size: 24px;
-    z-index: 100;
   }
 }

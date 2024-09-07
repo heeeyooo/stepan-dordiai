@@ -5,14 +5,15 @@ import "./Portfolio.css";
 function Portfolio() {
   return (
     <div className="portfolio-container">
-      {projectSet.map((project, index) => {
+      {projectSet.map((project) => {
         return (
           <Project
-            // BETTER TO USE UNIQUE KEY
-            key={index}
-            number={"0" + (index + 1)}
+            key={project.id}
+            id={"0" + project.id}
             title={project.title}
             titleName={project.titleName}
+            skill={project.skill}
+            skill2={project.skill2}
             link={project.link}
             gitHubLink={project.gitHubLink}
           />
