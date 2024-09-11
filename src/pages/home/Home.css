@@ -1,8 +1,8 @@
 .home-container {
-  text-align: right;
   position: fixed;
   bottom: 75px;
   right: 75px;
+  text-align: right;
   color: var(--color);
   opacity: 0;
   animation: revealHomeContainer 1s forwards;

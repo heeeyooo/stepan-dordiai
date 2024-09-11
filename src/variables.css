@@ -5,4 +5,7 @@
   --color: #faf9f6;
   --semi-transparent-color: rgba(255, 255, 255, 0.5);
   --glass-background: rgba(255, 255, 255, 0.25);
+  --background: #17171732;
+
+  /* --animation-background: #171717; */
 }

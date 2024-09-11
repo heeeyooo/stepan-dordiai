@@ -1,7 +1,7 @@
 .skills-container {
   position: fixed;
+  top: 0;
   right: 75px;
-  top: 0px;
   bottom: 0px;
   padding: 75px 0;
   width: calc(50% - 75px);
@@ -9,6 +9,7 @@
   /* opacity: 0; */
   /* animation: revealSkillsContainer 1s forwards; */
   color: var(--color);
+  z-index: 96;
 }
 
 /* @keyframes revealSkillsContainer {

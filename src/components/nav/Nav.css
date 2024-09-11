@@ -95,7 +95,7 @@
   .link-contact {
     display: inline-block;
     font-size: 16px;
-    padding: 5px 0;
+    margin: 5px 0;
     cursor: crosshair;
   }
 }

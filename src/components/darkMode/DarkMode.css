@@ -3,7 +3,7 @@
   top: 50px;
   right: -50px;
   bottom: 50px;
-  z-index: 101;
+  z-index: 98;
   width: 50px;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,6 @@
   color: var(--color);
   font-size: clamp(12px, 2vw, 16px);
   transition: color 1s;
-  cursor: crosshair;
 }
 
 @media screen and (width < 1000px) {

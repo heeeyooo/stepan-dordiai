@@ -1,25 +1,26 @@
-.about-title {
-  text-align: right;
-  color: var(--color);
-  font-weight: 200;
+.about {
   position: fixed;
   bottom: 75px;
   left: 75px;
   right: 75px;
+  text-align: right;
+  color: var(--color);
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 200;
   opacity: 0;
   margin: 0;
   transition: color 1s;
-  animation: revealAboutSection 1s forwards;
+  animation: revealAbout 1s forwards;
 }
 
-@keyframes revealAboutSection {
+@keyframes revealAbout {
   to {
     opacity: 1;
   }
 }
 
 @media screen and (width < 1000px) {
-  .about-title {
+  .about {
     bottom: 50px;
     left: 50px;
     right: 50px;

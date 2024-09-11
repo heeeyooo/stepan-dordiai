@@ -28,12 +28,22 @@ function BurgerBtn() {
     });
   };
 
+  function brightCursor() {
+    document.querySelector("#custom-cursor").classList.add("active-cursor");
+  }
+
+  function lowerCursor() {
+    document.querySelector("#custom-cursor").classList.remove("active-cursor");
+  }
+
   return (
     <div className="burger-container">
       <p className="burger-title">MENU</p>
       <div
         ref={refBurger}
         onClick={toggleBurgerBtn}
+        onMouseEnter={brightCursor}
+        onMouseLeave={lowerCursor}
         className="burger-btn"
       ></div>
     </div>

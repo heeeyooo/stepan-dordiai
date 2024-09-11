@@ -16,12 +16,17 @@ const projectSet = [
     link: "https://yagodakarpat.netlify.app/",
     gitHubLink: "https://github.com/heeeyooo/yagoda-karpat",
   },
-  // {
-  //   title: "cloud",
-  //   titleName: "Weather website",
-  //   link: "#",
-  //   gitHubLink: "#",
-  // },
+  {
+    id: 3,
+    title: "cloud",
+    titleName: "Weather website",
+    skill: "fa-brands fa-html5",
+    skill2: "BEM",
+    skill3: "fa-brands fa-sass",
+    skill4: "fa-brands fa-square-js",
+    link: "https://cloud-project.netlify.app/",
+    gitHubLink: "https://github.com/heeeyooo/cloud",
+  },
 ];
 
 export default projectSet;

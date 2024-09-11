@@ -13,6 +13,8 @@ body {
 }
 
 .main {
+  position: fixed;
+  z-index: 98;
   display: none;
   width: 100%;
   background-color: var(--main-background);
@@ -26,8 +28,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
+  justify-content: center;
 }
 
 ::-webkit-scrollbar {
@@ -42,14 +45,117 @@ ul {
   list-style-type: none;
 }
 
+.bulb-container {
+  position: relative;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.658); */
+  opacity: 0;
+  /* backdrop-filter: blur(5px); */
+  animation: revealBulbContainer 1s 5s forwards;
+  pointer-events: none;
+}
+
+@keyframes revealBulbContainer {
+  to {
+    opacity: 1;
+  }
+}
+
+.bulb {
+  position: absolute;
+  width: clamp(200px, 35vw, 400px);
+  height: clamp(200px, 35vw, 400px);
+  background-color: greenyellow;
+  background-image: linear-gradient(19deg, #53e75b 0%, #c7ee38 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  /* overflow: hidden; */
+  animation: morphing 10s infinite;
+  pointer-events: none;
+}
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+.blur-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
+  transition: background-color 1s;
+  pointer-events: none;
+}
+
+* {
+  cursor: none !important;
+}
+
+#custom-cursor {
+  position: fixed;
+  background-color: var(--semi-transparent-color);
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s;
+  pointer-events: none;
+}
+
+.active-cursor {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+#circle {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  border: 2px solid var(--semi-transparent-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 100;
+  border-radius: 50%;
+  transition: all 0.1s;
+  pointer-events: none;
+}
+
 .shadow-top {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   box-shadow: 0 0 25px 25px var(--main-background);
-  z-index: 100;
   transition: all 1s;
+  z-index: 97;
+  pointer-events: none;
 }
 
 .shadow-right {
@@ -58,8 +164,10 @@ ul {
   right: 0;
   bottom: 0;
   box-shadow: 0 0 25px 25px var(--main-background);
-  z-index: 100;
   transition: all 1s;
+  z-index: 97;
+
+  pointer-events: none;
 }
 
 .shadow-bottom {
@@ -68,8 +176,10 @@ ul {
   right: 0;
   left: 0;
   box-shadow: 0 0 25px 25px var(--main-background);
-  z-index: 100;
   transition: all 1s;
+  z-index: 97;
+
+  pointer-events: none;
 }
 
 .shadow-left {
@@ -78,12 +188,14 @@ ul {
   left: 0;
   bottom: 0;
   box-shadow: 0 0 25px 25px var(--main-background);
-  z-index: 100;
   transition: all 1s;
+  z-index: 97;
+
+  pointer-events: none;
 }
 
 .cube-top-left {
-  position: absolute;
+  position: fixed;
   left: calc(50% - 75px);
   top: calc(50% - 75px);
   width: 50px;
@@ -95,11 +207,20 @@ ul {
   animation: setCubeLeftTop 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
-  z-index: 101;
+  z-index: 99;
+  pointer-events: none;
+}
+
+@keyframes setCubeLeftTop {
+  to {
+    left: 50px;
+    top: 50px;
+    opacity: 1;
+  }
 }
 
 .cube-top-right {
-  position: absolute;
+  position: fixed;
   right: calc(50% - 75px);
   top: calc(50% - 75px);
   width: 50px;
@@ -111,7 +232,16 @@ ul {
   animation: setCubeRightTop 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
-  z-index: 101;
+  z-index: 99;
+  pointer-events: none;
+}
+
+@keyframes setCubeRightTop {
+  to {
+    right: 50px;
+    top: 50px;
+    opacity: 1;
+  }
 }
 
 .cube-bottom-left {
@@ -127,7 +257,16 @@ ul {
   animation: setCubeLeftBottom 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
-  z-index: 101;
+  z-index: 99;
+  pointer-events: none;
+}
+
+@keyframes setCubeLeftBottom {
+  to {
+    left: 50px;
+    bottom: 50px;
+    opacity: 1;
+  }
 }
 
 .cube-bottom-right {
@@ -143,30 +282,10 @@ ul {
   animation: setCubeRightBottom 1s 3s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
   transition: all 1s;
-  z-index: 101;
+  z-index: 99;
+  pointer-events: none;
 }
 
-@keyframes setCubeLeftTop {
-  to {
-    left: 50px;
-    top: 50px;
-    opacity: 1;
-  }
-}
-@keyframes setCubeLeftBottom {
-  to {
-    left: 50px;
-    bottom: 50px;
-    opacity: 1;
-  }
-}
-@keyframes setCubeRightTop {
-  to {
-    right: 50px;
-    top: 50px;
-    opacity: 1;
-  }
-}
 @keyframes setCubeRightBottom {
   to {
     right: 50px;
@@ -174,6 +293,7 @@ ul {
     opacity: 1;
   }
 }
+
 @media screen and (width < 1000px) {
   @keyframes setCubeLeftTop {
     to {
@@ -209,5 +329,14 @@ ul {
   .shadow-bottom,
   .shadow-left {
     box-shadow: 0 0 12.5px 12.5px var(--main-background);
+  }
+  #custom-cursor {
+    display: none !important;
+  }
+  #circle {
+    display: none !important;
+  }
+  * {
+    cursor: crosshair !important;
   }
 }

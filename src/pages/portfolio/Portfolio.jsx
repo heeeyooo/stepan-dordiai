@@ -14,6 +14,8 @@ function Portfolio() {
             titleName={project.titleName}
             skill={project.skill}
             skill2={project.skill2}
+            skill3={project.skill3}
+            skill4={project.skill4}
             link={project.link}
             gitHubLink={project.gitHubLink}
           />
