@@ -51,7 +51,7 @@
 }
 
 .nav__link--active {
-  text-decoration: 2px line-through var(--active-color);
+  color: var(--active-color);
 }
 
 @media screen and (width > 1000px) {
@@ -87,6 +87,5 @@
     display: inline-block;
     font-size: 16px;
     margin: 5px 0;
-    cursor: crosshair;
   }
 }

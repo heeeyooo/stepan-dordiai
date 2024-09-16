@@ -32,8 +32,8 @@ const projectSet = [
     title: "penguin",
     titleName: "Portfolio website",
     skill: "fa-brands fa-react",
-    link: "https://cloud-project.netlify.app/",
-    gitHubLink: "https://github.com/heeeyooo/cloud",
+    link: "https://penguin-project.netlify.app/",
+    gitHubLink: "https://github.com/heeeyooo/penguin",
   },
 ];
 

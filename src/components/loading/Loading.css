@@ -43,7 +43,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 100px;
+  bottom: 50px;
 }
 
 .loading-text {
