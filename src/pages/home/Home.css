@@ -1,7 +1,7 @@
 .home-container {
   position: fixed;
-  bottom: 75px;
-  right: 75px;
+  bottom: 100px;
+  right: 100px;
   text-align: right;
   color: var(--color);
   opacity: 0;

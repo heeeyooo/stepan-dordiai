@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Resume from "./../../pdf/heeeyooo-resume.pdf";
 import "./DarkMode.css";
+import { useLocalStorage } from "../../utils/UseLocalStorage";
 
 function DarkMode() {
-  const [lightMode, setLightMode] = useState("dark");
+  const [lightMode, setLightMode] = useLocalStorage("darkMode", "dark");
 
   const refBtn = useRef(null);
 

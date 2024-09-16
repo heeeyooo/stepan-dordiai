@@ -1,20 +1,12 @@
 .portfolio-container {
   position: fixed;
-  right: 75px;
+  right: 100px;
   top: 0;
   bottom: 0;
-  padding: 75px 0;
-  width: calc(50% - 75px);
+  padding: 100px 0;
+  width: calc(50% - 100px);
   overflow-y: scroll;
-  /* opacity: 0; */
-  /* animation: revealPortfolioContainer 1s forwards; */
 }
-
-/* @keyframes revealPortfolioContainer {
-  to {
-    opacity: 1;
-  }
-} */
 
 @media screen and (width < 1000px) {
   .portfolio-container {

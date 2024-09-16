@@ -10,7 +10,6 @@ import Nav from "./components/nav/Nav";
 import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
 import "./App.css";
-import "./variables.css";
 
 function App() {
   useEffect(() => {
@@ -33,23 +32,15 @@ function App() {
       <Loading />
       <div id="circle"></div>
       <div id="custom-cursor"></div>
-
-      {/* CORNERS */}
       <div className="cube-top-left"></div>
       <div className="cube-top-right"></div>
       <div className="cube-bottom-right"></div>
       <div className="cube-bottom-left"></div>
-
       <main className="main">
-        {/* SHADOW */}
         <div className="shadow-top"></div>
-        <div className="shadow-right"></div>
         <div className="shadow-bottom"></div>
-        <div className="shadow-left"></div>
         <Router>
-          {/* LEFT SIDE */}
           <Nav />
-          {/* RIGHT SIDE */}
           <DarkMode />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -58,11 +49,10 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          {/* BOTTOM SIDE */}
           <Footer />
         </Router>
       </main>
-      {/* <div className="blur-container"></div> */}
+      <div className="blur-container"></div>
       <div className="bulb-container">
         <div className="bulb"></div>
       </div>

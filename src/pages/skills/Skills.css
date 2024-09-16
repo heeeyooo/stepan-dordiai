@@ -1,22 +1,14 @@
 .skills-container {
   position: fixed;
   top: 0;
-  right: 75px;
-  bottom: 0px;
-  padding: 75px 0;
-  width: calc(50% - 75px);
+  right: 100px;
+  bottom: 0;
+  padding: 100px 0;
+  width: calc(50% - 100px);
   overflow-y: scroll;
-  /* opacity: 0; */
-  /* animation: revealSkillsContainer 1s forwards; */
   color: var(--color);
   z-index: 96;
 }
-
-/* @keyframes revealSkillsContainer {
-  to {
-    opacity: 1;
-  }
-} */
 
 @media screen and (width < 1000px) {
   .skills-container {

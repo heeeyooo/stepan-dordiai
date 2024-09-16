@@ -10,13 +10,19 @@ function Nav() {
   function lowerCursor() {
     document.querySelector("#custom-cursor").classList.remove("active-cursor");
   }
+
+  const activeLink = "nav__link nav__link--active";
+  const inactiveLink = "nav__link";
+
   return (
     <nav className="nav">
       <BurgerBtn />
-      <ul className="nav-list-container">
+      <ul className="nav__list">
         <li>
           <NavLink
-            className="link-home target-link"
+            className={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }}
             onMouseEnter={brightCursor}
             onMouseLeave={lowerCursor}
             to="/"
@@ -26,7 +32,9 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className="link-about target-link"
+            className={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }}
             onMouseEnter={brightCursor}
             onMouseLeave={lowerCursor}
             to="/about"
@@ -36,7 +44,9 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className="link-skills target-link"
+            className={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }}
             onMouseEnter={brightCursor}
             onMouseLeave={lowerCursor}
             to="/skills"
@@ -46,7 +56,9 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className="link-portfolio target-link"
+            className={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }}
             onMouseEnter={brightCursor}
             onMouseLeave={lowerCursor}
             to="/portfolio"
@@ -56,7 +68,9 @@ function Nav() {
         </li>
         <li>
           <NavLink
-            className="link-contact target-link"
+            className={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }}
             onMouseEnter={brightCursor}
             onMouseLeave={lowerCursor}
             to="/contact"

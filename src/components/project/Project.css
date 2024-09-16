@@ -22,6 +22,9 @@
 .project-container:nth-of-type(3) {
   animation: revealProjectContainer 0.5s 0.2s forwards;
 }
+.project-container:nth-of-type(4) {
+  animation: revealProjectContainer 0.5s 0.3s forwards;
+}
 
 @keyframes revealProjectContainer {
   to {
@@ -76,7 +79,6 @@
   gap: 10px;
   justify-content: right;
   color: var(--color);
-  /* font-weight: 200; */
   transition: color 1s;
 }
 
@@ -91,7 +93,6 @@
   color: var(--color);
   font-size: clamp(12px, 2vw, 16px);
   transition: color 1s;
-  cursor: crosshair;
 }
 
 @media screen and (width < 1000px) {

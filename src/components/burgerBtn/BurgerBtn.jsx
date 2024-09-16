@@ -9,16 +9,12 @@ function BurgerBtn() {
   useEffect(() => {
     if (burgerBtn === true) {
       refBurger.current.classList.add("active-burger-btn");
-      document
-        .querySelector(".nav-list-container")
-        .classList.add("active-nav-list-container");
-      document.querySelector(".nav").classList.add("active-nav");
+      document.querySelector(".nav__list").classList.add("nav__list--active");
     } else {
       refBurger.current.classList.remove("active-burger-btn");
       document
-        .querySelector(".nav-list-container")
-        .classList.remove("active-nav-list-container");
-      document.querySelector(".nav").classList.remove("active-nav");
+        .querySelector(".nav__list")
+        .classList.remove("nav__list--active");
     }
   }, [burgerBtn]);
 

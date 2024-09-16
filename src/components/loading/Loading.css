@@ -48,7 +48,7 @@
 
 .loading-text {
   color: var(--color);
-  letter-spacing: 10px;
+  font-weight: 300;
 }
 
 .percent-range-background {
@@ -59,13 +59,13 @@
   width: clamp(200px, 20vw, 300px);
   background-color: var(--glass-background);
   outline: 2.5px solid var(--glass-background);
-  outline-offset: 4px;
+  outline-offset: 2.5px;
 }
 
 .percent-range {
   width: 0px;
   height: 5px;
-  background-color: greenyellow;
+  background-color: var(--active-color);
   animation: setPercentRange 2s forwards;
   animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
 }

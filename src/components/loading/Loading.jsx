@@ -14,7 +14,7 @@ function Loading() {
         STEPAN DORDIAI<span> PORTFOLIO</span>
       </p>
       <div className="loading-container">
-        <p className="loading-text">LOADING</p>
+        <p className="loading-text">LOADING...</p>
         <div className="percent-range-background">
           <span className="percent-range"></span>
         </div>

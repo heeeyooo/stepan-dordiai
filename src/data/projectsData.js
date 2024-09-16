@@ -27,6 +27,14 @@ const projectSet = [
     link: "https://cloud-project.netlify.app/",
     gitHubLink: "https://github.com/heeeyooo/cloud",
   },
+  {
+    id: 4,
+    title: "penguin",
+    titleName: "Portfolio website",
+    skill: "fa-brands fa-react",
+    link: "https://cloud-project.netlify.app/",
+    gitHubLink: "https://github.com/heeeyooo/cloud",
+  },
 ];
 
 export default projectSet;

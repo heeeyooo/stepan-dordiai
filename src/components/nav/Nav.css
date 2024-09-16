@@ -12,17 +12,13 @@
   animation: revealNav 1s forwards;
 }
 
-.active-nav {
-  gap: 25px;
-}
-
 @keyframes revealNav {
   to {
     left: 0;
   }
 }
 
-.nav-list-container {
+.nav__list {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -42,21 +38,20 @@
 }
 
 /* WHEN TOGGLE BURGER BTN */
-.active-nav-list-container {
+.nav__list--active {
   height: 449.2px !important;
 }
 
-.link-home,
-.link-about,
-.link-skills,
-.link-portfolio,
-.link-contact {
+.nav__link {
   font-size: 12px;
   color: var(--color);
   font-weight: 300;
   padding: 0;
   transition: color 1s;
-  cursor: crosshair;
+}
+
+.nav__link--active {
+  text-decoration: 2px line-through var(--active-color);
 }
 
 @media screen and (width > 1000px) {
@@ -65,7 +60,7 @@
     bottom: 50px;
     z-index: 99;
   }
-  .nav-list-container {
+  .nav__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,11 +83,7 @@
       left: 50px;
     }
   }
-  .link-home,
-  .link-about,
-  .link-skills,
-  .link-portfolio,
-  .link-contact {
+  .nav__link {
     display: inline-block;
     font-size: 16px;
     margin: 5px 0;
