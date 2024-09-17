@@ -24,7 +24,7 @@ function DarkMode() {
       variables.style.setProperty("--background", "#faf9f632");
       // variables.style.setProperty("--animation-background", "#faf9f6");
       //
-      refBtn.current.innerHTML = "DARK";
+      refBtn.current.textContent = "DARK";
     } else {
       variables.style.setProperty("--main-background", "#171717");
       variables.style.setProperty("--color", "#faf9f6");
@@ -38,7 +38,7 @@ function DarkMode() {
       );
       variables.style.setProperty("--background", "#17171732");
       // variables.style.setProperty("--animation-background", "#171717");
-      refBtn.current.innerHTML = "LIGHT";
+      refBtn.current.textContent = "LIGHT";
     }
   }, [lightMode]);
 
@@ -50,10 +50,13 @@ function DarkMode() {
 
   function brightCursor() {
     document.querySelector("#custom-cursor").classList.add("active-cursor");
+    document.querySelector("#custom-cursor").textContent =
+      refBtn.current.textContent;
   }
 
   function lowerCursor() {
     document.querySelector("#custom-cursor").classList.remove("active-cursor");
+    document.querySelector("#custom-cursor").textContent = "";
   }
 
   return (

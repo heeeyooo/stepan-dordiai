@@ -9,14 +9,17 @@ function BurgerBtn() {
   useEffect(() => {
     if (burgerBtn === true) {
       refBurger.current.classList.add("active-burger-btn");
-      document.querySelector(".nav__list").classList.add("nav__list--active");
+      document.querySelector(".nav").classList.add("nav--active");
     } else {
       refBurger.current.classList.remove("active-burger-btn");
-      document
-        .querySelector(".nav__list")
-        .classList.remove("nav__list--active");
+      document.querySelector(".nav").classList.remove("nav--active");
     }
   }, [burgerBtn]);
+
+  addEventListener("resize", () => {
+    document.querySelector(".nav").classList.remove("nav--active");
+    document.querySelector(".burger-btn").classList.remove("active-burger-btn");
+  });
 
   const toggleBurgerBtn = () => {
     setBurgerBtn((currentState) => {
@@ -24,24 +27,10 @@ function BurgerBtn() {
     });
   };
 
-  function brightCursor() {
-    document.querySelector("#custom-cursor").classList.add("active-cursor");
-  }
-
-  function lowerCursor() {
-    document.querySelector("#custom-cursor").classList.remove("active-cursor");
-  }
-
   return (
-    <div className="burger-container">
+    <div onClick={toggleBurgerBtn} className="burger-container">
       <p className="burger-title">MENU</p>
-      <div
-        ref={refBurger}
-        onClick={toggleBurgerBtn}
-        onMouseEnter={brightCursor}
-        onMouseLeave={lowerCursor}
-        className="burger-btn"
-      ></div>
+      <div ref={refBurger} className="burger-btn"></div>
     </div>
   );
 }

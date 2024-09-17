@@ -27,7 +27,7 @@ function Nav() {
             onMouseLeave={lowerCursor}
             to="/"
           >
-            HOME
+            <span>HOME</span>
           </NavLink>
         </li>
         <li>
@@ -39,7 +39,7 @@ function Nav() {
             onMouseLeave={lowerCursor}
             to="/about"
           >
-            ABOUT
+            <span>ABOUT</span>
           </NavLink>
         </li>
         <li>
@@ -51,7 +51,7 @@ function Nav() {
             onMouseLeave={lowerCursor}
             to="/skills"
           >
-            SKILLS
+            <span>SKILLS</span>
           </NavLink>
         </li>
         <li>
@@ -63,7 +63,7 @@ function Nav() {
             onMouseLeave={lowerCursor}
             to="/portfolio"
           >
-            PORTFOLIO
+            <span>PORTFOLIO</span>
           </NavLink>
         </li>
         <li>
@@ -75,7 +75,19 @@ function Nav() {
             onMouseLeave={lowerCursor}
             to="/contact"
           >
-            CONTACT
+            <span>CONTACT</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={({ isActive }) => {
+              return isActive ? activeLink : inactiveLink;
+            }}
+            onMouseEnter={brightCursor}
+            onMouseLeave={lowerCursor}
+            to="/playground"
+          >
+            <span>PLAYGROUND</span>
           </NavLink>
         </li>
       </ul>

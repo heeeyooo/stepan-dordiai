@@ -6,7 +6,8 @@
   --active-color: #adff2f;
   --semi-transparent-color: #ffffff80;
   --glass-background: #ffffff40;
-  --background: #17171740;
+  --background: #17171780;
+  --bg-menu: #17171780;
 }
 
 body {
@@ -121,12 +122,16 @@ ul {
 
 #custom-cursor {
   position: fixed;
-  background-color: var(--semi-transparent-color);
+  background-color: var(--active-color);
   width: 25px;
   height: 25px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   z-index: 100;
   border-radius: 50%;
   transition: width 0.2s, height 0.2s;
@@ -181,7 +186,7 @@ ul {
   top: calc(50% - 75px);
   width: 50px;
   height: 50px;
-  opacity: 0;
+  /* opacity: 0; */
   border-left: 5px solid var(--color);
   border-top: 5px solid var(--color);
   box-sizing: border-box;
@@ -214,7 +219,7 @@ ul {
   top: calc(50% - 75px);
   width: 50px;
   height: 50px;
-  opacity: 0;
+  /* opacity: 0; */
   border-right: 5px solid var(--color);
   border-top: 5px solid var(--color);
   box-sizing: border-box;
@@ -247,7 +252,7 @@ ul {
   bottom: calc(50% - 75px);
   width: 50px;
   height: 50px;
-  opacity: 0;
+  /* opacity: 0; */
   border-left: 5px solid var(--color);
   border-bottom: 5px solid var(--color);
   box-sizing: border-box;
@@ -278,7 +283,7 @@ ul {
   position: fixed;
   right: calc(50% - 75px);
   bottom: calc(50% - 75px);
-  opacity: 0;
+  /* opacity: 0; */
   width: 50px;
   height: 50px;
   border-right: 5px solid var(--color);
@@ -309,6 +314,8 @@ ul {
 
 @media screen and (width < 1000px) {
   .cube-top-left {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
     width: 25px;
     height: 25px;
   }
@@ -331,6 +338,8 @@ ul {
   }
 
   .cube-top-right {
+    top: calc(50% - 50px);
+    right: calc(50% - 50px);
     width: 25px;
     height: 25px;
   }
@@ -353,6 +362,8 @@ ul {
   }
 
   .cube-bottom-left {
+    bottom: calc(50% - 50px);
+    left: calc(50% - 50px);
     width: 25px;
     height: 25px;
   }
@@ -375,6 +386,8 @@ ul {
   }
 
   .cube-bottom-right {
+    bottom: calc(50% - 50px);
+    right: calc(50% - 50px);
     width: 25px;
     height: 25px;
   }

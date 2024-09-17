@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import Skills from "./pages/skills/Skills";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Contact from "./pages/contact/Contact";
+import Playground from "./pages/playground/Playground";
 import Nav from "./components/nav/Nav";
 import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
@@ -48,6 +49,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/playground" element={<Playground />} />
           </Routes>
           <Footer />
         </Router>

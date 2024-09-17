@@ -13,10 +13,12 @@ function Project({
 }) {
   function brightCursor() {
     document.querySelector("#custom-cursor").classList.add("active-cursor");
+    document.querySelector("#custom-cursor").textContent = `Link`;
   }
 
   function lowerCursor() {
     document.querySelector("#custom-cursor").classList.remove("active-cursor");
+    document.querySelector("#custom-cursor").textContent = ``;
   }
   return (
     <>
