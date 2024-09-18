@@ -14,16 +14,6 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
-    // setTimeout(() => {
-    // document.querySelector(".cube-top-left").style.animation =
-    //   "setCubeTopLeft 2s forwards";
-    // document.querySelector(".cube-top-right").style.animation =
-    //   "setCubeTopRight 2s forwards";
-    // document.querySelector(".cube-bottom-left").style.animation =
-    //   "setCubeBottomLeft 2s forwards";
-    // document.querySelector(".cube-bottom-right").style.animation =
-    //   "setCubeBottomRight 2s forwards";
-    // }, 3000);
     setTimeout(() => {
       document.querySelector(".main").style.display = "initial";
     }, 3000);
@@ -43,7 +33,6 @@ function App() {
       <Loading />
       <div id="circle"></div>
       <div id="custom-cursor"></div>
-
       <main className="main">
         <Router>
           <div className="cube-top-left"></div>

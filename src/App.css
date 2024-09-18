@@ -263,7 +263,7 @@ ul {
   transition: all 1s;
   z-index: 99;
   pointer-events: none;
-  animation: setCubeBottomRight 2s forwards;
+  animation: setCubeBottomRight 1s forwards;
 }
 
 @keyframes setCubeBottomRight {
