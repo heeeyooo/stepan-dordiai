@@ -183,108 +183,78 @@ ul {
 
 .cube-top-left {
   position: fixed;
-  left: calc(50% - 75px);
-  top: calc(50% - 75px);
+  left: 50px;
+  top: 50px;
   width: 50px;
   height: 50px;
-  /* opacity: 0; */
+  opacity: 1;
   border-left: 5px solid var(--color);
   border-top: 5px solid var(--color);
   box-sizing: border-box;
   transition: all 1s;
   z-index: 99;
   pointer-events: none;
-  animation: setCubeTopLeft 2s 3s forwards;
+  animation: setCubeTopLeft 1s forwards;
 }
 
 @keyframes setCubeTopLeft {
-  50% {
-    width: 50px;
-    height: 50px;
-    left: 50px;
-    top: 50px;
-    opacity: 1;
-  }
   100% {
     width: 100px;
     height: 100px;
-    left: 50px;
-    top: 50px;
-    opacity: 1;
   }
 }
 
 .cube-top-right {
   position: fixed;
-  right: calc(50% - 75px);
-  top: calc(50% - 75px);
+  top: 50px;
+  right: 50px;
   width: 50px;
   height: 50px;
-  /* opacity: 0; */
+  opacity: 1;
   border-right: 5px solid var(--color);
   border-top: 5px solid var(--color);
   box-sizing: border-box;
   transition: all 1s;
   z-index: 99;
   pointer-events: none;
-  animation: setCubeTopRight 2s 3s forwards;
+  animation: setCubeTopRight 1s forwards;
 }
 
 @keyframes setCubeTopRight {
-  50% {
-    width: 50px;
-    height: 50px;
-    top: 50px;
-    right: 50px;
-    opacity: 1;
-  }
   100% {
     width: 100px;
     height: 100px;
-    top: 50px;
-    right: 50px;
-    opacity: 1;
   }
 }
 
 .cube-bottom-left {
   position: fixed;
-  left: calc(50% - 75px);
-  bottom: calc(50% - 75px);
+  bottom: 50px;
+  left: 50px;
   width: 50px;
   height: 50px;
-  /* opacity: 0; */
+  opacity: 1;
   border-left: 5px solid var(--color);
   border-bottom: 5px solid var(--color);
   box-sizing: border-box;
   transition: all 1s;
   z-index: 99;
   pointer-events: none;
-  animation: setCubeBottomLeft 2s 3s forwards;
+  animation: setCubeBottomLeft 1s forwards;
 }
 
 @keyframes setCubeBottomLeft {
-  50% {
-    width: 50px;
-    height: 50px;
-    bottom: 50px;
-    left: 50px;
-    opacity: 1;
-  }
   100% {
     width: 100px;
     height: 100px;
-    bottom: 50px;
-    left: 50px;
-    opacity: 1;
   }
 }
 
 .cube-bottom-right {
   position: fixed;
-  right: calc(50% - 75px);
-  bottom: calc(50% - 75px);
-  /* opacity: 0; */
+  bottom: 50px;
+  right: 50px;
+  opacity: 1;
   width: 50px;
   height: 50px;
   border-right: 5px solid var(--color);
@@ -293,120 +263,70 @@ ul {
   transition: all 1s;
   z-index: 99;
   pointer-events: none;
-  animation: setCubeBottomRight 2s 3s forwards;
+  animation: setCubeBottomRight 2s forwards;
 }
 
 @keyframes setCubeBottomRight {
-  50% {
-    width: 50px;
-    height: 50px;
-    bottom: 50px;
-    right: 50px;
-    opacity: 1;
-  }
   100% {
     width: 100px;
     height: 100px;
-    bottom: 50px;
-    right: 50px;
-    opacity: 1;
   }
 }
 
 @media screen and (width < 1000px) {
   .cube-top-left {
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
+    top: 25px;
+    left: 25px;
     width: 25px;
     height: 25px;
   }
 
   @keyframes setCubeTopLeft {
-    50% {
-      width: 25px;
-      height: 25px;
-      top: 25px;
-      left: 25px;
-      opacity: 1;
-    }
     100% {
       width: 50px;
       height: 50px;
-      top: 25px;
-      left: 25px;
-      opacity: 1;
     }
   }
 
   .cube-top-right {
-    top: calc(50% - 50px);
-    right: calc(50% - 50px);
+    top: 25px;
+    right: 25px;
     width: 25px;
     height: 25px;
   }
 
   @keyframes setCubeTopRight {
-    50% {
-      width: 25px;
-      height: 25px;
-      top: 25px;
-      right: 25px;
-      opacity: 1;
-    }
     100% {
       width: 50px;
       height: 50px;
-      top: 25px;
-      right: 25px;
-      opacity: 1;
     }
   }
 
   .cube-bottom-left {
-    bottom: calc(50% - 50px);
-    left: calc(50% - 50px);
+    bottom: 25px;
+    left: 25px;
     width: 25px;
     height: 25px;
   }
 
   @keyframes setCubeBottomLeft {
-    50% {
-      width: 25px;
-      height: 25px;
-      bottom: 25px;
-      left: 25px;
-      opacity: 1;
-    }
     100% {
       width: 50px;
       height: 50px;
-      bottom: 25px;
-      left: 25px;
-      opacity: 1;
     }
   }
 
   .cube-bottom-right {
-    bottom: calc(50% - 50px);
-    right: calc(50% - 50px);
+    bottom: 25px;
+    right: 25px;
     width: 25px;
     height: 25px;
   }
 
   @keyframes setCubeBottomRight {
-    50% {
-      width: 25px;
-      height: 25px;
-      bottom: 25px;
-      right: 25px;
-      opacity: 1;
-    }
     100% {
       width: 50px;
       height: 50px;
-      bottom: 25px;
-      right: 25px;
-      opacity: 1;
     }
   }
 

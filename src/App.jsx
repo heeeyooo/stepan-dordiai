@@ -14,9 +14,19 @@ import "./App.css";
 
 function App() {
   useEffect(() => {
+    // setTimeout(() => {
+    // document.querySelector(".cube-top-left").style.animation =
+    //   "setCubeTopLeft 2s forwards";
+    // document.querySelector(".cube-top-right").style.animation =
+    //   "setCubeTopRight 2s forwards";
+    // document.querySelector(".cube-bottom-left").style.animation =
+    //   "setCubeBottomLeft 2s forwards";
+    // document.querySelector(".cube-bottom-right").style.animation =
+    //   "setCubeBottomRight 2s forwards";
+    // }, 3000);
     setTimeout(() => {
       document.querySelector(".main").style.display = "initial";
-    }, 4000);
+    }, 3000);
   }, []);
 
   addEventListener("mousemove", (event) => {
@@ -33,14 +43,15 @@ function App() {
       <Loading />
       <div id="circle"></div>
       <div id="custom-cursor"></div>
-      <div className="cube-top-left"></div>
-      <div className="cube-top-right"></div>
-      <div className="cube-bottom-right"></div>
-      <div className="cube-bottom-left"></div>
+
       <main className="main">
-        <div className="shadow-top"></div>
-        <div className="shadow-bottom"></div>
         <Router>
+          <div className="cube-top-left"></div>
+          <div className="cube-top-right"></div>
+          <div className="cube-bottom-right"></div>
+          <div className="cube-bottom-left"></div>
+          <div className="shadow-top"></div>
+          <div className="shadow-bottom"></div>
           <Nav />
           <DarkMode />
           <Routes>
