@@ -4,10 +4,10 @@ function Project({
   id,
   title,
   titleName,
-  skill,
-  skill2,
-  skill3,
-  skill4,
+  skills,
+  // skill2,
+  // skill3,
+  // skill4,
   link,
   gitHubLink,
 }) {
@@ -30,10 +30,13 @@ function Project({
             <h4 className="project-title">{title}</h4>
           </div>
           <div className="project-skills">
-            <i className={skill}></i>
-            <span>{skill2}</span>
-            <i className={skill3}></i>
-            <i className={skill4}></i>
+            {skills.map((item, index) => {
+              return <span key={index}>{item}</span>;
+            })}
+            {/* <i className={skill}></i> */}
+            {/* <span>{skill2}</span> */}
+            {/* <i className={skill3}></i> */}
+            {/* <i className={skill4}></i> */}
           </div>
           <div className="project-links-container">
             <a
@@ -43,7 +46,9 @@ function Project({
               target="_blank"
             >
               Live demo{" "}
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <span className="material-symbols-outlined project-arrow">
+                arrow_outward
+              </span>
             </a>
             <a
               href={gitHubLink}
@@ -52,7 +57,9 @@ function Project({
               target="_blank"
             >
               Github code{" "}
-              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+              <span className="material-symbols-outlined project-arrow">
+                arrow_outward
+              </span>
             </a>
           </div>
         </div>

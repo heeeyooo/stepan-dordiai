@@ -54,10 +54,6 @@ function App() {
           <Footer />
         </Router>
       </main>
-      <div className="blur-container"></div>
-      <div className="bulb-container">
-        <div className="bulb"></div>
-      </div>
     </>
   );
 }

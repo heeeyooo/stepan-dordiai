@@ -54,11 +54,11 @@
     width: 50%;
     padding-left: 25px;
     box-sizing: border-box;
-    background-color: var(--background);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     transform: translateX(0);
-    transition: transform 0.5s ease, background-color 1s;
+    transition: all 0.5s ease, background-color 1s;
   }
 
   @keyframes revealNav {
@@ -69,6 +69,9 @@
 }
 
 .nav--active {
+  background-color: var(--background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transform: translateX(calc(100% - 25px));
-  transition: transform 0.5s ease, background-color 1s;
+  transition: all 0.5s ease, background-color 1s;
 }

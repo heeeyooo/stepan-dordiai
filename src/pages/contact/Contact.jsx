@@ -109,6 +109,10 @@ function Contact() {
           <i className="fa-brands fa-behance"></i>
         </a>
       </div>
+      <div className="blur-container"></div>
+      <div className="bulb-container">
+        <div className="bulb"></div>
+      </div>
     </>
   );
 }

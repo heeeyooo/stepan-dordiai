@@ -1,16 +1,96 @@
 .playground {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  color: var(--color);
-  transition: color 1s;
-  opacity: 0;
-  animation: revealPlayground 1s forwards;
+  right: 100px;
+  top: 0;
+  bottom: 0;
+  padding: 100px 0;
+  width: calc(50% - 100px);
+  overflow-y: scroll;
 }
 
-@keyframes revealPlayground {
+.playground-project {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color);
+  box-sizing: border-box;
+  opacity: 0;
+  transition: border-color 1s;
+}
+
+.playground-project:nth-of-type(1) {
+  animation: revealProject 0.5s forwards;
+}
+
+.playground-project:nth-of-type(2) {
+  animation: revealProject 0.5s 0.1s forwards;
+}
+
+.playground-project:nth-of-type(3) {
+  animation: revealProject 0.5s 0.2s forwards;
+}
+
+.playground-project:nth-of-type(4) {
+  animation: revealProject 0.5s 0.3s forwards;
+}
+
+.playground-project:nth-of-type(5) {
+  animation: revealProject 0.5s 0.4s forwards;
+}
+
+@keyframes revealProject {
   to {
     opacity: 1;
+  }
+}
+
+.playground-project__number {
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 200;
+  color: var(--color);
+  transition: color 1s;
+}
+
+.playground-project__link {
+  color: var(--color);
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 400;
+  transition: color 1s;
+}
+
+.pg-project-arrow {
+  font-size: clamp(24px, 3vw, 30px);
+  vertical-align: middle;
+}
+
+.playground__bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  color: var(--active-color);
+  font-size: clamp(45px, 8vw, 100px);
+  margin: 0;
+  opacity: 0;
+  z-index: -2;
+  animation: revealPlaygroundBg 1s forwards;
+}
+
+@keyframes revealPlaygroundBg {
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (width < 1000px) {
+  .playground {
+    padding: 50px 0;
+    right: 50px;
+    left: 50px;
+    width: calc(100% - 100px);
   }
 }
