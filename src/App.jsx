@@ -13,49 +13,47 @@ import Footer from "./components/footer/Footer";
 import "./App.css";
 
 function App() {
-  useEffect(() => {
-    setTimeout(() => {
-      document.querySelector(".main").style.display = "initial";
-    }, 3000);
-  }, []);
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelector(".main").style.display = "initial";
+        }, 3000);
+    }, []);
 
-  addEventListener("mousemove", (event) => {
-    let x1 = event.clientX;
-    let y1 = event.clientY;
-    document.querySelector("#custom-cursor").style.left = x1 + "px";
-    document.querySelector("#custom-cursor").style.top = y1 + "px";
-    document.querySelector("#circle").style.left = x1 + "px";
-    document.querySelector("#circle").style.top = y1 + "px";
-  });
+    addEventListener("mousemove", (event) => {
+        let x1 = event.clientX;
+        let y1 = event.clientY;
+        document.querySelector("#custom-cursor").style.left = x1 + "px";
+        document.querySelector("#custom-cursor").style.top = y1 + "px";
+        document.querySelector("#circle").style.left = x1 + "px";
+        document.querySelector("#circle").style.top = y1 + "px";
+    });
 
-  return (
-    <>
-      <Loading />
-      <div id="circle"></div>
-      <div id="custom-cursor"></div>
-      <main className="main">
-        <Router>
-          <div className="cube-top-left"></div>
-          <div className="cube-top-right"></div>
-          <div className="cube-bottom-right"></div>
-          <div className="cube-bottom-left"></div>
-          <div className="shadow-top"></div>
-          <div className="shadow-bottom"></div>
-          <Nav />
-          <DarkMode />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/playground" element={<Playground />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </main>
-    </>
-  );
+    return (
+        <>
+            <Loading />
+            <div id="circle"></div>
+            <div id="custom-cursor"></div>
+            <main className="main">
+                <Router>
+                    <div className="cube-top-left"></div>
+                    <div className="cube-top-right"></div>
+                    <div className="cube-bottom-right"></div>
+                    <div className="cube-bottom-left"></div>
+                    <Nav />
+                    <DarkMode />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/skills" element={<Skills />} />
+                        <Route path="/portfolio" element={<Portfolio />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/playground" element={<Playground />} />
+                    </Routes>
+                    <Footer />
+                </Router>
+            </main>
+        </>
+    );
 }
 
 export default App;

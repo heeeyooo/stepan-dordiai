@@ -1,77 +1,76 @@
 .nav {
-  position: fixed;
-  left: -120px;
-  top: 0;
-  bottom: 0;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  z-index: 110;
-  animation: revealNav 1s forwards;
+    position: fixed;
+    left: -120px;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    z-index: 110;
+    animation: revealNav 1s forwards;
 }
 
 @keyframes revealNav {
-  to {
-    left: 50px;
-  }
+    to {
+        left: 50px;
+    }
 }
 
 .nav__list {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .nav__link {
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px 0;
-  background-color: var(--color);
-  width: 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: width 0.5s ease, background-color 1s;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0;
+    background-color: var(--color);
+    width: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: width 0.5s ease, background-color 1s;
 }
 
 .nav__link span {
-  background-color: var(--semi-transparent-color);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-color 1s;
+    background-color: var(--semi-transparent-50);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-color 1s;
 }
 
 .nav__link--active {
-  width: 100%;
-  transition: width 0.5s ease, background-color 1s;
+    width: 100%;
+    transition: width 0.5s ease, background-color 1s;
 }
 
 @media screen and (width < 1000px) {
-  .nav {
-    left: -50%;
-    width: 50%;
-    padding-left: 25px;
-    box-sizing: border-box;
-    background-color: transparent;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-    transform: translateX(0);
-    transition: all 0.5s ease, background-color 1s;
-  }
-
-  @keyframes revealNav {
-    to {
-      left: calc(-50% + 25px);
+    .nav {
+        left: -50%;
+        width: 50%;
+        padding-left: 25px;
+        box-sizing: border-box;
+        background-color: transparent;
+        backdrop-filter: blur(0);
+        -webkit-backdrop-filter: blur(0);
+        transform: translateX(0);
+        transition: all 0.5s ease;
     }
-  }
+
+    @keyframes revealNav {
+        to {
+            left: calc(-50% + 25px);
+        }
+    }
 }
 
 .nav--active {
-  background-color: var(--background);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transform: translateX(calc(100% - 25px));
-  transition: all 0.5s ease, background-color 1s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: translateX(calc(100% - 25px));
+    transition: all 0.5s ease;
 }

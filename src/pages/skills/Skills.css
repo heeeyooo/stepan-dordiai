@@ -1,20 +1,21 @@
 .skills-container {
-  position: fixed;
-  top: 0;
-  right: 100px;
-  bottom: 0;
-  padding: 100px 0;
-  width: calc(50% - 100px);
-  overflow-y: scroll;
-  color: var(--color);
-  z-index: 96;
+    position: fixed;
+    top: 0;
+    right: 100px;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 100px 0;
+    overflow-y: scroll;
+    width: calc(50% - 100px);
 }
 
 @media screen and (width < 1000px) {
-  .skills-container {
-    padding: 50px 0;
-    right: 50px;
-    left: 50px;
-    width: calc(100% - 100px);
-  }
+    .skills-container {
+        right: 50px;
+        left: 50px;
+        padding: 50px 0;
+        width: calc(100% - 100px);
+    }
 }

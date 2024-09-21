@@ -1,303 +1,57 @@
-.skill-container {
-  display: flex;
-  width: 100%;
-  gap: 25px;
-  height: 100px;
-  opacity: 0;
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--semi-transparent-10);
+    opacity: 0;
+    scale: 0.5;
+    transition: background-color 1s;
 }
 
-.skill-container:not(:nth-last-of-type(1)) {
-  margin-bottom: 25px;
+.skill:nth-child(1) {
+    animation: revealSkill 0.5s forwards;
+}
+.skill:nth-child(2) {
+    animation: revealSkill 0.5s 0.1s forwards;
+}
+.skill:nth-child(3) {
+    animation: revealSkill 0.5s 0.2s forwards;
+}
+.skill:nth-child(4) {
+    animation: revealSkill 0.5s 0.3s forwards;
+}
+.skill:nth-child(5) {
+    animation: revealSkill 0.5s 0.4s forwards;
+}
+.skill:nth-child(6) {
+    animation: revealSkill 0.5s 0.5s forwards;
+}
+.skill:nth-child(7) {
+    animation: revealSkill 0.5s 0.6s forwards;
+}
+.skill:nth-child(8) {
+    animation: revealSkill 0.5s 0.7s forwards;
+}
+.skill:nth-child(9) {
+    animation: revealSkill 0.5s 0.8s forwards;
 }
 
-.skill-container:nth-child(1) {
-  animation: revealSkillContainer 0.5s forwards;
-}
-.skill-container:nth-child(2) {
-  animation: revealSkillContainer 0.5s 0.1s forwards;
-}
-.skill-container:nth-child(3) {
-  animation: revealSkillContainer 0.5s 0.2s forwards;
-}
-.skill-container:nth-child(4) {
-  animation: revealSkillContainer 0.5s 0.3s forwards;
-}
-.skill-container:nth-child(5) {
-  animation: revealSkillContainer 0.5s 0.4s forwards;
-}
-.skill-container:nth-child(6) {
-  animation: revealSkillContainer 0.5s 0.5s forwards;
-}
-.skill-container:nth-child(7) {
-  animation: revealSkillContainer 0.5s 0.6s forwards;
-}
-.skill-container:nth-child(8) {
-  animation: revealSkillContainer 0.5s 0.7s forwards;
-}
-.skill-container:nth-child(9) {
-  animation: revealSkillContainer 0.5s 0.8s forwards;
+@keyframes revealSkill {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
-@keyframes revealSkillContainer {
-  to {
-    opacity: 1;
-  }
-}
-
-.skill-icon-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  transition: color 1s;
-}
-
-.skill-icon-container:hover .line1,
-.skill-icon-container:hover .line2,
-.skill-icon-container:hover .line3,
-.skill-icon-container:hover .line4 {
-  width: 30px;
-  height: 30px;
-}
-
-.skill-icon-container i {
-  font-size: 36px;
-}
-
-.line1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  border-top: 5px solid var(--color);
-  border-left: 5px solid var(--color);
-  box-sizing: border-box;
-  transition: border-color 1s, width 0.5s, height 0.5s;
-}
-.line2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 15px;
-  height: 15px;
-  border-top: 5px solid var(--color);
-  border-right: 5px solid var(--color);
-  box-sizing: border-box;
-  transition: border-color 1s, width 0.5s, height 0.5s;
-}
-.line3 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 15px;
-  height: 15px;
-  border-right: 5px solid var(--color);
-  border-bottom: 5px solid var(--color);
-  box-sizing: border-box;
-  transition: border-color 1s, width 0.5s, height 0.5s;
-}
-.line4 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 15px;
-  height: 15px;
-  border-bottom: 5px solid var(--color);
-  border-left: 5px solid var(--color);
-  box-sizing: border-box;
-  transition: border-color 1s, width 0.5s, height 0.5s;
-}
-
-.skill-info-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: calc(100% - 125px);
-}
-
-.skill-info-container p {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 200;
-  transition: color 1s;
-}
-
-.skill-range {
-  width: 100%;
-  height: 5px;
-  background: var(--glass-background);
-  position: relative;
-  transition: background-color 1s;
-}
-
-.python-background-range,
-.html-background-range,
-.css-background-range,
-.js-background-range,
-.git-background-range,
-.github-background-range,
-.sass-background-range,
-.figma-background-range,
-.react-background-range {
-  position: absolute;
-  height: 5px;
-  background-color: greenyellow;
-  width: 0%;
-  animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
-  transition: background-color 1s;
-}
-
-.python-background-range {
-  animation: pythonLoad 2s 0.5s forwards;
-}
-
-@keyframes pythonLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-.html-background-range {
-  animation: htmlLoad 2s 0.6s forwards;
-}
-@keyframes htmlLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 96%;
-  }
-}
-
-.css-background-range {
-  animation: cssLoad 2s 0.7s forwards;
-}
-
-@keyframes cssLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 65%;
-  }
-}
-
-.js-background-range {
-  animation: jsLoad 2s 0.8s forwards;
-}
-
-@keyframes jsLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 87%;
-  }
-}
-.git-background-range {
-  animation: gitLoad 2s 0.9s forwards;
-}
-
-@keyframes gitLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 52%;
-  }
-}
-.github-background-range {
-  animation: githubLoad 2s 1s forwards;
-}
-
-@keyframes githubLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 52%;
-  }
-}
-.sass-background-range {
-  animation: sassLoad 2s 1.1s forwards;
-}
-
-@keyframes sassLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 87%;
-  }
-}
-.figma-background-range {
-  animation: figmaLoad 2s 1.2s forwards;
-}
-
-@keyframes figmaLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 75%;
-  }
-}
-.react-background-range {
-  animation: reactLoad 2s 1.3s forwards;
-}
-
-@keyframes reactLoad {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
+.skill i {
+    font-size: 3em;
+    color: var(--color);
 }
 
 @media screen and (width < 1000px) {
-  .skill-container {
-    height: 50px;
-  }
-
-  .skill-icon-container {
-    width: 50px;
-    height: 50px;
-  }
-
-  .skill-icon-container:hover .line1,
-  .skill-icon-container:hover .line2,
-  .skill-icon-container:hover .line3,
-  .skill-icon-container:hover .line4 {
-    width: 15px;
-    height: 15px;
-  }
-
-  .skill-icon-container i {
-    font-size: 24px;
-  }
-
-  .line1,
-  .line2,
-  .line3,
-  .line4 {
-    width: 10px;
-    height: 10px;
-    border-width: 2.5px;
-  }
-
-  .skill-info-container {
-    width: calc(100% - 75px);
-  }
-
-  .skill-info-container p {
-    font-size: 18px;
-    font-weight: 300;
-  }
+    .skill i {
+        font-size: 2em;
+    }
 }
