@@ -27,6 +27,10 @@ function DarkMode() {
                 "--semi-transparent-50",
                 "rgba(0, 0, 0, 0.5)"
             );
+            variables.style.setProperty(
+                "--semi-transparent-black-50",
+                "rgba(255, 255, 255, 0.5)"
+            );
             refBtn.current.textContent = "DARK";
         } else {
             variables.style.setProperty("--bg-color", "#171717");
@@ -42,6 +46,10 @@ function DarkMode() {
             variables.style.setProperty(
                 "--semi-transparent-50",
                 "rgba(255, 255, 255, 0.5)"
+            );
+            variables.style.setProperty(
+                "--semi-transparent-black-50",
+                "rgba(0, 0, 0, 0.5)"
             );
             refBtn.current.textContent = "LIGHT";
         }

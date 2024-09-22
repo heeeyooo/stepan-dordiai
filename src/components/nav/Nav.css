@@ -69,8 +69,9 @@
 }
 
 .nav--active {
+    background-color: var(--semi-transparent-black-50);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transform: translateX(calc(100% - 25px));
-    transition: all 0.5s ease;
+    transition: all 0.5s ease, background-color 1s;
 }

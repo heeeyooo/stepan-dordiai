@@ -1,14 +1,51 @@
 .skills-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 100px;
     max-height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
     padding: 100px 0;
     overflow-y: scroll;
     width: calc(50% - 100px);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.skills__title {
+    color: var(--color);
+    margin: 50px 0;
+    font-size: clamp(18px, 3vw, 30px);
+    font-weight: 200;
+    transition: color 1s;
+}
+
+.current-skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--semi-transparent-10);
+    opacity: 0;
+    scale: 0.5;
+    transition: background-color 1s;
+    animation: revealCurrentSkill 0.5s 0.9s forwards;
+}
+
+@keyframes revealCurrentSkill {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.current-skill i {
+    font-size: 3em;
+    color: var(--color);
+    transition: color 1s;
 }
 
 @media screen and (width < 1000px) {
@@ -17,5 +54,11 @@
         left: 50px;
         padding: 50px 0;
         width: calc(100% - 100px);
+    }
+    .skills__title {
+        margin: 25px 0;
+    }
+    .current-skill i {
+        font-size: 2em;
     }
 }

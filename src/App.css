@@ -7,6 +7,7 @@
     --semi-transparent-10: rgba(255, 255, 255, 0.1);
     --semi-transparent-25: rgba(255, 255, 255, 0.25);
     --semi-transparent-50: rgba(255, 255, 255, 0.5);
+    --semi-transparent-black-50: rgba(0, 0, 0, 0.5);
 }
 
 body {
