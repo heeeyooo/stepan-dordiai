@@ -12,8 +12,8 @@ function DarkMode() {
         const variables = document.querySelector(":root");
 
         if (lightMode === "light") {
-            variables.style.setProperty("--bg-color", "#faf9f6");
-            variables.style.setProperty("--color", "#171717");
+            variables.style.setProperty("--bg-color", "#ffffff");
+            variables.style.setProperty("--color", "#000000");
             variables.style.setProperty(
                 "--semi-transparent-10",
                 "rgba(0, 0, 0, 0.1)"
@@ -33,8 +33,8 @@ function DarkMode() {
             );
             refBtn.current.textContent = "DARK";
         } else {
-            variables.style.setProperty("--bg-color", "#171717");
-            variables.style.setProperty("--color", "#faf9f6");
+            variables.style.setProperty("--bg-color", "#000000");
+            variables.style.setProperty("--color", "#ffffff");
             variables.style.setProperty(
                 "--semi-transparent-10",
                 "rgba(255, 255, 255, 0.1)"

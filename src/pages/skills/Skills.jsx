@@ -4,9 +4,9 @@ import "./Skills.css";
 
 function Skills() {
     //
-    function brightCursor() {
+    function brightCursor(props) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");
-        document.querySelector("#custom-cursor").textContent = "Node.js";
+        document.querySelector("#custom-cursor").textContent = props;
     }
 
     function lowerCursor() {
@@ -16,6 +16,13 @@ function Skills() {
         document.querySelector("#custom-cursor").textContent = "";
     }
     //
+
+    function scrollUp() {
+        document.querySelector(".skills-container").scrollTop -= 100;
+    }
+    function scrollDown() {
+        document.querySelector(".skills-container").scrollTop += 100;
+    }
     return (
         <>
             <div className="skills-container">
@@ -33,7 +40,7 @@ function Skills() {
                 <p className="skills__title">Currently learning</p>
                 <div className="skills">
                     <div
-                        onMouseEnter={brightCursor}
+                        onMouseEnter={() => brightCursor("Node.js")}
                         onMouseLeave={lowerCursor}
                         className="current-skill"
                     >
@@ -41,7 +48,22 @@ function Skills() {
                     </div>
                 </div>
             </div>
-
+            <button
+                onMouseEnter={() => brightCursor("Up")}
+                onMouseLeave={lowerCursor}
+                onClick={scrollUp}
+                className="scroll__up-btn"
+            >
+                <i className="fa-solid fa-arrow-up-long"></i>
+            </button>
+            <button
+                onMouseEnter={() => brightCursor("Down")}
+                onMouseLeave={lowerCursor}
+                onClick={scrollDown}
+                className="scroll__down-btn"
+            >
+                <i className="fa-solid fa-arrow-down-long"></i>
+            </button>
             {/*  */}
             <div className="blur-container"></div>
             <div className="bulb-container">
