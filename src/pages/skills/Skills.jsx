@@ -26,8 +26,11 @@ function Skills() {
     return (
         <>
             <div className="skills-container">
+                <p className="skills__title">FRONTEND</p>
                 <div className="skills">
-                    {SKILLSDATA.map((skill) => {
+                    {SKILLSDATA.filter((skill) => {
+                        return skill.info === "frontend";
+                    }).map((skill) => {
                         return (
                             <Skill
                                 key={skill.id}
@@ -37,15 +40,47 @@ function Skills() {
                         );
                     })}
                 </div>
-                <p className="skills__title">Currently learning</p>
+                <p className="skills__title">BACKEND</p>
                 <div className="skills">
-                    <div
-                        onMouseEnter={() => brightCursor("Node.js")}
-                        onMouseLeave={lowerCursor}
-                        className="current-skill"
-                    >
-                        <i className="fa-brands fa-node"></i>
-                    </div>
+                    {SKILLSDATA.filter((skill) => {
+                        return skill.info === "backend";
+                    }).map((skill) => {
+                        return (
+                            <Skill
+                                key={skill.id}
+                                icon={skill.icon}
+                                id={skill.id}
+                            />
+                        );
+                    })}
+                </div>
+                <p className="skills__title">UI/UX</p>
+                <div className="skills">
+                    {SKILLSDATA.filter((skill) => {
+                        return skill.info === "ui-ux";
+                    }).map((skill) => {
+                        return (
+                            <Skill
+                                key={skill.id}
+                                icon={skill.icon}
+                                id={skill.id}
+                            />
+                        );
+                    })}
+                </div>
+                <p className="skills__title">CURRENTLY LEARNING</p>
+                <div className="skills">
+                    {SKILLSDATA.filter((skill) => {
+                        return skill.info === "currently-learning";
+                    }).map((skill) => {
+                        return (
+                            <Skill
+                                key={skill.id}
+                                icon={skill.icon}
+                                id={skill.id}
+                            />
+                        );
+                    })}
                 </div>
             </div>
             <button

@@ -17,10 +17,10 @@ function Portfolio() {
     }
     //
     function scrollUp() {
-        document.querySelector(".portfolio-container").scrollTop -= 100;
+        document.querySelector(".portfolio-container").scrollTop -= 125;
     }
     function scrollDown() {
-        document.querySelector(".portfolio-container").scrollTop += 100;
+        document.querySelector(".portfolio-container").scrollTop += 125;
     }
     return (
         <>
