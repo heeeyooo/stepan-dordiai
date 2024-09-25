@@ -1,5 +1,5 @@
 import Project from "../../components/project/Project";
-import projectSet from "../../data/projectsData";
+import PROJECTSDATA from "../../data/projectsData";
 import "./Portfolio.css";
 
 function Portfolio() {
@@ -25,7 +25,7 @@ function Portfolio() {
     return (
         <>
             <div className="portfolio-container">
-                {projectSet.map((project) => {
+                {PROJECTSDATA.map((project) => {
                     return (
                         <Project
                             key={project.id}
@@ -33,8 +33,7 @@ function Portfolio() {
                             title={project.title}
                             titleName={project.titleName}
                             skills={project.skills}
-                            link={project.link}
-                            gitHubLink={project.gitHubLink}
+                            links={project.links}
                         />
                     );
                 })}

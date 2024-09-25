@@ -82,14 +82,14 @@
     transition: color 1s;
 }
 
-.project-links-container {
+.project-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 25px;
 }
 
-.project-links-container a {
+.project-links a {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
     transition: color 1s;

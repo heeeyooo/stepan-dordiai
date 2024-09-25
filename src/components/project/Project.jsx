@@ -1,9 +1,10 @@
 import "./Project.css";
 
-function Project({ id, title, titleName, skills, link, gitHubLink }) {
-    function brightCursor() {
+function Project({ id, title, titleName, skills, links }) {
+    function brightCursor(info) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");
-        document.querySelector("#custom-cursor").textContent = `Link`;
+        document.querySelector("#custom-cursor").textContent = info;
+        console.log(info);
     }
 
     function lowerCursor() {
@@ -22,33 +23,22 @@ function Project({ id, title, titleName, skills, link, gitHubLink }) {
                         <h4 className="project-title">{title}</h4>
                     </div>
                     <div className="project-skills">
-                        {skills.map((item, index) => {
-                            return <span key={index}>{item}</span>;
+                        {skills.map((skill, index) => {
+                            return <span key={index}>{skill}</span>;
                         })}
                     </div>
-                    <div className="project-links-container">
-                        <a
-                            href={link}
-                            onMouseEnter={brightCursor}
-                            onMouseLeave={lowerCursor}
-                            target="_blank"
-                        >
-                            Live demo{" "}
-                            <span className="material-symbols-outlined project-arrow">
-                                arrow_outward
-                            </span>
-                        </a>
-                        <a
-                            href={gitHubLink}
-                            onMouseEnter={brightCursor}
-                            onMouseLeave={lowerCursor}
-                            target="_blank"
-                        >
-                            Github code{" "}
-                            <span className="material-symbols-outlined project-arrow">
-                                arrow_outward
-                            </span>
-                        </a>
+                    <div className="project-links">
+                        {links.map(({ link, info }) => {
+                            return (
+                                <span
+                                    onMouseEnter={() => brightCursor(info)}
+                                    onMouseLeave={lowerCursor}
+                                    key={info}
+                                >
+                                    {link}
+                                </span>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
