@@ -76,12 +76,7 @@ function DarkMode() {
 
     return (
         <div className="dark-mode-container">
-            <a
-                href={Resume}
-                onMouseEnter={brightCursor}
-                onMouseLeave={lowerCursor}
-                target="_blank"
-            >
+            <a href={Resume} target="_blank">
                 RESUME
             </a>
             <button

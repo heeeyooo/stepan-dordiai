@@ -15,7 +15,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none !important;
+    /*  */
+    cursor: none;
+    /*  */
 }
 
 ::-webkit-scrollbar {
@@ -120,37 +122,40 @@ body {
 }
 
 #custom-cursor {
+    display: none;
     position: fixed;
     background-color: var(--active-color);
     width: 10px;
     height: 10px;
-    top: 50%;
-    left: 50%;
+    /*  */
+    top: -100px;
+    /*  */
     transform: translate(-50%, -50%);
-    display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     z-index: 100;
     border-radius: 50%;
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.3s, height 0.3s;
     pointer-events: none;
 }
 
 .active-cursor {
+    background-color: var(--active-color);
     width: 100px !important;
     height: 100px !important;
 }
 
 #circle {
+    display: none;
     position: fixed;
     width: 75px;
     height: 75px;
     border: 2px solid var(--semi-transparent-50);
-    top: 50%;
-    left: 50%;
+    /*  */
+    top: -100px;
+    /*  */
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
     z-index: 100;
     border-radius: 50%;
     transition: all 0.1s;
@@ -318,16 +323,6 @@ body {
             width: 50px;
             height: 50px;
         }
-    }
-
-    #custom-cursor {
-        display: none !important;
-    }
-    #circle {
-        display: none !important;
-    }
-    * {
-        cursor: crosshair !important;
     }
     .scroll__up-btn,
     .scroll__down-btn {

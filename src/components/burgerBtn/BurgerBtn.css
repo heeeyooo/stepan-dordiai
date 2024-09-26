@@ -1,61 +1,59 @@
 .burger-container {
-  display: none;
+    display: none;
 }
 
 @media screen and (width < 1000px) {
-  .burger-container {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    .burger-container {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .burger-title {
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-    margin: 0;
-    font-size: clamp(12px, 2vw, 16px);
-    color: var(--color);
-    transition: color 1s;
-  }
+    .burger-title {
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+        font-size: clamp(12px, 2vw, 16px);
+        color: var(--color);
+        transition: color 1s;
+    }
 
-  .burger-btn {
-    width: 20px;
-    height: 0;
-    cursor: crosshair;
-    padding: 10px 0;
-  }
+    .burger-btn {
+        width: 20px;
+        height: 0;
+        padding: 10px 0;
+    }
 
-  .burger-btn::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background-color: var(--color);
-    transform: translateY(-5px);
-    transition: transform 0.3s 0.5s, background-color 1s;
-  }
+    .burger-btn::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: var(--color);
+        transform: translateY(-5px);
+        transition: transform 0.3s 0.5s, background-color 1s;
+    }
 
-  .burger-btn::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background-color: var(--color);
-    transform: translateY(5px);
-    transition: transform 0.3s 0.5s, background-color 1s;
-  }
+    .burger-btn::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: var(--color);
+        transform: translateY(5px);
+        transition: transform 0.3s 0.5s, background-color 1s;
+    }
 
-  .active-burger-btn::before {
-    transform: translateY(0) rotate(-45deg);
-  }
+    .active-burger-btn::before {
+        transform: translateY(0) rotate(-45deg);
+    }
 
-  .active-burger-btn::after {
-    transform: translateY(0) rotate(45deg);
-  }
+    .active-burger-btn::after {
+        transform: translateY(0) rotate(45deg);
+    }
 }

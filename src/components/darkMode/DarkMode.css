@@ -1,46 +1,44 @@
 .dark-mode-container {
-  position: fixed;
-  top: 50px;
-  right: -50px;
-  bottom: 50px;
-  z-index: 98;
-  width: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  animation: revealDarkModeContainer 1s forwards;
+    position: fixed;
+    top: 50px;
+    right: -50px;
+    bottom: 50px;
+    z-index: 98;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    animation: revealDarkModeContainer 1s forwards;
 }
 
 @keyframes revealDarkModeContainer {
-  to {
-    right: 0;
-  }
+    to {
+        right: 0;
+    }
 }
 
 .dark-mode-container a {
-  color: var(--color);
-  font-size: clamp(12px, 2vw, 16px);
-  transition: color 1s;
-  cursor: crosshair;
+    color: var(--color);
+    font-size: clamp(12px, 2vw, 16px);
+    transition: color 1s;
 }
 
 .dark-mode-btn {
-  font-family: inherit;
-  padding: 0;
-  background: transparent;
-  border: none;
-  color: var(--color);
-  font-size: clamp(12px, 2vw, 16px);
-  transition: color 1s;
+    font-family: inherit;
+    background: transparent;
+    border: none;
+    color: var(--color);
+    font-size: clamp(12px, 2vw, 16px);
+    transition: color 1s;
 }
 
 @media screen and (width < 1000px) {
-  .dark-mode-container {
-    top: 25px;
-    bottom: 25px;
-    width: 25px;
-    right: -25px;
-  }
+    .dark-mode-container {
+        top: 25px;
+        bottom: 25px;
+        width: 25px;
+        right: -25px;
+    }
 }

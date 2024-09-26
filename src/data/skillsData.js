@@ -1,51 +1,51 @@
 const SKILLSDATA = [
     {
-        id: "python",
+        id: "Python",
         icon: "fa-brands fa-python",
         info: "backend",
     },
     {
-        id: "html",
+        id: "HTML",
         icon: "fa-brands fa-html5",
         info: "frontend",
     },
     {
-        id: "css",
+        id: "CSS",
         icon: "fa-brands fa-css3-alt",
         info: "frontend",
     },
     {
-        id: "js",
+        id: "JS",
         icon: "fa-brands fa-square-js",
         info: "frontend",
     },
     {
-        id: "git",
+        id: "Git",
         icon: "fa-brands fa-git-alt",
         info: "ui-ux",
     },
     {
-        id: "github",
+        id: "Github",
         icon: "fa-brands fa-github",
         info: "ui-ux",
     },
     {
-        id: "sass",
+        id: "SASS",
         icon: "fa-brands fa-sass",
         info: "frontend",
     },
     {
-        id: "figma",
+        id: "Figma",
         icon: "fa-brands fa-figma",
         info: "ui-ux",
     },
     {
-        id: "react",
+        id: "React",
         icon: "fa-brands fa-react",
         info: "frontend",
     },
     {
-        id: "node",
+        id: "Node.js",
         icon: "fa-brands fa-node",
         info: "currently-learning",
     },
