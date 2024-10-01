@@ -99,12 +99,6 @@ function Skills() {
             >
                 <i className="fa-solid fa-arrow-down-long"></i>
             </button>
-            {/*  */}
-            <div className="blur-container"></div>
-            <div className="bulb-container">
-                <div className="bulb"></div>
-            </div>
-            {/*  */}
         </>
     );
 }

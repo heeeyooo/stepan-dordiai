@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Project.css";
 
 function Project({ id, title, titleName, skills, links }) {
@@ -13,6 +14,17 @@ function Project({ id, title, titleName, skills, links }) {
             .classList.remove("active-cursor");
         document.querySelector("#custom-cursor").textContent = ``;
     }
+
+    useEffect(() => {
+        document
+            .querySelectorAll(".project-container")
+            .forEach((project, index) => {
+                setInterval(() => {
+                    project.style.animation =
+                        "revealProjectContainer 0.5s forwards";
+                }, 100 * index);
+            });
+    }, []);
     return (
         <>
             <div className="project-container">
@@ -31,9 +43,9 @@ function Project({ id, title, titleName, skills, links }) {
                         {links.map(({ link, info }) => {
                             return (
                                 <span
+                                    key={info}
                                     onMouseEnter={() => brightCursor(info)}
                                     onMouseLeave={lowerCursor}
-                                    key={info}
                                 >
                                     {link}
                                 </span>

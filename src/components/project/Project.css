@@ -12,22 +12,6 @@
     margin-bottom: 25px;
 }
 
-.project-container:nth-of-type(1) {
-    animation: revealProjectContainer 0.5s forwards;
-}
-
-.project-container:nth-of-type(2) {
-    animation: revealProjectContainer 0.5s 0.1s forwards;
-}
-
-.project-container:nth-of-type(3) {
-    animation: revealProjectContainer 0.5s 0.2s forwards;
-}
-
-.project-container:nth-of-type(4) {
-    animation: revealProjectContainer 0.5s 0.3s forwards;
-}
-
 @keyframes revealProjectContainer {
     to {
         opacity: 1;

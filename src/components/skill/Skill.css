@@ -7,34 +7,12 @@
     background-color: var(--semi-transparent-10);
     opacity: 0;
     scale: 0.5;
-    /*  */
-    filter: blur(10px);
-    /*  */
     transition: background-color 1s;
-}
-
-.skill:nth-child(1) {
-    animation: revealSkill 0.5s forwards;
-}
-.skill:nth-child(2) {
-    animation: revealSkill 0.5s 0.1s forwards;
-}
-.skill:nth-child(3) {
-    animation: revealSkill 0.5s 0.2s forwards;
-}
-.skill:nth-child(4) {
-    animation: revealSkill 0.5s 0.3s forwards;
-}
-.skill:nth-child(5) {
-    animation: revealSkill 0.5s 0.4s forwards;
 }
 
 @keyframes revealSkill {
     to {
         opacity: 1;
-        /*  */
-        filter: blur(0);
-        /*  */
         scale: 1;
     }
 }

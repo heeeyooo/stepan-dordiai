@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Skill.css";
 
 function Skill({ icon, id }) {
@@ -14,6 +15,13 @@ function Skill({ icon, id }) {
         document.querySelector("#custom-cursor").textContent = "";
     }
     //
+    useEffect(() => {
+        document.querySelectorAll(".skill").forEach((project, index) => {
+            setInterval(() => {
+                project.style.animation = "revealSkill 0.5s forwards";
+            }, 100 * index);
+        });
+    }, []);
     return (
         <div
             onMouseEnter={brightCursor}

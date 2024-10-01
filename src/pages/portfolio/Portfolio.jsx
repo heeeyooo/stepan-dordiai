@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Project from "../../components/project/Project";
 import PROJECTSDATA from "../../data/projectsData";
 import "./Portfolio.css";
@@ -54,10 +55,6 @@ function Portfolio() {
             >
                 <i className="fa-solid fa-arrow-down-long"></i>
             </button>
-            <div className="blur-container"></div>
-            <div className="bulb-container">
-                <div className="bulb"></div>
-            </div>
         </>
     );
 }

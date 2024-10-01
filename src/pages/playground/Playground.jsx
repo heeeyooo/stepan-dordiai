@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import PGPROJECTSDATA from "../../data/pgProjectsData";
 import "./Playground.css";
+import { useState } from "react";
 const Playground = () => {
     //
     function brightCursor(props) {
@@ -20,6 +22,17 @@ const Playground = () => {
     function scrollDown() {
         document.querySelector(".playground").scrollTop += 100;
     }
+
+    useEffect(() => {
+        document
+            .querySelectorAll(".playground-project")
+            .forEach((project, index) => {
+                setInterval(() => {
+                    project.style.animation = "revealProject 0.5s forwards";
+                }, 100 * index);
+            });
+    }, []);
+
     return (
         <>
             <div className="playground">
@@ -64,8 +77,6 @@ const Playground = () => {
             >
                 <i className="fa-solid fa-arrow-down-long"></i>
             </button>
-            <div className="blur-container"></div>
-            <p className="playground__bg">PLAYGROUND</p>
         </>
     );
 };

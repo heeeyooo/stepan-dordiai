@@ -92,6 +92,9 @@ function App() {
                         <Route path="/playground" element={<Playground />} />
                     </Routes>
                     <Footer />
+                    <div className="bulb-container">
+                        <div className="bulb"></div>
+                    </div>
                 </Router>
             </main>
         </>

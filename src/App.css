@@ -15,9 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*  */
     cursor: none;
-    /*  */
 }
 
 ::-webkit-scrollbar {
@@ -71,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    filter: blur(5px);
     z-index: -2;
     pointer-events: none;
     animation: revealBulbContainer 1s forwards;
@@ -105,20 +104,6 @@ body {
     75% {
         border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
     }
-}
-
-.blur-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: var(--background);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    z-index: -1;
-    transition: background-color 1s;
-    pointer-events: none;
 }
 
 #custom-cursor {
