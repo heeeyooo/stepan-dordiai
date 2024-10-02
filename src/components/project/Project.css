@@ -79,6 +79,10 @@
     transition: color 1s;
 }
 
+.inactive-link {
+    display: none;
+}
+
 .project-arrow {
     font-size: clamp(16px, 2vw, 20px);
     vertical-align: middle;

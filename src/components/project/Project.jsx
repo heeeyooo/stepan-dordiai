@@ -1,11 +1,18 @@
 import { useEffect } from "react";
 import "./Project.css";
 
-function Project({ id, title, titleName, skills, links }) {
-    function brightCursor(info) {
+function Project({
+    id,
+    title,
+    titleName,
+    skills,
+    githubLink,
+    liveDemo,
+    extraClass,
+}) {
+    function brightCursor(text) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");
-        document.querySelector("#custom-cursor").textContent = info;
-        console.log(info);
+        document.querySelector("#custom-cursor").textContent = text;
     }
 
     function lowerCursor() {
@@ -36,21 +43,33 @@ function Project({ id, title, titleName, skills, links }) {
                     </div>
                     <div className="project-skills">
                         {skills.map((skill, index) => {
-                            return <span key={index}>{skill}</span>;
+                            return <div key={index}>{skill}</div>;
                         })}
                     </div>
                     <div className="project-links">
-                        {links.map(({ link, info }) => {
-                            return (
-                                <span
-                                    key={info}
-                                    onMouseEnter={() => brightCursor(info)}
-                                    onMouseLeave={lowerCursor}
-                                >
-                                    {link}
-                                </span>
-                            );
-                        })}
+                        <a
+                            onMouseEnter={() => brightCursor("Live")}
+                            onMouseLeave={lowerCursor}
+                            className={extraClass}
+                            href={liveDemo}
+                            target="_blank"
+                        >
+                            Live demo{" "}
+                            <span className="material-symbols-outlined project-arrow">
+                                arrow_outward
+                            </span>
+                        </a>
+                        <a
+                            onMouseEnter={() => brightCursor("Github")}
+                            onMouseLeave={lowerCursor}
+                            href={githubLink}
+                            target="_blank"
+                        >
+                            Github code{" "}
+                            <span className="material-symbols-outlined project-arrow">
+                                arrow_outward
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>

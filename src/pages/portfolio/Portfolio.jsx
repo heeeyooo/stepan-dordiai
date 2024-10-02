@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Project from "../../components/project/Project";
 import PROJECTSDATA from "../../data/projectsData";
 import "./Portfolio.css";
@@ -34,7 +33,9 @@ function Portfolio() {
                             title={project.title}
                             titleName={project.titleName}
                             skills={project.skills}
-                            links={project.links}
+                            githubLink={project.githubLink}
+                            liveDemo={project.liveDemo}
+                            extraClass={project.extraClass}
                         />
                     );
                 })}

@@ -4,55 +4,16 @@ const PROJECTSDATA = [
         title: "Stepan Dordiai",
         titleName: "Portfolio website",
         skills: [<i className="fa-brands fa-react"></i>],
-        links: [
-            {
-                info: "Github",
-                link: [
-                    <a
-                        href="https://github.com/heeeyooo/stepan-dordiai"
-                        target="_blank"
-                    >
-                        Github code{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-        ],
+        githubLink: "https://github.com/heeeyooo/stepan-dordiai",
+        extraClass: "inactive-link",
     },
     {
         id: 2,
         title: "Yagoda Karpat",
         titleName: "Business website",
         skills: [<i className="fa-brands fa-react"></i>, <span>Swiper</span>],
-        links: [
-            {
-                info: "Live",
-                link: [
-                    <a href="https://yagodakarpat.netlify.app/" target="_blank">
-                        Live demo{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-            {
-                info: "Github",
-                link: [
-                    <a
-                        href="https://github.com/heeeyooo/yagoda-karpat"
-                        target="_blank"
-                    >
-                        Github code{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-        ],
+        githubLink: "https://github.com/heeeyooo/yagoda-karpat",
+        liveDemo: "https://yagodakarpat.netlify.app/",
     },
     {
         id: 3,
@@ -64,69 +25,16 @@ const PROJECTSDATA = [
             <i className="fa-brands fa-square-js"></i>,
             <span>BEM</span>,
         ],
-        links: [
-            {
-                info: "Live",
-                link: [
-                    <a
-                        href="https://cloud-project.netlify.app/"
-                        target="_blank"
-                    >
-                        Live demo{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-            {
-                info: "Github",
-                link: [
-                    <a href="https://github.com/heeeyooo/cloud" target="_blank">
-                        Github code{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-        ],
+        githubLink: "https://github.com/heeeyooo/cloud",
+        liveDemo: "https://cloud-project.netlify.app/",
     },
     {
         id: 4,
         title: "penguin",
         titleName: "Portfolio website",
         skills: [<i className="fa-brands fa-react"></i>],
-        links: [
-            {
-                info: "Live",
-                link: [
-                    <a
-                        href="https://penguin-project.netlify.app/"
-                        target="_blank"
-                    >
-                        Live demo{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-            {
-                info: "Github",
-                link: [
-                    <a
-                        href="https://github.com/heeeyooo/penguin"
-                        target="_blank"
-                    >
-                        Github code{" "}
-                        <span className="material-symbols-outlined project-arrow">
-                            arrow_outward
-                        </span>
-                    </a>,
-                ],
-            },
-        ],
+        githubLink: "https://github.com/heeeyooo/stepan-dordiai",
+        liveDemo: "https://github.com/heeeyooo/stepan-dordiai",
     },
 ];
 
