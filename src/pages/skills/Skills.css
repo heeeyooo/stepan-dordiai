@@ -8,18 +8,26 @@
     width: calc(50% - 100px);
 }
 
-.skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-}
-
 .skills__title {
     color: var(--color);
     margin: 25px 0;
     font-size: clamp(18px, 3vw, 30px);
     font-weight: 200;
+    opacity: 0;
     transition: color 1s;
+    animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
 }
 
 @media screen and (width < 1000px) {

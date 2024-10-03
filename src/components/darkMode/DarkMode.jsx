@@ -4,35 +4,14 @@ import Resume from "./../../pdf/heeeyooo-resume.pdf";
 import "./DarkMode.css";
 
 function DarkMode() {
-    const [lightMode, setLightMode] = useLocalStorage("darkMode", "dark");
+    const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");
 
     const refBtn = useRef(null);
 
     useEffect(() => {
         const variables = document.querySelector(":root");
 
-        if (lightMode === "light") {
-            variables.style.setProperty("--bg-color", "#ffffff");
-            variables.style.setProperty("--color", "#000000");
-            variables.style.setProperty(
-                "--semi-transparent-10",
-                "rgba(0, 0, 0, 0.1)"
-            );
-            variables.style.setProperty(
-                "--semi-transparent-25",
-                "rgba(0, 0, 0, 0.25"
-            );
-
-            variables.style.setProperty(
-                "--semi-transparent-50",
-                "rgba(0, 0, 0, 0.5)"
-            );
-            variables.style.setProperty(
-                "--semi-transparent-black-50",
-                "rgba(255, 255, 255, 0.5)"
-            );
-            refBtn.current.textContent = "DARK";
-        } else {
+        if (lightMode === "dark") {
             variables.style.setProperty("--bg-color", "#000000");
             variables.style.setProperty("--color", "#ffffff");
             variables.style.setProperty(
@@ -47,17 +26,29 @@ function DarkMode() {
                 "--semi-transparent-50",
                 "rgba(255, 255, 255, 0.5)"
             );
+            refBtn.current.textContent = "LIGHT";
+        } else {
+            variables.style.setProperty("--bg-color", "#ffffff");
+            variables.style.setProperty("--color", "#000000");
             variables.style.setProperty(
-                "--semi-transparent-black-50",
+                "--semi-transparent-10",
+                "rgba(0, 0, 0, 0.1)"
+            );
+            variables.style.setProperty(
+                "--semi-transparent-25",
+                "rgba(0, 0, 0, 0.25"
+            );
+            variables.style.setProperty(
+                "--semi-transparent-50",
                 "rgba(0, 0, 0, 0.5)"
             );
-            refBtn.current.textContent = "LIGHT";
+            refBtn.current.textContent = "DARK";
         }
     }, [lightMode]);
 
     const changeMode = () => {
         setLightMode((currentMode) => {
-            return currentMode === "dark" ? "light" : "dark";
+            return currentMode === "light" ? "dark" : "light";
         });
     };
 
@@ -86,7 +77,7 @@ function DarkMode() {
                 onMouseEnter={brightCursor}
                 onMouseLeave={lowerCursor}
             >
-                LIGHT
+                DARK
             </button>
         </div>
     );
