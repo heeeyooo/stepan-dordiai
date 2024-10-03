@@ -76,9 +76,14 @@
 .project-links a {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
-    transition: color 1s;
+    transition: color 1s, opacity 0.2s;
 }
 
+.project-links a:hover {
+    opacity: 0.5;
+}
+
+/* hide liveDemo in first portfolio */
 .inactive-link {
     display: none;
 }

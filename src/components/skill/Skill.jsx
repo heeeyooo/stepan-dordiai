@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Skill.css";
 
 function Skill({ icon, id }) {
@@ -15,13 +16,17 @@ function Skill({ icon, id }) {
         document.querySelector("#custom-cursor").textContent = "";
     }
     //
+    // useLocation for rendering data when navigate
+    // what is pathname?
+    const { pathname } = useLocation();
+
     useEffect(() => {
-        document.querySelectorAll(".skill").forEach((project, index) => {
+        document.querySelectorAll(".skill").forEach((skill, index) => {
             setInterval(() => {
-                project.style.animation = "revealSkill 0.5s forwards";
+                skill.style.animation = "revealSkill 0.5s forwards";
             }, 100 * index);
         });
-    }, []);
+    }, [pathname]);
     return (
         <div
             onMouseEnter={brightCursor}

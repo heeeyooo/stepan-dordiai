@@ -10,6 +10,7 @@
     --semi-transparent-black-50: rgba(0, 0, 0, 0.5);
 }
 
+/* RESET DEFAULT PROPERTIES */
 * {
     scroll-behavior: smooth;
     margin: 0;
@@ -30,7 +31,9 @@ ul {
     list-style-type: none;
 }
 
-button {
+button,
+input {
+    font-family: inherit;
     border: none;
     background-color: transparent;
 }
@@ -103,47 +106,6 @@ body {
     75% {
         border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
     }
-}
-
-#custom-cursor {
-    display: none;
-    position: fixed;
-    background-color: var(--active-color);
-    width: 10px;
-    height: 10px;
-    /*  */
-    top: -100px;
-    /*  */
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    align-items: center;
-    color: black;
-    z-index: 100;
-    border-radius: 50%;
-    transition: width 0.3s, height 0.3s;
-    pointer-events: none;
-}
-
-.active-cursor {
-    background-color: var(--active-color);
-    width: 100px !important;
-    height: 100px !important;
-}
-
-#circle {
-    display: none;
-    position: fixed;
-    width: 75px;
-    height: 75px;
-    border: 2px solid var(--semi-transparent-50);
-    /*  */
-    top: -100px;
-    /*  */
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    border-radius: 50%;
-    transition: all 0.1s;
-    pointer-events: none;
 }
 
 .cube-top-left {
@@ -235,21 +197,39 @@ body {
 }
 
 .scroll__up-btn {
-    font-size: 20px;
     position: fixed;
-    top: 40%;
     right: 50px;
+    top: 45%;
+    font-size: 20px;
     color: var(--color);
+    opacity: 0;
     transition: color 1s;
+    animation: revealUpBtn 1s forwards;
+}
+
+@keyframes revealUpBtn {
+    to {
+        top: 40%;
+        opacity: 1;
+    }
 }
 
 .scroll__down-btn {
-    font-size: 20px;
     position: fixed;
-    bottom: 40%;
     right: 50px;
+    bottom: 45%;
+    font-size: 20px;
     color: var(--color);
+    opacity: 0;
     transition: color 1s;
+    animation: revealDownBtn 1s forwards;
+}
+
+@keyframes revealDownBtn {
+    to {
+        bottom: 40%;
+        opacity: 1;
+    }
 }
 
 @media screen and (width < 1000px) {

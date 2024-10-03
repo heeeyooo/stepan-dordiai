@@ -33,8 +33,8 @@ const PROJECTSDATA = [
         title: "penguin",
         titleName: "Portfolio website",
         skills: [<i className="fa-brands fa-react"></i>],
-        githubLink: "https://github.com/heeeyooo/stepan-dordiai",
-        liveDemo: "https://github.com/heeeyooo/stepan-dordiai",
+        githubLink: "https://github.com/heeeyooo/penguin",
+        liveDemo: "https://penguin-project.netlify.app/",
     },
 ];
 

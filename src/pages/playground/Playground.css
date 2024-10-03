@@ -51,7 +51,11 @@
 .playground-project__link {
     color: var(--color);
     font-weight: 200;
-    transition: color 1s;
+    transition: color 1s, opacity 0.2s;
+}
+
+.playground-project__link:hover {
+    opacity: 0.5;
 }
 
 .pg-project-arrow {
