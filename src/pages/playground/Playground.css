@@ -28,7 +28,7 @@
 
 .playground-project__number {
     font-size: clamp(24px, 3vw, 30px);
-    font-weight: 200;
+    font-weight: 300;
     color: var(--color);
     transition: color 1s;
 }
@@ -44,13 +44,13 @@
 .playground-project__title {
     color: var(--color);
     font-size: clamp(24px, 3vw, 30px);
-    font-weight: 400;
+    font-weight: 300;
     transition: color 1s;
 }
 
 .playground-project__link {
     color: var(--color);
-    font-weight: 200;
+    font-weight: 300;
     transition: color 1s, opacity 0.2s;
 }
 

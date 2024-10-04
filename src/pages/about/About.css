@@ -1,18 +1,18 @@
 .about {
     position: fixed;
+    right: 100px;
     bottom: 100px;
     left: 100px;
-    right: 100px;
     text-align: right;
     color: var(--color);
     font-size: clamp(16px, 2vw, 20px);
     font-weight: 300;
     opacity: 0;
     transition: color 1s;
-    animation: revealAbout 1s forwards;
+    animation: reveal 1s forwards;
 }
 
-@keyframes revealAbout {
+@keyframes reveal {
     to {
         opacity: 1;
     }
@@ -20,8 +20,8 @@
 
 @media screen and (width < 1000px) {
     .about {
+        right: 50px;
         bottom: 50px;
         left: 50px;
-        right: 50px;
     }
 }

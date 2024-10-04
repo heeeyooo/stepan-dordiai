@@ -22,15 +22,14 @@
 .dark-mode-container a {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
+    font-weight: 300;
     transition: color 1s;
 }
 
 .dark-mode-btn {
-    font-family: inherit;
-    background: transparent;
-    border: none;
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
+    font-weight: 300;
     transition: color 1s;
 }
 

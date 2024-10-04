@@ -1,8 +1,11 @@
 .portfolio-container {
     position: fixed;
-    right: 100px;
     top: 0;
+    right: 100px;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
     padding: 100px 0;
     width: calc(50% - 100px);
     overflow-y: scroll;
@@ -15,5 +18,6 @@
         right: 50px;
         left: 50px;
         width: calc(100% - 100px);
+        row-gap: 25px;
     }
 }

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import PGPROJECTSDATA from "../../data/pgProjectsData";
 import "./Playground.css";
-import { useState } from "react";
 const Playground = () => {
     //
     function brightCursor(props) {
@@ -27,7 +26,7 @@ const Playground = () => {
         document
             .querySelectorAll(".playground-project")
             .forEach((project, index) => {
-                setInterval(() => {
+                setTimeout(() => {
                     project.style.animation = "revealProject 0.5s forwards";
                 }, 100 * index);
             });

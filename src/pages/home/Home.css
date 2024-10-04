@@ -1,27 +1,27 @@
 .home-container {
     position: fixed;
-    bottom: 100px;
     right: 100px;
+    bottom: 100px;
     text-align: right;
     color: var(--color);
     opacity: 0;
-    animation: revealHomeContainer 1s forwards;
+    animation: reveal 1s forwards;
 }
 
-@keyframes revealHomeContainer {
+@keyframes reveal {
     to {
         opacity: 1;
     }
 }
 
-.home-title-name {
-    font-size: clamp(16px, 3vw, 30px);
+.home-container__title {
+    font-size: clamp(16px, 3vw, 32px);
     font-weight: 200;
     transition: color 1s;
 }
 
-.home-title {
-    font-size: clamp(30px, 6vw, 60px);
+.home-container__title-name {
+    font-size: clamp(32px, 5vw, 64px);
     font-weight: 300;
     transition: color 1s;
 }

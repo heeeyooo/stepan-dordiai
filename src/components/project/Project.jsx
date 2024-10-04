@@ -26,9 +26,9 @@ function Project({
         document
             .querySelectorAll(".project-container")
             .forEach((project, index) => {
-                setInterval(() => {
-                    project.style.animation =
-                        "revealProjectContainer 0.5s forwards";
+                // setTimeout or setInterval?
+                setTimeout(() => {
+                    project.style.animation = "reveal 0.5s forwards";
                 }, 100 * index);
             });
     }, []);
@@ -38,8 +38,8 @@ function Project({
                 <p className="project-number">{id}</p>
                 <div className="project-info-container">
                     <div className="project-title-container">
-                        <h5 className="project-title-name">{titleName}</h5>
-                        <h4 className="project-title">{title}</h4>
+                        <h5 className="project-title">{titleName}</h5>
+                        <h4 className="project-title-name">{title}</h4>
                     </div>
                     <div className="project-skills">
                         {skills.map((skill, index) => {

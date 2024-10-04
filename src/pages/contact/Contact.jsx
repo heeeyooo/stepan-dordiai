@@ -5,9 +5,9 @@ function Contact() {
         //
         navigator.clipboard.writeText("stepandordiai@gmail.com");
         //
-        document.querySelector(".email-copy-btn").textContent = "Copied";
+        document.querySelector(".email-copy-btn").innerHTML = "Copied";
         setTimeout(() => {
-            document.querySelector(".email-copy-btn").textContent = "Copy";
+            document.querySelector(".email-copy-btn").innerHTML = "Copy";
         }, 3000);
     }
 

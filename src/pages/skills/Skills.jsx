@@ -23,10 +23,11 @@ function Skills() {
     function scrollDown() {
         document.querySelector(".skills-container").scrollTop += 100;
     }
+
     return (
         <>
             <div className="skills-container">
-                <p className="skills__title">FRONTEND</p>
+                <p className="skills-container__title">FRONTEND</p>
                 <div className="skills">
                     {SKILLSDATA.filter((skill) => {
                         return skill.info === "frontend";
@@ -40,7 +41,7 @@ function Skills() {
                         );
                     })}
                 </div>
-                <p className="skills__title">BACKEND</p>
+                <p className="skills-container__title">BACKEND</p>
                 <div className="skills">
                     {SKILLSDATA.filter((skill) => {
                         return skill.info === "backend";
@@ -54,7 +55,7 @@ function Skills() {
                         );
                     })}
                 </div>
-                <p className="skills__title">UI/UX</p>
+                <p className="skills-container__title">UI/UX</p>
                 <div className="skills">
                     {SKILLSDATA.filter((skill) => {
                         return skill.info === "ui-ux";
@@ -68,7 +69,7 @@ function Skills() {
                         );
                     })}
                 </div>
-                <p className="skills__title">CURRENTLY LEARNING</p>
+                <p className="skills-container__title">CURRENTLY LEARNING</p>
                 <div className="skills">
                     {SKILLSDATA.filter((skill) => {
                         return skill.info === "currently-learning";
@@ -86,7 +87,7 @@ function Skills() {
             <button
                 onMouseEnter={() => brightCursor("Up")}
                 onMouseLeave={lowerCursor}
-                onClick={scrollUp}
+                onMouseDown={scrollUp}
                 className="scroll__up-btn"
             >
                 <i className="fa-solid fa-arrow-up-long"></i>
@@ -94,7 +95,7 @@ function Skills() {
             <button
                 onMouseEnter={() => brightCursor("Down")}
                 onMouseLeave={lowerCursor}
-                onClick={scrollDown}
+                onMouseDown={scrollDown}
                 className="scroll__down-btn"
             >
                 <i className="fa-solid fa-arrow-down-long"></i>

@@ -1,26 +1,22 @@
 .project-container {
-    position: relative;
     height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
     opacity: 0;
 }
 
-.project-container:not(:nth-last-of-type(1)) {
-    margin-bottom: 25px;
-}
-
-@keyframes revealProjectContainer {
+@keyframes reveal {
     to {
         opacity: 1;
     }
 }
 
 .project-number {
-    font-weight: 300;
     font-size: 36px;
+    font-weight: 300;
     color: var(--color);
     transition: color 1s;
 }
@@ -37,20 +33,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    column-gap: 10px;
 }
 
-.project-title {
+.project-title-name {
     font-family: inherit;
-    margin: 0;
     font-size: 36px;
     font-weight: 300;
     color: var(--color);
     transition: color 1s;
 }
 
-.project-title-name {
-    margin: 0;
+.project-title {
     color: var(--color);
     font-weight: 200;
     font-size: clamp(12px, 2vw, 16px);
@@ -61,7 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    column-gap: 10px;
     color: var(--color);
     transition: color 1s;
 }
@@ -70,12 +64,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    column-gap: 10px;
 }
 
 .project-links a {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
+    font-weight: 300;
     transition: color 1s, opacity 0.2s;
 }
 
@@ -100,10 +95,10 @@
     .project-title-container {
         flex-direction: column-reverse;
         align-items: end;
-        gap: 0;
+        column-gap: 0;
     }
 
-    .project-title {
+    .project-title-name {
         font-size: 28px;
     }
 }

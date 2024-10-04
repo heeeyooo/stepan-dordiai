@@ -22,7 +22,7 @@ function Skill({ icon, id }) {
 
     useEffect(() => {
         document.querySelectorAll(".skill").forEach((skill, index) => {
-            setInterval(() => {
+            setTimeout(() => {
                 skill.style.animation = "revealSkill 0.5s forwards";
             }, 100 * index);
         });

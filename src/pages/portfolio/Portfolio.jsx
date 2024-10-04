@@ -43,7 +43,7 @@ function Portfolio() {
             <button
                 onMouseEnter={() => brightCursor("Up")}
                 onMouseLeave={lowerCursor}
-                onClick={scrollUp}
+                onMouseDown={scrollUp}
                 className="scroll__up-btn"
             >
                 <i className="fa-solid fa-arrow-up-long"></i>
@@ -51,7 +51,7 @@ function Portfolio() {
             <button
                 onMouseEnter={() => brightCursor("Down")}
                 onMouseLeave={lowerCursor}
-                onClick={scrollDown}
+                onMouseDown={scrollDown}
                 className="scroll__down-btn"
             >
                 <i className="fa-solid fa-arrow-down-long"></i>
