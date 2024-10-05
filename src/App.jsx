@@ -10,6 +10,7 @@ import Playground from "./pages/playground/Playground";
 import Nav from "./components/nav/Nav";
 import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
+import Game from "./pages/game/Game";
 import "./App.css";
 import CustomCursor from "./components/customCursor/CustomCursor";
 import CustomCorners from "./components/customCorners/CustomCorners";
@@ -38,6 +39,7 @@ function App() {
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/playground" element={<Playground />} />
+                        <Route path="/game" element={<Game />} />
                     </Routes>
                     <Footer />
                     {/*  */}

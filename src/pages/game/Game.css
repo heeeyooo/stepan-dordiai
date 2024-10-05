@@ -1,0 +1,66 @@
+.game-container {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 100px);
+    background-color: var(--semi-transparent-50);
+    z-index: 1;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(4, 4rem);
+    gap: 0.5rem;
+    perspective: 800px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+    transform-style: preserve-3d;
+    /*  */
+    /*  */
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /*  */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.face {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+    transform: rotateY(-180deg);
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.toggle-card {
+    transform: rotateY(180deg);
+}
+
+@media screen and (width < 1000px) {
+    .game-container {
+        top: 50px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+        width: calc(100% - 100px);
+    }
+}

@@ -70,6 +70,16 @@ function Nav() {
                         <span>PLAYGROUND</span>
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) => {
+                            return isActive ? activeLink : inactiveLink;
+                        }}
+                        to="/game"
+                    >
+                        <span>GAME</span>
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );
