@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    z-index: 110;
+    z-index: 3;
     animation: revealNav 1s forwards;
 }
 

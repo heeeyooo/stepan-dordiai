@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     color: black;
-    z-index: 100;
+    z-index: 5;
     border-radius: 50%;
     transition: width 0.3s, height 0.3s;
     pointer-events: none;
@@ -33,7 +33,7 @@
     top: -100px;
     /*  */
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 4;
     border-radius: 50%;
     transition: all 0.1s;
     pointer-events: none;

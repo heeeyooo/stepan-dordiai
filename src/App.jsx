@@ -12,11 +12,12 @@ import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
 import "./App.css";
 import CustomCursor from "./components/customCursor/CustomCursor";
+import CustomCorners from "./components/customCorners/CustomCorners";
 
 function App() {
     useEffect(() => {
         setTimeout(() => {
-            document.querySelector(".main").style.display = "initial";
+            document.querySelector(".wrapper").style.display = "initial";
         }, 3000);
     }, []);
 
@@ -24,12 +25,10 @@ function App() {
         <>
             <Router>
                 <Loading />
-                <CustomCursor />
-                <main className="main">
-                    <div className="cube-top-left"></div>
-                    <div className="cube-top-right"></div>
-                    <div className="cube-bottom-right"></div>
-                    <div className="cube-bottom-left"></div>
+                <div className="wrapper">
+                    <CustomCursor />
+                    <CustomCorners />
+                    <header className="header"></header>
                     <Nav />
                     <DarkMode />
                     <Routes>
@@ -41,10 +40,12 @@ function App() {
                         <Route path="/playground" element={<Playground />} />
                     </Routes>
                     <Footer />
+                    {/*  */}
                     <div className="bulb-container">
                         <div className="bulb"></div>
                     </div>
-                </main>
+                    {/*  */}
+                </div>
             </Router>
         </>
     );

@@ -5,8 +5,8 @@
 @media screen and (width < 1000px) {
     .burger-container {
         position: absolute;
-        right: 0;
         top: 50%;
+        right: 0;
         transform: translateY(-50%);
         width: 25px;
         display: flex;

@@ -5,6 +5,7 @@
     text-align: right;
     color: var(--color);
     opacity: 0;
+    z-index: 1;
     animation: reveal 1s forwards;
 }
 

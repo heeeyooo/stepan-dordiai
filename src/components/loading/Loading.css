@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
     background-color: var(--bg-color);
     opacity: 1;
     animation: hideLoadingSection 1s 2s forwards;
@@ -23,7 +22,6 @@
     font-size: clamp(24px, 4vw, 48px);
     color: var(--color);
     font-weight: 300;
-    margin: 0;
     opacity: 0;
     animation: revealLoadingTitle 1s forwards;
 }
@@ -48,7 +46,7 @@
 
 .loading-text {
     color: var(--color);
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 10px;
 }
 

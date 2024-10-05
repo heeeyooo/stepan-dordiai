@@ -1,0 +1,136 @@
+.corner-top-left {
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid var(--color);
+    border-top: 5px solid var(--color);
+    transition: border-color 1s;
+    z-index: 2;
+    animation: setCornerTopLeft 1s forwards;
+}
+
+@keyframes setCornerTopLeft {
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.corner-top-right {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-right: 5px solid var(--color);
+    border-top: 5px solid var(--color);
+    transition: border-color 1s;
+    z-index: 2;
+    animation: setCornerTopRight 1s forwards;
+}
+
+@keyframes setCornerTopRight {
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.corner-bottom-right {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-right: 5px solid var(--color);
+    border-bottom: 5px solid var(--color);
+    transition: border-color 1s;
+    z-index: 2;
+    animation: setCornerBottomRight 1s forwards;
+}
+
+@keyframes setCornerBottomRight {
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.corner-bottom-left {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid var(--color);
+    border-bottom: 5px solid var(--color);
+    transition: border-color 1s;
+    z-index: 2;
+    animation: setCornerBottomLeft 1s forwards;
+}
+
+@keyframes setCornerBottomLeft {
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .corner-top-left {
+        top: 25px;
+        left: 25px;
+        width: 25px;
+        height: 25px;
+    }
+
+    @keyframes setCornerTopLeft {
+        100% {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .corner-top-right {
+        top: 25px;
+        right: 25px;
+        width: 25px;
+        height: 25px;
+    }
+
+    @keyframes setCornerTopRight {
+        100% {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .corner-bottom-right {
+        bottom: 25px;
+        right: 25px;
+        width: 25px;
+        height: 25px;
+    }
+
+    @keyframes setCornerBottomRight {
+        100% {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .corner-bottom-left {
+        bottom: 25px;
+        left: 25px;
+        width: 25px;
+        height: 25px;
+    }
+
+    @keyframes setCornerBottomLeft {
+        100% {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

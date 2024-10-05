@@ -9,7 +9,7 @@
     padding: 100px 0;
     width: calc(50% - 100px);
     overflow-y: scroll;
-    z-index: 96;
+    z-index: 1;
 }
 
 @media screen and (width < 1000px) {

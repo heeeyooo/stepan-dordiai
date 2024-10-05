@@ -8,6 +8,7 @@
     font-size: clamp(16px, 2vw, 20px);
     font-weight: 300;
     opacity: 0;
+    z-index: 1;
     transition: color 1s;
     animation: reveal 1s forwards;
 }
