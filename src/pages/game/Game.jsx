@@ -93,14 +93,30 @@ const Game = () => {
     const section = useRef(null);
 
     function cardGenerator() {
-        const cardData = randomize();
+        let cardData = randomize();
         cardData.forEach((item) => {
+            const topLeftCorner = document.createElement("div");
+            const topRightCorner = document.createElement("div");
+            const bottomRightCorner = document.createElement("div");
+            const bottomLeftCorner = document.createElement("div");
             const card = document.createElement("div");
             const face = document.createElement("img");
             const back = document.createElement("div");
+
+            topLeftCorner.classList = "card-top-left-corner";
+            topRightCorner.classList = "card-top-right-corner";
+            bottomRightCorner.classList = "card-bottom-right-corner";
+            bottomLeftCorner.classList = "card-bottom-left-corner";
+
             card.classList = "card";
             face.classList = "face";
             back.classList = "back";
+
+            back.appendChild(topLeftCorner);
+            back.appendChild(topRightCorner);
+            back.appendChild(bottomRightCorner);
+            back.appendChild(bottomLeftCorner);
+
             section.current.appendChild(card);
             card.appendChild(face);
             card.appendChild(back);
@@ -114,15 +130,21 @@ const Game = () => {
                 checkCards();
             });
         });
-        let cards = document.querySelectorAll(".card");
-        cardData.forEach((item, index) => {
+        section.current.style.pointerEvents = "none";
+    }
+
+    function startGame() {
+        section.current.style.pointerEvents = "all";
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((item) => {
+            item.style.pointerEvents = "all";
+
+            item.classList.add("toggle-card");
             setTimeout(() => {
-                cards[index].classList.add("toggle-card");
-            }, 1000);
-            setTimeout(() => {
-                cards[index].classList.remove("toggle-card");
+                item.classList.remove("toggle-card");
             }, 3000);
         });
+        document.querySelector(".game__play-btn").classList.add("inactive-btn");
     }
 
     function checkCards() {
@@ -151,29 +173,33 @@ const Game = () => {
                 }
             }
         }
+        console.log(toggleCards.length);
         if (toggleCards.length === 16) {
             restart("you win");
         }
     }
 
-    const restart = (text) => {
+    function restart(text) {
         let cardData = randomize();
         let faces = document.querySelectorAll(".face");
-        cards;
-        section.current.style.pointerEvents = "none";
+        const cards = document.querySelectorAll(".card");
         cardData.forEach((item, index) => {
+            cards[index].style.pointerEvents = "none";
             cards[index].classList.remove("toggle-card");
             setTimeout(() => {
-                cards[index].style.pointerEvents = "all";
                 faces[index].src = item.imgSrc;
                 cards[index].setAttribute("name", item.name);
-                section.current.style.pointerEvents = "all";
+                // section.current.style.pointerEvents = "all";
             }, 1000);
         });
         playerLives = 6;
         lives();
         setTimeout(() => alert(text), 100);
-    };
+        section.current.style.pointerEvents = "none";
+        document
+            .querySelector(".game__play-btn")
+            .classList.remove("inactive-btn");
+    }
 
     useEffect(() => {
         lives();
@@ -181,11 +207,14 @@ const Game = () => {
     }, []);
 
     return (
-        <div className="game-container">
-            <h1>
+        <div className="game">
+            <p className="game__lives">
                 Lives: <span className="lives-count"></span>
-            </h1>
+            </p>
             <section ref={section}></section>
+            <button className="game__play-btn" onClick={startGame}>
+                Play
+            </button>
         </div>
     );
 };

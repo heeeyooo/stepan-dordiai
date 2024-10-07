@@ -49,6 +49,10 @@
     transition: width 0.5s ease, background-color 1s;
 }
 
+.game-font {
+    font-family: "Silkscreen", sans-serif;
+}
+
 @media screen and (width < 1000px) {
     .nav {
         left: -50%;
