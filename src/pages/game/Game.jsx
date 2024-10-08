@@ -11,45 +11,52 @@ import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
 
 const Game = () => {
-    let playerLives = 6;
+    const section = useRef(null);
+
+    useEffect(() => {
+        lives();
+        cardGenerator();
+    }, []);
+
+    let playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
 
     const lives = () => {
-        const livesCounts = document.querySelector(".lives-count");
-        livesCounts.textContent = playerLives;
+        const livesCounts = document.querySelector(".js-lives-count");
+        livesCounts.textContent = playerLives.join(" ");
     };
 
-    const gameData = [
+    const cardData = [
         {
             imgSrc: img1,
             name: "css",
         },
         {
             imgSrc: img2,
-            name: "figma",
-        },
-        {
-            imgSrc: img3,
-            name: "git",
-        },
-        {
-            imgSrc: img4,
             name: "html",
         },
         {
-            imgSrc: img5,
+            imgSrc: img3,
+            name: "figma",
+        },
+        {
+            imgSrc: img4,
             name: "js",
         },
         {
-            imgSrc: img6,
+            imgSrc: img5,
             name: "node",
         },
         {
+            imgSrc: img6,
+            name: "git",
+        },
+        {
             imgSrc: img7,
-            name: "react",
+            name: "sass",
         },
         {
             imgSrc: img8,
-            name: "sass",
+            name: "react",
         },
         {
             imgSrc: img1,
@@ -57,43 +64,39 @@ const Game = () => {
         },
         {
             imgSrc: img2,
-            name: "figma",
-        },
-        {
-            imgSrc: img3,
-            name: "git",
-        },
-        {
-            imgSrc: img4,
             name: "html",
         },
         {
-            imgSrc: img5,
+            imgSrc: img3,
+            name: "figma",
+        },
+        {
+            imgSrc: img4,
             name: "js",
         },
         {
-            imgSrc: img6,
+            imgSrc: img5,
             name: "node",
         },
         {
+            imgSrc: img6,
+            name: "git",
+        },
+        {
             imgSrc: img7,
-            name: "react",
+            name: "sass",
         },
         {
             imgSrc: img8,
-            name: "sass",
+            name: "react",
         },
     ];
 
     const randomize = () => {
-        gameData.sort(() => Math.random() - 0.5);
-        return gameData;
+        return cardData.sort(() => Math.random() - 0.5);
     };
 
-    const section = useRef(null);
-
     function cardGenerator() {
-        let cardData = randomize();
         cardData.forEach((item) => {
             const topLeftCorner = document.createElement("div");
             const topRightCorner = document.createElement("div");
@@ -107,7 +110,6 @@ const Game = () => {
             topRightCorner.classList = "card-top-right-corner";
             bottomRightCorner.classList = "card-bottom-right-corner";
             bottomLeftCorner.classList = "card-bottom-left-corner";
-
             card.classList = "card";
             face.classList = "face";
             back.classList = "back";
@@ -123,6 +125,7 @@ const Game = () => {
 
             face.src = item.imgSrc;
             card.setAttribute("name", item.name);
+
             card.addEventListener("click", (event) => {
                 card.classList.toggle("toggle-card");
                 const clickedCard = event.target;
@@ -133,18 +136,45 @@ const Game = () => {
         section.current.style.pointerEvents = "none";
     }
 
-    function startGame() {
-        section.current.style.pointerEvents = "all";
+    function startGame(text) {
+        document.querySelector(".js-game__title-result").textContent = text;
+        playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
+        lives();
+        const randomCardData = randomize();
+        const faces = document.querySelectorAll(".face");
         const cards = document.querySelectorAll(".card");
+        randomCardData.forEach((item, index) => {
+            faces[index].src = item.imgSrc;
+            cards[index].setAttribute("name", item.name);
+        });
         cards.forEach((item) => {
-            item.style.pointerEvents = "all";
-
+            item.style.pointerEvents = "none";
             item.classList.add("toggle-card");
             setTimeout(() => {
+                item.style.pointerEvents = "all";
                 item.classList.remove("toggle-card");
             }, 3000);
         });
-        document.querySelector(".game__play-btn").classList.add("inactive-btn");
+        document
+            .querySelector(".js-inactive-btn")
+            .classList.add("game__btn--inactive");
+        section.current.style.pointerEvents = "all";
+    }
+
+    function stopGame(text) {
+        document.querySelector(".js-game__title-result").textContent = text;
+        playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
+        lives();
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((item) => {
+            item.style.pointerEvents = "none";
+            item.classList.remove("toggle-card");
+        });
+        document
+            .querySelector(".js-inactive-btn")
+            .classList.remove("game__btn--inactive");
+        section.current.style.pointerEvents = "none";
+        document.querySelector(".js-inactive-btn").textContent = "Play";
     }
 
     function checkCards() {
@@ -166,55 +196,56 @@ const Game = () => {
                         card.classList.remove("toggle-card");
                     }, 1000);
                 });
-                playerLives--;
+                playerLives.pop();
                 lives();
-                if (playerLives === 0) {
-                    restart("you lose");
+                if (playerLives.length === 0) {
+                    gameResult("You lose!");
                 }
             }
         }
-        console.log(toggleCards.length);
         if (toggleCards.length === 16) {
-            restart("you win");
+            gameResult("You win!");
         }
     }
 
-    function restart(text) {
-        let cardData = randomize();
-        let faces = document.querySelectorAll(".face");
+    function gameResult(text) {
+        document.querySelector(".js-game__title-result").textContent = text;
         const cards = document.querySelectorAll(".card");
-        cardData.forEach((item, index) => {
-            cards[index].style.pointerEvents = "none";
-            cards[index].classList.remove("toggle-card");
-            setTimeout(() => {
-                faces[index].src = item.imgSrc;
-                cards[index].setAttribute("name", item.name);
-                // section.current.style.pointerEvents = "all";
-            }, 1000);
+        cards.forEach((item) => {
+            item.style.pointerEvents = "none";
         });
-        playerLives = 6;
-        lives();
-        setTimeout(() => alert(text), 100);
-        section.current.style.pointerEvents = "none";
         document
-            .querySelector(".game__play-btn")
-            .classList.remove("inactive-btn");
+            .querySelector(".js-inactive-btn")
+            .classList.remove("game__btn--inactive");
+        section.current.style.pointerEvents = "none";
+        document.querySelector(".js-inactive-btn").textContent = "Play again";
     }
-
-    useEffect(() => {
-        lives();
-        cardGenerator();
-    }, []);
 
     return (
         <div className="game">
-            <p className="game__lives">
-                Lives: <span className="lives-count"></span>
+            <p className="game__title-result js-game__title-result">
+                Memory Card Game
             </p>
-            <section ref={section}></section>
-            <button className="game__play-btn" onClick={startGame}>
-                Play
-            </button>
+            <p className="game__lives">
+                Lives: <span className="js-lives-count"></span>
+            </p>
+            <div>
+                <section ref={section}></section>
+                <div className="game__btn-container">
+                    <button
+                        className="game__btn"
+                        onClick={() => stopGame("Memory Card Game")}
+                    >
+                        Stop
+                    </button>
+                    <button
+                        className="game__btn js-inactive-btn"
+                        onClick={() => startGame("Memory Card Game")}
+                    >
+                        Play
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };

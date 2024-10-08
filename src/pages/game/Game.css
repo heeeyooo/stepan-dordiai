@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
-
 .game {
     font-family: "Silkscreen", sans-serif;
     position: absolute;
@@ -8,11 +6,10 @@
     bottom: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: calc(50% - 100px);
     opacity: 0;
-    /* background-color: var(--semi-transparent-50); */
     z-index: 1;
     animation: reveal 1s forwards;
 }
@@ -23,50 +20,25 @@
     }
 }
 
+.game__title-result {
+    color: var(--color);
+    font-size: 1.5rem;
+    transition: color 1s;
+}
+
 .game__lives {
     color: var(--color);
+    transition: color 1s;
 }
 
 section {
     display: grid;
-    grid-template-columns: repeat(4, 6rem);
-    grid-template-rows: repeat(4, 6rem);
-    gap: 0.5rem;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(4, 5rem);
+    gap: 10px;
+    /*  */
     perspective: 800px;
-}
-
-.game__play-btn {
-    position: relative;
-    color: var(--color);
-    padding: 5px;
-    transition: color 0.25s ease-out;
-}
-
-.game__play-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    background-color: var(--color);
-    transition: transform 0.25s ease-out;
-    transform-origin: bottom left;
-    z-index: -1;
-}
-
-.game__play-btn:hover {
-    color: var(--bg-color);
-}
-
-.game__play-btn:hover::before {
-    transform: scaleX(1);
-}
-
-.inactive-btn {
-    opacity: 0.5;
-    pointer-events: none;
+    /*  */
 }
 
 .card {
@@ -77,11 +49,9 @@ section {
     /*  */
     transform-style: preserve-3d;
     /*  */
-    /*  */
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /*  */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
 
 .face {
@@ -97,7 +67,9 @@ section {
     width: 100%;
     height: 100%;
     background-color: white;
+    /*  */
     backface-visibility: hidden;
+    /*  */
     pointer-events: none;
 }
 
@@ -105,8 +77,8 @@ section {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-top: 5px solid black;
     border-left: 5px solid black;
 }
@@ -115,8 +87,8 @@ section {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-top: 5px solid black;
     border-right: 5px solid black;
 }
@@ -125,8 +97,8 @@ section {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-bottom: 5px solid black;
     border-right: 5px solid black;
 }
@@ -135,14 +107,68 @@ section {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-bottom: 5px solid black;
     border-left: 5px solid black;
 }
 
 .toggle-card {
     transform: rotateY(180deg);
+}
+
+.inactive {
+    pointer-events: none;
+}
+
+.game__btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.game__btn {
+    position: relative;
+    color: var(--color);
+    padding: 10px 20px;
+    transition: color 1s;
+}
+
+.game__btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    border-top: 2.5px solid var(--color);
+    border-left: 2.5px solid var(--color);
+    transition: width 0.3s, height 0.3s, border-color 1s;
+}
+
+.game__btn::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    border-right: 2.5px solid var(--color);
+    border-bottom: 2.5px solid var(--color);
+    transition: width 0.3s, height 0.3s, border-color 1s;
+}
+
+.game__btn:hover::before,
+.game__btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.game__btn--inactive {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 @media screen and (width < 1000px) {
@@ -152,5 +178,10 @@ section {
         bottom: 50px;
         left: 50px;
         width: calc(100% - 100px);
+        justify-content: space-around;
+    }
+    section {
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows: repeat(4, 4rem);
     }
 }
