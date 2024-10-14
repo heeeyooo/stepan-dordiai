@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./Game.css";
 import { useRef } from "react";
 import img1 from "./images/css3.svg";
 import img2 from "./images/html5.svg";
@@ -9,6 +8,7 @@ import img5 from "./images/node.svg";
 import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
+import "./Game.css";
 
 const Game = () => {
     const section = useRef(null);
@@ -222,32 +222,56 @@ const Game = () => {
         document.querySelector(".js-inactive-btn").textContent = "Play again";
     }
 
+    addEventListener("resize", () => {
+        if (
+            (window.innerWidth > 1000 && window.innerHeight < 650) ||
+            (window.innerWidth < 1000 && window.innerHeight < 600)
+        ) {
+            document.querySelector(".game").classList.add("none");
+            document
+                .querySelector(".rotate-container")
+                .classList.remove("none");
+        } else {
+            document.querySelector(".game").classList.remove("none");
+            document.querySelector(".rotate-container").classList.add("none");
+        }
+    });
+
     return (
-        <div className="game">
-            <p className="game__title-result js-game__title-result">
-                Memory Card Game
-            </p>
-            <p className="game__lives">
-                Lives: <span className="js-lives-count"></span>
-            </p>
-            <div>
-                <section ref={section}></section>
-                <div className="game__btn-container">
-                    <button
-                        className="game__btn"
-                        onClick={() => stopGame("Memory Card Game")}
-                    >
-                        Stop
-                    </button>
-                    <button
-                        className="game__btn js-inactive-btn"
-                        onClick={() => startGame("Memory Card Game")}
-                    >
-                        Play
-                    </button>
+        <>
+            <div className="game">
+                <p className="game__title-result js-game__title-result">
+                    Memory Card Game
+                </p>
+                <p className="game__lives">
+                    Lives: <span className="js-lives-count"></span>
+                </p>
+                <div>
+                    <section ref={section}></section>
+                    <div className="game__btn-container">
+                        <button
+                            className="game__btn"
+                            onClick={() => stopGame("Memory Card Game")}
+                        >
+                            Stop
+                        </button>
+                        <button
+                            className="game__btn js-inactive-btn"
+                            onClick={() => startGame("Memory Card Game")}
+                        >
+                            Play
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className="rotate-container none">
+                {/* i specified img src in darkMode because i need to change img depending on darkMode */}
+                <img className="rotate-img" src="" alt="" />
+                <p className="rotate-title">
+                    Please rotate your device for better experience!
+                </p>
+            </div>
+        </>
     );
 };
 

@@ -14,12 +14,6 @@
     animation: reveal 1s forwards;
 }
 
-@keyframes reveal {
-    to {
-        opacity: 1;
-    }
-}
-
 .game__title-result {
     color: var(--color);
     font-size: 1.5rem;
@@ -164,6 +158,42 @@ section {
     pointer-events: none;
 }
 
+.none {
+    display: none !important;
+}
+
+.rotate-container {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: calc(50% - 100px);
+    opacity: 0;
+    z-index: 1;
+    animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
+
+.rotate-img {
+    width: 100px;
+}
+
+.rotate-title {
+    color: var(--color);
+    font-weight: 300;
+    transition: color 1s;
+}
+
 @media screen and (width < 1000px) {
     .game {
         top: 50px;
@@ -173,7 +203,16 @@ section {
         width: calc(100% - 100px);
         justify-content: space-around;
     }
+
     section {
         grid-template: repeat(4, 4rem) / repeat(4, 4rem);
+    }
+
+    .rotate-container {
+        top: 50px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+        width: calc(100% - 100px);
     }
 }
