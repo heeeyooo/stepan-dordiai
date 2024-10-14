@@ -192,6 +192,7 @@ section {
     color: var(--color);
     font-weight: 300;
     transition: color 1s;
+    text-align: center;
 }
 
 @media screen and (width < 1000px) {

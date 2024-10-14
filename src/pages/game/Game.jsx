@@ -8,6 +8,8 @@ import img5 from "./images/node.svg";
 import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
+import rotateBlackImg from "./images/rotate-img/rotate-black.png";
+
 import "./Game.css";
 
 const Game = () => {
@@ -265,8 +267,7 @@ const Game = () => {
                 </div>
             </div>
             <div className="rotate-container none">
-                {/* i specified img src in darkMode because i need to change img depending on darkMode */}
-                <img className="rotate-img" src="" alt="" />
+                <img className="rotate-img" src={rotateBlackImg} alt="" />
                 <p className="rotate-title">
                     Please rotate your device for better experience!
                 </p>

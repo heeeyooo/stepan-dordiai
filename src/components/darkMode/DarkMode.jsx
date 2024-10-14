@@ -2,8 +2,6 @@ import { useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/UseLocalStorage";
 import Resume from "./../../pdf/heeeyooo-resume.pdf";
 import "./DarkMode.css";
-import rotateBlackImg from "./rotate-img/rotate-black.png";
-import rotateWhiteImg from "./rotate-img/rotate-white.png";
 
 function DarkMode() {
     const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");
@@ -29,7 +27,6 @@ function DarkMode() {
                 "rgba(255, 255, 255, 0.5)"
             );
             refBtn.current.textContent = "LIGHT";
-            document.querySelector(".rotate-img").src = rotateWhiteImg;
         } else {
             variables.style.setProperty("--bg-color", "#ffffff");
             variables.style.setProperty("--color", "#000000");
@@ -46,7 +43,6 @@ function DarkMode() {
                 "rgba(0, 0, 0, 0.5)"
             );
             refBtn.current.textContent = "DARK";
-            document.querySelector(".rotate-img").src = rotateBlackImg;
         }
     }, [lightMode]);
 
