@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import "./Contact.css";
 
 function Contact() {
+    useEffect(() => {
+        document.title = "Stepan Dordiai | Contact";
+    }, []);
     function copyEmail() {
         //
         navigator.clipboard.writeText("stepandordiai@gmail.com");
@@ -22,7 +26,6 @@ function Contact() {
             .classList.remove("active-cursor");
         document.querySelector("#custom-cursor").innerHTML = "";
     }
-
     return (
         <>
             <div className="email-container">

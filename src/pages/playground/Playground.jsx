@@ -2,6 +2,16 @@ import { useEffect } from "react";
 import PGPROJECTSDATA from "../../data/pgProjectsData";
 import "./Playground.css";
 const Playground = () => {
+    useEffect(() => {
+        document
+            .querySelectorAll(".playground-project")
+            .forEach((project, index) => {
+                setTimeout(() => {
+                    project.style.animation = "revealProject 0.5s forwards";
+                }, 100 * index);
+            });
+        document.title = "Stepan Dordiai | Playground";
+    }, []);
     //
     function brightCursor(props) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");
@@ -21,17 +31,6 @@ const Playground = () => {
     function scrollDown() {
         document.querySelector(".playground").scrollTop += 100;
     }
-
-    useEffect(() => {
-        document
-            .querySelectorAll(".playground-project")
-            .forEach((project, index) => {
-                setTimeout(() => {
-                    project.style.animation = "revealProject 0.5s forwards";
-                }, 100 * index);
-            });
-    }, []);
-
     return (
         <>
             <div className="playground">

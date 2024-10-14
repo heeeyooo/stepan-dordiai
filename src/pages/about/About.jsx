@@ -1,6 +1,10 @@
 import "./About.css";
+import { useEffect } from "react";
 
 function About() {
+    useEffect(() => {
+        document.title = "Stepan Dordiai | About";
+    }, []);
     return (
         <p className="about">
             Hi! My name is Stepan Dordiai and I am a Junior Frontend Developer

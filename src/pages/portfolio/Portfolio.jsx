@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Project from "../../components/project/Project";
 import PROJECTSDATA from "../../data/projectsData";
 import "./Portfolio.css";
 
 function Portfolio() {
+    useEffect(() => {
+        document.title = "Stepan Dordiai | Portfolio";
+    }, []);
     //
     function brightCursor(props) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");

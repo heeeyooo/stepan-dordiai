@@ -1,8 +1,12 @@
 import SKILLSDATA from "./../../data/skillsData";
 import Skill from "../../components/skill/Skill";
+import { useEffect } from "react";
 import "./Skills.css";
 
 function Skills() {
+    useEffect(() => {
+        document.title = "Stepan Dordiai | Skills";
+    }, []);
     //
     function brightCursor(props) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");
@@ -20,6 +24,7 @@ function Skills() {
     function scrollUp() {
         document.querySelector(".skills-container").scrollTop -= 100;
     }
+
     function scrollDown() {
         document.querySelector(".skills-container").scrollTop += 100;
     }

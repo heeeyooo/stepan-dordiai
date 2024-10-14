@@ -16,6 +16,7 @@ const Game = () => {
     useEffect(() => {
         lives();
         cardGenerator();
+        document.title = "Stepan Dordiai | Game";
     }, []);
 
     let playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
