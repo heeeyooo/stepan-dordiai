@@ -184,8 +184,10 @@ section {
     }
 }
 
-.rotate-img {
-    width: 100px;
+.rotate-font-img {
+    font-size: 72px;
+    color: var(--color);
+    transition: color 1s;
 }
 
 .rotate-title {

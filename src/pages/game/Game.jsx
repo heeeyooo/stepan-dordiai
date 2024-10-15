@@ -8,8 +8,6 @@ import img5 from "./images/node.svg";
 import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
-import rotateBlackImg from "./images/rotate-img/rotate-black.png";
-import rotateWhiteImg from "./images/rotate-img/rotate-white.png";
 import "./Game.css";
 
 const Game = () => {
@@ -251,18 +249,6 @@ const Game = () => {
         }
     });
 
-    const storage = () => {
-        return JSON.parse(localStorage.getItem("darkMode"));
-    };
-
-    addEventListener("transitionstart", () => {
-        if (storage() === "light") {
-            document.querySelector(".rotate-img").src = rotateBlackImg;
-        } else {
-            document.querySelector(".rotate-img").src = rotateWhiteImg;
-        }
-    });
-
     return (
         <>
             <div className="game">
@@ -291,7 +277,9 @@ const Game = () => {
                 </div>
             </div>
             <div className="rotate-container none">
-                <img className="rotate-img" src={rotateBlackImg} alt="" />
+                <p className="rotate-font-img">
+                    <i class="fa-solid fa-rotate"></i>
+                </p>
                 <p className="rotate-title">
                     Please rotate your device for better experience!
                 </p>

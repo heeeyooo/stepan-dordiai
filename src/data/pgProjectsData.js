@@ -37,7 +37,7 @@ const PGPROJECTSDATA = [
     },
     {
         id: 7,
-        title: "heart-clicker",
+        title: "Heart Clicker",
         info: "Telegram Bot",
         link: "https://t.me/heart_clicker_bot",
     },
