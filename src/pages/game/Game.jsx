@@ -9,7 +9,7 @@ import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
 import rotateBlackImg from "./images/rotate-img/rotate-black.png";
-
+import rotateWhiteImg from "./images/rotate-img/rotate-white.png";
 import "./Game.css";
 
 const Game = () => {
@@ -19,6 +19,18 @@ const Game = () => {
         lives();
         cardGenerator();
         document.title = "Stepan Dordiai | Game";
+        if (
+            (window.innerWidth > 1000 && window.innerHeight < 650) ||
+            (window.innerWidth < 1000 && window.innerHeight < 600)
+        ) {
+            document.querySelector(".game").classList.add("none");
+            document
+                .querySelector(".rotate-container")
+                .classList.remove("none");
+        } else {
+            document.querySelector(".game").classList.remove("none");
+            document.querySelector(".rotate-container").classList.add("none");
+        }
     }, []);
 
     let playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
@@ -236,6 +248,18 @@ const Game = () => {
         } else {
             document.querySelector(".game").classList.remove("none");
             document.querySelector(".rotate-container").classList.add("none");
+        }
+    });
+
+    const storage = () => {
+        return JSON.parse(localStorage.getItem("darkMode"));
+    };
+
+    addEventListener("transitionstart", () => {
+        if (storage() === "light") {
+            document.querySelector(".rotate-img").src = rotateBlackImg;
+        } else {
+            document.querySelector(".rotate-img").src = rotateWhiteImg;
         }
     });
 
