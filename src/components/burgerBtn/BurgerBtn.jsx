@@ -16,6 +16,12 @@ function BurgerBtn() {
         }
     }, [burgerBtn]);
 
+    const toggleBurgerBtn = () => {
+        setBurgerBtn((currentState) => {
+            return currentState === false ? true : false;
+        });
+    };
+
     // close menu when page resize
     addEventListener("resize", () => {
         document.querySelector(".nav").classList.remove("nav--active");
@@ -23,12 +29,6 @@ function BurgerBtn() {
             .querySelector(".burger-btn")
             .classList.remove("active-burger-btn");
     });
-
-    const toggleBurgerBtn = () => {
-        setBurgerBtn((currentState) => {
-            return currentState === false ? true : false;
-        });
-    };
 
     return (
         <div onClick={toggleBurgerBtn} className="burger-container">
