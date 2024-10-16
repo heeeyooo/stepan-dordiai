@@ -278,7 +278,7 @@ const Game = () => {
             </div>
             <div className="rotate-container none">
                 <p className="rotate-font-img">
-                    <i class="fa-solid fa-rotate"></i>
+                    <i className="fa-solid fa-rotate"></i>
                 </p>
                 <p className="rotate-title">
                     Please rotate your device for better experience!

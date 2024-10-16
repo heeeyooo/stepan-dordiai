@@ -24,6 +24,7 @@ const PROJECTSDATA = [
             <i className="fa-brands fa-sass"></i>,
             <i className="fa-brands fa-square-js"></i>,
             <span>BEM</span>,
+            <span>Day.js</span>,
         ],
         githubLink: "https://github.com/heeeyooo/cloud",
         liveDemo: "https://cloud-project.netlify.app/",
@@ -35,6 +36,20 @@ const PROJECTSDATA = [
         skills: [<i className="fa-brands fa-react"></i>],
         githubLink: "https://github.com/heeeyooo/penguin",
         liveDemo: "https://penguin-project.netlify.app/",
+    },
+    {
+        id: 5,
+        title: "Coffeefy",
+        titleName: "Ecommerce website",
+        skills: [
+            <i className="fa-brands fa-html5"></i>,
+            <i className="fa-brands fa-css3-alt"></i>,
+            <i className="fa-brands fa-square-js"></i>,
+            <span>BEM</span>,
+            <span>Day.js</span>,
+        ],
+        githubLink: "https://github.com/heeeyooo/coffeefy",
+        liveDemo: "https://heeeyooo.github.io/coffeefy/",
     },
 ];
 

@@ -70,29 +70,21 @@
     .corner-top-left {
         top: 25px;
         left: 25px;
-        width: 0;
-        height: 0;
     }
 
     .corner-top-right {
         top: 25px;
         right: 25px;
-        width: 25px;
-        height: 25px;
     }
 
     .corner-bottom-right {
         bottom: 25px;
         right: 25px;
-        width: 25px;
-        height: 25px;
     }
 
     .corner-bottom-left {
         bottom: 25px;
         left: 25px;
-        width: 25px;
-        height: 25px;
     }
 
     @keyframes revealCorner {
