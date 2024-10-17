@@ -3,8 +3,8 @@
     /*  */
     left: -120px;
     /*  */
-    top: 0;
-    bottom: 0;
+    top: 50px;
+    bottom: 50px;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -51,6 +51,8 @@
 
 @media screen and (width < 1000px) {
     .nav {
+        top: 0;
+        bottom: 0;
         left: -50%;
         width: 50%;
         padding-left: 25px;

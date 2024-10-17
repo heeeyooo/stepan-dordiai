@@ -38,7 +38,7 @@
         height: 2px;
         background-color: var(--color);
         transform: translateY(-5px);
-        transition: transform 0.5s 0.5s, background-color 1s;
+        transition: transform 0.3s 0.5s, background-color 1s;
     }
 
     .burger-btn::after {
@@ -48,7 +48,7 @@
         height: 2px;
         background-color: var(--color);
         transform: translateY(5px);
-        transition: transform 0.5s 0.5s, background-color 1s;
+        transition: transform 0.3s 0.5s, background-color 1s;
     }
 
     .active-burger-btn::before {

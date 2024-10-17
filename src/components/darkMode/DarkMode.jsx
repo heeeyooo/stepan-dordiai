@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/UseLocalStorage";
-import Resume from "./../../pdf/heeeyooo-resume.pdf";
+import resume from "./../../pdf/resume-v1.0.pdf";
 import "./DarkMode.css";
 
 function DarkMode() {
@@ -67,7 +67,7 @@ function DarkMode() {
 
     return (
         <div className="dark-mode-container">
-            <a href={Resume} target="_blank">
+            <a href={resume} target="_blank">
                 RESUME
             </a>
             <button
