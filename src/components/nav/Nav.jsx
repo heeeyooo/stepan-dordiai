@@ -75,9 +75,9 @@ function Nav() {
                         className={({ isActive }) => {
                             return isActive ? activeLink : inactiveLink;
                         }}
-                        to="/game"
+                        to="/games"
                     >
-                        <span className="game-font">GAME</span>
+                        <span className="game-font">GAMES</span>
                     </NavLink>
                 </li>
             </ul>

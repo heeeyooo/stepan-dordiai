@@ -19,33 +19,27 @@ const PGPROJECTSDATA = [
     },
     {
         id: 4,
-        title: "countdown",
-        info: "Live demo",
-        link: "https://playground-countdown.netlify.app/",
-    },
-    {
-        id: 5,
-        title: "tiermaker",
-        info: "Live demo",
-        link: "https://playground-tiermaker.netlify.app/",
-    },
-    {
-        id: 6,
-        title: "log-in",
-        info: "Live demo",
-        link: "https://playground-login.netlify.app/",
-    },
-    {
-        id: 7,
         title: "Heart Clicker",
         info: "Telegram Bot",
         link: "https://t.me/heart_clicker_bot",
     },
     {
-        id: 8,
-        title: "burger-btn",
+        id: 5,
+        title: "Tasty Burger",
         info: "Live demo",
-        link: "https://playground-burger-btn.netlify.app/",
+        link: "https://heeeyooo.github.io/tasty-burger/",
+    },
+    {
+        id: 6,
+        title: "countdown",
+        info: "Live demo",
+        link: "https://heeeyooo.github.io/countdown/",
+    },
+    {
+        id: 7,
+        title: "tiermaker",
+        info: "Live demo",
+        link: "https://heeeyooo.github.io/drag-n-drop-tier-list/",
     },
 ];
 

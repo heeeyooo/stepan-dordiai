@@ -8,9 +8,32 @@ import img5 from "./images/node.svg";
 import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
-import "./Game.css";
+import "./Games.css";
 
-const Game = () => {
+const Games = () => {
+    // Game one
+    function startGameOne() {
+        document
+            .querySelector(".game-one-container")
+            .classList.add("game-one-container--start");
+        document.querySelector(".game-one-container__start-btn").style.display =
+            "none";
+        document.querySelector(".game-one-container__header").style.display =
+            "none";
+        document.querySelector(".game-one").style.display = "flex";
+    }
+
+    function closeGameOne() {
+        document
+            .querySelector(".game-one-container")
+            .classList.remove("game-one-container--start");
+        document.querySelector(".game-one-container__start-btn").style.display =
+            "initial";
+        document.querySelector(".game-one-container__header").style.display =
+            "flex";
+        document.querySelector(".game-one").style.display = "none";
+    }
+
     const section = useRef(null);
 
     useEffect(() => {
@@ -21,12 +44,12 @@ const Game = () => {
             (window.innerWidth > 1000 && window.innerHeight < 650) ||
             (window.innerWidth < 1000 && window.innerHeight < 600)
         ) {
-            document.querySelector(".game").classList.add("none");
+            document.querySelector(".game-one").classList.add("none");
             document
                 .querySelector(".rotate-container")
                 .classList.remove("none");
         } else {
-            document.querySelector(".game").classList.remove("none");
+            document.querySelector(".game-one").classList.remove("none");
             document.querySelector(".rotate-container").classList.add("none");
         }
     }, []);
@@ -149,8 +172,8 @@ const Game = () => {
         section.current.style.pointerEvents = "none";
     }
 
-    function startGame(text) {
-        document.querySelector(".js-game__title-result").textContent = text;
+    function playGameOne(text) {
+        document.querySelector(".js-game-one__title-result").textContent = text;
         playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
         lives();
         const randomCardData = randomize();
@@ -170,12 +193,12 @@ const Game = () => {
         });
         document
             .querySelector(".js-inactive-btn")
-            .classList.add("game__btn--inactive");
+            .classList.add("game-one__btn--inactive");
         section.current.style.pointerEvents = "all";
     }
 
-    function stopGame(text) {
-        document.querySelector(".js-game__title-result").textContent = text;
+    function stopGameOne(text) {
+        document.querySelector(".js-game-one__title-result").textContent = text;
         playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
         lives();
         const cards = document.querySelectorAll(".card");
@@ -185,7 +208,7 @@ const Game = () => {
         });
         document
             .querySelector(".js-inactive-btn")
-            .classList.remove("game__btn--inactive");
+            .classList.remove("game-one__btn--inactive");
         section.current.style.pointerEvents = "none";
         document.querySelector(".js-inactive-btn").textContent = "Play";
     }
@@ -222,60 +245,88 @@ const Game = () => {
     }
 
     function gameResult(text) {
-        document.querySelector(".js-game__title-result").textContent = text;
+        document.querySelector(".js-game-one__title-result").textContent = text;
         const cards = document.querySelectorAll(".card");
         cards.forEach((item) => {
             item.style.pointerEvents = "none";
         });
         document
             .querySelector(".js-inactive-btn")
-            .classList.remove("game__btn--inactive");
+            .classList.remove("game-one__btn--inactive");
         section.current.style.pointerEvents = "none";
         document.querySelector(".js-inactive-btn").textContent = "Play again";
     }
 
-    addEventListener("resize", () => {
-        if (
-            (window.innerWidth > 1000 && window.innerHeight < 650) ||
-            (window.innerWidth < 1000 && window.innerHeight < 600)
-        ) {
-            document.querySelector(".game").classList.add("none");
-            document
-                .querySelector(".rotate-container")
-                .classList.remove("none");
-        } else {
-            document.querySelector(".game").classList.remove("none");
-            document.querySelector(".rotate-container").classList.add("none");
-        }
-    });
+    // addEventListener("resize", () => {
+    //     if (
+    //         (window.innerWidth > 1000 && window.innerHeight < 650) ||
+    //         (window.innerWidth < 1000 && window.innerHeight < 600)
+    //     ) {
+    //         document.querySelector(".game").classList.add("none");
+    //         document
+    //             .querySelector(".rotate-container")
+    //             .classList.remove("none");
+    //     } else {
+    //         document.querySelector(".game").classList.remove("none");
+    //         document.querySelector(".rotate-container").classList.add("none");
+    //     }
+    // });
 
     return (
         <>
-            <div className="game">
-                <p className="game__title-result js-game__title-result">
-                    Memory Card Game
-                </p>
-                <p className="game__lives">
-                    Lives: <span className="js-lives-count"></span>
-                </p>
-                <div>
-                    <section ref={section}></section>
-                    <div className="game__btn-container">
+            <div className="games-section">
+                <div className="game-one-container">
+                    <div className="game-one-container__header">
+                        <div className="game-number">
+                            <span>1</span>
+                        </div>
+                        <p className="game-title">Memory Card Game</p>
+                    </div>
+
+                    <button
+                        className="game-one-container__start-btn"
+                        onClick={startGameOne}
+                    >
+                        Start
+                    </button>
+                    <div className="game-one">
                         <button
-                            className="game__btn"
-                            onClick={() => stopGame("Memory Card Game")}
+                            className="game-one__back-btn"
+                            onClick={closeGameOne}
                         >
-                            Stop
+                            Back
                         </button>
-                        <button
-                            className="game__btn js-inactive-btn"
-                            onClick={() => startGame("Memory Card Game")}
-                        >
-                            Play
-                        </button>
+                        <p className="game-one__title-result js-game-one__title-result">
+                            Memory Card Game
+                        </p>
+                        <p className="game-one__lives">
+                            Lives: <span className="js-lives-count"></span>
+                        </p>
+                        <div>
+                            <section ref={section}></section>
+                            <div className="game-one__btn-container">
+                                <button
+                                    className="game-one__btn"
+                                    onClick={() =>
+                                        stopGameOne("Memory Card Game")
+                                    }
+                                >
+                                    Stop
+                                </button>
+                                <button
+                                    className="game-one__btn js-inactive-btn"
+                                    onClick={() =>
+                                        playGameOne("Memory Card Game")
+                                    }
+                                >
+                                    Play
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div className="rotate-container none">
                 <p className="rotate-font-img">
                     <i className="fa-solid fa-rotate"></i>
@@ -288,4 +339,4 @@ const Game = () => {
     );
 };
 
-export default Game;
+export default Games;
