@@ -1,17 +1,8 @@
 import { useEffect } from "react";
 import "./CustomCursor.css";
+import { isTouchDevice } from "../../utils/isTouchDevice";
 
 const CustomCursor = () => {
-    // function will return true if touch device and false if mouse device
-    const isTouchDevice = () => {
-        try {
-            document.createEvent("TouchEvent");
-            return true;
-        } catch (e) {
-            return false;
-        }
-    };
-
     // i use useeffect to handle the condition once when load page
     useEffect(() => {
         if (!isTouchDevice()) {

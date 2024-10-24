@@ -9,8 +9,7 @@
     font-weight: 300;
     opacity: 0;
     z-index: 1;
-    transition: color 1s;
-    animation: reveal 1s forwards;
+    animation: reveal 0.5s forwards;
 }
 
 @keyframes reveal {

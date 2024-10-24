@@ -17,8 +17,7 @@
     font-weight: 300;
     color: var(--semi-transparent-50);
     opacity: 0;
-    transition: color 1s;
-    animation: reveal 1s forwards;
+    animation: reveal 0.5s forwards;
 }
 
 .rights {
@@ -26,8 +25,7 @@
     font-weight: 300;
     color: var(--semi-transparent-50);
     opacity: 0;
-    transition: color 1s;
-    animation: reveal 1s forwards;
+    animation: reveal 0.5s forwards;
 }
 
 @keyframes reveal {

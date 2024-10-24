@@ -3,10 +3,9 @@
     right: 100px;
     bottom: 100px;
     text-align: right;
-    color: var(--color);
     opacity: 0;
     z-index: 1;
-    animation: reveal 1s forwards;
+    animation: reveal 0.5s forwards;
 }
 
 @keyframes reveal {
@@ -18,13 +17,13 @@
 .home-container__title {
     font-size: clamp(16px, 3vw, 32px);
     font-weight: 200;
-    transition: color 1s;
+    color: var(--color);
 }
 
 .home-container__title-name {
     font-size: clamp(32px, 5vw, 64px);
     font-weight: 300;
-    transition: color 1s;
+    color: var(--color);
 }
 
 @media screen and (width < 1000px) {

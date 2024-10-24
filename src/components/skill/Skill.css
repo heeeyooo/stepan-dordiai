@@ -7,7 +7,6 @@
     background-color: var(--semi-transparent-10);
     opacity: 0;
     scale: 0.5;
-    transition: background-color 1s;
 }
 
 @keyframes revealSkill {
@@ -20,7 +19,6 @@
 .skill i {
     font-size: 3em;
     color: var(--color);
-    transition: color 1s;
 }
 
 @media screen and (width < 1000px) {

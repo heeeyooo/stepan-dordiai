@@ -18,7 +18,6 @@
     font-size: 36px;
     font-weight: 300;
     color: var(--color);
-    transition: color 1s;
 }
 
 .project-info-container {
@@ -41,14 +40,12 @@
     font-size: 36px;
     font-weight: 300;
     color: var(--color);
-    transition: color 1s;
 }
 
 .project-title {
     color: var(--color);
     font-weight: 200;
     font-size: clamp(12px, 2vw, 16px);
-    transition: color 1s;
 }
 
 .project-skills {
@@ -57,7 +54,6 @@
     align-items: center;
     column-gap: 10px;
     color: var(--color);
-    transition: color 1s;
 }
 
 .project-links {
@@ -71,7 +67,7 @@
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
-    transition: color 1s, opacity 0.2s;
+    transition: opacity 0.2s;
 }
 
 .project-links a:hover {

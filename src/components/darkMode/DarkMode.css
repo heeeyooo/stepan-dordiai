@@ -10,7 +10,7 @@
     writing-mode: vertical-lr;
     text-orientation: upright;
     z-index: 2;
-    animation: revealDarkModeContainer 1s forwards;
+    animation: revealDarkModeContainer 0.5s forwards;
 }
 
 @keyframes revealDarkModeContainer {
@@ -24,7 +24,6 @@
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
     margin-top: 50px;
-    transition: color 1s;
 }
 
 .dark-mode-btn {
@@ -32,7 +31,6 @@
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
     margin-bottom: 50px;
-    transition: color 1s;
 }
 
 @media screen and (width < 1000px) {

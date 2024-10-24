@@ -9,8 +9,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: 2;
-    transition: border-color 1s;
-    animation: revealCorner 1s forwards;
+    animation: revealCorner 0.5s forwards;
 }
 
 .corner-top-right {
@@ -24,8 +23,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: 2;
-    transition: border-color 1s;
-    animation: revealCorner 1s forwards;
+    animation: revealCorner 0.5s forwards;
 }
 
 .corner-bottom-right {
@@ -39,8 +37,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: 2;
-    transition: border-color 1s;
-    animation: revealCorner 1s forwards;
+    animation: revealCorner 0.5s forwards;
 }
 
 .corner-bottom-left {
@@ -54,8 +51,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: 2;
-    transition: border-color 1s;
-    animation: revealCorner 1s forwards;
+    animation: revealCorner 0.5s forwards;
 }
 
 @keyframes revealCorner {

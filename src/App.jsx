@@ -14,12 +14,13 @@ import Games from "./pages/games/Games";
 import "./App.css";
 import CustomCursor from "./components/customCursor/CustomCursor";
 import CustomCorners from "./components/customCorners/CustomCorners";
+import MemoryCardGame from "./pages/MemoryCardGame/MemoryCardGame";
 
 function App() {
     useEffect(() => {
         setTimeout(() => {
             document.querySelector(".wrapper").style.display = "initial";
-        }, 3000);
+        }, 1500);
     }, []);
 
     return (
@@ -40,6 +41,10 @@ function App() {
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/playground" element={<Playground />} />
                         <Route path="/games" element={<Games />} />
+                        <Route
+                            path="/memory-card-game"
+                            element={<MemoryCardGame />}
+                        />
                     </Routes>
                     <Footer />
                     {/*  */}

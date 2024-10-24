@@ -1,339 +1,135 @@
+import { NavLink } from "react-router-dom";
+import { isTouchDevice } from "../../utils/isTouchDevice";
 import { useEffect } from "react";
-import { useRef } from "react";
-import img1 from "./images/css3.svg";
-import img2 from "./images/html5.svg";
-import img3 from "./images/figma.svg";
-import img4 from "./images/js.svg";
-import img5 from "./images/node.svg";
-import img6 from "./images/git.svg";
-import img7 from "./images/sass.svg";
-import img8 from "./images/react.svg";
 import "./Games.css";
 
 const Games = () => {
-    // Game one
-    function startGameOne() {
-        document
-            .querySelector(".game-one-container")
-            .classList.add("game-one-container--start");
-        document.querySelector(".game-one-container__start-btn").style.display =
-            "none";
-        document.querySelector(".game-one-container__header").style.display =
-            "none";
-        document.querySelector(".game-one").style.display = "flex";
-    }
-
-    function closeGameOne() {
-        document
-            .querySelector(".game-one-container")
-            .classList.remove("game-one-container--start");
-        document.querySelector(".game-one-container__start-btn").style.display =
-            "initial";
-        document.querySelector(".game-one-container__header").style.display =
-            "flex";
-        document.querySelector(".game-one").style.display = "none";
-    }
-
-    const section = useRef(null);
-
+    // i use useeffect to handle the condition once when load page
     useEffect(() => {
-        lives();
-        cardGenerator();
-        document.title = "Stepan Dordiai | Game";
-        if (
-            (window.innerWidth > 1000 && window.innerHeight < 650) ||
-            (window.innerWidth < 1000 && window.innerHeight < 600)
-        ) {
-            document.querySelector(".game-one").classList.add("none");
-            document
-                .querySelector(".rotate-container")
-                .classList.remove("none");
+        if (!isTouchDevice()) {
+            document.querySelector(".games-section").style.overflowY = "scroll";
         } else {
-            document.querySelector(".game-one").classList.remove("none");
-            document.querySelector(".rotate-container").classList.add("none");
+            document.querySelector(".games-section").style.overflowY = "hidden";
         }
     }, []);
 
-    let playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
-
-    const lives = () => {
-        const livesCounts = document.querySelector(".js-lives-count");
-        livesCounts.textContent = playerLives.join(" ");
-    };
-
-    const cardData = [
-        {
-            imgSrc: img1,
-            name: "css",
-        },
-        {
-            imgSrc: img2,
-            name: "html",
-        },
-        {
-            imgSrc: img3,
-            name: "figma",
-        },
-        {
-            imgSrc: img4,
-            name: "js",
-        },
-        {
-            imgSrc: img5,
-            name: "node",
-        },
-        {
-            imgSrc: img6,
-            name: "git",
-        },
-        {
-            imgSrc: img7,
-            name: "sass",
-        },
-        {
-            imgSrc: img8,
-            name: "react",
-        },
-        {
-            imgSrc: img1,
-            name: "css",
-        },
-        {
-            imgSrc: img2,
-            name: "html",
-        },
-        {
-            imgSrc: img3,
-            name: "figma",
-        },
-        {
-            imgSrc: img4,
-            name: "js",
-        },
-        {
-            imgSrc: img5,
-            name: "node",
-        },
-        {
-            imgSrc: img6,
-            name: "git",
-        },
-        {
-            imgSrc: img7,
-            name: "sass",
-        },
-        {
-            imgSrc: img8,
-            name: "react",
-        },
-    ];
-
-    const randomize = () => {
-        return cardData.sort(() => Math.random() - 0.5);
-    };
-
-    function cardGenerator() {
-        cardData.forEach((item) => {
-            const topLeftCorner = document.createElement("div");
-            const topRightCorner = document.createElement("div");
-            const bottomRightCorner = document.createElement("div");
-            const bottomLeftCorner = document.createElement("div");
-            const card = document.createElement("div");
-            const face = document.createElement("img");
-            const back = document.createElement("div");
-
-            topLeftCorner.classList = "card-top-left-corner";
-            topRightCorner.classList = "card-top-right-corner";
-            bottomRightCorner.classList = "card-bottom-right-corner";
-            bottomLeftCorner.classList = "card-bottom-left-corner";
-            card.classList = "card";
-            face.classList = "face";
-            back.classList = "back";
-
-            back.appendChild(topLeftCorner);
-            back.appendChild(topRightCorner);
-            back.appendChild(bottomRightCorner);
-            back.appendChild(bottomLeftCorner);
-
-            section.current.appendChild(card);
-            card.appendChild(face);
-            card.appendChild(back);
-
-            face.src = item.imgSrc;
-            card.setAttribute("name", item.name);
-
-            card.addEventListener("click", (event) => {
-                card.classList.toggle("toggle-card");
-                const clickedCard = event.target;
-                clickedCard.classList.toggle("flipped");
-                checkCards();
-            });
-        });
-        section.current.style.pointerEvents = "none";
-    }
-
-    function playGameOne(text) {
-        document.querySelector(".js-game-one__title-result").textContent = text;
-        playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
-        lives();
-        const randomCardData = randomize();
-        const faces = document.querySelectorAll(".face");
-        const cards = document.querySelectorAll(".card");
-        randomCardData.forEach((item, index) => {
-            faces[index].src = item.imgSrc;
-            cards[index].setAttribute("name", item.name);
-        });
-        cards.forEach((item) => {
-            item.style.pointerEvents = "none";
-            item.classList.add("toggle-card");
-            setTimeout(() => {
-                item.style.pointerEvents = "all";
-                item.classList.remove("toggle-card");
-            }, 3000);
-        });
+    useEffect(() => {
         document
-            .querySelector(".js-inactive-btn")
-            .classList.add("game-one__btn--inactive");
-        section.current.style.pointerEvents = "all";
-    }
-
-    function stopGameOne(text) {
-        document.querySelector(".js-game-one__title-result").textContent = text;
-        playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
-        lives();
-        const cards = document.querySelectorAll(".card");
-        cards.forEach((item) => {
-            item.style.pointerEvents = "none";
-            item.classList.remove("toggle-card");
-        });
-        document
-            .querySelector(".js-inactive-btn")
-            .classList.remove("game-one__btn--inactive");
-        section.current.style.pointerEvents = "none";
-        document.querySelector(".js-inactive-btn").textContent = "Play";
-    }
-
-    function checkCards() {
-        const flippedCards = document.querySelectorAll(".flipped");
-        const toggleCards = document.querySelectorAll(".toggle-card");
-        if (flippedCards.length === 2) {
-            if (
-                flippedCards[0].getAttribute("name") ===
-                flippedCards[1].getAttribute("name")
-            ) {
-                flippedCards.forEach((card) => {
-                    card.classList.remove("flipped");
-                    card.style.pointerEvents = "none";
-                });
-            } else {
-                flippedCards.forEach((card) => {
-                    card.classList.remove("flipped");
-                    setTimeout(() => {
-                        card.classList.remove("toggle-card");
-                    }, 1000);
-                });
-                playerLives.pop();
-                lives();
-                if (playerLives.length === 0) {
-                    gameResult("You lose!");
+            .querySelector(".games-section")
+            .addEventListener("scroll", () => {
+                if (document.querySelector(".games-section").scrollTop >= 100) {
+                    document.querySelector(".pag1").classList.remove("active");
+                    document.querySelector(".pag2").classList.add("active");
+                } else {
+                    document.querySelector(".pag1").classList.add("active");
+                    document.querySelector(".pag2").classList.remove("active");
                 }
-            }
-        }
-        if (toggleCards.length === 16) {
-            gameResult("You win!");
-        }
+            });
+    }, []);
+
+    function scrollPag1() {
+        document.querySelector(".games-section").scrollTop = 0;
+    }
+    function scrollPag2() {
+        document.querySelector(".games-section").scrollTop = 500;
     }
 
-    function gameResult(text) {
-        document.querySelector(".js-game-one__title-result").textContent = text;
-        const cards = document.querySelectorAll(".card");
-        cards.forEach((item) => {
-            item.style.pointerEvents = "none";
-        });
+    function tiltEffect(event, className) {
+        const rect = document.querySelector(className).getBoundingClientRect();
+
+        const offsetX =
+            (!isTouchDevice() ? event.clientX : event.touches[0].pageX) -
+            rect.left -
+            rect.width / 2;
+        const offsetY =
+            (!isTouchDevice() ? event.clientY : event.touches[0].pageY) -
+            rect.top -
+            rect.height / 2;
+
+        const DEG = 15;
+
+        const tiltX = (offsetY / rect.height) * -DEG;
+        const tiltY = (offsetX / rect.width) * DEG;
+
         document
-            .querySelector(".js-inactive-btn")
-            .classList.remove("game-one__btn--inactive");
-        section.current.style.pointerEvents = "none";
-        document.querySelector(".js-inactive-btn").textContent = "Play again";
+            .querySelector(className)
+            .style.setProperty("--tiltX", `${tiltX}deg`);
+        document
+            .querySelector(className)
+            .style.setProperty("--tiltY", `${tiltY}deg`);
     }
 
-    // addEventListener("resize", () => {
-    //     if (
-    //         (window.innerWidth > 1000 && window.innerHeight < 650) ||
-    //         (window.innerWidth < 1000 && window.innerHeight < 600)
-    //     ) {
-    //         document.querySelector(".game").classList.add("none");
-    //         document
-    //             .querySelector(".rotate-container")
-    //             .classList.remove("none");
-    //     } else {
-    //         document.querySelector(".game").classList.remove("none");
-    //         document.querySelector(".rotate-container").classList.add("none");
-    //     }
-    // });
+    function removeTiltEffect(className) {
+        document.querySelector(className).style.setProperty("--tiltX", `0deg`);
+        document.querySelector(className).style.setProperty("--tiltY", `0deg`);
+    }
 
     return (
         <>
             <div className="games-section">
-                <div className="game-one-container">
-                    <div className="game-one-container__header">
-                        <div className="game-number">
-                            <span>1</span>
-                        </div>
-                        <p className="game-title">Memory Card Game</p>
-                    </div>
-
-                    <button
-                        className="game-one-container__start-btn"
-                        onClick={startGameOne}
-                    >
-                        Start
-                    </button>
-                    <div className="game-one">
-                        <button
-                            className="game-one__back-btn"
-                            onClick={closeGameOne}
-                        >
-                            Back
-                        </button>
-                        <p className="game-one__title-result js-game-one__title-result">
-                            Memory Card Game
-                        </p>
-                        <p className="game-one__lives">
-                            Lives: <span className="js-lives-count"></span>
-                        </p>
-                        <div>
-                            <section ref={section}></section>
-                            <div className="game-one__btn-container">
-                                <button
-                                    className="game-one__btn"
-                                    onClick={() =>
-                                        stopGameOne("Memory Card Game")
-                                    }
-                                >
-                                    Stop
-                                </button>
-                                <button
-                                    className="game-one__btn js-inactive-btn"
-                                    onClick={() =>
-                                        playGameOne("Memory Card Game")
-                                    }
-                                >
-                                    Play
-                                </button>
+                <div className="games-section__pagination">
+                    <span onClick={scrollPag1} className="pag1 active"></span>
+                    <span onClick={scrollPag2} className="pag2"></span>
+                </div>
+                {/* I use className as a property */}
+                <div
+                    className="game-wrapper"
+                    onMouseMove={() =>
+                        tiltEffect(event, ".js-game-one-container")
+                    }
+                    onMouseLeave={() =>
+                        removeTiltEffect(".js-game-one-container")
+                    }
+                    onTouchMove={() =>
+                        tiltEffect(event, ".js-game-one-container")
+                    }
+                    onTouchEnd={() =>
+                        removeTiltEffect(".js-game-one-container")
+                    }
+                >
+                    <div className="game-container js-game-one-container">
+                        <div className="game-container__header">
+                            <div className="game-container__number">
+                                <span>1</span>
                             </div>
+                            <p className="game-container__title">
+                                Memory Card Game
+                            </p>
+                        </div>
+                        <NavLink
+                            className="game-container__start-btn"
+                            to="/memory-card-game"
+                        >
+                            Start
+                        </NavLink>
+                    </div>
+                </div>
+                <div
+                    className="game-wrapper"
+                    onMouseMove={() =>
+                        tiltEffect(event, ".js-game-two-container")
+                    }
+                    onMouseLeave={() =>
+                        removeTiltEffect(".js-game-two-container")
+                    }
+                    onTouchMove={() =>
+                        tiltEffect(event, ".js-game-two-container")
+                    }
+                    onTouchEnd={() =>
+                        removeTiltEffect(".js-game-two-container")
+                    }
+                >
+                    <div className="game-container js-game-two-container">
+                        <div className="game-container__header">
+                            <div className="game-container__number">
+                                <span>2</span>
+                            </div>
+                            <p className="game-container__title">
+                                Comming soon...
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="rotate-container none">
-                <p className="rotate-font-img">
-                    <i className="fa-solid fa-rotate"></i>
-                </p>
-                <p className="rotate-title">
-                    Please rotate your device for better experience!
-                </p>
             </div>
         </>
     );
