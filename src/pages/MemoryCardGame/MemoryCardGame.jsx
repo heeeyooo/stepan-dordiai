@@ -240,12 +240,12 @@ const MemoryCardGame = () => {
             (window.innerWidth > 1000 && window.innerHeight < 650) ||
             (window.innerWidth < 1000 && window.innerHeight < 600)
         ) {
-            document.querySelector(".game").classList.add("none");
+            document.querySelector(".game-one").classList.add("none");
             document
                 .querySelector(".rotate-container")
                 .classList.remove("none");
         } else {
-            document.querySelector(".game").classList.remove("none");
+            document.querySelector(".game-one").classList.remove("none");
             document.querySelector(".rotate-container").classList.add("none");
         }
     });

@@ -1,7 +1,5 @@
 .game-one__back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    align-self: flex-start;
     color: var(--color);
 }
 

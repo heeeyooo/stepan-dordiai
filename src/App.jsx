@@ -47,11 +47,6 @@ function App() {
                         />
                     </Routes>
                     <Footer />
-                    {/*  */}
-                    {/* <div className="bulb-container">
-                        <div className="bulb"></div>
-                    </div> */}
-                    {/*  */}
                 </div>
             </Router>
         </>

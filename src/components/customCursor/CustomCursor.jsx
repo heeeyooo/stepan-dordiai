@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "./CustomCursor.css";
 import { isTouchDevice } from "../../utils/isTouchDevice";
+import "./CustomCursor.css";
 
 const CustomCursor = () => {
     // i use useeffect to handle the condition once when load page
