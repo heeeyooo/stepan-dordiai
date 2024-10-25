@@ -11,10 +11,10 @@ import Nav from "./components/nav/Nav";
 import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
 import Games from "./pages/games/Games";
-import "./App.css";
 import CustomCursor from "./components/customCursor/CustomCursor";
 import CustomCorners from "./components/customCorners/CustomCorners";
 import MemoryCardGame from "./pages/MemoryCardGame/MemoryCardGame";
+import "./App.css";
 
 function App() {
     useEffect(() => {

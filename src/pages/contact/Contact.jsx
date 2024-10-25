@@ -7,8 +7,10 @@ function Contact() {
     }, []);
 
     function copyEmail() {
+        const emailInput = document.querySelector(".email-input");
+        const emailValue = emailInput.value;
         //
-        navigator.clipboard.writeText("stepandordiai@gmail.com");
+        navigator.clipboard.writeText(emailValue);
         //
         document.querySelector(".email-copy-btn").innerHTML = "Copied";
         setTimeout(() => {
