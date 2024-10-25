@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/UseLocalStorage";
-import resume from "./../../pdf/resume-v1.0.pdf";
+import resume from "./../../pdf/stepan-dordiai-resume-v1.0.pdf";
 import "./DarkMode.css";
 
 function DarkMode() {
