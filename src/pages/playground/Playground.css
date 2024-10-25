@@ -1,0 +1,70 @@
+.playground {
+    position: fixed;
+    right: 100px;
+    top: 0;
+    bottom: 0;
+    padding: 100px 0;
+    width: calc(50% - 100px);
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.playground-project {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color);
+    opacity: 0;
+}
+
+@keyframes revealProject {
+    to {
+        opacity: 1;
+    }
+}
+
+.playground-project__number {
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 300;
+    color: var(--color);
+}
+
+.playground-info-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.playground-project__title {
+    color: var(--color);
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 300;
+}
+
+.playground-project__link {
+    color: var(--color);
+    font-weight: 300;
+    transition: opacity 0.2s;
+}
+
+.playground-project__link:hover {
+    opacity: 0.5;
+}
+
+.pg-project-arrow {
+    vertical-align: middle;
+}
+
+@media screen and (width < 1000px) {
+    .playground {
+        padding: 50px 0;
+        right: 50px;
+        left: 50px;
+        width: calc(100% - 100px);
+    }
+}

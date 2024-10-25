@@ -1,0 +1,43 @@
+.footer {
+    position: fixed;
+    right: 50px;
+    bottom: 0;
+    left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.creator {
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 300;
+    color: var(--semi-transparent-50);
+    opacity: 0;
+    animation: reveal 0.5s forwards;
+}
+
+.rights {
+    font-size: clamp(12px, 1vw, 16px);
+    font-weight: 300;
+    color: var(--semi-transparent-50);
+    opacity: 0;
+    animation: reveal 0.5s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .footer {
+        right: 25px;
+        left: 25px;
+        height: 25px;
+    }
+}

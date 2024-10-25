@@ -1,0 +1,50 @@
+.dark-mode-container {
+    position: fixed;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    z-index: 2;
+    animation: revealDarkModeContainer 0.5s forwards;
+}
+
+@keyframes revealDarkModeContainer {
+    to {
+        right: 0;
+    }
+}
+
+.dark-mode-container a {
+    color: var(--color);
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+.dark-mode-btn {
+    color: var(--color);
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+@media screen and (width < 1000px) {
+    .dark-mode-container {
+        top: 0;
+        right: -25px;
+        bottom: 0;
+        width: 25px;
+    }
+    .dark-mode-container a {
+        margin-top: 25px;
+    }
+
+    .dark-mode-btn {
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,28 @@
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--semi-transparent-10);
+    opacity: 0;
+    scale: 0.5;
+}
+
+@keyframes revealSkill {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.skill i {
+    font-size: 3em;
+    color: var(--color);
+}
+
+@media screen and (width < 1000px) {
+    .skill i {
+        font-size: 2em;
+    }
+}

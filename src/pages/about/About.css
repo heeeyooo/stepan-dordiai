@@ -1,0 +1,27 @@
+.about {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+    text-align: right;
+    color: var(--color);
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 300;
+    opacity: 0;
+    z-index: 1;
+    animation: reveal 0.5s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .about {
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+    }
+}

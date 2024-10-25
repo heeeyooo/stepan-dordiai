@@ -1,0 +1,80 @@
+.nav {
+    position: fixed;
+    left: -120px;
+    /*  */
+    top: 50px;
+    bottom: 50px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    z-index: 3;
+    animation: revealNav 0.5s forwards;
+}
+
+@keyframes revealNav {
+    to {
+        left: 50px;
+    }
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 5px 0;
+    background-color: var(--color);
+    width: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: width 0.5s;
+}
+
+.nav__link span {
+    background-color: var(--semi-transparent-50);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav__link--active {
+    width: 100%;
+}
+
+.game-font {
+    font-family: "Silkscreen", sans-serif;
+}
+
+@media screen and (width < 1000px) {
+    .nav {
+        top: 0;
+        bottom: 0;
+        left: -50%;
+        width: 50%;
+        padding-left: 25px;
+        box-sizing: border-box;
+        backdrop-filter: blur(0);
+        -webkit-backdrop-filter: blur(0);
+        transform: translateX(0);
+        transition: all 0.5s ease;
+    }
+
+    @keyframes revealNav {
+        to {
+            left: calc(-50% + 25px);
+        }
+    }
+
+    .nav--active {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transform: translateX(calc(100% - 25px));
+    }
+}

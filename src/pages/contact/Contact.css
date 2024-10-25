@@ -1,0 +1,58 @@
+.email-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    opacity: 0;
+    font-size: clamp(20px, 3vw, 36px);
+    font-weight: 200;
+    color: var(--color);
+    z-index: 1;
+    animation: reveal 0.5s forwards;
+}
+
+.email-input,
+.email-copy-btn {
+    font-size: clamp(20px, 3vw, 36px);
+    color: var(--color);
+    font-weight: 200;
+}
+
+.socials-container {
+    position: fixed;
+    bottom: 100px;
+    top: 100px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    opacity: 0;
+    z-index: 1;
+    animation: reveal 0.5s forwards;
+}
+
+.socials-container a {
+    color: var(--color);
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .socials-container {
+        top: auto;
+        bottom: 50px;
+        right: 50px;
+        left: 50px;
+        flex-direction: row;
+    }
+}

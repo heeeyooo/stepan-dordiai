@@ -1,0 +1,205 @@
+.games-section {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    width: calc(50% - 100px);
+    font-family: "Silkscreen", sans-serif;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    opacity: 0;
+    animation: reveal 0.5s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
+
+.games-section__pagination {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.games-section__pagination span {
+    width: 5px;
+    height: 25px;
+    background-color: var(--semi-transparent-50);
+}
+
+.active {
+    background-color: var(--color) !important;
+}
+
+.game-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    perspective: 700px;
+}
+
+.game-container {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    transform-style: preserve-3d;
+    --tiltX: 0deg;
+    --tiltY: 0deg;
+    background-color: var(--bg-semi-transparent-50);
+    transform: rotateY(var(--tiltY)) rotateX(var(--tiltX));
+    transition: transform 0.1s;
+}
+
+.game-container::before {
+    position: absolute;
+    content: "";
+    inset: 0rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    filter: blur(0);
+    transform: translateZ(-49px);
+    transition: all 0.3s;
+}
+
+.game-wrapper:hover .game-container::before {
+    inset: 0.75rem;
+    opacity: 1;
+    filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.game-container::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(-135deg, rgb(89, 238, 251), rgb(255, 124, 237));
+    inset: -1.25rem;
+    transform: translateZ(-50px);
+}
+
+/* Just background gradient for the last element */
+.game-wrapper:nth-last-child(1) .game-container::after {
+    background: linear-gradient(rgb(255, 95, 47), rgb(227, 245, 109));
+}
+
+.game-container__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    margin: 0 20px;
+}
+
+.game-container__number {
+    color: var(--color);
+    font-size: 34px;
+}
+
+.game-container__title {
+    color: var(--color);
+    font-size: 24px;
+}
+
+.scroller__inner {
+    /*  */
+    /* padding-block: 1rem; */
+    /*  */
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    /*  */
+    /* mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
+    /*  */
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    /*  */
+    flex-wrap: nowrap;
+    /*  */
+    animation: scroll var(--_animation-duration, 8s)
+        var(--_animation-direction, forwards) linear infinite;
+    /* animation-timing-function: steps(50); */
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 16s;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 5s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+.game-container__start-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: var(--color);
+    font-size: 24px;
+}
+
+@media screen and (width < 1000px) {
+    .games-section {
+        top: 50px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px;
+        width: calc(100% - 100px);
+    }
+
+    .games-section__pagination {
+        right: 25px;
+    }
+
+    .game-container {
+        width: 190px;
+    }
+
+    .game-container__header {
+        height: 50px;
+        column-gap: 10px;
+        margin: 0 10px;
+    }
+
+    .game-container__title,
+    .game-container__start-btn {
+        font-size: 16px;
+    }
+
+    .game-container__number {
+        font-size: 26px;
+    }
+}
