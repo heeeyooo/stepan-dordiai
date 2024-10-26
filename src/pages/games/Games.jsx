@@ -4,6 +4,10 @@ import { useEffect } from "react";
 import "./Games.css";
 
 const Games = () => {
+    useEffect(() => {
+        document.title = "Stepan Dordiai | Games";
+    }, []);
+
     // i use useeffect to handle the condition once when load page
     useEffect(() => {
         if (!isTouchDevice()) {
@@ -25,6 +29,12 @@ const Games = () => {
                     document.querySelector(".pag2").classList.remove("active");
                 }
             });
+    }, []);
+
+    useEffect(() => {
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
     }, []);
 
     function scrollPag1() {
@@ -64,12 +74,6 @@ const Games = () => {
         document.querySelector(className).style.setProperty("--tiltX", `0deg`);
         document.querySelector(className).style.setProperty("--tiltY", `0deg`);
     }
-
-    useEffect(() => {
-        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            addAnimation();
-        }
-    }, []);
 
     function addAnimation() {
         const scrollers = document.querySelectorAll(".scroller");
@@ -157,7 +161,7 @@ const Games = () => {
                             <div
                                 className="scroller"
                                 data-speed="fast"
-                                data-direction="right"
+                                data-direction="left"
                             >
                                 <div className="scroller__inner">
                                     <p className="game-container__title">

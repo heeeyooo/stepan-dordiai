@@ -15,9 +15,9 @@ const MemoryCardGame = () => {
     const section = useRef(null);
 
     useEffect(() => {
+        document.title = "Stepan Dordiai | Memory Card Game";
         lives();
         cardGenerator();
-        document.title = "Stepan Dordiai | Game";
         if (
             (window.innerWidth > 1000 && window.innerHeight < 650) ||
             (window.innerWidth < 1000 && window.innerHeight < 600)
