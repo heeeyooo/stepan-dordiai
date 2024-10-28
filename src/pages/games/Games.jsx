@@ -97,10 +97,6 @@ const Games = () => {
     return (
         <>
             <div className="games-section">
-                <div className="games-section__pagination">
-                    <span onClick={scrollPag1} className="pag1 active"></span>
-                    <span onClick={scrollPag2} className="pag2"></span>
-                </div>
                 {/* I use className as a property */}
                 <div
                     className="game-wrapper"
@@ -172,6 +168,10 @@ const Games = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="games-section__pagination">
+                <span onClick={scrollPag1} className="pag1 active"></span>
+                <span onClick={scrollPag2} className="pag2"></span>
             </div>
         </>
     );

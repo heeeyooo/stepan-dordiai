@@ -27,6 +27,8 @@
     justify-content: center;
     align-items: center;
     row-gap: 10px;
+    opacity: 0;
+    animation: reveal 0.5s forwards;
 }
 
 .games-section__pagination span {
@@ -130,6 +132,10 @@
     flex-wrap: nowrap;
     animation: scroll var(--_animation-duration, 8s)
         var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller__inner:hover {
+    animation-play-state: paused;
 }
 
 .scroller[data-direction="right"] {

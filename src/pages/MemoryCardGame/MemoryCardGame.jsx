@@ -172,6 +172,7 @@ const MemoryCardGame = () => {
         document
             .querySelector(".js-inactive-btn")
             .classList.add("game-one__btn--inactive");
+        document.querySelector(".js-inactive-btn").disabled = true;
         section.current.style.pointerEvents = "all";
     }
 
@@ -187,6 +188,7 @@ const MemoryCardGame = () => {
         document
             .querySelector(".js-inactive-btn")
             .classList.remove("game-one__btn--inactive");
+        document.querySelector(".js-inactive-btn").disabled = false;
         section.current.style.pointerEvents = "none";
         document.querySelector(".js-inactive-btn").textContent = "Play";
     }
@@ -231,6 +233,7 @@ const MemoryCardGame = () => {
         document
             .querySelector(".js-inactive-btn")
             .classList.remove("game-one__btn--inactive");
+        document.querySelector(".js-inactive-btn").disabled = false;
         section.current.style.pointerEvents = "none";
         document.querySelector(".js-inactive-btn").textContent = "Play again";
     }

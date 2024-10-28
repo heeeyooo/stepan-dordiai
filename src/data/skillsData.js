@@ -49,6 +49,11 @@ const SKILLSDATA = [
         icon: "fa-brands fa-node",
         info: "currently-learning",
     },
+    {
+        id: "Bootstrap",
+        icon: "fa-brands fa-bootstrap",
+        info: "frontend",
+    },
 ];
 
 export default SKILLSDATA;
