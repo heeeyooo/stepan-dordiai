@@ -1,1 +1,3 @@
-# My own portfolio website
+# Stepan Dordiai Portfolio
+
+## My own portfolio website

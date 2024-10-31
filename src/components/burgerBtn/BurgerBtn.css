@@ -51,10 +51,10 @@
     }
 
     .active-burger-btn::before {
-        transform: translateY(0) rotate(-45deg);
+        transform: translateY(0) rotate(45deg);
     }
 
     .active-burger-btn::after {
-        transform: translateY(0) rotate(45deg);
+        transform: translateY(0) rotate(-45deg);
     }
 }

@@ -8,6 +8,11 @@ function Nav() {
 
     return (
         <nav className="nav">
+            <div className="nav__header">
+                <h1 className="nav__logo-title">
+                    STEPAN DORDIAI <span>PORTFOLIO</span>
+                </h1>
+            </div>
             <BurgerBtn />
             <ul className="nav__list">
                 <li>
@@ -81,6 +86,11 @@ function Nav() {
                     </NavLink>
                 </li>
             </ul>
+            <div className="nav__footer">
+                <a href="https://github.com/heeeyooo" target="_blank">
+                    <i className="fa-brands fa-github"></i>
+                </a>
+            </div>
         </nav>
     );
 }
