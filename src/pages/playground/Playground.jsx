@@ -12,6 +12,7 @@ const Playground = () => {
             });
         document.title = "Stepan Dordiai | Playground";
     }, []);
+
     //
     function brightCursor(props) {
         document.querySelector("#custom-cursor").classList.add("active-cursor");
@@ -25,12 +26,15 @@ const Playground = () => {
         document.querySelector("#custom-cursor").textContent = "";
     }
     //
+
     function scrollUp() {
         document.querySelector(".playground").scrollTop -= 100;
     }
+
     function scrollDown() {
         document.querySelector(".playground").scrollTop += 100;
     }
+
     return (
         <>
             <div className="playground">
@@ -49,10 +53,7 @@ const Playground = () => {
                                     href={link}
                                     target="_blank"
                                 >
-                                    {info}{" "}
-                                    <span className="material-symbols-outlined pg-project-arrow">
-                                        arrow_outward
-                                    </span>
+                                    {info} <i className="fa-solid fa-link"></i>
                                 </a>
                             </div>
                         </div>

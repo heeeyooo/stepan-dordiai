@@ -82,7 +82,7 @@ function Nav() {
                         }}
                         to="/games"
                     >
-                        <span className="game-font">GAMES</span>
+                        <span className="game-link-font">GAMES</span>
                     </NavLink>
                 </li>
             </ul>

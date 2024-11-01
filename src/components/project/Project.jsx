@@ -43,10 +43,7 @@ function Project({
                             href={liveDemo}
                             target="_blank"
                         >
-                            Live demo{" "}
-                            <span className="material-symbols-outlined project-arrow">
-                                arrow_outward
-                            </span>
+                            Live demo <i className="fa-solid fa-link"></i>
                         </a>
                         <a
                             onMouseEnter={() => brightCursor("Github")}
@@ -54,10 +51,7 @@ function Project({
                             href={githubLink}
                             target="_blank"
                         >
-                            Github code{" "}
-                            <span className="material-symbols-outlined project-arrow">
-                                arrow_outward
-                            </span>
+                            Github code <i className="fa-solid fa-link"></i>
                         </a>
                     </div>
                 </div>

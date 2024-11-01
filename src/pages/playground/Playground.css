@@ -27,7 +27,7 @@
 }
 
 .playground-project__number {
-    font-size: clamp(24px, 3vw, 30px);
+    font-size: 24px;
     font-weight: 300;
     color: var(--color);
 }
@@ -42,22 +42,19 @@
 
 .playground-project__title {
     color: var(--color);
-    font-size: clamp(24px, 3vw, 30px);
+    font-size: 24px;
     font-weight: 300;
 }
 
 .playground-project__link {
+    font-size: clamp(12px, 2vw, 16px);
     color: var(--color);
-    font-weight: 300;
-    transition: opacity 0.2s;
+    font-weight: 200;
+    transition: opacity 0.15s;
 }
 
 .playground-project__link:hover {
     opacity: 0.5;
-}
-
-.pg-project-arrow {
-    vertical-align: middle;
 }
 
 @media screen and (width < 1000px) {
