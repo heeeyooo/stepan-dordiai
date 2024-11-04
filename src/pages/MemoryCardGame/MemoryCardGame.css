@@ -22,12 +22,10 @@
 .game-one__title-result {
     color: var(--color);
     font-size: 1.5rem;
-    transition: color 1s;
 }
 
 .game-one__lives {
     color: var(--color);
-    transition: color 1s;
 }
 
 section {
@@ -125,7 +123,6 @@ section {
     position: relative;
     color: var(--color);
     padding: 10px 20px;
-    transition: color 1s;
 }
 
 .game-one__btn::before {
@@ -137,7 +134,7 @@ section {
     height: 50%;
     border-top: 2.5px solid var(--color);
     border-left: 2.5px solid var(--color);
-    transition: width 0.3s, height 0.3s, border-color 1s;
+    transition: width 0.3s, height 0.3s;
 }
 
 .game-one__btn::after {
@@ -149,7 +146,7 @@ section {
     height: 50%;
     border-right: 2.5px solid var(--color);
     border-bottom: 2.5px solid var(--color);
-    transition: width 0.3s, height 0.3s, border-color 1s;
+    transition: width 0.3s, height 0.3s;
 }
 
 .game-one__btn:hover::before,
@@ -179,7 +176,7 @@ section {
     width: calc(50% - 100px);
     opacity: 0;
     z-index: 1;
-    animation: reveal 1s forwards;
+    animation: reveal 0.5s forwards;
 }
 
 @keyframes reveal {
@@ -191,13 +188,11 @@ section {
 .rotate-font-img {
     font-size: 72px;
     color: var(--color);
-    transition: color 1s;
 }
 
 .rotate-title {
     color: var(--color);
     font-weight: 300;
-    transition: color 1s;
     text-align: center;
 }
 

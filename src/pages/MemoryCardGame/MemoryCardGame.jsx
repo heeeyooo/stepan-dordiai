@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import img1 from "./images/css3.svg";
 import img2 from "./images/html5.svg";
 import img3 from "./images/figma.svg";
@@ -9,7 +9,6 @@ import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
 import "./MemoryCardGame.css";
-import { NavLink } from "react-router-dom";
 
 const MemoryCardGame = () => {
     const section = useRef(null);
