@@ -3,6 +3,7 @@
     top: 100px;
     right: 100px;
     bottom: 100px;
+    z-index: 1;
     width: calc(50% - 100px);
     font-family: "Silkscreen", sans-serif;
     overflow-y: scroll;

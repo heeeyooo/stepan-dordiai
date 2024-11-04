@@ -15,6 +15,7 @@ import CustomCursor from "./components/customCursor/CustomCursor";
 import CustomCorners from "./components/customCorners/CustomCorners";
 import MemoryCardGame from "./pages/MemoryCardGame/MemoryCardGame";
 import "./App.css";
+import CubeBackground from "./components/cubeBackground/CubeBackground";
 
 function App() {
     useEffect(() => {
@@ -47,6 +48,7 @@ function App() {
                         />
                     </Routes>
                     <Footer />
+                    <CubeBackground />
                 </div>
             </Router>
         </>
