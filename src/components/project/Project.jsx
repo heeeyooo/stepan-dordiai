@@ -5,19 +5,21 @@ function Project({
     title,
     titleName,
     skills,
-    githubLink,
+    githubRepo,
     liveDemo,
     extraClass,
 }) {
     function brightCursor(text) {
-        document.querySelector("#custom-cursor").classList.add("active-cursor");
+        document
+            .querySelector("#custom-cursor")
+            .classList.add("cursor--active");
         document.querySelector("#custom-cursor").textContent = text;
     }
 
     function lowerCursor() {
         document
             .querySelector("#custom-cursor")
-            .classList.remove("active-cursor");
+            .classList.remove("cursor--active");
         document.querySelector("#custom-cursor").textContent = ``;
     }
 
@@ -35,25 +37,29 @@ function Project({
                             return <div key={index}>{skill}</div>;
                         })}
                     </div>
-                    <div className="project-links">
-                        <a
-                            onMouseEnter={() => brightCursor("Live")}
-                            onMouseLeave={lowerCursor}
-                            className={extraClass}
-                            href={liveDemo}
-                            target="_blank"
-                        >
-                            Live demo <i className="fa-solid fa-link"></i>
-                        </a>
-                        <a
-                            onMouseEnter={() => brightCursor("Github")}
-                            onMouseLeave={lowerCursor}
-                            href={githubLink}
-                            target="_blank"
-                        >
-                            Github code <i className="fa-solid fa-link"></i>
-                        </a>
-                    </div>
+                    <ul className="project-links__list">
+                        <li className={extraClass}>
+                            <a
+                                onMouseEnter={() => brightCursor("Live")}
+                                onMouseLeave={lowerCursor}
+                                href={liveDemo}
+                                target="_blank"
+                            >
+                                <i className="fa-solid fa-link"></i> Live demo
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                onMouseEnter={() => brightCursor("Github")}
+                                onMouseLeave={lowerCursor}
+                                href={githubRepo}
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-github"></i> Github
+                                Repo
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </>

@@ -5,12 +5,28 @@ const CubeBackground = () => {
         <div className="reveal-cube-container">
             <div className="cube-container">
                 <div className="cube">
-                    <div className="side side-front"></div>
-                    <div className="side side-back"></div>
+                    <div className="side side-front">
+                        <p>
+                            STEPAN DORDIAI <span>PORTFOLIO</span>
+                        </p>
+                    </div>
+                    <div className="side side-back">
+                        <p>
+                            STEPAN DORDIAI <span>PORTFOLIO</span>
+                        </p>
+                    </div>
                     <div className="side side-top"></div>
                     <div className="side side-bottom"></div>
-                    <div className="side side-left"></div>
-                    <div className="side side-right"></div>
+                    <div className="side side-left">
+                        <p>
+                            SD <span>PORTFOLIO</span>
+                        </p>
+                    </div>
+                    <div className="side side-right">
+                        <p>
+                            SD <span>PORTFOLIO</span>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className="cube-shadow"></div>

@@ -21,7 +21,7 @@
     }
 }
 
-.creator {
+.copyright {
     font-size: clamp(12px, 1vw, 16px);
     font-weight: 300;
     color: var(--semi-transparent-50);

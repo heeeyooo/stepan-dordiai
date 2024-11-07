@@ -19,14 +19,16 @@ function Contact() {
     }
 
     function brightCursor(props) {
-        document.querySelector("#custom-cursor").classList.add("active-cursor");
+        document
+            .querySelector("#custom-cursor")
+            .classList.add("cursor--active");
         document.querySelector("#custom-cursor").innerHTML = props;
     }
 
     function lowerCursor() {
         document
             .querySelector("#custom-cursor")
-            .classList.remove("active-cursor");
+            .classList.remove("cursor--active");
         document.querySelector("#custom-cursor").innerHTML = "";
     }
 
@@ -53,64 +55,85 @@ function Contact() {
                 </button>
             </div>
 
-            <div className="socials-container">
-                <a
-                    onMouseEnter={() => brightCursor("Github")}
-                    onMouseLeave={lowerCursor}
-                    href="https://github.com/heeeyooo"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-github"></i>
-                </a>
-                <a
-                    onMouseEnter={() => brightCursor("Instagram")}
-                    onMouseLeave={lowerCursor}
-                    href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-instagram"></i>
-                </a>
-                <a
-                    onMouseEnter={() => brightCursor("Facebook")}
-                    onMouseLeave={lowerCursor}
-                    href="https://www.facebook.com/stepan.dordyay.5"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-facebook"></i>
-                </a>
-                <a
-                    onMouseEnter={() => brightCursor("Twitter")}
-                    onMouseLeave={lowerCursor}
-                    href="https://twitter.com/Heeeyooo_"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-x-twitter"></i>
-                </a>
-                <a
-                    onMouseEnter={() => brightCursor("Twitch")}
-                    onMouseLeave={lowerCursor}
-                    href="https://www.twitch.tv/heeeyooo_"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-twitch"></i>
-                </a>
-                <a
-                    onMouseEnter={() => brightCursor("Linkedin")}
-                    onMouseLeave={lowerCursor}
-                    href="https://www.linkedin.com/in/stepan-dordiai-245715310"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-linkedin"></i>
-                </a>
-                <a
-                    onMouseEnter={() => brightCursor("Behance")}
-                    onMouseLeave={lowerCursor}
-                    href="https://www.behance.net/stepandordiai"
-                    target="_blank"
-                >
-                    <i className="fa-brands fa-behance"></i>
-                </a>
-            </div>
+            <ul className="socials-list">
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Github")}
+                        onMouseLeave={lowerCursor}
+                        href="https://github.com/heeeyooo"
+                        target="_blank"
+                        title="Github"
+                    >
+                        <i className="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Instagram")}
+                        onMouseLeave={lowerCursor}
+                        href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
+                        target="_blank"
+                        title="Instagram"
+                    >
+                        <i className="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Facebook")}
+                        onMouseLeave={lowerCursor}
+                        href="https://www.facebook.com/stepan.dordyay.5"
+                        target="_blank"
+                        title="Facebook"
+                    >
+                        <i className="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Twitter")}
+                        onMouseLeave={lowerCursor}
+                        href="https://twitter.com/Heeeyooo_"
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        <i className="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Twitch")}
+                        onMouseLeave={lowerCursor}
+                        href="https://www.twitch.tv/heeeyooo_"
+                        target="_blank"
+                        title="Twitch"
+                    >
+                        <i className="fa-brands fa-twitch"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Linkedin")}
+                        onMouseLeave={lowerCursor}
+                        href="https://www.linkedin.com/in/stepan-dordiai-245715310"
+                        target="_blank"
+                        title="Linkedin"
+                    >
+                        <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => brightCursor("Behance")}
+                        onMouseLeave={lowerCursor}
+                        href="https://www.behance.net/stepandordiai"
+                        target="_blank"
+                        title="Behance"
+                    >
+                        <i className="fa-brands fa-behance"></i>
+                    </a>
+                </li>
+            </ul>
         </>
     );
 }

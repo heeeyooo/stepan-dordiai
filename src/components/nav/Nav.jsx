@@ -87,7 +87,11 @@ function Nav() {
                 </li>
             </ul>
             <div className="nav__footer">
-                <a href="https://github.com/heeeyooo" target="_blank">
+                <a
+                    href="https://github.com/heeeyooo"
+                    target="_blank"
+                    title="Github"
+                >
                     <i className="fa-brands fa-github"></i>
                 </a>
             </div>

@@ -58,10 +58,18 @@ function DarkMode() {
         setLightMode((currentMode) => {
             return currentMode === "light" ? "dark" : "light";
         });
+
+        // I added setTimeout to change text after a function was completed
+        setTimeout(() => {
+            document.querySelector("#custom-cursor").textContent =
+                refBtn.current.textContent;
+        }, 1);
     };
 
     function brightCursor() {
-        document.querySelector("#custom-cursor").classList.add("active-cursor");
+        document
+            .querySelector("#custom-cursor")
+            .classList.add("cursor--active");
         document.querySelector("#custom-cursor").textContent =
             refBtn.current.textContent;
     }
@@ -69,7 +77,7 @@ function DarkMode() {
     function lowerCursor() {
         document
             .querySelector("#custom-cursor")
-            .classList.remove("active-cursor");
+            .classList.remove("cursor--active");
         document.querySelector("#custom-cursor").textContent = "";
     }
 

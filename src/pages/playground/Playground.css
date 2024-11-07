@@ -46,15 +46,24 @@
     font-weight: 300;
 }
 
-.playground-project__link {
-    font-size: clamp(12px, 2vw, 16px);
+.pg-project__links-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.pg-project__link {
     color: var(--color);
-    font-weight: 200;
     transition: opacity 0.15s;
 }
 
-.playground-project__link:hover {
+.pg-project__link:hover {
     opacity: 0.5;
+}
+
+.link--none {
+    display: none;
 }
 
 @media screen and (width < 1000px) {

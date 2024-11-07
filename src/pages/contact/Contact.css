@@ -22,7 +22,7 @@
     font-weight: 200;
 }
 
-.socials-container {
+.socials-list {
     position: fixed;
     bottom: 100px;
     top: 100px;
@@ -31,13 +31,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-size: 24px;
     opacity: 0;
     z-index: 1;
     animation: reveal 0.5s forwards;
 }
 
-.socials-container a {
+.socials-list a {
+    font-size: clamp(18px, 3vw, 24px);
     color: var(--color);
 }
 
@@ -48,7 +48,7 @@
 }
 
 @media screen and (width < 1000px) {
-    .socials-container {
+    .socials-list {
         top: auto;
         bottom: 50px;
         right: 50px;

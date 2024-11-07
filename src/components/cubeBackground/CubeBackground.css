@@ -43,6 +43,24 @@
     width: 200px;
     height: 200px;
     border: 2px solid var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.side p {
+    font-size: clamp(10px, 1vw, 12px);
+    font-weight: 300;
+    /*  */
+    backface-visibility: hidden;
+    /*  */
+}
+
+.side span {
+    font-weight: 100;
 }
 
 .side-front {
@@ -50,7 +68,7 @@
 }
 
 .side-back {
-    transform: translateZ(-100px);
+    transform: rotateX(180deg) rotate(180deg) translateZ(100px);
 }
 
 .side-top {
@@ -110,7 +128,7 @@
     }
 
     .side-back {
-        transform: translateZ(-50px);
+        transform: rotateX(180deg) rotate(180deg) translateZ(50px);
     }
 
     .side-top {

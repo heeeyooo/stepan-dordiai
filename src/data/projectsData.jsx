@@ -4,15 +4,15 @@ const PROJECTSDATA = [
         title: "Stepan Dordiai",
         titleName: "Portfolio website",
         skills: [<i className="fa-brands fa-react"></i>],
-        githubLink: "https://github.com/heeeyooo/stepan-dordiai",
-        extraClass: "inactive-link",
+        githubRepo: "https://github.com/heeeyooo/stepan-dordiai",
+        extraClass: "link--none",
     },
     {
         id: 2,
         title: "Yagoda Karpat",
         titleName: "Business website",
         skills: [<i className="fa-brands fa-react"></i>, <span>Swiper</span>],
-        githubLink: "https://github.com/heeeyooo/yagoda-karpat",
+        githubRepo: "https://github.com/heeeyooo/yagoda-karpat",
         liveDemo: "https://yagodakarpat.netlify.app/",
     },
     {
@@ -26,7 +26,7 @@ const PROJECTSDATA = [
             <span>BEM</span>,
             <span>Day.js</span>,
         ],
-        githubLink: "https://github.com/heeeyooo/cloud",
+        githubRepo: "https://github.com/heeeyooo/cloud",
         liveDemo: "https://cloud-project.netlify.app/",
     },
     {
@@ -34,7 +34,7 @@ const PROJECTSDATA = [
         title: "penguin",
         titleName: "Portfolio website",
         skills: [<i className="fa-brands fa-react"></i>],
-        githubLink: "https://github.com/heeeyooo/penguin",
+        githubRepo: "https://github.com/heeeyooo/penguin",
         liveDemo: "https://penguin-project.netlify.app/",
     },
     {
@@ -48,7 +48,7 @@ const PROJECTSDATA = [
             <span>BEM</span>,
             <span>Day.js</span>,
         ],
-        githubLink: "https://github.com/heeeyooo/coffeefy",
+        githubRepo: "https://github.com/heeeyooo/coffeefy",
         liveDemo: "https://heeeyooo.github.io/coffeefy/",
     },
     {
@@ -61,7 +61,7 @@ const PROJECTSDATA = [
             <i className="fa-brands fa-square-js"></i>,
             <span>BEM</span>,
         ],
-        githubLink: "https://github.com/heeeyooo/tasty-burger",
+        githubRepo: "https://github.com/heeeyooo/tasty-burger",
         liveDemo: "https://heeeyooo.github.io/tasty-burger/",
     },
 ];

@@ -81,26 +81,26 @@
     font-size: clamp(12px, 2vw, 16px);
 }
 
-.project-links {
+.project-links__list {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 10px;
 }
 
-.project-links a {
+.project-links__list a {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
-    font-weight: 200;
+    font-weight: 300;
     transition: opacity 0.15s;
 }
 
-.project-links a:hover {
+.project-links__list a:hover {
     opacity: 0.5;
 }
 
-/* hide liveDemo in first portfolio */
-.inactive-link {
+/* Hide Live Demo at first project */
+.link--none {
     display: none;
 }
 

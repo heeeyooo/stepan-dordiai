@@ -37,7 +37,7 @@ function Portfolio() {
                             title={project.title}
                             titleName={project.titleName}
                             skills={project.skills}
-                            githubLink={project.githubLink}
+                            githubRepo={project.githubRepo}
                             liveDemo={project.liveDemo}
                             extraClass={project.extraClass}
                         />
