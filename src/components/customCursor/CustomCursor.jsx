@@ -36,7 +36,13 @@ const CustomCursor = () => {
         document.querySelector("#custom-cursor").style.top = mouseY + "px";
     });
 
-    return <div id="custom-cursor"></div>;
+    return (
+        <div id="custom-cursor">
+            <div className="text">
+                <p></p>
+            </div>
+        </div>
+    );
 };
 
 export default CustomCursor;

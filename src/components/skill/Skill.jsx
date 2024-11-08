@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Skill.css";
+import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 
 function Skill({ icon, id }) {
     // useLocation for rendering data when navigate
@@ -19,26 +20,10 @@ function Skill({ icon, id }) {
             });
     }, [pathname]);
 
-    //
-    function brightCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.add("cursor--active");
-        document.querySelector("#custom-cursor").textContent = id;
-    }
-
-    function lowerCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.remove("cursor--active");
-        document.querySelector("#custom-cursor").textContent = "";
-    }
-    //
-
     return (
         <div
-            onMouseEnter={brightCursor}
-            onMouseLeave={lowerCursor}
+            onMouseEnter={() => makeCursorActive(id)}
+            onMouseLeave={makeCursorNormal}
             className="skill-container"
         >
             {icon.map((element, index) => {

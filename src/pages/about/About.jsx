@@ -7,11 +7,12 @@ function About() {
     }, []);
     return (
         <p className="about">
-            Hi! My name is Stepan Dordiai and I am a Junior Frontend Developer
-            currently based in Ukraine.
-            <br />I specialize in building pixel perfect minimalistic projects
-            that will charm the viewer with their interactivity and ease of use.
-            Gym enjoyer
+            Hi! My name is Stepan Dordiai and I'm a self-taught Web Developer
+            with 1 year of practical experience in designing and building
+            responsive web pages and applications.
+            <br />
+            Constantly seeking for new challenges and opportunities that will
+            expand my skill set.
         </p>
     );
 }

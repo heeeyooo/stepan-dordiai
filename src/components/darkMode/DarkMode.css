@@ -1,8 +1,8 @@
 .dark-mode-container {
     position: fixed;
-    top: 0;
+    top: 50px;
     right: -50px;
-    bottom: 0;
+    bottom: 50px;
     width: 50px;
     display: flex;
     justify-content: space-between;
@@ -19,32 +19,23 @@
     }
 }
 
-.dark-mode-container a {
+.dark-mode-btn,
+.resume-link {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
-    margin-top: 50px;
+    transition: opacity 0.15s;
 }
 
-.dark-mode-btn {
-    color: var(--color);
-    font-size: clamp(12px, 2vw, 16px);
-    font-weight: 300;
-    margin-bottom: 50px;
+.resume-link:hover {
+    opacity: 0.5;
 }
 
 @media screen and (width < 1000px) {
     .dark-mode-container {
-        top: 0;
+        top: 25px;
         right: -25px;
-        bottom: 0;
+        bottom: 25px;
         width: 25px;
-    }
-    .dark-mode-container a {
-        margin-top: 25px;
-    }
-
-    .dark-mode-btn {
-        margin-bottom: 25px;
     }
 }

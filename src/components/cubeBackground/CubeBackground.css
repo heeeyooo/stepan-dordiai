@@ -54,9 +54,7 @@
 .side p {
     font-size: clamp(10px, 1vw, 12px);
     font-weight: 300;
-    /*  */
     backface-visibility: hidden;
-    /*  */
 }
 
 .side span {
@@ -91,7 +89,7 @@
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50px;
+    bottom: 55px;
     width: 200px;
     height: 40px;
     background-color: var(--semi-transparent-10);
@@ -149,7 +147,7 @@
 
     .cube-shadow {
         width: 100px;
-        bottom: 25px;
+        bottom: 30px;
     }
 
     @keyframes moveCubeShadow {

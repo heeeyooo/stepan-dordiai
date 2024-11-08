@@ -2,36 +2,16 @@ import SKILLSDATA from "./../../data/skillsData";
 import Skill from "../../components/skill/Skill";
 import { useEffect } from "react";
 import "./Skills.css";
+import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 
 function Skills() {
     useEffect(() => {
         document.title = "Stepan Dordiai | Skills";
     }, []);
-    //
-    function brightCursor(props) {
-        document.querySelector("#custom-cursor").classList.add("active-cursor");
-        document.querySelector("#custom-cursor").textContent = props;
-    }
-
-    function lowerCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.remove("active-cursor");
-        document.querySelector("#custom-cursor").textContent = "";
-    }
-    //
-
-    function scrollUp() {
-        document.querySelector(".skills-container").scrollTop -= 100;
-    }
-
-    function scrollDown() {
-        document.querySelector(".skills-container").scrollTop += 100;
-    }
 
     return (
         <>
-            <div className="skills-container">
+            <div className="skills-container js-skills-container">
                 <p className="skills-container__title">FRONTEND</p>
                 <div className="skills">
                     {SKILLSDATA.filter((skill) => {
@@ -89,22 +69,7 @@ function Skills() {
                     })}
                 </div>
             </div>
-            <button
-                onMouseEnter={() => brightCursor("Up")}
-                onMouseLeave={lowerCursor}
-                onMouseDown={scrollUp}
-                className="scroll__up-btn"
-            >
-                <i className="fa-solid fa-arrow-up-long"></i>
-            </button>
-            <button
-                onMouseEnter={() => brightCursor("Down")}
-                onMouseLeave={lowerCursor}
-                onMouseDown={scrollDown}
-                className="scroll__down-btn"
-            >
-                <i className="fa-solid fa-arrow-down-long"></i>
-            </button>
+            <ScrollBtn className={".js-skills-container"} />
         </>
     );
 }

@@ -9,20 +9,6 @@ function Project({
     liveDemo,
     extraClass,
 }) {
-    function brightCursor(text) {
-        document
-            .querySelector("#custom-cursor")
-            .classList.add("cursor--active");
-        document.querySelector("#custom-cursor").textContent = text;
-    }
-
-    function lowerCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.remove("cursor--active");
-        document.querySelector("#custom-cursor").textContent = ``;
-    }
-
     return (
         <>
             <div className="project-container">
@@ -39,22 +25,12 @@ function Project({
                     </div>
                     <ul className="project-links__list">
                         <li className={extraClass}>
-                            <a
-                                onMouseEnter={() => brightCursor("Live")}
-                                onMouseLeave={lowerCursor}
-                                href={liveDemo}
-                                target="_blank"
-                            >
+                            <a href={liveDemo} target="_blank">
                                 <i className="fa-solid fa-link"></i> Live demo
                             </a>
                         </li>
                         <li>
-                            <a
-                                onMouseEnter={() => brightCursor("Github")}
-                                onMouseLeave={lowerCursor}
-                                href={githubRepo}
-                                target="_blank"
-                            >
+                            <a href={githubRepo} target="_blank">
                                 <i className="fa-brands fa-github"></i> Github
                                 Repo
                             </a>

@@ -13,9 +13,9 @@ import Footer from "./components/footer/Footer";
 import Games from "./pages/games/Games";
 import CustomCursor from "./components/customCursor/CustomCursor";
 import CustomCorners from "./components/customCorners/CustomCorners";
-import MemoryCardGame from "./pages/MemoryCardGame/MemoryCardGame";
-import "./App.css";
 import CubeBackground from "./components/cubeBackground/CubeBackground";
+import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
+import "./App.css";
 
 function App() {
     useEffect(() => {

@@ -2,6 +2,11 @@ import { useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/UseLocalStorage";
 import resume from "./../../pdf/stepan-dordiai-resume-v1.0.pdf";
 import "./DarkMode.css";
+import {
+    makeCursorActive,
+    makeCursorNormal,
+    showText,
+} from "../../utils/cursorState";
 
 function DarkMode() {
     const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");
@@ -61,37 +66,25 @@ function DarkMode() {
 
         // I added setTimeout to change text after a function was completed
         setTimeout(() => {
-            document.querySelector("#custom-cursor").textContent =
+            document.querySelector(".text p").textContent =
                 refBtn.current.textContent;
+            showText();
         }, 1);
     };
 
-    function brightCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.add("cursor--active");
-        document.querySelector("#custom-cursor").textContent =
-            refBtn.current.textContent;
-    }
-
-    function lowerCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.remove("cursor--active");
-        document.querySelector("#custom-cursor").textContent = "";
-    }
-
     return (
         <div className="dark-mode-container">
-            <a href={resume} target="_blank">
+            <a className="resume-link" href={resume} target="_blank">
                 RESUME
             </a>
             <button
                 ref={refBtn}
-                className="dark-mode-btn target-link"
+                className="dark-mode-btn"
                 onClick={changeMode}
-                onMouseEnter={brightCursor}
-                onMouseLeave={lowerCursor}
+                onMouseEnter={() =>
+                    makeCursorActive(refBtn.current.textContent)
+                }
+                onMouseLeave={makeCursorNormal}
             >
                 DARK
             </button>

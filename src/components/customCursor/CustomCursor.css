@@ -5,14 +5,14 @@
     /*  */
     z-index: 5;
     display: none;
+    justify-content: center;
+    align-items: center;
     /*  */
     background-color: white;
     /*  */
     width: 10px;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;
     pointer-events: none;
     /*  */
@@ -20,6 +20,34 @@
     /*  */
     transition: width 0.3s, height 0.3s;
 }
+
+/*  */
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 10s linear infinite;
+}
+
+.text span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0px 50px;
+    opacity: 0;
+}
+
+@keyframes revealChar {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateText {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*  */
 
 .cursor--active {
     width: 100px !important;

@@ -32,7 +32,6 @@ const PGPROJECTSDATA = [
         title: "countdown",
         liveDemo: "https://heeeyooo.github.io/countdown/",
         githubRepo: "https://github.com/heeeyooo/countdown",
-        telegramBot: "",
         extraClass: "link--none",
     },
     {
@@ -40,7 +39,13 @@ const PGPROJECTSDATA = [
         title: "tiermaker",
         liveDemo: "https://heeeyooo.github.io/drag-n-drop-tier-list/",
         githubRepo: "https://github.com/heeeyooo/drag-n-drop-tier-list",
-        telegramBot: "",
+        extraClass: "link--none",
+    },
+    {
+        id: 7,
+        title: "gallery",
+        liveDemo: "https://heeeyooo.github.io/gallery/",
+        githubRepo: "https://github.com/heeeyooo/gallery",
         extraClass: "link--none",
     },
 ];

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./Contact.css";
+import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 
 function Contact() {
     useEffect(() => {
@@ -18,27 +19,13 @@ function Contact() {
         }, 3000);
     }
 
-    function brightCursor(props) {
-        document
-            .querySelector("#custom-cursor")
-            .classList.add("cursor--active");
-        document.querySelector("#custom-cursor").innerHTML = props;
-    }
-
-    function lowerCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.remove("cursor--active");
-        document.querySelector("#custom-cursor").innerHTML = "";
-    }
-
     return (
         <>
             <div className="email-container">
                 <form action="mailto:stepandordiai@gmail.com">
                     <input
-                        onMouseEnter={() => brightCursor("Email")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Email")}
+                        onMouseLeave={makeCursorNormal}
                         className="email-input"
                         type="submit"
                         value="stepandordiai@gmail.com"
@@ -47,8 +34,8 @@ function Contact() {
                 <span>|</span>
                 <button
                     className="email-copy-btn"
-                    onMouseEnter={() => brightCursor("Copy")}
-                    onMouseLeave={lowerCursor}
+                    onMouseEnter={() => makeCursorActive("Copy")}
+                    onMouseLeave={makeCursorNormal}
                     onClick={copyEmail}
                 >
                     Copy
@@ -58,8 +45,8 @@ function Contact() {
             <ul className="socials-list">
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Github")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Github")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://github.com/heeeyooo"
                         target="_blank"
                         title="Github"
@@ -69,8 +56,8 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Instagram")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Instagram")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
                         target="_blank"
                         title="Instagram"
@@ -80,8 +67,8 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Facebook")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Facebook")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://www.facebook.com/stepan.dordyay.5"
                         target="_blank"
                         title="Facebook"
@@ -91,8 +78,8 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Twitter")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Twitter")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://twitter.com/Heeeyooo_"
                         target="_blank"
                         title="Twitter"
@@ -102,8 +89,8 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Twitch")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Twitch")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://www.twitch.tv/heeeyooo_"
                         target="_blank"
                         title="Twitch"
@@ -113,8 +100,8 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Linkedin")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Linkedin")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://www.linkedin.com/in/stepan-dordiai-245715310"
                         target="_blank"
                         title="Linkedin"
@@ -124,8 +111,8 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => brightCursor("Behance")}
-                        onMouseLeave={lowerCursor}
+                        onMouseEnter={() => makeCursorActive("Behance")}
+                        onMouseLeave={makeCursorNormal}
                         href="https://www.behance.net/stepandordiai"
                         target="_blank"
                         title="Behance"

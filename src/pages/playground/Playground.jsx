@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import PGPROJECTSDATA from "../../data/pgProjectsData";
 import "./Playground.css";
+import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
+
 const Playground = () => {
     useEffect(() => {
         document
@@ -13,31 +15,9 @@ const Playground = () => {
         document.title = "Stepan Dordiai | Playground";
     }, []);
 
-    //
-    function brightCursor(props) {
-        document.querySelector("#custom-cursor").classList.add("active-cursor");
-        document.querySelector("#custom-cursor").textContent = props;
-    }
-
-    function lowerCursor() {
-        document
-            .querySelector("#custom-cursor")
-            .classList.remove("active-cursor");
-        document.querySelector("#custom-cursor").textContent = "";
-    }
-    //
-
-    function scrollUp() {
-        document.querySelector(".playground").scrollTop -= 100;
-    }
-
-    function scrollDown() {
-        document.querySelector(".playground").scrollTop += 100;
-    }
-
     return (
         <>
-            <div className="playground">
+            <div className="playground js-pg-container">
                 {PGPROJECTSDATA.map(
                     ({
                         id,
@@ -62,6 +42,7 @@ const Playground = () => {
                                                 className="pg-project__link"
                                                 href={liveDemo}
                                                 target="_blank"
+                                                title="Live demo"
                                             >
                                                 <i className="fa-solid fa-link"></i>
                                             </a>
@@ -71,6 +52,7 @@ const Playground = () => {
                                                 className="pg-project__link"
                                                 href={githubRepo}
                                                 target="_blank"
+                                                title="Github Repo"
                                             >
                                                 <i className="fa-brands fa-github"></i>
                                             </a>
@@ -80,6 +62,7 @@ const Playground = () => {
                                                 className="pg-project__link"
                                                 href={telegramBot}
                                                 target="_blank"
+                                                title="Telegram bot"
                                             >
                                                 <i className="fa-brands fa-telegram"></i>
                                             </a>
@@ -91,22 +74,7 @@ const Playground = () => {
                     }
                 )}
             </div>
-            <button
-                onMouseEnter={() => brightCursor("Up")}
-                onMouseLeave={lowerCursor}
-                onClick={scrollUp}
-                className="scroll__up-btn"
-            >
-                <i className="fa-solid fa-arrow-up-long"></i>
-            </button>
-            <button
-                onMouseEnter={() => brightCursor("Down")}
-                onMouseLeave={lowerCursor}
-                onClick={scrollDown}
-                className="scroll__down-btn"
-            >
-                <i className="fa-solid fa-arrow-down-long"></i>
-            </button>
+            <ScrollBtn className={".js-pg-container"} />
         </>
     );
 };
