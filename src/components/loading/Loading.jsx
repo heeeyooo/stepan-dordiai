@@ -8,16 +8,29 @@ function Loading() {
         }, 1500);
     }, []);
 
+    // I'm using self-executing anonymous function (IIFE)
+    (() => {
+        let percent = 0;
+        let customInterval = setInterval(closure, 10);
+        function closure() {
+            if (percent === 100) {
+                clearInterval(customInterval);
+            } else {
+                percent++;
+                document.querySelector(".loading span").innerHTML = percent;
+            }
+        }
+    })();
+
     return (
         <div className="loading-section">
             <p className="loading-title">
                 STEPAN DORDIAI<span> PORTFOLIO</span>
             </p>
             <div className="loading-container">
-                <p className="loading-text">LOADING...</p>
-                <div className="percent-range-background">
-                    <span className="percent-range"></span>
-                </div>
+                <p className="loading">
+                    <span>0</span>%
+                </p>
             </div>
         </div>
     );

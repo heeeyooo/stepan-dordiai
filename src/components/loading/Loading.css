@@ -37,40 +37,13 @@
 }
 
 .loading-container {
-    text-align: center;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50px;
     bottom: 50px;
 }
 
-.loading-text {
+.loading {
+    font-size: clamp(24px, 4vw, 48px);
     color: var(--color);
     font-weight: 200;
-    margin-bottom: 10px;
-}
-
-.percent-range-background {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 5px;
-    width: clamp(200px, 20vw, 300px);
-    background-color: var(--semi-transparent-25);
-    outline: 2.5px solid var(--semi-transparent-25);
-    outline-offset: 2.5px;
-}
-
-.percent-range {
-    width: 0px;
-    height: 5px;
-    background-color: var(--color);
-    animation: setPercentRange 1s forwards;
-    animation-timing-function: cubic-bezier(1, 0.25, 0.5, 1);
-}
-
-@keyframes setPercentRange {
-    to {
-        width: clamp(200px, 20vw, 300px);
-    }
 }
