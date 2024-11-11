@@ -5,13 +5,13 @@ function Loading() {
     useEffect(() => {
         setTimeout(() => {
             document.querySelector(".loading-section").style.display = "none";
-        }, 1500);
+        }, 3000);
     }, []);
 
     // I'm using self-executing anonymous function (IIFE)
     (() => {
         let percent = 0;
-        let customInterval = setInterval(closure, 10);
+        let customInterval = setInterval(closure, 18);
         function closure() {
             if (percent === 100) {
                 clearInterval(customInterval);

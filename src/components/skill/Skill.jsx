@@ -14,8 +14,7 @@ function Skill({ icon, id }) {
             .forEach((skill, index) => {
                 // setTimeout or setInterval?
                 setTimeout(() => {
-                    skill.style.animation =
-                        "revealSkillContainer 0.5s forwards";
+                    skill.style.animation = "revealSkillContainer 1s forwards";
                 }, 100 * index);
             });
     }, [pathname]);

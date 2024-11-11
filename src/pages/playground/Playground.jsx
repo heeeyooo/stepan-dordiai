@@ -5,13 +5,6 @@ import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 
 const Playground = () => {
     useEffect(() => {
-        document
-            .querySelectorAll(".playground-project")
-            .forEach((project, index) => {
-                setTimeout(() => {
-                    project.style.animation = "revealProject 0.5s forwards";
-                }, 100 * index);
-            });
         document.title = "Stepan Dordiai | Playground";
     }, []);
 

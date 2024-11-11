@@ -9,7 +9,7 @@
     pointer-events: none;
     opacity: 0;
     z-index: 2;
-    animation: revealCorner 0.5s forwards;
+    animation: revealCorner 1s forwards;
 }
 
 .corner-top-right {
@@ -23,7 +23,7 @@
     pointer-events: none;
     opacity: 0;
     z-index: 2;
-    animation: revealCorner 0.5s forwards;
+    animation: revealCorner 1s forwards;
 }
 
 .corner-bottom-right {
@@ -37,7 +37,7 @@
     pointer-events: none;
     opacity: 0;
     z-index: 2;
-    animation: revealCorner 0.5s forwards;
+    animation: revealCorner 1s forwards;
 }
 
 .corner-bottom-left {
@@ -51,7 +51,7 @@
     pointer-events: none;
     opacity: 0;
     z-index: 2;
-    animation: revealCorner 0.5s forwards;
+    animation: revealCorner 1s forwards;
 }
 
 @keyframes revealCorner {

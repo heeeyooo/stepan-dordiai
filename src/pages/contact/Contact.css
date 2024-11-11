@@ -12,7 +12,7 @@
     font-weight: 200;
     color: var(--color);
     z-index: 1;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .email-input,
@@ -33,7 +33,7 @@
     align-items: center;
     opacity: 0;
     z-index: 1;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .socials-list a {

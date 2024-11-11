@@ -1,40 +1,42 @@
 .project-container {
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     opacity: 0;
+    transform: translateY(50px);
 }
 
 .project-container:nth-of-type(1) {
-    animation: reveal 0.5s forwards;
+    animation: revealProjectContainer 1s forwards;
 }
 
 .project-container:nth-of-type(2) {
-    animation: reveal 0.5s 0.1s forwards;
+    animation: revealProjectContainer 1s 0.1s forwards;
 }
 
 .project-container:nth-of-type(3) {
-    animation: reveal 0.5s 0.2s forwards;
+    animation: revealProjectContainer 1s 0.2s forwards;
 }
 
 .project-container:nth-of-type(4) {
-    animation: reveal 0.5s 0.3s forwards;
+    animation: revealProjectContainer 1s 0.3s forwards;
 }
 
 .project-container:nth-of-type(5) {
-    animation: reveal 0.5s 0.4s forwards;
+    animation: revealProjectContainer 1s 0.4s forwards;
 }
 
 .project-container:nth-of-type(6) {
-    animation: reveal 0.5s 0.5s forwards;
+    animation: revealProjectContainer 1s 0.5s forwards;
 }
 
-@keyframes reveal {
+@keyframes revealProjectContainer {
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 

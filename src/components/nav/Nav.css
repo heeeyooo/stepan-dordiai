@@ -11,7 +11,7 @@
     /*  */
     padding-left: 50px;
     z-index: 3;
-    animation: revealNav 0.5s forwards;
+    animation: revealNav 1s forwards;
 }
 
 @keyframes revealNav {

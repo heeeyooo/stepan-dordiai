@@ -21,7 +21,7 @@ function App() {
     useEffect(() => {
         setTimeout(() => {
             document.querySelector(".wrapper").style.display = "initial";
-        }, 1500);
+        }, 3000);
     }, []);
 
     return (

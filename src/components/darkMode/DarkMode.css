@@ -10,7 +10,7 @@
     writing-mode: vertical-lr;
     text-orientation: upright;
     z-index: 2;
-    animation: revealDarkModeContainer 0.5s forwards;
+    animation: revealDarkModeContainer 1s forwards;
 }
 
 @keyframes revealDarkModeContainer {

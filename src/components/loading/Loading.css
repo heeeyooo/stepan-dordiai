@@ -9,7 +9,7 @@
     align-items: center;
     background-color: var(--bg-color);
     opacity: 1;
-    animation: hideLoadingSection 0.5s 1s forwards;
+    animation: hideLoadingSection 1s 2s forwards;
 }
 
 @keyframes hideLoadingSection {
@@ -23,7 +23,7 @@
     color: var(--color);
     font-weight: 300;
     opacity: 0;
-    animation: revealLoadingTitle 0.5s forwards;
+    animation: revealLoadingTitle 1s forwards;
 }
 
 @keyframes revealLoadingTitle {
@@ -46,4 +46,11 @@
     font-size: clamp(24px, 4vw, 48px);
     color: var(--color);
     font-weight: 200;
+}
+
+@media screen and (width < 1000px) {
+    .loading-container {
+        right: 25px;
+        bottom: 25px;
+    }
 }
