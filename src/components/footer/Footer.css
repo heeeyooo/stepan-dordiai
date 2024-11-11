@@ -4,7 +4,7 @@
     bottom: -50px;
     left: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 50px;
     backdrop-filter: blur(0);
@@ -22,13 +22,7 @@
 }
 
 .copyright {
-    font-size: clamp(12px, 1vw, 16px);
-    font-weight: 300;
-    color: var(--semi-transparent-50);
-}
-
-.rights {
-    font-size: clamp(12px, 1vw, 16px);
+    font-size: clamp(12px, 1.5vw, 16px);
     font-weight: 300;
     color: var(--semi-transparent-50);
 }
