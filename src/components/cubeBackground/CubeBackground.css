@@ -1,6 +1,6 @@
 .reveal-cube-container {
     opacity: 0;
-    animation: revealCubeContainer 1s 0.5s forwards;
+    animation: revealCubeContainer 1s 1s forwards;
 }
 
 @keyframes revealCubeContainer {

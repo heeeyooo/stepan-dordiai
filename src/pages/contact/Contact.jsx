@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "./Contact.css";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
+import "./Contact.css";
 
 function Contact() {
     useEffect(() => {
@@ -41,7 +41,6 @@ function Contact() {
                     Copy
                 </button>
             </div>
-
             <ul className="socials-list">
                 <li>
                     <a

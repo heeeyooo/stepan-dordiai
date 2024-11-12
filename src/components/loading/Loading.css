@@ -1,56 +1,22 @@
-.loading-section {
+.loading {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-    opacity: 1;
-    animation: hideLoadingSection 1s 2s forwards;
-}
-
-@keyframes hideLoadingSection {
-    to {
-        opacity: 0;
-    }
-}
-
-.loading-title {
-    font-size: clamp(24px, 4vw, 48px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
     color: var(--color);
+    font-size: clamp(20px, 3vw, 40px);
     font-weight: 300;
     opacity: 0;
-    animation: revealLoadingTitle 1s forwards;
+    animation: animateLoading 3s forwards;
 }
 
-@keyframes revealLoadingTitle {
-    to {
+@keyframes animateLoading {
+    50% {
         opacity: 1;
     }
 }
 
-.loading-title span {
+.loading span {
     font-weight: 100;
-}
-
-.loading-container {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-}
-
-.loading {
-    font-size: clamp(24px, 4vw, 48px);
-    color: var(--color);
-    font-weight: 200;
-}
-
-@media screen and (width < 1000px) {
-    .loading-container {
-        right: 25px;
-        bottom: 25px;
-    }
 }

@@ -13,7 +13,7 @@ function Project({
         <>
             <div className="project-container">
                 <p className="project-number">{id}</p>
-                <div className="project-info-container">
+                <div className="project-right-section">
                     <div className="project-title-container">
                         <h5 className="project-title">{titleName}</h5>
                         <h4 className="project-title-name">{title}</h4>

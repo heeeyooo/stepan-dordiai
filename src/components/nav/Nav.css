@@ -65,7 +65,6 @@
         padding-left: 25px;
         backdrop-filter: blur(0);
         -webkit-backdrop-filter: blur(0);
-        transform: 0;
         transition: all 0.5s ease;
     }
 
