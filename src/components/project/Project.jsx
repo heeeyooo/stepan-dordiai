@@ -14,10 +14,10 @@ function Project({
             <div className="project-container">
                 <p className="project-number">{id}</p>
                 <div className="project-right-section">
-                    <div className="project-title-container">
-                        <h5 className="project-title">{titleName}</h5>
-                        <h4 className="project-title-name">{title}</h4>
-                    </div>
+                    {/* <div className="project-title-container"> */}
+                    <h4 className="project-title">{title}</h4>
+                    <h5 className="project-title-name">{titleName}</h5>
+                    {/* </div> */}
                     <div className="project-skills">
                         {skills.map((skill, index) => {
                             return <div key={index}>{skill}</div>;

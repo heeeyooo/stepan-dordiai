@@ -9,7 +9,7 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 @keyframes reveal {
@@ -29,7 +29,7 @@
     align-items: center;
     row-gap: 10px;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .games-section__pagination span {

@@ -69,7 +69,7 @@
 }
 
 .socials-list a {
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: clamp(20px, 3vw, 24px);
     color: var(--color);
     overflow: hidden;
 }

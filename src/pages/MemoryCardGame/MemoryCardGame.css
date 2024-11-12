@@ -11,7 +11,7 @@
     align-items: center;
     opacity: 0;
     z-index: 1;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .game-one__back-btn {
@@ -176,7 +176,7 @@ section {
     width: calc(50% - 100px);
     opacity: 0;
     z-index: 1;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 @keyframes reveal {

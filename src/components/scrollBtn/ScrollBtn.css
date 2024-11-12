@@ -5,7 +5,7 @@
     font-size: 20px;
     color: var(--color);
     opacity: 0;
-    animation: revealUpBtn 0.5s forwards;
+    animation: revealUpBtn 1s forwards;
 }
 
 @keyframes revealUpBtn {
@@ -22,7 +22,7 @@
     font-size: 20px;
     color: var(--color);
     opacity: 0;
-    animation: revealDownBtn 0.5s forwards;
+    animation: revealDownBtn 1s forwards;
 }
 
 @keyframes revealDownBtn {

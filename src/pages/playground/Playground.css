@@ -5,17 +5,21 @@
     bottom: 0;
     padding: 100px 0;
     width: calc(50% - 100px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
     overflow-y: scroll;
     z-index: 1;
 }
 
 .playground-project {
     position: relative;
-    height: 100px;
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
     opacity: 0;
     transform: translateY(50px);
 }
@@ -65,7 +69,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: end;
 }
 
@@ -101,5 +105,6 @@
         right: 50px;
         left: 50px;
         width: calc(100% - 100px);
+        row-gap: 25px;
     }
 }
