@@ -23,11 +23,12 @@
     place-items: center;
 }
 
-.skill i {
+.skill i,
+.text-icon {
     font-size: clamp(2em, 3vw, 3em);
     color: var(--color);
 }
 
 .img-icon {
-    width: 35%;
+    width: 30%;
 }

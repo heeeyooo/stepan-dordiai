@@ -1,5 +1,6 @@
-import tsIcon from "./img/icons/ts-icon.svg";
 import { v4 as uuidv4 } from "uuid";
+import tsIcon from "./img/icons/ts-icon.svg";
+import mongodbIcon from "./img/icons/mongodb-icon.svg";
 
 // I'm using uuid external library for unique id
 const skillsData = [
@@ -73,6 +74,18 @@ const skillsData = [
         id: uuidv4(),
         name: "TypeScript",
         icon: [<img className="img-icon" src={tsIcon} alt="TypeScript" />],
+        info: "currently-learning",
+    },
+    {
+        id: uuidv4(),
+        name: "Express",
+        icon: [<p className="text-icon">ex</p>],
+        info: "currently-learning",
+    },
+    {
+        id: uuidv4(),
+        name: "Mongo DB",
+        icon: [<img className="img-icon" src={mongodbIcon} alt="Mongo DB" />],
         info: "currently-learning",
     },
 ];
