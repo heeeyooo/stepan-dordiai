@@ -2,7 +2,7 @@ import tsIcon from "./img/icons/ts-icon.svg";
 import { v4 as uuidv4 } from "uuid";
 
 // I'm using uuid external library for unique id
-const SKILLSDATA = [
+const skillsData = [
     {
         id: uuidv4(),
         name: "Python",
@@ -77,4 +77,4 @@ const SKILLSDATA = [
     },
 ];
 
-export default SKILLSDATA;
+export default skillsData;

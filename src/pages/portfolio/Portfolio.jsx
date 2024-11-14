@@ -1,8 +1,8 @@
 import { useEffect } from "react";
+import portfolioData from "../../data/portfolioData";
 import Project from "../../components/project/Project";
-import PROJECTSDATA from "../../data/projectsData";
-import "./Portfolio.css";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
+import "./Portfolio.css";
 
 function Portfolio() {
     useEffect(() => {
@@ -12,7 +12,7 @@ function Portfolio() {
     return (
         <>
             <div className="portfolio-container js-portfolio-container">
-                {PROJECTSDATA.map((project) => {
+                {portfolioData.map((project) => {
                     return (
                         <Project
                             key={project.id}

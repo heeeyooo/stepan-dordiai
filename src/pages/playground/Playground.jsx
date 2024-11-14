@@ -1,17 +1,16 @@
 import { useEffect } from "react";
-import PGPROJECTSDATA from "../../data/pgProjectsData";
-import "./Playground.css";
+import pgData from "../../data/pgData.json";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
+import "./Playground.css";
 
 const Playground = () => {
     useEffect(() => {
         document.title = "Stepan Dordiai | Playground";
     }, []);
-
     return (
         <>
             <div className="playground js-pg-container">
-                {PGPROJECTSDATA.map(
+                {pgData.map(
                     ({
                         id,
                         title,

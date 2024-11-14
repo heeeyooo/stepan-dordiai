@@ -1,4 +1,4 @@
-const PROJECTSDATA = [
+const portfolioData = [
     {
         id: 1,
         title: "Stepan Dordiai",
@@ -66,4 +66,4 @@ const PROJECTSDATA = [
     },
 ];
 
-export default PROJECTSDATA;
+export default portfolioData;
