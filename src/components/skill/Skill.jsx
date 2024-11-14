@@ -1,27 +1,20 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import "./Skill.css";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
+import "./Skill.css";
 
-function Skill({ icon, id }) {
-    // useLocation for rendering data when navigate
-    // what is pathname?
-    const { pathname } = useLocation();
-
+function Skill({ icon, name }) {
     useEffect(() => {
-        document
-            .querySelectorAll(".skill-container")
-            .forEach((skill, index) => {
-                // setTimeout or setInterval?
-                setTimeout(() => {
-                    skill.style.animation = "revealSkillContainer 1s forwards";
-                }, 100 * index);
-            });
-    }, [pathname]);
+        document.querySelectorAll(".skill-container").forEach((item, index) => {
+            // FIXME: setTimeout or setInterval?
+            setTimeout(() => {
+                item.style.animation = "revealSkillContainer 1s forwards";
+            }, 100 * index);
+        });
+    }, []);
 
     return (
         <div
-            onMouseEnter={() => makeCursorActive(id)}
+            onMouseEnter={() => makeCursorActive(name)}
             onMouseLeave={makeCursorNormal}
             className="skill-container"
         >

@@ -1,8 +1,8 @@
 import SKILLSDATA from "./../../data/skillsData";
 import Skill from "../../components/skill/Skill";
 import { useEffect } from "react";
-import "./Skills.css";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
+import "./Skills.css";
 
 function Skills() {
     useEffect(() => {
@@ -21,7 +21,7 @@ function Skills() {
                             <Skill
                                 key={skill.id}
                                 icon={skill.icon}
-                                id={skill.id}
+                                name={skill.name}
                             />
                         );
                     })}
@@ -35,7 +35,7 @@ function Skills() {
                             <Skill
                                 key={skill.id}
                                 icon={skill.icon}
-                                id={skill.id}
+                                name={skill.name}
                             />
                         );
                     })}
@@ -49,7 +49,7 @@ function Skills() {
                             <Skill
                                 key={skill.id}
                                 icon={skill.icon}
-                                id={skill.id}
+                                name={skill.name}
                             />
                         );
                     })}
@@ -63,7 +63,7 @@ function Skills() {
                             <Skill
                                 key={skill.id}
                                 icon={skill.icon}
-                                id={skill.id}
+                                name={skill.name}
                             />
                         );
                     })}
