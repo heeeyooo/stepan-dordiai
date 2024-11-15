@@ -1,16 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import pgData from "../../data/pgData.json";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Playground.css";
+import axios from "axios";
 
 const Playground = () => {
     useEffect(() => {
         document.title = "Stepan Dordiai | Playground";
     }, []);
+
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        axios
+            .get("http://localhost:3000/getProjects")
+            .then((projects) => setProjects(projects.data))
+            .catch((err) => console.log(err));
+    }, []);
+
+    console.log(projects);
     return (
         <>
             <div className="playground js-pg-container">
-                {pgData.map(
+                {projects.map(
                     ({
                         id,
                         title,
