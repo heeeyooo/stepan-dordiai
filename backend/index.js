@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/getProjects", (req, res) => {
+app.get("/", (req, res) => {
     projectModel
         .find()
         .then((projects) => res.json(projects))
