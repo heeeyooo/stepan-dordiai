@@ -24,6 +24,6 @@ mongoose
             console.log("Node API app is running on port 3000");
         });
     })
-    .catch(() => {
+    .catch((error) => {
         console.log(error);
     });
