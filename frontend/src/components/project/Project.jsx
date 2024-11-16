@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import AnimateElements from "../../utils/AnimateElements";
 import "./Project.css";
 
 function Project({
@@ -10,17 +10,7 @@ function Project({
     liveDemo,
     extraClass,
 }) {
-    useEffect(() => {
-        document
-            .querySelectorAll(".project-container")
-            .forEach((project, index) => {
-                // FIXME: setTimeout or setInterval?
-                setTimeout(() => {
-                    project.style.animation =
-                        "revealProjectContainer 1s forwards";
-                }, 100 * index);
-            });
-    }, []);
+    AnimateElements(".project-container", "revealProjectContainer 1s forwards");
 
     return (
         <div className="project-container">

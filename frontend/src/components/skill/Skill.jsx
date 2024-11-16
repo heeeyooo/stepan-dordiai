@@ -1,19 +1,9 @@
-import { useEffect } from "react";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import "./Skill.css";
+import AnimateElements from "../../utils/AnimateElements";
 
 function Skill({ icon, name }) {
-    useEffect(() => {
-        document
-            .querySelectorAll(".skill-container")
-            .forEach((skill, index) => {
-                // FIXME: setTimeout or setInterval?
-                setTimeout(() => {
-                    skill.style.animation = "revealSkillContainer 1s forwards";
-                }, 100 * index);
-            });
-    }, []);
-
+    AnimateElements(".skill-container", "revealSkillContainer 1s forwards");
     return (
         <div
             onMouseEnter={() => makeCursorActive(name)}

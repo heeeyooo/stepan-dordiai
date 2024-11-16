@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AnimateElements from "../../utils/AnimateElements";
 // import pgData from "../../data/pgData.json";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Playground.css";
@@ -36,14 +37,7 @@ const Playground = () => {
             });
     }, []);
 
-    useEffect(() => {
-        document.querySelectorAll(".pg-project").forEach((project, index) => {
-            // FIXME: setTimeout or setInterval?
-            setTimeout(() => {
-                project.style.animation = "revealPgProject 1s forwards";
-            }, 100 * index);
-        });
-    }, [projects]);
+    AnimateElements(".pg-project", "revealPgProject 1s forwards", projects);
 
     return (
         <>
