@@ -1,3 +1,18 @@
+.awaiting {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    color: var(--color);
+    font-weight: 300;
+    animation: animateAwaiting 1s infinite;
+}
+
+@keyframes animateAwaiting {
+    50% {
+        opacity: 0.5;
+    }
+}
+
 .playground {
     position: fixed;
     right: 100px;
@@ -12,7 +27,7 @@
     z-index: 1;
 }
 
-.playground-project {
+.pg-project {
     position: relative;
     height: 80px;
     width: 100%;
@@ -24,7 +39,7 @@
     transform: translateY(50px);
 }
 
-.playground-project:nth-of-type(1) {
+/* .playground-project:nth-of-type(1) {
     animation: revealProject 1s forwards;
 }
 
@@ -50,9 +65,9 @@
 
 .playground-project:nth-of-type(7) {
     animation: revealProject 1s 0.6s forwards;
-}
+} */
 
-@keyframes revealProject {
+@keyframes revealPgProject {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -100,6 +115,11 @@
 }
 
 @media screen and (width < 1000px) {
+    .awaiting {
+        right: 50px;
+        bottom: 50px;
+    }
+
     .playground {
         padding: 50px 0;
         right: 50px;

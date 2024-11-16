@@ -9,7 +9,7 @@
     transform: translateY(50px);
 }
 
-.project-container:nth-of-type(1) {
+/* .project-container:nth-of-type(1) {
     animation: revealProjectContainer 1s forwards;
 }
 
@@ -31,7 +31,7 @@
 
 .project-container:nth-of-type(6) {
     animation: revealProjectContainer 1s 0.5s forwards;
-}
+} */
 
 @keyframes revealProjectContainer {
     to {

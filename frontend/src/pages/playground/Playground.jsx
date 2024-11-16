@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import pgData from "../../data/pgData.json";
+import axios from "axios";
+// import pgData from "../../data/pgData.json";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Playground.css";
-import axios from "axios";
 
 const Playground = () => {
     useEffect(() => {
@@ -10,14 +10,41 @@ const Playground = () => {
     }, []);
 
     const [projects, setProjects] = useState([]);
+
     useEffect(() => {
+        const awaiting = document.createElement("p");
+        awaiting.classList.add("awaiting");
+        awaiting.textContent = "Loading data...";
+        document.querySelector(".js-pg-container").append(awaiting);
+        let isError = false;
         axios
-            .get("http://localhost:3000/getProjects")
+            .get("https://stepan-dordiai-backend.onrender.com")
             .then((projects) => setProjects(projects.data))
-            .catch((err) => console.log(err));
+            .catch((error) => {
+                // TODO: Write custom error
+                awaiting.textContent = error.message;
+                awaiting.style.animation = "none";
+                isError = true;
+            })
+            .finally(() => {
+                if (!isError) {
+                    awaiting.remove();
+                } else {
+                    isError = false;
+                    return;
+                }
+            });
     }, []);
 
-    console.log(projects);
+    useEffect(() => {
+        document.querySelectorAll(".pg-project").forEach((project, index) => {
+            // FIXME: setTimeout or setInterval?
+            setTimeout(() => {
+                project.style.animation = "revealPgProject 1s forwards";
+            }, 100 * index);
+        });
+    }, [projects]);
+
     return (
         <>
             <div className="playground js-pg-container">
@@ -31,7 +58,7 @@ const Playground = () => {
                         extraClass,
                     }) => {
                         return (
-                            <div className="playground-project" key={id}>
+                            <div className="pg-project" key={id}>
                                 <p className="playground-project__number">
                                     {"00" + id}
                                 </p>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Project.css";
 
 function Project({
@@ -9,36 +10,45 @@ function Project({
     liveDemo,
     extraClass,
 }) {
+    useEffect(() => {
+        document
+            .querySelectorAll(".project-container")
+            .forEach((project, index) => {
+                // FIXME: setTimeout or setInterval?
+                setTimeout(() => {
+                    project.style.animation =
+                        "revealProjectContainer 1s forwards";
+                }, 100 * index);
+            });
+    }, []);
+
     return (
-        <>
-            <div className="project-container">
-                <p className="project-number">{id}</p>
-                <div className="project-right-section">
-                    {/* <div className="project-title-container"> */}
-                    <h4 className="project-title">{title}</h4>
-                    <h5 className="project-title-name">{titleName}</h5>
-                    {/* </div> */}
-                    <div className="project-skills">
-                        {skills.map((skill, index) => {
-                            return <div key={index}>{skill}</div>;
-                        })}
-                    </div>
-                    <ul className="project-links__list">
-                        <li className={extraClass}>
-                            <a href={liveDemo} target="_blank">
-                                <i className="fa-solid fa-link"></i> Live demo
-                            </a>
-                        </li>
-                        <li>
-                            <a href={githubRepo} target="_blank">
-                                <i className="fa-brands fa-github"></i> Github
-                                Repo
-                            </a>
-                        </li>
-                    </ul>
+        <div className="project-container">
+            <p className="project-number">{id}</p>
+            <div className="project-right-section">
+                {/* <div className="project-title-container"> */}
+                <h4 className="project-title">{title}</h4>
+                <h5 className="project-title-name">{titleName}</h5>
+                {/* </div> */}
+                <div className="project-skills">
+                    {skills.map((skill, index) => {
+                        return <div key={index}>{skill}</div>;
+                    })}
                 </div>
+                <ul className="project-links__list">
+                    <li className={extraClass}>
+                        <a href={liveDemo} target="_blank">
+                            <i className="fa-solid fa-link"></i> Live demo
+                        </a>
+                    </li>
+                    <li>
+                        <a href={githubRepo} target="_blank">
+                            <i className="fa-brands fa-github"></i> Github Repo
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </>
+        </div>
     );
 }
 

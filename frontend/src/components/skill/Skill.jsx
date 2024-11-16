@@ -4,12 +4,14 @@ import "./Skill.css";
 
 function Skill({ icon, name }) {
     useEffect(() => {
-        document.querySelectorAll(".skill-container").forEach((item, index) => {
-            // FIXME: setTimeout or setInterval?
-            setTimeout(() => {
-                item.style.animation = "revealSkillContainer 1s forwards";
-            }, 100 * index);
-        });
+        document
+            .querySelectorAll(".skill-container")
+            .forEach((skill, index) => {
+                // FIXME: setTimeout or setInterval?
+                setTimeout(() => {
+                    skill.style.animation = "revealSkillContainer 1s forwards";
+                }, 100 * index);
+            });
     }, []);
 
     return (
