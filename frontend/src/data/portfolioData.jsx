@@ -1,9 +1,20 @@
+import mongodbIcon from "./img/icons/mongodb-icon.svg";
+
 const portfolioData = [
     {
         id: 1,
         title: "Stepan Dordiai",
         titleName: "Portfolio website",
-        skills: [<i className="fa-brands fa-react"></i>],
+        skills: [
+            <i className="fa-brands fa-react"></i>,
+            <i className="fa-brands fa-node"></i>,
+            <p style={{ height: 20, verticalAlign: "middle" }}>ex</p>,
+            <img
+                src={mongodbIcon}
+                style={{ height: 20, verticalAlign: "middle" }}
+                alt="Mongo DB"
+            />,
+        ],
         githubRepo: "https://github.com/heeeyooo/stepan-dordiai",
         extraClass: "link--none",
     },

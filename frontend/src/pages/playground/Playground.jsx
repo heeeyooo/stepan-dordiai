@@ -16,7 +16,7 @@ const Playground = () => {
         const awaiting = document.createElement("p");
         awaiting.classList.add("awaiting");
         awaiting.textContent = "Loading data...";
-        document.querySelector(".js-pg-container").append(awaiting);
+        document.querySelector(".js-pg-container").appendChild(awaiting);
         let isError = false;
         axios
             .get("https://stepan-dordiai-backend.onrender.com")

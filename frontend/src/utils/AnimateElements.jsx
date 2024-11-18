@@ -1,31 +1,28 @@
 import { useEffect } from "react";
-import { useLocalStorage } from "./UseLocalStorage";
 
 // FIXME: Is it okay to use these names (className, animation) for parameters?
-function AnimateElements(className, animation, param) {
-    const [active, setActive] = useLocalStorage("animateElements", false);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setActive((current) => (current = true));
-        }, 3000);
-    }, []);
-
-    useEffect(() => {
-        if (active) {
-            document.querySelectorAll(className).forEach((skill, index) => {
-                // FIXME: setTimeout or setInterval?
-                setTimeout(() => {
-                    skill.style.animation = animation;
-                }, 100 * index);
-            });
-        }
-    }, [active, param]);
-
-    // Reset to false on refresh
-    window.onbeforeunload = () => {
-        localStorage.setItem("animateElements", false);
+function AnimateElements(className, animation, projects) {
+    const revealElements = () => {
+        document.querySelectorAll(className).forEach((skill, index) => {
+            // FIXME: setTimeout or setInterval?
+            setTimeout(() => {
+                skill.style.animation = animation;
+            }, 100 * index);
+        });
     };
+
+    useEffect(() => {
+        // I check if preload is active (if it is i wait until it ends (duration 3 sec))
+        if (document.querySelector(".loading").style.display === "initial") {
+            setTimeout(() => {
+                revealElements();
+            }, 3000);
+        } else {
+            revealElements();
+        }
+        // I use this dependency to start animation after the data r loaded
+    }, [projects]);
+
     return <></>;
 }
 
