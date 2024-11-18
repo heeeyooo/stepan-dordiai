@@ -15,7 +15,8 @@ const Playground = () => {
     useEffect(() => {
         const awaiting = document.createElement("p");
         awaiting.classList.add("awaiting");
-        awaiting.textContent = "Loading data...";
+        awaiting.textContent =
+            "Loading data...(it may take some time (30-60sec) due the inactivity of the server (like 30min), after it loads immediately)";
         document.querySelector(".js-pg-container").appendChild(awaiting);
         let isError = false;
         axios

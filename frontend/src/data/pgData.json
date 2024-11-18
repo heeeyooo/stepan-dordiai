@@ -47,5 +47,12 @@
         "liveDemo": "https://heeeyooo.github.io/gallery/",
         "githubRepo": "https://github.com/heeeyooo/gallery",
         "extraClass": "link--none"
+    },
+    {
+        "id": 8,
+        "title": "Calculator",
+        "liveDemo": "https://heeeyooo.github.io/calculator/",
+        "githubRepo": "https://github.com/heeeyooo/calculator",
+        "extraClass": "link--none"
     }
 ]

@@ -1,4 +1,4 @@
-// function will return true if touch device and false if mouse device
+// The function will return true if touch device and false if mouse device
 export const isTouchDevice = () => {
     try {
         document.createEvent("TouchEvent");

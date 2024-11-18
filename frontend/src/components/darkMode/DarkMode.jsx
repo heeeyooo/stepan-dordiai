@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/UseLocalStorage";
-import resume from "./../../pdf/stepan-dordiai-resume-v1.0.pdf";
 import "./DarkMode.css";
 import {
     makeCursorActive,
     makeCursorNormal,
     showText,
 } from "../../utils/cursorState";
+import Resume from "../resume/Resume";
 
 function DarkMode() {
     const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");
@@ -74,9 +74,7 @@ function DarkMode() {
 
     return (
         <div className="dark-mode-container">
-            <a className="resume-link" href={resume} target="_blank">
-                RESUME
-            </a>
+            <Resume />
             <button
                 ref={refBtn}
                 className="dark-mode-btn"

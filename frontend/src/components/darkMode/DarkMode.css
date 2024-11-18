@@ -19,16 +19,11 @@
     }
 }
 
-.dark-mode-btn,
-.resume-link {
+.dark-mode-btn {
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
     transition: opacity 0.15s;
-}
-
-.resume-link:hover {
-    opacity: 0.5;
 }
 
 @media screen and (width < 1000px) {

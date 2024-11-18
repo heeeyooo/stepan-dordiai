@@ -2,6 +2,9 @@
     position: fixed;
     right: 100px;
     bottom: 100px;
+    z-index: 1;
+    width: calc(50% - 100px);
+    text-align: right;
     color: var(--color);
     font-weight: 300;
     animation: animateAwaiting 1s infinite;
@@ -118,6 +121,8 @@
     .awaiting {
         right: 50px;
         bottom: 50px;
+        left: 50px;
+        width: calc(100% - 100px);
     }
 
     .playground {

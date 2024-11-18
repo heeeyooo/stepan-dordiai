@@ -5,9 +5,6 @@
     font-size: 20px;
     color: var(--color);
     opacity: 0;
-}
-
-.scroll__up-btn--active {
     animation: revealUpBtn 1s forwards;
 }
 
@@ -25,9 +22,6 @@
     font-size: 20px;
     color: var(--color);
     opacity: 0;
-}
-
-.scroll__down-btn--active {
     animation: revealDownBtn 1s forwards;
 }
 
