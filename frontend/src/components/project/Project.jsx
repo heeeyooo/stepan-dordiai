@@ -28,7 +28,11 @@ function Project({
                 <ul className="project-links__list">
                     <li className={extraClass}>
                         <a href={liveDemo} target="_blank">
-                            <i className="fa-solid fa-link"></i> Live demo
+                            {/* <i className="fa-solid fa-link"></i> */}
+                            <div className="link-arrow">
+                                <div className="link-arrow-center"></div>
+                            </div>
+                            Live demo
                         </a>
                     </li>
                     <li>

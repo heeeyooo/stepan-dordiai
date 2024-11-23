@@ -68,7 +68,7 @@
     align-items: center;
     column-gap: 10px;
     color: var(--color);
-    font-size: clamp(12px, 2vw, 16px);
+    font-size: clamp(14px, 2vw, 16px);
 }
 
 .project-links__list {
@@ -79,8 +79,12 @@
 }
 
 .project-links__list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
     color: var(--color);
-    font-size: clamp(12px, 2vw, 16px);
+    font-size: clamp(14px, 2vw, 16px);
     font-weight: 300;
     transition: opacity 0.15s;
 }
@@ -89,7 +93,44 @@
     opacity: 0.5;
 }
 
-/* Hide Live Demo at first project */
+.link-arrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.link-arrow-center {
+    /* Square diagonal d=(root)2a=(root)2·12≈16.97056 */
+    width: 16.97056px;
+    height: 2px;
+    background-color: white;
+    rotate: -45deg;
+    flex-shrink: 0;
+}
+
+.link-arrow::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.link-arrow::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+}
+
+/* Hide Live demo in first project */
 .link--none {
     display: none;
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AnimateElements from "../../utils/AnimateElements";
-// import pgData from "../../data/pgData.json";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Playground.css";
 

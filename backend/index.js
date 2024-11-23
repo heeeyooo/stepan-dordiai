@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const projectModel = require("./models/pgProjects");
+const projectModel = require("./models/pgData");
 
 const app = express();
 app.use(cors());
