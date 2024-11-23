@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 mongoose
     .connect(
-        "mongodb+srv://stepandordiaiBdWcumZOkcl:Overwatch1@stepandordiaiapi.1ocur.mongodb.net/Node-API?retryWrites=true&w=majority&appName=StepanDordiaiAPI"
+        "mongodb+srv://stepandordiaiBdWcumZOkcl:Overwatch1@stepandordiaiapi.1ocur.mongodb.net/Playground_API?retryWrites=true&w=majority&appName=StepanDordiaiAPI"
     )
     .then(() => {
         console.log("Connected to MongoDB");

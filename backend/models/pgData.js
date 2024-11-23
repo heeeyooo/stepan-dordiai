@@ -9,5 +9,5 @@ const projectSchema = new mongoose.Schema({
     extraClass: String,
 });
 
-const projectModel = mongoose.model("pg_data", projectSchema);
+const projectModel = mongoose.model("projects", projectSchema);
 module.exports = projectModel;
