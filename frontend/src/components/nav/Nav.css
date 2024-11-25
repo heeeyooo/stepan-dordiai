@@ -104,17 +104,22 @@
         bottom: 25px;
         left: 25px;
         right: 25px;
+    }
+
+    .nav__footer-list {
         display: flex;
         justify-content: center;
         align-items: center;
+        column-gap: 10px;
     }
 
-    .nav__footer a {
+    .nav__footer-list a {
         color: var(--semi-transparent-50);
         font-size: 20px;
         transition: all 0.15s;
     }
-    .nav__footer a:hover {
+
+    .nav__footer-list a:hover {
         color: var(--color);
     }
 }

@@ -87,13 +87,26 @@ function Nav() {
                 </li>
             </ul>
             <div className="nav__footer">
-                <a
-                    href="https://github.com/heeeyooo"
-                    target="_blank"
-                    title="Github"
-                >
-                    <i className="fa-brands fa-github"></i>
-                </a>
+                <ul className="nav__footer-list">
+                    <li>
+                        <a
+                            href="https://github.com/heeeyooo"
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            <i className="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://t.me/heeeyooo"
+                            target="_blank"
+                            title="Telegram"
+                        >
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     );

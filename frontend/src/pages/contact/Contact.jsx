@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import AnimateElements from "../../utils/AnimateElements";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import "./Contact.css";
 
@@ -18,6 +19,8 @@ function Contact() {
             document.querySelector(".email-copy-btn").innerHTML = "Copy";
         }, 3000);
     }
+
+    AnimateElements(".socials-list li", "revealSocialIcon 1s forwards");
 
     return (
         <>
@@ -48,7 +51,6 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://github.com/heeeyooo"
                         target="_blank"
-                        title="Github"
                     >
                         <i className="fa-brands fa-github"></i>
                     </a>
@@ -59,7 +61,6 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
                         target="_blank"
-                        title="Instagram"
                     >
                         <i className="fa-brands fa-instagram"></i>
                     </a>
@@ -70,7 +71,6 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://www.facebook.com/stepan.dordyay.5"
                         target="_blank"
-                        title="Facebook"
                     >
                         <i className="fa-brands fa-facebook"></i>
                     </a>
@@ -81,7 +81,6 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://twitter.com/Heeeyooo_"
                         target="_blank"
-                        title="Twitter"
                     >
                         <i className="fa-brands fa-x-twitter"></i>
                     </a>
@@ -92,7 +91,6 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://www.twitch.tv/heeeyooo_"
                         target="_blank"
-                        title="Twitch"
                     >
                         <i className="fa-brands fa-twitch"></i>
                     </a>
@@ -103,7 +101,6 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://www.linkedin.com/in/stepan-dordiai-245715310"
                         target="_blank"
-                        title="Linkedin"
                     >
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
@@ -114,9 +111,18 @@ function Contact() {
                         onMouseLeave={makeCursorNormal}
                         href="https://www.behance.net/stepandordiai"
                         target="_blank"
-                        title="Behance"
                     >
                         <i className="fa-brands fa-behance"></i>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        onMouseEnter={() => makeCursorActive("Telegram")}
+                        onMouseLeave={makeCursorNormal}
+                        href="https://t.me/heeeyooo"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-telegram"></i>
                     </a>
                 </li>
             </ul>

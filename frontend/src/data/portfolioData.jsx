@@ -20,6 +20,14 @@ const portfolioData = [
     },
     {
         id: 2,
+        title: "penguin",
+        titleName: "Portfolio website",
+        skills: [<i className="fa-brands fa-react"></i>],
+        githubRepo: "https://github.com/heeeyooo/penguin",
+        liveDemo: "https://penguin-project.netlify.app/",
+    },
+    {
+        id: 3,
         title: "Yagoda Karpat",
         titleName: "Business website",
         skills: [<i className="fa-brands fa-react"></i>, <span>Swiper</span>],
@@ -27,7 +35,7 @@ const portfolioData = [
         liveDemo: "https://yagodakarpat.netlify.app/",
     },
     {
-        id: 3,
+        id: 4,
         title: "cloud",
         titleName: "Weather website",
         skills: [
@@ -40,14 +48,7 @@ const portfolioData = [
         githubRepo: "https://github.com/heeeyooo/cloud",
         liveDemo: "https://cloud-project.netlify.app/",
     },
-    {
-        id: 4,
-        title: "penguin",
-        titleName: "Portfolio website",
-        skills: [<i className="fa-brands fa-react"></i>],
-        githubRepo: "https://github.com/heeeyooo/penguin",
-        liveDemo: "https://penguin-project.netlify.app/",
-    },
+
     {
         id: 5,
         title: "Coffeefy",
