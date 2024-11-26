@@ -1,4 +1,4 @@
-import resume from "../../pdf/stepan-dordiai-resume-v2.1.0.pdf";
+import resume from "../../pdf/stepan-dordiai-resume-v2.1.1.pdf";
 import "./Resume.css";
 
 const Resume = () => {
