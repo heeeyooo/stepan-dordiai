@@ -7,12 +7,12 @@ function About() {
     }, []);
     return (
         <p className="about">
-            Hi! My name is Stepan Dordiai and I'm a self-taught Web Developer
-            with 1 year of practical experience in designing and building
-            responsive web pages and applications.
+            Self-taught Web developer with more than 1 year of diverse
+            experience in designing and building responsive web pages and
+            applications.
             <br />
             Constantly seeking for new challenges and opportunities that will
-            expand my skill set.
+            expand my skill set
         </p>
     );
 }

@@ -169,6 +169,10 @@
     font-size: 24px;
 }
 
+.inactive-btn {
+    pointer-events: none;
+}
+
 @media screen and (width < 1000px) {
     .games-section {
         top: 50px;

@@ -26,15 +26,15 @@ function Project({
                 <ul className="project-links__list">
                     <li className={extraClass}>
                         <a href={liveDemo} target="_blank">
+                            Live demo
                             <div className="link-arrow">
                                 <div className="link-arrow-center"></div>
                             </div>
-                            Live demo
                         </a>
                     </li>
                     <li>
                         <a href={githubRepo} target="_blank">
-                            <i className="fa-brands fa-github"></i> GitHub Repo
+                            GitHub Repo<i className="fa-brands fa-github"></i>
                         </a>
                     </li>
                 </ul>

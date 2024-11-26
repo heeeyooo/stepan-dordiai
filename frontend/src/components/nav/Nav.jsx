@@ -103,7 +103,7 @@ function Nav() {
                             target="_blank"
                             title="Telegram"
                         >
-                            <i class="fa-brands fa-telegram"></i>
+                            <i className="fa-brands fa-telegram"></i>
                         </a>
                     </li>
                 </ul>

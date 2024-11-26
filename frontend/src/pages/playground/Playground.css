@@ -101,16 +101,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px;
 }
 
 .pg-project__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
     color: var(--color);
     transition: opacity 0.15s;
 }
 
 .pg-project__link:hover {
     opacity: 0.5;
+}
+
+.link__title-container {
+    display: grid;
+    justify-content: flex-end;
+    overflow: hidden;
+    grid-template-columns: 0fr;
+    transition: grid-template-columns 1s;
+}
+
+.link__title-container p {
+    overflow: hidden;
+    /*  */
+    white-space: nowrap;
+    /*  */
+}
+
+.pg-project__link:hover .link__title-container {
+    grid-template-columns: 1fr;
 }
 
 .link--none {

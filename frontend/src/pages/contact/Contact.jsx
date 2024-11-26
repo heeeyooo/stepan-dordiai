@@ -107,22 +107,12 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => makeCursorActive("Behance")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://www.behance.net/stepandordiai"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-behance"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
                         onMouseEnter={() => makeCursorActive("Telegram")}
                         onMouseLeave={makeCursorNormal}
                         href="https://t.me/heeeyooo"
                         target="_blank"
                     >
-                        <i class="fa-brands fa-telegram"></i>
+                        <i className="fa-brands fa-telegram"></i>
                     </a>
                 </li>
             </ul>

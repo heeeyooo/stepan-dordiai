@@ -66,9 +66,13 @@ const Playground = () => {
                                                 className="pg-project__link"
                                                 href={liveDemo}
                                                 target="_blank"
-                                                title="Live demo"
                                             >
-                                                <i className="fa-solid fa-link"></i>
+                                                <div className="link__title-container">
+                                                    <p>Live demo</p>
+                                                </div>
+                                                <div className="link-arrow">
+                                                    <div className="link-arrow-center"></div>
+                                                </div>
                                             </a>
                                         </li>
                                         <li>
@@ -76,8 +80,10 @@ const Playground = () => {
                                                 className="pg-project__link"
                                                 href={githubRepo}
                                                 target="_blank"
-                                                title="Github Repo"
                                             >
+                                                <div className="link__title-container">
+                                                    <p>GitHub Repo</p>
+                                                </div>
                                                 <i className="fa-brands fa-github"></i>
                                             </a>
                                         </li>
@@ -86,8 +92,10 @@ const Playground = () => {
                                                 className="pg-project__link"
                                                 href={telegramBot}
                                                 target="_blank"
-                                                title="Telegram bot"
                                             >
+                                                <div className="link__title-container">
+                                                    <p>Telegram Bot</p>
+                                                </div>
                                                 <i className="fa-brands fa-telegram"></i>
                                             </a>
                                         </li>
