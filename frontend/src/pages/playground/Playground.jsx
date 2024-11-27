@@ -42,69 +42,72 @@ const Playground = () => {
     return (
         <>
             <div className="playground js-pg-container">
-                {projects.map(
-                    ({
-                        id,
-                        title,
-                        liveDemo,
-                        githubRepo,
-                        telegramBot,
-                        extraClass,
-                    }) => {
-                        return (
-                            <div className="pg-project" key={id}>
-                                <p className="playground-project__number">
-                                    {"00" + id}
-                                </p>
-                                <div className="playground-info-container">
-                                    <p className="playground-project__title">
-                                        {title}
+                {projects
+                    // MongoDB shuffle my json objects so i use sort() method to sort objects by id
+                    .sort((a, b) => a.id - b.id)
+                    .map(
+                        ({
+                            id,
+                            title,
+                            liveDemo,
+                            githubRepo,
+                            telegramBot,
+                            extraClass,
+                        }) => {
+                            return (
+                                <div className="pg-project" key={id}>
+                                    <p className="playground-project__number">
+                                        {"00" + id}
                                     </p>
-                                    <ul className="pg-project__links-list">
-                                        <li>
-                                            <a
-                                                className="pg-project__link"
-                                                href={liveDemo}
-                                                target="_blank"
-                                            >
-                                                <div className="link__title-container">
-                                                    <p>Live demo</p>
-                                                </div>
-                                                <div className="link-arrow">
-                                                    <div className="link-arrow-center"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                className="pg-project__link"
-                                                href={githubRepo}
-                                                target="_blank"
-                                            >
-                                                <div className="link__title-container">
-                                                    <p>GitHub Repo</p>
-                                                </div>
-                                                <i className="fa-brands fa-github"></i>
-                                            </a>
-                                        </li>
-                                        <li className={extraClass}>
-                                            <a
-                                                className="pg-project__link"
-                                                href={telegramBot}
-                                                target="_blank"
-                                            >
-                                                <div className="link__title-container">
-                                                    <p>Telegram Bot</p>
-                                                </div>
-                                                <i className="fa-brands fa-telegram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div className="playground-info-container">
+                                        <p className="playground-project__title">
+                                            {title}
+                                        </p>
+                                        <ul className="pg-project__links-list">
+                                            <li>
+                                                <a
+                                                    className="pg-project__link"
+                                                    href={liveDemo}
+                                                    target="_blank"
+                                                >
+                                                    <div className="link__title-container">
+                                                        <p>Live demo</p>
+                                                    </div>
+                                                    <div className="link-arrow">
+                                                        <div className="link-arrow-center"></div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    className="pg-project__link"
+                                                    href={githubRepo}
+                                                    target="_blank"
+                                                >
+                                                    <div className="link__title-container">
+                                                        <p>GitHub Repo</p>
+                                                    </div>
+                                                    <i className="fa-brands fa-github"></i>
+                                                </a>
+                                            </li>
+                                            <li className={extraClass}>
+                                                <a
+                                                    className="pg-project__link"
+                                                    href={telegramBot}
+                                                    target="_blank"
+                                                >
+                                                    <div className="link__title-container">
+                                                        <p>Telegram Bot</p>
+                                                    </div>
+                                                    <i className="fa-brands fa-telegram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    }
-                )}
+                            );
+                        }
+                    )}
             </div>
             <ScrollBtn className={".js-pg-container"} />
         </>
