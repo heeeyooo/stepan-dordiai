@@ -67,16 +67,6 @@ function Contact() {
                 </li>
                 <li>
                     <a
-                        onMouseEnter={() => makeCursorActive("Facebook")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://www.facebook.com/stepan.dordyay.5"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a
                         onMouseEnter={() => makeCursorActive("Twitter")}
                         onMouseLeave={makeCursorNormal}
                         href="https://twitter.com/Heeeyooo_"
