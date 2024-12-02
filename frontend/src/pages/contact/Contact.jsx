@@ -8,41 +8,86 @@ function Contact() {
         document.title = "Stepan Dordiai | Contact";
     }, []);
 
-    function copyEmail() {
-        const emailInput = document.querySelector(".email-input");
-        const emailValue = emailInput.value;
+    function copyMail() {
+        const mailLink = document.querySelector(".mail-link");
+        const mailContent = mailLink.textContent;
         //
-        navigator.clipboard.writeText(emailValue);
+        navigator.clipboard.writeText(mailContent);
         //
-        document.querySelector(".email-copy-btn").innerHTML = "Copied";
+        document.querySelector(".mail-copy-btn").innerHTML = "Copied";
         setTimeout(() => {
-            document.querySelector(".email-copy-btn").innerHTML = "Copy";
+            document.querySelector(".mail-copy-btn").innerHTML = "Copy";
+        }, 3000);
+    }
+
+    function copyTel() {
+        const telLink = document.querySelector(".tel-link");
+        const telContent = telLink.textContent;
+        //
+        navigator.clipboard.writeText(telContent);
+        //
+        document.querySelector(".mail-copy-btn").innerHTML = "Copied";
+        setTimeout(() => {
+            document.querySelector(".mail-copy-btn").innerHTML = "Copy";
         }, 3000);
     }
 
     AnimateElements(".socials-list li", "revealSocialIcon 1s forwards");
 
+    AnimateElements(".text-line-container div", "revealTextLine 1s forwards");
+
     return (
         <>
-            <div className="email-container">
-                <form action="mailto:stepandordiai@gmail.com">
-                    <input
-                        onMouseEnter={() => makeCursorActive("Email")}
-                        onMouseLeave={makeCursorNormal}
-                        className="email-input"
-                        type="submit"
-                        value="stepandordiai@gmail.com"
-                    />
-                </form>
-                <span>|</span>
-                <button
-                    className="email-copy-btn"
-                    onMouseEnter={() => makeCursorActive("Copy")}
-                    onMouseLeave={makeCursorNormal}
-                    onClick={copyEmail}
-                >
-                    Copy
-                </button>
+            <div className="mail-tel-container">
+                <div className="text-line-container">
+                    <div>
+                        <div className="mail-container">
+                            <a
+                                onMouseEnter={() => makeCursorActive("Email")}
+                                onMouseLeave={makeCursorNormal}
+                                className="mail-link"
+                                href="mailto:stepandordiai@gmail.com"
+                            >
+                                stepandordiai@gmail.com
+                            </a>
+                            <span>|</span>
+                            <button
+                                className="mail-copy-btn"
+                                onMouseEnter={() => makeCursorActive("Copy")}
+                                onMouseLeave={makeCursorNormal}
+                                onClick={copyMail}
+                            >
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="text-line-container">
+                    <div>
+                        <div className="tel-container">
+                            <a
+                                href="tel:+380689852978"
+                                onMouseEnter={() =>
+                                    makeCursorActive("Phone number")
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                className="tel-link"
+                            >
+                                +380 68 985 29 78
+                            </a>
+                            <span>|</span>
+                            <button
+                                className="tel-copy-btn"
+                                onMouseEnter={() => makeCursorActive("Copy")}
+                                onMouseLeave={makeCursorNormal}
+                                onClick={copyTel}
+                            >
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <ul className="socials-list">
                 <li>

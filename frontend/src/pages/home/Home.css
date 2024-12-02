@@ -3,14 +3,20 @@
     right: 100px;
     bottom: 100px;
     text-align: right;
-    opacity: 0;
     z-index: 1;
-    animation: reveal 1s forwards;
 }
 
-@keyframes reveal {
+.text-line-container {
+    overflow: hidden;
+}
+
+.text-line-container div {
+    transform: translateY(100%);
+}
+
+@keyframes revealTextLine {
     to {
-        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -18,12 +24,14 @@
     font-size: clamp(18px, 3vw, 36px);
     font-weight: 100;
     color: var(--color);
+    overflow: hidden;
 }
 
 .home-container__title-name {
     font-size: clamp(32px, 5vw, 64px);
     font-weight: 300;
     color: var(--color);
+    overflow: hidden;
 }
 
 @media screen and (width < 1000px) {
