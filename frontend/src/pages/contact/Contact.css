@@ -17,20 +17,6 @@
     color: var(--color);
 }
 
-.text-line-container {
-    overflow: hidden;
-}
-
-.text-line-container div {
-    transform: translateY(100%);
-}
-
-@keyframes revealTextLine {
-    to {
-        transform: translateY(0);
-    }
-}
-
 .mail-container,
 .tel-container {
     display: flex;

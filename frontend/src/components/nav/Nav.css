@@ -33,7 +33,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: width 0.5s;
+    transition: width 0.5s, letter-spacing 0.5s;
 }
 
 .nav__link--active {
@@ -45,6 +45,10 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.nav__link:hover {
+    letter-spacing: 5px;
 }
 
 .game-link-font {

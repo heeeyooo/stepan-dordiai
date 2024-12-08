@@ -52,7 +52,7 @@ const portfolioData = [
     {
         id: 5,
         title: "Coffeefy",
-        titleName: "Ecommerce website",
+        titleName: "E-commerce website",
         skills: [
             <i className="fa-brands fa-html5"></i>,
             <i className="fa-brands fa-css3-alt"></i>,

@@ -34,13 +34,13 @@ function Contact() {
 
     AnimateElements(".socials-list li", "revealSocialIcon 1s forwards");
 
-    AnimateElements(".text-line-container div", "revealTextLine 1s forwards");
+    AnimateElements(".text-line", "revealTextLine 1s forwards");
 
     return (
         <>
             <div className="mail-tel-container">
                 <div className="text-line-container">
-                    <div>
+                    <div className="text-line">
                         <div className="mail-container">
                             <a
                                 onMouseEnter={() => makeCursorActive("Email")}
@@ -64,7 +64,7 @@ function Contact() {
                 </div>
 
                 <div className="text-line-container">
-                    <div>
+                    <div className="text-line">
                         <div className="tel-container">
                             <a
                                 href="tel:+380689852978"

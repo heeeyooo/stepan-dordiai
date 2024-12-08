@@ -10,21 +10,6 @@
     font-weight: 300;
 }
 
-.text-line-container {
-    overflow: hidden;
-}
-
-.text-line-container span {
-    display: block;
-    transform: translateY(100%);
-}
-
-@keyframes revealTextLine {
-    to {
-        transform: translateY(0);
-    }
-}
-
 @media screen and (width < 1000px) {
     .about {
         right: 50px;

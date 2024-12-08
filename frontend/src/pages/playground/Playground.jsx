@@ -71,7 +71,7 @@ const Playground = () => {
                                                     target="_blank"
                                                 >
                                                     <div className="link__title-container">
-                                                        <p>Live demo</p>
+                                                        <p>Live site</p>
                                                     </div>
                                                     <div className="link-arrow">
                                                         <div className="link-arrow-center"></div>

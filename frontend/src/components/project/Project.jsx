@@ -26,7 +26,7 @@ function Project({
                 <ul className="project-links__list">
                     <li className={extraClass}>
                         <a href={liveDemo} target="_blank">
-                            Live demo
+                            Live site
                             <div className="link-arrow">
                                 <div className="link-arrow-center"></div>
                             </div>
