@@ -94,7 +94,7 @@
     justify-content: flex-end;
     overflow: hidden;
     grid-template-columns: 0fr;
-    transition: grid-template-columns 1s;
+    transition: grid-template-columns 0.5s;
 }
 
 .link__title-container p {

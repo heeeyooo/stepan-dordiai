@@ -26,9 +26,9 @@ function Contact() {
         //
         navigator.clipboard.writeText(telContent);
         //
-        document.querySelector(".mail-copy-btn").innerHTML = "Copied";
+        document.querySelector(".tel-copy-btn").innerHTML = "Copied";
         setTimeout(() => {
-            document.querySelector(".mail-copy-btn").innerHTML = "Copy";
+            document.querySelector(".tel-copy-btn").innerHTML = "Copy";
         }, 3000);
     }
 
