@@ -49,7 +49,7 @@ const Playground = () => {
                         ({
                             id,
                             title,
-                            liveDemo,
+                            liveSite,
                             githubRepo,
                             telegramBot,
                             extraClass,
@@ -67,7 +67,7 @@ const Playground = () => {
                                             <li>
                                                 <a
                                                     className="pg-project__link"
-                                                    href={liveDemo}
+                                                    href={liveSite}
                                                     target="_blank"
                                                 >
                                                     <div className="link__title-container">

@@ -40,7 +40,6 @@ const ScrollBtn = ({ className }) => {
                 onMouseDown={scrollUp}
                 onMouseUp={stopScrollingUp}
                 className="scroll__up-btn"
-                title="Scroll up"
             >
                 <i className="fa-solid fa-arrow-up-long"></i>
             </button>
@@ -50,7 +49,6 @@ const ScrollBtn = ({ className }) => {
                 onMouseDown={scrollDown}
                 onMouseUp={stopScrollingDown}
                 className="scroll__down-btn"
-                title="Scroll down"
             >
                 <i className="fa-solid fa-arrow-down-long"></i>
             </button>
