@@ -47,10 +47,6 @@
     -webkit-text-fill-color: transparent;
 }
 
-.nav__link:hover {
-    letter-spacing: 5px;
-}
-
 .game-link-font {
     font-family: "Silkscreen", sans-serif;
 }

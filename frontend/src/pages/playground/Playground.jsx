@@ -16,7 +16,7 @@ const Playground = () => {
         awaiting.classList.add("awaiting");
         awaiting.textContent =
             "Loading data...(it may take some time (30-60sec) due the inactivity of the server (like 30min), after it loads immediately)";
-        document.querySelector(".js-pg-container").appendChild(awaiting);
+        document.querySelector(".js-pg-section").appendChild(awaiting);
         let isError = false;
         axios
             .get("https://stepan-dordiai-backend.onrender.com")
@@ -41,7 +41,7 @@ const Playground = () => {
 
     return (
         <>
-            <div className="playground js-pg-container">
+            <section className="pg-section js-pg-section">
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
                     .sort((a, b) => a.id - b.id)
@@ -108,8 +108,8 @@ const Playground = () => {
                             );
                         }
                     )}
-            </div>
-            <ScrollBtn className={".js-pg-container"} />
+            </section>
+            <ScrollBtn className={".js-pg-section"} />
         </>
     );
 };

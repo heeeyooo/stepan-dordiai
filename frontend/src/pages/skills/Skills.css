@@ -1,4 +1,4 @@
-.skills-container {
+.skills-section {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -9,21 +9,6 @@
     z-index: 1;
 }
 
-/* .skills-container__title { */
-/* color: var(--color); */
-/* margin: 50px 0; */
-/* font-size: clamp(18px, 3vw, 36px); */
-/* font-weight: 200; */
-/* opacity: 0; */
-/* animation: reveal 1s forwards; */
-/* } */
-
-/* @keyframes reveal {
-    to {
-        opacity: 1;
-    }
-} */
-
 .skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -31,13 +16,10 @@
 }
 
 @media screen and (width < 1000px) {
-    .skills-container {
+    .skills-section {
         right: 50px;
         left: 50px;
         padding: 50px 0;
         width: calc(100% - 100px);
     }
-    /* .skills-container__title {
-        margin: 25px 0;
-    } */
 }

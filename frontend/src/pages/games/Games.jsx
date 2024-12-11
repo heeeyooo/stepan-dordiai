@@ -95,7 +95,7 @@ const Games = () => {
 
     return (
         <>
-            <div className="games-section">
+            <section className="games-section">
                 <div
                     className="game-wrapper"
                     onMouseMove={() =>
@@ -172,7 +172,7 @@ const Games = () => {
                         </NavLink>
                     </div>
                 </div>
-            </div>
+            </section>
             <div className="games-section__pagination">
                 <span onClick={scrollPag1} className="pag1 active"></span>
                 <span onClick={scrollPag2} className="pag2"></span>

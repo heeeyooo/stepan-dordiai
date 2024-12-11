@@ -11,7 +11,7 @@ function Home() {
     AnimateElements(".text-line", "revealTextLine 1s forwards");
 
     return (
-        <div className="home-container">
+        <section className="home-section">
             <div className="text-line-container">
                 <div className="text-line">
                     <h2 className="home-container__title">
@@ -26,7 +26,7 @@ function Home() {
                     </h1>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

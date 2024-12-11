@@ -11,7 +11,7 @@ function About() {
     AnimateElements(".text-line", "revealTextLine 1s forwards");
 
     return (
-        <div className="about js-about">
+        <section className="about-section">
             <div className="text-line-container">
                 <div className="text-line">
                     <p>Self-taught Web developer</p>
@@ -47,7 +47,7 @@ function About() {
                     <p>that will expand my skill set</p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

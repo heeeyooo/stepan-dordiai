@@ -1,4 +1,4 @@
-.home-container {
+.home-section {
     position: fixed;
     right: 100px;
     bottom: 100px;
@@ -19,7 +19,7 @@
 }
 
 @media screen and (width < 1000px) {
-    .home-container {
+    .home-section {
         bottom: 50px;
         right: 50px;
     }

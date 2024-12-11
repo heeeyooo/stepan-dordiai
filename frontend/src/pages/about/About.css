@@ -1,4 +1,4 @@
-.about {
+.about-section {
     position: fixed;
     right: 100px;
     bottom: 100px;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (width < 1000px) {
-    .about {
+    .about-section {
         right: 50px;
         bottom: 50px;
         left: 50px;

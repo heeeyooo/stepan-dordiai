@@ -11,7 +11,7 @@ function Portfolio() {
 
     return (
         <>
-            <div className="portfolio-container js-portfolio-container">
+            <section className="portfolio-section js-portfolio-section">
                 {portfolioData.map((project) => {
                     return (
                         <Project
@@ -26,8 +26,8 @@ function Portfolio() {
                         />
                     );
                 })}
-            </div>
-            <ScrollBtn className={".js-portfolio-container"} />
+            </section>
+            <ScrollBtn className={".js-portfolio-section"} />
         </>
     );
 }
