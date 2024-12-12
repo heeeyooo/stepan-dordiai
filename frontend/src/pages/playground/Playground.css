@@ -25,14 +25,13 @@
     width: calc(50% - 100px);
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
     overflow-y: scroll;
     z-index: 1;
 }
 
 .pg-project {
     position: relative;
-    height: 80px;
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -40,6 +39,10 @@
     flex-shrink: 0;
     opacity: 0;
     transform: translateY(50px);
+}
+
+.pg-project:not(:nth-last-of-type(1)) {
+    border-bottom: 1px solid var(--color);
 }
 
 @keyframes revealPgProject {
@@ -59,7 +62,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: end;
 }
 
@@ -123,6 +126,5 @@
         right: 50px;
         left: 50px;
         width: calc(100% - 100px);
-        row-gap: 25px;
     }
 }
