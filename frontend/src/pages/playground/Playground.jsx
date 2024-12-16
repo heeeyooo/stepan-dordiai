@@ -73,9 +73,7 @@ const Playground = () => {
                                                     <div className="link__title-container">
                                                         <p>Live site</p>
                                                     </div>
-                                                    <div className="link-arrow">
-                                                        <div className="link-arrow-center"></div>
-                                                    </div>
+                                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </li>
                                             <li>
