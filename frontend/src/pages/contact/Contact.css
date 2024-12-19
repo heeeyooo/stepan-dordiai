@@ -37,6 +37,7 @@
     position: fixed;
     bottom: 100px;
     right: 100px;
+    /* left: 100px; */
     z-index: 1;
     display: flex;
     width: calc(50% - 100px);

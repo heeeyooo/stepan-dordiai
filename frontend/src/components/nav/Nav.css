@@ -12,22 +12,47 @@
     animation: revealNav 1s forwards;
 }
 
-.nav--pc {
+@keyframes revealNav {
+    to {
+        left: calc(-25% + 50px);
+    }
+}
+
+.nav--hover {
     transform: translateX(calc(100% - 50px));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+/* Works only on touch devices */
+.nav--active {
+    transform: translateX(calc(100% - 25px));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav__header {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
+}
+
+.nav__header-logo {
+    font-size: clamp(12px, 3vw, 16px);
+    font-weight: 300;
+    color: var(--color);
+}
+
+.nav__header-logo span {
+    font-weight: 100;
 }
 
 .nav__list {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-}
-
-@keyframes revealNav {
-    to {
-        left: calc(-25% + 50px);
-    }
 }
 
 .nav__link {
@@ -39,7 +64,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: width 0.5s, letter-spacing 0.5s;
+    transition: all 0.5s;
 }
 
 .nav__link--active {
@@ -47,48 +72,21 @@
 }
 
 .nav__link span {
-    width: max-content;
     background-color: var(--semi-transparent-50);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.game-link-font {
+.nav__link-extra-font {
     font-family: "Silkscreen", sans-serif;
 }
 
-.nav--active {
-    transform: translateX(calc(100% - 25px));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.nav__header {
-    display: initial;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    text-align: center;
-}
-
-.nav__logo-title {
-    font-size: clamp(16px, 3vw, 20px);
-    font-weight: 300;
-    color: var(--color);
-}
-
-.nav__logo-title span {
-    font-weight: 100;
-}
-
 .nav__footer {
-    display: initial;
     position: absolute;
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
 }
 
 .nav__footer-list {
@@ -112,6 +110,7 @@
     .nav {
         width: 50%;
         left: -50%;
+        padding-left: 25px;
     }
 
     @keyframes revealNav {
@@ -120,7 +119,19 @@
         }
     }
 
-    .nav--pc {
+    .nav--hover {
         transform: translateX(calc(100% - 25px));
+    }
+
+    .nav__header {
+        top: 25px;
+        left: 25px;
+        right: 25px;
+    }
+
+    .nav__footer {
+        bottom: 25px;
+        left: 25px;
+        right: 25px;
     }
 }

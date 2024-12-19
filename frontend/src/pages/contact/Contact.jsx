@@ -105,7 +105,7 @@ function Contact() {
                     <a
                         onMouseEnter={() => makeCursorActive("Instagram")}
                         onMouseLeave={makeCursorNormal}
-                        href="https://www.instagram.com/heeeyooo_?igsh=N2ZreTdicmF1dDlk&utm_source=qr"
+                        href="https://www.instagram.com/heeeyooo_"
                         target="_blank"
                     >
                         <i className="fa-brands fa-instagram"></i>

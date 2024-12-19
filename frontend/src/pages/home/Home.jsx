@@ -16,7 +16,7 @@ function Home() {
             <div className="text-line-container">
                 <div className="text-line">
                     <div className="home-section__btn-container">
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <i className="fa-solid fa-arrow-right"></i>
                         <NavLink
                             to="/contact"
                             className="home-section__hire-me"

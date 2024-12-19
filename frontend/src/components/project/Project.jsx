@@ -30,7 +30,7 @@ function Project({
                     <li className={extraClass}>
                         <a href={liveDemo} target="_blank">
                             Live site
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i className="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </li>
                     <li>

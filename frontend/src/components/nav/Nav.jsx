@@ -1,42 +1,54 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../burgerBtn/BurgerBtn";
-import "./Nav.css";
 import { isTouchDevice } from "../../utils/isTouchDevice";
+import "./Nav.css";
 
 function Nav() {
+    function showNavMenu() {
+        if (!isTouchDevice()) {
+            document.querySelector(".nav").classList.add("nav--hover");
+            document
+                .querySelector(".js-burger-btn")
+                .classList.add("burger-btn--active");
+        } else {
+            return;
+        }
+    }
+
+    function hideNavMenu() {
+        if (!isTouchDevice()) {
+            document.querySelector(".nav").classList.remove("nav--hover");
+            document
+                .querySelector(".js-burger-btn")
+                .classList.remove("burger-btn--active");
+        } else {
+            return;
+        }
+    }
+
     const activeLink = "nav__link nav__link--active";
     const inactiveLink = "nav__link";
 
-    function showNav() {
-        if (!isTouchDevice()) {
-            document.querySelector(".nav").classList.add("nav--pc");
-            document
-                .querySelector(".js-burger-btn")
-                .classList.add("active-burger-btn");
-        } else {
-            return;
-        }
-    }
-
-    function hideNav() {
-        if (!isTouchDevice()) {
-            document.querySelector(".nav").classList.remove("nav--pc");
-            document
-                .querySelector(".js-burger-btn")
-                .classList.remove("active-burger-btn");
-        } else {
-            return;
-        }
-    }
+    // Hide nav menu on page resize (when touch device rotates)
+    addEventListener("resize", () => {
+        document.querySelector(".nav").classList.remove("nav--active");
+        document
+            .querySelector(".burger-btn")
+            .classList.remove("burger-btn--active");
+    });
 
     return (
-        <nav className="nav" onMouseOver={showNav} onMouseLeave={hideNav}>
+        <nav
+            className="nav"
+            onMouseOver={showNavMenu}
+            onMouseLeave={hideNavMenu}
+        >
+            <BurgerBtn />
             <div className="nav__header">
-                <h1 className="nav__logo-title">
+                <h1 className="nav__header-logo">
                     STEPAN DORDIAI <span>PORTFOLIO</span>
                 </h1>
             </div>
-            <BurgerBtn />
             <ul className="nav__list">
                 <li>
                     <NavLink
@@ -105,7 +117,7 @@ function Nav() {
                         }}
                         to="/games"
                     >
-                        <span className="game-link-font">GAMES</span>
+                        <span className="nav__link-extra-font">GAMES</span>
                     </NavLink>
                 </li>
             </ul>
@@ -127,6 +139,15 @@ function Nav() {
                             title="Telegram"
                         >
                             <i className="fa-brands fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/heeeyooo_"
+                            target="_blank"
+                            title="Instagram"
+                        >
+                            <i className="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                 </ul>

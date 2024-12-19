@@ -3,7 +3,7 @@
     top: 100px;
     right: 100px;
     bottom: 100px;
-    width: calc(50% - 100px);
+    left: 100px;
     font-family: "Silkscreen", sans-serif;
     display: flex;
     flex-direction: column;
@@ -168,12 +168,12 @@
     top: 100px;
     right: 100px;
     bottom: 100px;
+    left: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 10px;
-    width: calc(50% - 100px);
     opacity: 0;
     z-index: 1;
     animation: reveal 1s forwards;
@@ -202,7 +202,6 @@
         right: 50px;
         bottom: 50px;
         left: 50px;
-        width: calc(100% - 100px);
     }
 
     .cards-grid {
@@ -214,6 +213,5 @@
         right: 50px;
         bottom: 50px;
         left: 50px;
-        width: calc(100% - 100px);
     }
 }

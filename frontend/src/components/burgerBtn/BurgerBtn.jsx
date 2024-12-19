@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { isTouchDevice } from "../../utils/isTouchDevice";
 import "./BurgerBtn.css";
 
 function BurgerBtn() {
@@ -8,31 +9,39 @@ function BurgerBtn() {
 
     useEffect(() => {
         if (burgerBtn) {
-            refBurger.current.classList.add("active-burger-btn");
+            refBurger.current.classList.add("burger-btn--active");
             document.querySelector(".nav").classList.add("nav--active");
         } else {
-            refBurger.current.classList.remove("active-burger-btn");
+            refBurger.current.classList.remove("burger-btn--active");
             document.querySelector(".nav").classList.remove("nav--active");
         }
     }, [burgerBtn]);
 
+    useEffect(() => {
+        if (!isTouchDevice()) {
+            document
+                .querySelector(".burger-btn__container")
+                .classList.add("burger-btn__container--inactive");
+        } else {
+            document
+                .querySelector(".burger-btn__container")
+                .classList.remove("burger-btn__container--inactive");
+        }
+    }, []);
+
     const toggleBurgerBtn = () => {
-        setBurgerBtn((currentState) => {
-            return currentState === false ? true : false;
-        });
+        if (!isTouchDevice()) {
+            return;
+        } else {
+            setBurgerBtn((currentState) => {
+                return currentState === false ? true : false;
+            });
+        }
     };
 
-    // close menu when page resize
-    addEventListener("resize", () => {
-        document.querySelector(".nav").classList.remove("nav--active");
-        document
-            .querySelector(".burger-btn")
-            .classList.remove("active-burger-btn");
-    });
-
     return (
-        <div onClick={toggleBurgerBtn} className="burger-container">
-            <p className="burger-title">MENU</p>
+        <div onClick={toggleBurgerBtn} className="burger-btn__container">
+            <p className="burger-btn__title">MENU</p>
             <div ref={refBurger} className="burger-btn js-burger-btn"></div>
         </div>
     );
