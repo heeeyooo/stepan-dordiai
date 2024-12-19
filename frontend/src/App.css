@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
 :root {
-    --bg-color: #000000;
+    --bg-light: #fff;
+    --bg-dark: #1c1c1c;
+    --bg: #000;
     --color: #ffffff;
     --semi-transparent-10: rgba(0, 0, 0, 0.1);
     --semi-transparent-25: rgba(0, 0, 0, 0.25);

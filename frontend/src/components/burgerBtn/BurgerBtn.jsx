@@ -33,7 +33,7 @@ function BurgerBtn() {
     return (
         <div onClick={toggleBurgerBtn} className="burger-container">
             <p className="burger-title">MENU</p>
-            <div ref={refBurger} className="burger-btn"></div>
+            <div ref={refBurger} className="burger-btn js-burger-btn"></div>
         </div>
     );
 }

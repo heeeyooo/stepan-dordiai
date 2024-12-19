@@ -2,12 +2,13 @@
     position: fixed;
     top: 0;
     right: 100px;
+    left: 100px;
     bottom: 0;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
     padding: 100px 0;
-    width: calc(50% - 100px);
+    /* width: calc(50% - 100px); */
     overflow-y: scroll;
     z-index: 1;
 }

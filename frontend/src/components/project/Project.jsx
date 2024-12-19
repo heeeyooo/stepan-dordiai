@@ -14,7 +14,10 @@ function Project({
 
     return (
         <div className="project-container">
-            <p className="project-number">{id}</p>
+            <div className="project-left-side">
+                <p className="project-number">{id}</p>
+                <p className="project-production">2024</p>
+            </div>
             <div className="project-right-section">
                 <h4 className="project-title">{title}</h4>
                 <h5 className="project-title-name">{titleName}</h5>

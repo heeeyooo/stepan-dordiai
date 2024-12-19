@@ -6,8 +6,22 @@ function Nav() {
     const activeLink = "nav__link nav__link--active";
     const inactiveLink = "nav__link";
 
+    function showNav() {
+        document.querySelector(".nav").classList.add("nav--pc");
+        document
+            .querySelector(".js-burger-btn")
+            .classList.add("active-burger-btn");
+    }
+
+    function hideNav() {
+        document.querySelector(".nav").classList.remove("nav--pc");
+        document
+            .querySelector(".js-burger-btn")
+            .classList.remove("active-burger-btn");
+    }
+
     return (
-        <nav className="nav">
+        <nav className="nav" onMouseOver={showNav} onMouseLeave={hideNav}>
             <div className="nav__header">
                 <h1 className="nav__logo-title">
                     STEPAN DORDIAI <span>PORTFOLIO</span>

@@ -1,19 +1,18 @@
 .mail-tel-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 100px;
+    right: 100px;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     row-gap: 50px;
-    z-index: 1;
 }
 
 .mail-tel-container span {
-    font-size: clamp(20px, 3vw, 36px);
-    font-weight: 200;
+    /* font-size: clamp(20px, 3vw, 36px); */
+    font-weight: 300;
     color: var(--color);
 }
 
@@ -29,26 +28,25 @@
 .tel-link,
 .mail-copy-btn,
 .tel-copy-btn {
-    font-size: clamp(20px, 3vw, 36px);
+    /* font-size: clamp(20px, 3vw, 36px); */
     color: var(--color);
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .socials-list {
     position: fixed;
-    top: 100px;
     bottom: 100px;
     right: 100px;
     z-index: 1;
     display: flex;
-    flex-direction: column;
+    width: calc(50% - 100px);
     justify-content: space-between;
     align-items: center;
 }
 
 .socials-list li {
     display: grid;
-    grid-template-columns: 0fr;
+    grid-template-rows: 0fr;
     overflow: hidden;
 }
 
@@ -60,29 +58,21 @@
 
 @keyframes revealSocialIcon {
     to {
-        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 }
 
 @media screen and (width < 1000px) {
+    .mail-tel-container {
+        top: 50px;
+        right: 50px;
+        row-gap: 25px;
+    }
     .socials-list {
-        top: auto;
         bottom: 50px;
         left: 50px;
         right: 50px;
+        width: calc(100% - 100px);
         flex-direction: row;
-    }
-
-    .socials-list li {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0fr;
-        overflow: hidden;
-    }
-
-    @keyframes revealSocialIcon {
-        to {
-            grid-template-rows: 1fr;
-        }
     }
 }

@@ -85,14 +85,14 @@
 .game-container::after {
     position: absolute;
     content: "";
-    background: linear-gradient(-135deg, rgb(89, 238, 251), rgb(255, 124, 237));
+    background: linear-gradient(-90deg, #43c6ac, #f8ffae);
     inset: -1.25rem;
     transform: translateZ(-50px);
 }
 
 /* Just background gradient for the last element */
 .game-wrapper:nth-last-child(1) .game-container::after {
-    background: linear-gradient(rgb(255, 95, 47), rgb(227, 245, 109));
+    background: linear-gradient(-90deg, #333399, #ff00cc);
 }
 
 .game-container__header {

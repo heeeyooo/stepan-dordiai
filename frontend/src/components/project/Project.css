@@ -40,9 +40,21 @@
     }
 }
 
+.project-left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+.project-production {
+    color: var(--color);
+    font-weight: 100;
+    font-size: 12px;
+}
+
 .project-number,
 .project-title {
-    font-size: clamp(24px, 4vw, 36px);
+    font-size: clamp(16px, 4vw, 36px);
     font-weight: 300;
     color: var(--color);
 }
@@ -58,7 +70,7 @@
 .project-title-name {
     color: var(--color);
     font-weight: 100;
-    font-size: 16px;
+    font-size: clamp(12px, 3vw, 16px);
 }
 
 .project-skills {
