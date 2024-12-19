@@ -1,23 +1,32 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../burgerBtn/BurgerBtn";
 import "./Nav.css";
+import { isTouchDevice } from "../../utils/isTouchDevice";
 
 function Nav() {
     const activeLink = "nav__link nav__link--active";
     const inactiveLink = "nav__link";
 
     function showNav() {
-        document.querySelector(".nav").classList.add("nav--pc");
-        document
-            .querySelector(".js-burger-btn")
-            .classList.add("active-burger-btn");
+        if (!isTouchDevice()) {
+            document.querySelector(".nav").classList.add("nav--pc");
+            document
+                .querySelector(".js-burger-btn")
+                .classList.add("active-burger-btn");
+        } else {
+            return;
+        }
     }
 
     function hideNav() {
-        document.querySelector(".nav").classList.remove("nav--pc");
-        document
-            .querySelector(".js-burger-btn")
-            .classList.remove("active-burger-btn");
+        if (!isTouchDevice()) {
+            document.querySelector(".nav").classList.remove("nav--pc");
+            document
+                .querySelector(".js-burger-btn")
+                .classList.remove("active-burger-btn");
+        } else {
+            return;
+        }
     }
 
     return (
