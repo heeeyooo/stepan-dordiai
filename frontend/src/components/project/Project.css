@@ -16,6 +16,22 @@
     cursor: pointer;
 }
 
+.project-container:hover .project-number {
+    opacity: 0.5;
+}
+
+.project-container:hover .project-title {
+    opacity: 0.5;
+}
+
+.project-container:hover .project-production {
+    opacity: 0.5;
+}
+
+.project-container:hover .project-title-name {
+    opacity: 0.5;
+}
+
 .new-page {
     position: fixed;
     top: 50px;
@@ -109,6 +125,7 @@
     color: var(--color);
     font-weight: 200;
     font-size: 12px;
+    transition: opacity 0.15s;
     /* justify-self: flex-start; */
     /* align-self: center; */
 }
@@ -118,10 +135,7 @@
     font-size: clamp(24px, 4vw, 36px);
     font-weight: 300;
     color: var(--color);
-}
-
-.project-title {
-    /* justify-self: flex-end; */
+    transition: opacity 0.15s;
 }
 
 .project-right-section {
@@ -138,6 +152,7 @@
     color: var(--color);
     font-weight: 200;
     font-size: clamp(12px, 3vw, 16px);
+    transition: opacity 0.15s;
 }
 
 .project-skills {

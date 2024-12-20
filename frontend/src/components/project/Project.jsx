@@ -33,7 +33,7 @@ function Project({
             document
                 .querySelector(".new-page")
                 .classList.add("new-page--active");
-        }, 100);
+        }, 1);
         document.querySelector(".close-btn").addEventListener("click", () => {
             // document.querySelector(".new-page").remove();
             document.querySelector(".nav").style.pointerEvents = "all";
