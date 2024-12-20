@@ -15,9 +15,15 @@ function Contact() {
         //
         navigator.clipboard.writeText(mailContent);
         //
-        document.querySelector(".mail-copy-btn").innerHTML = "Copied";
+        document.querySelector(".mail-copy-btn .dublicate").style.display =
+            "inline";
+        document.querySelector(".mail-copy-btn span").style.display = "none";
+
         setTimeout(() => {
-            document.querySelector(".mail-copy-btn").innerHTML = "Copy";
+            document.querySelector(".mail-copy-btn .dublicate").style.display =
+                "none";
+            document.querySelector(".mail-copy-btn span").style.display =
+                "inline";
         }, 3000);
     }
 
@@ -27,9 +33,15 @@ function Contact() {
         //
         navigator.clipboard.writeText(telContent);
         //
-        document.querySelector(".tel-copy-btn").innerHTML = "Copied";
+        document.querySelector(".tel-copy-btn .dublicate").style.display =
+            "inline";
+        document.querySelector(".tel-copy-btn span").style.display = "none";
+
         setTimeout(() => {
-            document.querySelector(".tel-copy-btn").innerHTML = "Copy";
+            document.querySelector(".tel-copy-btn .dublicate").style.display =
+                "none";
+            document.querySelector(".tel-copy-btn span").style.display =
+                "inline";
         }, 3000);
     }
 
@@ -58,7 +70,8 @@ function Contact() {
                                 onMouseLeave={makeCursorNormal}
                                 onClick={copyMail}
                             >
-                                Copy
+                                <span>Copy</span>
+                                <span className="dublicate">Copied</span>
                             </button>
                         </div>
                     </div>
@@ -84,7 +97,8 @@ function Contact() {
                                 onMouseLeave={makeCursorNormal}
                                 onClick={copyTel}
                             >
-                                Copy
+                                <span>Copy</span>
+                                <span className="dublicate">Copied</span>
                             </button>
                         </div>
                     </div>

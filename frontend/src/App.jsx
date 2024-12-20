@@ -7,14 +7,15 @@ import Skills from "./pages/skills/Skills";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Contact from "./pages/contact/Contact";
 import Playground from "./pages/playground/Playground";
+import Games from "./pages/games/Games";
 import Nav from "./components/nav/Nav";
 import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
-import Games from "./pages/games/Games";
+import Header from "./components/header/Header";
 import CustomCursor from "./components/customCursor/CustomCursor";
 import CustomCorners from "./components/customCorners/CustomCorners";
-// import CubeBackground from "./components/cubeBackground/CubeBackground";
 import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
+// import CubeBackground from "./components/cubeBackground/CubeBackground";
 import "./App.css";
 
 function App() {
@@ -25,33 +26,31 @@ function App() {
     }, []);
 
     return (
-        <>
-            <Router>
-                <Loading />
-                <div className="wrapper">
-                    <CustomCursor />
-                    <CustomCorners />
-                    <header className="header"></header>
-                    <Nav />
-                    <DarkMode />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/skills" element={<Skills />} />
-                        <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/playground" element={<Playground />} />
-                        <Route path="/games" element={<Games />} />
-                        <Route
-                            path="/memory-card-game"
-                            element={<MemoryCardGame />}
-                        />
-                    </Routes>
-                    <Footer />
-                    {/* <CubeBackground /> */}
-                </div>
-            </Router>
-        </>
+        <Router>
+            <Loading />
+            <div className="wrapper">
+                <CustomCursor />
+                <CustomCorners />
+                <Header />
+                <Nav />
+                <DarkMode />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/playground" element={<Playground />} />
+                    <Route path="/games" element={<Games />} />
+                    <Route
+                        path="/memory-card-game"
+                        element={<MemoryCardGame />}
+                    />
+                </Routes>
+                <Footer />
+                {/* <CubeBackground /> */}
+            </div>
+        </Router>
     );
 }
 

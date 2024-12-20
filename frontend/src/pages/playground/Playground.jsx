@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect } from "react";
+// import axios from "axios";
+import projects from "./../../data/pgData.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Playground.css";
@@ -9,42 +10,47 @@ const Playground = () => {
         document.title = "Stepan Dordiai | Playground";
     }, []);
 
-    const [projects, setProjects] = useState([]);
+    // const [projects, setProjects] = useState([]);
 
-    useEffect(() => {
-        const awaiting = document.createElement("p");
-        awaiting.classList.add("awaiting");
-        awaiting.textContent =
-            "Loading data...(it may take some time (30-60sec) due the inactivity of the server (like 30min), after it loads immediately)";
-        document.querySelector(".js-pg-section").appendChild(awaiting);
-        let isError = false;
-        axios
-            .get("https://stepan-dordiai-backend.onrender.com")
-            .then((projects) => setProjects(projects.data))
-            .catch((error) => {
-                // TODO: Write custom error
-                awaiting.textContent = error.message;
-                awaiting.style.animation = "none";
-                isError = true;
-            })
-            .finally(() => {
-                if (!isError) {
-                    awaiting.remove();
-                } else {
-                    isError = false;
-                    return;
-                }
-            });
-    }, []);
+    // useEffect(() => {
+    //     const awaiting = document.createElement("p");
+    //     awaiting.classList.add("awaiting");
+    //     awaiting.textContent =
+    //         "Loading data...(it may take some time (30-60sec) due the inactivity of the server (like 30min), after it loads immediately)";
+    //     document.querySelector(".js-pg-section").appendChild(awaiting);
+    //     let isError = false;
+    //     axios
+    //         .get("https://stepan-dordiai-backend.onrender.com")
+    //         .then((projects) => setProjects(projects.data))
+    //         .catch((error) => {
+    //             // TODO: Write custom error
+    //             awaiting.textContent = error.message;
+    //             awaiting.style.animation = "none";
+    //             isError = true;
+    //         })
+    //         .finally(() => {
+    //             if (!isError) {
+    //                 awaiting.remove();
+    //             } else {
+    //                 isError = false;
+    //                 return;
+    //             }
+    //         });
+    // }, []);
 
-    AnimateElements(".pg-project", "revealPgProject 1s forwards", projects);
+    AnimateElements(
+        ".pg-project",
+        "revealPgProject 1s forwards",
+        100,
+        projects
+    );
 
     return (
         <>
             <section className="pg-section js-pg-section">
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
-                    .sort((a, b) => a.id - b.id)
+                    // .sort((a, b) => a.id - b.id)
                     .map(
                         ({
                             id,

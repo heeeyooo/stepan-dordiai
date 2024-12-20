@@ -9,32 +9,43 @@ function Home() {
         document.title = "Stepan Dordiai | Home";
     }, []);
 
-    AnimateElements(".text-line", "revealTextLine 1s forwards");
+    AnimateElements(".text-line", "revealTextLine 1s forwards", 20);
 
     return (
         <section className="home-section">
-            <div className="text-line-container">
-                <div className="text-line">
-                    <div className="home-section__btn-container">
-                        <i className="fa-solid fa-arrow-right"></i>
-                        <NavLink
-                            to="/contact"
-                            className="home-section__hire-me"
-                        >
-                            Hire me
-                        </NavLink>
-                    </div>
-                </div>
+            <div>
+                {"Front-end developer".split(` `).map((word, index) => {
+                    return (
+                        <div key={index} className="text-line-container">
+                            <div className="text-line">
+                                <h2
+                                    style={{
+                                        marginLeft: "5px",
+                                    }}
+                                    className="home-section__title"
+                                >
+                                    {word}
+                                </h2>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
-            <div className="text-line-container">
-                <div className="text-line">
-                    <h2 className="home-section__title">Front-end developer</h2>
-                </div>
-            </div>
-            <div className="text-line-container">
-                <div className="text-line">
-                    <h1 className="home-section__title-name">STEPAN DORDIAI</h1>
-                </div>
+            <div>
+                {"STEPAN DORDIAI".split(` `).map((word, index) => {
+                    return (
+                        <div key={index} className="text-line-container">
+                            <div className="text-line">
+                                <h1
+                                    style={{ marginLeft: "10px" }}
+                                    className="home-section__title-name"
+                                >
+                                    {word}
+                                </h1>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );

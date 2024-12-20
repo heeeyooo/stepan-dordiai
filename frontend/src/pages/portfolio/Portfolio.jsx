@@ -23,6 +23,7 @@ function Portfolio() {
                             githubRepo={project.githubRepo}
                             liveDemo={project.liveDemo}
                             extraClass={project.extraClass}
+                            projectImg={project.projectImg}
                         />
                     );
                 })}

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
 // FIXME: Is it okay to use these names (className, animation) for parameters?
-function AnimateElements(className, animation, projects) {
+function AnimateElements(className, animation, time = 100, projects) {
     const revealElements = () => {
         document.querySelectorAll(className).forEach((element, index) => {
             // FIXME: setTimeout or setInterval?
             setTimeout(() => {
                 element.style.animation = animation;
-            }, 100 * index);
+            }, time * index);
         });
     };
 

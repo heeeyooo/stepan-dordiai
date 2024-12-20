@@ -17,43 +17,43 @@ function DarkMode() {
         const variables = document.querySelector(":root");
 
         if (lightMode === "dark") {
-            variables.style.setProperty("--bg-color", "var(--bg-dark)");
-            variables.style.setProperty("--color", "#ffffff");
+            variables.style.setProperty("--bg-color", "var(--bg-color-dark)");
+            variables.style.setProperty("--color", "var(--color-light)");
             variables.style.setProperty(
-                "--semi-transparent-10",
-                "rgba(255, 255, 255, 0.1)"
+                "--semi-tp-10",
+                "var(--semi-tp-10-light)"
             );
             variables.style.setProperty(
-                "--semi-transparent-25",
-                "rgba(255, 255, 255, 0.25)"
+                "--semi-tp-25",
+                "var(--semi-tp-25-light)"
             );
             variables.style.setProperty(
-                "--semi-transparent-50",
-                "rgba(255, 255, 255, 0.5)"
+                "--semi-tp-50",
+                "var(--semi-tp-50-light)"
             );
             variables.style.setProperty(
-                "--bg-semi-transparent-50",
-                "rgba(0, 0, 0, 0.5)"
+                "--bg-semi-tp-50",
+                "var(--bg-semi-tp-50-dark)"
             );
             refBtn.current.textContent = "LIGHT";
         } else {
-            variables.style.setProperty("--bg-color", "var(--bg-light)");
-            variables.style.setProperty("--color", "#000000");
+            variables.style.setProperty("--bg-color", "var(--bg-color-light)");
+            variables.style.setProperty("--color", "var(--color-dark)");
             variables.style.setProperty(
-                "--semi-transparent-10",
-                "rgba(0, 0, 0, 0.1)"
+                "--semi-tp-10",
+                "var(--semi-tp-10-dark)"
             );
             variables.style.setProperty(
-                "--semi-transparent-25",
-                "rgba(0, 0, 0, 0.25"
+                "--semi-tp-25",
+                "var(--semi-tp-25-dark)"
             );
             variables.style.setProperty(
-                "--semi-transparent-50",
-                "rgba(0, 0, 0, 0.5)"
+                "--semi-tp-50",
+                "var(--semi-tp-50-dark)"
             );
             variables.style.setProperty(
-                "--bg-semi-transparent-50",
-                "rgba(255, 255, 255, 0.5)"
+                "--bg-semi-tp-50",
+                "var(--bg-semi-tp-50-light)"
             );
             refBtn.current.textContent = "DARK";
         }

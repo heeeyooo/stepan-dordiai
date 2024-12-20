@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     /*  */
-    background-color: white;
+    background-color: var(--color);
     /*  */
     width: 10px;
     aspect-ratio: 1 / 1;
@@ -16,7 +16,7 @@
     border-radius: 50%;
     pointer-events: none;
     /*  */
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     /*  */
     transition: width 0.3s, height 0.3s, top 0.1s, left 0.1s;
 }
@@ -32,8 +32,9 @@
 .text span {
     position: absolute;
     left: 50%;
-    transform-origin: 0px 50px;
+    transform-origin: 0px 75px;
     opacity: 0;
+    color: var(--bg-color);
 }
 
 @keyframes revealChar {
@@ -50,5 +51,5 @@
 /*  */
 
 .cursor--active {
-    width: 100px !important;
+    width: 150px !important;
 }

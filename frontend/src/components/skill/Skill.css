@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-color: var(--semi-transparent-10);
+    background-color: var(--semi-tp-10);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     opacity: 0;

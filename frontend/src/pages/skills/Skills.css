@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (width < 500px) {
+@media screen and (width < 400px) {
     .skills {
         grid-template-columns: repeat(3, 1fr);
     }

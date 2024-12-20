@@ -1,4 +1,5 @@
 import mongodbIcon from "./img/icons/mongodb-icon.svg";
+import cloudImg from "./img/projects/cloud-project.png";
 
 const portfolioData = [
     {
@@ -47,6 +48,7 @@ const portfolioData = [
         ],
         githubRepo: "https://github.com/heeeyooo/cloud",
         liveDemo: "https://cloud-project.netlify.app/",
+        projectImg: cloudImg,
     },
 
     {

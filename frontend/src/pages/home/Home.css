@@ -6,29 +6,6 @@
     z-index: 1;
 }
 
-.home-section__btn-container {
-    color: var(--color);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    column-gap: 25px;
-    font-size: clamp(12px, 5vw, 36px);
-    transition: column-gap 0.3s;
-}
-
-.home-section__btn-container:hover {
-    column-gap: 5px;
-}
-
-.home-section__hire-me {
-    color: black;
-    cursor: pointer;
-    font-weight: 200;
-    font-size: clamp(12px, 5vw, 36px);
-    background-color: greenyellow;
-}
-
 .home-section__title {
     font-size: clamp(12px, 5vw, 36px);
     font-weight: 100;

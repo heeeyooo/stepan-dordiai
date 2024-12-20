@@ -35,7 +35,7 @@
 .games-section__pagination span {
     width: 5px;
     height: 25px;
-    background-color: var(--semi-transparent-50);
+    background-color: var(--semi-tp-50);
 }
 
 .active {
@@ -59,7 +59,7 @@
     transform-style: preserve-3d;
     --tiltX: 0deg;
     --tiltY: 0deg;
-    background-color: var(--bg-semi-transparent-50);
+    background-color: var(--bg-semi-tp-50);
     transform: rotateY(var(--tiltY)) rotateX(var(--tiltX));
     transition: transform 0.1s;
 }

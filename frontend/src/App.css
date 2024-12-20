@@ -1,17 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
-:root {
-    --bg-light: #fff;
-    --bg-dark: #1c1c1c;
-    --bg: #000;
-    --color: #ffffff;
-    --semi-transparent-10: rgba(0, 0, 0, 0.1);
-    --semi-transparent-25: rgba(0, 0, 0, 0.25);
-    --semi-transparent-50: rgba(0, 0, 0, 0.5);
-    --bg-semi-transparent-50: rgba(255, 255, 255, 0.5);
-}
-
 /* Reset */
 * {
     scroll-behavior: smooth;
@@ -52,6 +41,32 @@ button {
     cursor: pointer;
 }
 
+:root {
+    --bg-color: #fff;
+    --bg-color-light: #fff;
+    --bg-color-dark: rgb(25, 25, 25);
+
+    --color: rgb(25, 25, 25);
+    --color-light: #fff;
+    --color-dark: rgb(25, 25, 25);
+
+    --semi-tp-10: rgba(25, 25, 25, 0.1);
+    --semi-tp-10-light: rgba(255, 255, 255, 0.1);
+    --semi-tp-10-dark: rgba(25, 25, 25, 0.1);
+
+    --semi-tp-25: rgba(25, 25, 25, 0.25);
+    --semi-tp-25-light: rgba(255, 255, 255, 0.25);
+    --semi-tp-25-dark: rgba(25, 25, 25, 0.25);
+
+    --semi-tp-50: rgba(25, 25, 25, 0.5);
+    --semi-tp-50-light: rgba(255, 255, 255, 0.5);
+    --semi-tp-50-dark: rgba(25, 25, 25, 0.5);
+
+    --bg-semi-tp-50: rgba(255, 255, 255, 0.5);
+    --bg-semi-tp-50-light: rgba(255, 255, 255, 0.5);
+    --bg-semi-tp-50-dark: rgba(25, 25, 25, 0.5);
+}
+
 body {
     width: 100%;
     height: 100dvh;
@@ -67,23 +82,4 @@ body {
 
 .wrapper {
     display: none;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    right: 50px;
-    left: 50px;
-    height: 50px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    z-index: 2;
-}
-
-@media screen and (width < 1000px) {
-    .header {
-        right: 25px;
-        left: 25px;
-        height: 25px;
-    }
 }

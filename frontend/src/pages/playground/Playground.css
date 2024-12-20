@@ -42,7 +42,7 @@
 }
 
 .pg-project:not(:nth-last-of-type(1)) {
-    border-bottom: 2px solid var(--color);
+    border-bottom: 1px solid var(--semi-tp-50);
 }
 
 @keyframes revealPgProject {
