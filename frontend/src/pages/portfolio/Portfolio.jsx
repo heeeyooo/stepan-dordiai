@@ -12,6 +12,7 @@ function Portfolio() {
     return (
         <>
             <section className="portfolio-section js-portfolio-section">
+                <p className="portfolio-section__title">PORTFOLIO</p>
                 {portfolioData.map((project) => {
                     return (
                         <Project

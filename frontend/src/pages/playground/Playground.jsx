@@ -48,6 +48,7 @@ const Playground = () => {
     return (
         <>
             <section className="pg-section js-pg-section">
+                <p className="pg-section__title">PLAYGROUND</p>
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
                     // .sort((a, b) => a.id - b.id)

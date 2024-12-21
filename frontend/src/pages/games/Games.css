@@ -1,10 +1,11 @@
 .games-section {
     position: fixed;
-    top: 100px;
+    top: 0;
+    bottom: 0;
     right: 100px;
-    bottom: 100px;
     left: 100px;
     z-index: 1;
+    padding: 100px 0;
     font-family: "Silkscreen", sans-serif;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -176,10 +177,9 @@
 
 @media screen and (width < 1000px) {
     .games-section {
-        top: 50px;
         right: 50px;
-        bottom: 50px;
         left: 50px;
+        padding: 50px 0;
     }
 
     .games-section__pagination {
