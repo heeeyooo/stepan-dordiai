@@ -28,20 +28,17 @@ function Project({
         newPage.classList = "new-page";
         document.body.appendChild(newPage);
         newPage.appendChild(close);
-        // document.querySelector(".new-page").style.display = "initial";
         setTimeout(() => {
             document
                 .querySelector(".new-page")
                 .classList.add("new-page--active");
         }, 1);
         document.querySelector(".close-btn").addEventListener("click", () => {
-            // document.querySelector(".new-page").remove();
             document.querySelector(".nav").style.pointerEvents = "all";
             document
                 .querySelector(".new-page")
                 .classList.remove("new-page--active");
 
-            // document.querySelector(".close-btn").remove();
             document.querySelector(".project-container").style.pointerEvents =
                 "none";
             setTimeout(() => {
@@ -49,7 +46,6 @@ function Project({
                 document.querySelector(
                     ".project-container"
                 ).style.pointerEvents = "all";
-                // document.querySelector(".new-page").style.display = "none";
             }, 500);
         });
         const gitHubLink = document.createElement("a");

@@ -1,27 +1,19 @@
 #custom-cursor {
     position: fixed;
-    /*  */
     top: -100px;
-    /*  */
     z-index: 5;
     display: none;
     justify-content: center;
     align-items: center;
-    /*  */
     background-color: var(--color);
-    /*  */
     width: 10px;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     pointer-events: none;
-    /*  */
-    /* mix-blend-mode: difference; */
-    /*  */
-    transition: width 0.3s, height 0.3s, top 0.1s, left 0.1s;
+    transition: width 0.5s, height 0.5s, top 0.1s, left 0.1s;
 }
 
-/*  */
 .text {
     position: absolute;
     width: 100%;
@@ -35,6 +27,7 @@
     transform-origin: 0px 75px;
     opacity: 0;
     color: var(--bg-color);
+    font-weight: 300;
 }
 
 @keyframes revealChar {
@@ -48,7 +41,6 @@
         transform: rotate(360deg);
     }
 }
-/*  */
 
 .cursor--active {
     width: 150px !important;

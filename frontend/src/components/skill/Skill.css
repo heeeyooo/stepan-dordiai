@@ -9,6 +9,7 @@
     -webkit-backdrop-filter: blur(5px);
     opacity: 0;
     scale: 0.5;
+    cursor: pointer;
 }
 
 @keyframes revealSkillContainer {

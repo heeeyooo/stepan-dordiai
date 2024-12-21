@@ -36,6 +36,7 @@
     width: 5px;
     height: 25px;
     background-color: var(--semi-tp-50);
+    cursor: pointer;
 }
 
 .active {

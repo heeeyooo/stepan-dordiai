@@ -62,11 +62,13 @@ const Playground = () => {
                         }) => {
                             return (
                                 <div className="pg-project" key={id}>
-                                    <p className="playground-project__number">
-                                        {"00" + id}
-                                    </p>
-                                    <div className="playground-info-container">
-                                        <p className="playground-project__title">
+                                    <div className="pg-project__left-side">
+                                        <p className="pg-project__number">
+                                            {"00" + id}
+                                        </p>
+                                    </div>
+                                    <div className="pg-project__right-side">
+                                        <p className="pg-project__title">
                                             {title}
                                         </p>
                                         <ul className="pg-project__links-list">
@@ -75,10 +77,8 @@ const Playground = () => {
                                                     className="pg-project__link"
                                                     href={liveSite}
                                                     target="_blank"
+                                                    title="Live Site"
                                                 >
-                                                    <div className="link__title-container">
-                                                        <p>Live site</p>
-                                                    </div>
                                                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </li>
@@ -87,10 +87,8 @@ const Playground = () => {
                                                     className="pg-project__link"
                                                     href={githubRepo}
                                                     target="_blank"
+                                                    title="GitHub Repo"
                                                 >
-                                                    <div className="link__title-container">
-                                                        <p>GitHub Repo</p>
-                                                    </div>
                                                     <i className="fa-brands fa-github"></i>
                                                 </a>
                                             </li>
@@ -99,10 +97,8 @@ const Playground = () => {
                                                     className="pg-project__link"
                                                     href={telegramBot}
                                                     target="_blank"
+                                                    title="Telegram Bot"
                                                 >
-                                                    <div className="link__title-container">
-                                                        <p>Telegram Bot</p>
-                                                    </div>
                                                     <i className="fa-brands fa-telegram"></i>
                                                 </a>
                                             </li>

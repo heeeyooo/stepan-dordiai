@@ -10,8 +10,6 @@ const ScrollBtn = ({ className }) => {
         scrollUpInterval = setInterval(() => {
             document.querySelector(className).scrollTop -= 100;
         }, 200);
-
-        console.log(document.querySelector(className).scrollTop);
     }
 
     let scrollDownInterval;
@@ -21,7 +19,6 @@ const ScrollBtn = ({ className }) => {
         scrollDownInterval = setInterval(() => {
             document.querySelector(className).scrollTop += 100;
         }, 200);
-        console.log(document.querySelector(className).scrollTop);
     }
 
     function stopScrollingUp() {

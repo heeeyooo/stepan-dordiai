@@ -45,8 +45,6 @@ function Contact() {
         }, 3000);
     }
 
-    AnimateElements(".socials-list li", "revealSocialIcon 1s forwards");
-
     AnimateElements(".text-line", "revealTextLine 1s forwards");
 
     return (
@@ -76,7 +74,6 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-
                 <div className="text-line-container">
                     <div className="text-line">
                         <div className="tel-container">
@@ -106,64 +103,94 @@ function Contact() {
             </div>
             <ul className="socials-list">
                 <li>
-                    <a
-                        onMouseEnter={() => makeCursorActive("Github")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://github.com/heeeyooo"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-github"></i>
-                    </a>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() => makeCursorActive("Github")}
+                                onMouseLeave={makeCursorNormal}
+                                href="https://github.com/heeeyooo"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a
-                        onMouseEnter={() => makeCursorActive("Instagram")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://www.instagram.com/heeeyooo_"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-instagram"></i>
-                    </a>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() =>
+                                    makeCursorActive("Instagram")
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                href="https://www.instagram.com/heeeyooo_"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a
-                        onMouseEnter={() => makeCursorActive("Twitter")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://twitter.com/Heeeyooo_"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-x-twitter"></i>
-                    </a>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() => makeCursorActive("Twitter")}
+                                onMouseLeave={makeCursorNormal}
+                                href="https://twitter.com/Heeeyooo_"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a
-                        onMouseEnter={() => makeCursorActive("Twitch")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://www.twitch.tv/heeeyooo_"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-twitch"></i>
-                    </a>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() => makeCursorActive("Twitch")}
+                                onMouseLeave={makeCursorNormal}
+                                href="https://www.twitch.tv/heeeyooo_"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-twitch"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a
-                        onMouseEnter={() => makeCursorActive("Linkedin")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://www.linkedin.com/in/stepan-dordiai-245715310"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-linkedin"></i>
-                    </a>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() =>
+                                    makeCursorActive("Linkedin")
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                href="https://www.linkedin.com/in/stepan-dordiai-245715310"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a
-                        onMouseEnter={() => makeCursorActive("Telegram")}
-                        onMouseLeave={makeCursorNormal}
-                        href="https://t.me/heeeyooo"
-                        target="_blank"
-                    >
-                        <i className="fa-brands fa-telegram"></i>
-                    </a>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() =>
+                                    makeCursorActive("Telegram")
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                href="https://t.me/heeeyooo"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>

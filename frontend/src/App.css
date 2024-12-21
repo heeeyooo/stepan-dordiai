@@ -44,27 +44,27 @@ button {
 :root {
     --bg-color: #fff;
     --bg-color-light: #fff;
-    --bg-color-dark: rgb(25, 25, 25);
+    --bg-color-dark: #000;
 
-    --color: rgb(25, 25, 25);
+    --color: #000;
     --color-light: #fff;
-    --color-dark: rgb(25, 25, 25);
+    --color-dark: #000;
 
-    --semi-tp-10: rgba(25, 25, 25, 0.1);
+    --semi-tp-10: rgba(0, 0, 0, 0.1);
     --semi-tp-10-light: rgba(255, 255, 255, 0.1);
-    --semi-tp-10-dark: rgba(25, 25, 25, 0.1);
+    --semi-tp-10-dark: rgba(0, 0, 0, 0.1);
 
-    --semi-tp-25: rgba(25, 25, 25, 0.25);
+    --semi-tp-25: rgba(0, 0, 0, 0.25);
     --semi-tp-25-light: rgba(255, 255, 255, 0.25);
-    --semi-tp-25-dark: rgba(25, 25, 25, 0.25);
+    --semi-tp-25-dark: rgba(0, 0, 0, 0.25);
 
-    --semi-tp-50: rgba(25, 25, 25, 0.5);
+    --semi-tp-50: rgba(0, 0, 0, 0.5);
     --semi-tp-50-light: rgba(255, 255, 255, 0.5);
-    --semi-tp-50-dark: rgba(25, 25, 25, 0.5);
+    --semi-tp-50-dark: rgba(0, 0, 0, 0.5);
 
     --bg-semi-tp-50: rgba(255, 255, 255, 0.5);
     --bg-semi-tp-50-light: rgba(255, 255, 255, 0.5);
-    --bg-semi-tp-50-dark: rgba(25, 25, 25, 0.5);
+    --bg-semi-tp-50-dark: rgba(0, 0, 0, 0.5);
 }
 
 body {

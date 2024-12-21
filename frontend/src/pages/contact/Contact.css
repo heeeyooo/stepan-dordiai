@@ -49,22 +49,9 @@
     width: calc(50% - 100px);
 }
 
-.socials-list li {
-    display: grid;
-    grid-template-rows: 0fr;
-    overflow: hidden;
-}
-
 .socials-list a {
     font-size: clamp(20px, 3vw, 24px);
     color: var(--color);
-    overflow: hidden;
-}
-
-@keyframes revealSocialIcon {
-    to {
-        grid-template-rows: 1fr;
-    }
 }
 
 @media screen and (width < 1000px) {
@@ -73,6 +60,7 @@
         right: 50px;
         row-gap: 25px;
     }
+
     .socials-list {
         bottom: 50px;
         left: 50px;
