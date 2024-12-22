@@ -18,6 +18,48 @@
     align-items: center;
 }
 
+.tree-level1 .skill-container:nth-child(1) {
+    animation: revealSkillContainer 1s forwards;
+}
+
+.tree-level2 .skill-container:nth-child(1),
+.tree-level2 .skill-container:nth-child(2),
+.tree-level2 .skill-container:nth-child(3) {
+    animation: revealSkillContainer 1s 0.5s forwards;
+}
+
+.tree-level3 .skill-container:nth-child(1),
+.tree-level3 .skill-container:nth-child(2) {
+    animation: revealSkillContainer 1s 1s forwards;
+}
+
+.tree-level4 .skill-container:nth-child(1),
+.tree-level4 .skill-container:nth-child(2) {
+    animation: revealSkillContainer 1s 1.5s forwards;
+}
+
+.tree-level5 .skill-container:nth-child(1) {
+    animation: revealSkillContainer 1s 2s forwards;
+}
+
+.tree-level6 .skill-container:nth-child(1),
+.tree-level6 .skill-container:nth-child(2) {
+    animation: revealSkillContainer 1s 2.5s forwards;
+}
+
+.tree-level7 .skill-container:nth-child(1),
+.tree-level7 .skill-container:nth-child(2),
+.tree-level7 .skill-container:nth-child(3) {
+    animation: revealSkillContainer 1s 3s forwards;
+}
+
+@keyframes revealSkillContainer {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .tree-level2,
 .tree-level7 {
     gap: 50px;
@@ -36,7 +78,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-1::before {
@@ -48,7 +90,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-1::after {
@@ -60,7 +102,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-2 {
@@ -71,7 +113,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .extra-line {
@@ -89,7 +131,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-2::after {
@@ -103,7 +145,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-3 {
@@ -113,7 +155,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-3::before {
@@ -128,7 +170,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .line-3::after {
@@ -142,7 +184,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .left-line {
@@ -151,7 +193,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .left-line-2 {
@@ -160,7 +202,7 @@
     background-color: transparent;
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .right-line {
@@ -169,7 +211,7 @@
     background-color: var(--semi-tp-50);
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 .right-line-2 {
@@ -178,7 +220,7 @@
     background-color: transparent;
     flex-shrink: 0;
     opacity: 0;
-    animation: reveal 0.5s forwards;
+    animation: reveal 1s forwards;
 }
 
 @keyframes reveal {

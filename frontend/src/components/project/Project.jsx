@@ -16,6 +16,7 @@ function Project({
 
     function createPage() {
         document.querySelector(".nav").style.pointerEvents = "none";
+        document.querySelector(".nav").classList.remove("nav--active");
         // document.querySelector(".new-page").style.display = "initial";
         const newPage = document.createElement("div");
         const close = document.createElement("button");
@@ -57,7 +58,7 @@ function Project({
         const liveSiteLink = document.createElement("a");
         liveSiteLink.href = liveDemo;
         liveSiteLink.target = "_blank";
-        liveSiteLink.innerHTML = "GitHub Repo";
+        liveSiteLink.innerHTML = "Live Site";
         newPage.appendChild(liveSiteLink);
         liveSiteLink.classList = `livesite-link ${extraClass}`;
     }
@@ -76,7 +77,7 @@ function Project({
 
                 <div className="project-right-section">
                     {/* </div> */}
-                    <h5 className="project-title-name">{titleName}</h5>
+                    {/* <h5 className="project-title-name">{titleName}</h5> */}
                     <h4 className="project-title">{title}</h4>
                     {/* <div className="project-skills">
                     {skills.map((skill, index) => {

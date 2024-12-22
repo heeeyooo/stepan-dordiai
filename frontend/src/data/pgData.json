@@ -61,5 +61,12 @@
         "liveSite": "https://heeeyooo.github.io/img-comparison/",
         "githubRepo": "https://github.com/heeeyooo/img-comparison",
         "extraClass": "link--none"
+    },
+    {
+        "id": 10,
+        "title": "Currency converter",
+        "liveSite": "https://heeeyooo.github.io/currency-converter/",
+        "githubRepo": "https://github.com/heeeyooo/currency-converter",
+        "extraClass": "link--none"
     }
 ]

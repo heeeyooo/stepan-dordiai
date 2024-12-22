@@ -12,22 +12,23 @@ function Portfolio() {
     return (
         <>
             <section className="portfolio-section js-portfolio-section">
-                <p className="portfolio-section__title">PORTFOLIO</p>
-                {portfolioData.map((project) => {
-                    return (
-                        <Project
-                            key={project.id}
-                            id={"0" + project.id}
-                            title={project.title}
-                            titleName={project.titleName}
-                            skills={project.skills}
-                            githubRepo={project.githubRepo}
-                            liveDemo={project.liveDemo}
-                            extraClass={project.extraClass}
-                            projectImg={project.projectImg}
-                        />
-                    );
-                })}
+                {portfolioData
+                    .sort((a, b) => b.id - a.id)
+                    .map((project) => {
+                        return (
+                            <Project
+                                key={project.id}
+                                id={"0" + project.id}
+                                title={project.title}
+                                titleName={project.titleName}
+                                skills={project.skills}
+                                githubRepo={project.githubRepo}
+                                liveDemo={project.liveDemo}
+                                extraClass={project.extraClass}
+                                projectImg={project.projectImg}
+                            />
+                        );
+                    })}
             </section>
             <ScrollBtn className={".js-portfolio-section"} />
         </>

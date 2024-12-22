@@ -48,10 +48,10 @@ const Playground = () => {
     return (
         <>
             <section className="pg-section js-pg-section">
-                <p className="pg-section__title">PLAYGROUND</p>
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
-                    // .sort((a, b) => a.id - b.id)
+                    // I use sort for descending order
+                    .sort((a, b) => b.id - a.id)
                     .map(
                         ({
                             id,
@@ -65,7 +65,7 @@ const Playground = () => {
                                 <div className="pg-project" key={id}>
                                     <div className="pg-project__left-side">
                                         <p className="pg-project__number">
-                                            {"00" + id}
+                                            {id < 10 ? `00${id}` : `0${id}`}
                                         </p>
                                     </div>
                                     <div className="pg-project__right-side">

@@ -29,23 +29,6 @@
     z-index: 1;
 }
 
-.pg-section__title {
-    position: fixed;
-    top: 100px;
-    right: 100px;
-    color: var(--color);
-    font-size: clamp(24px, 4vw, 50px);
-    opacity: 0;
-    pointer-events: none;
-    animation: revealTitle 3s forwards;
-}
-
-@keyframes revealTitle {
-    50% {
-        opacity: 1;
-    }
-}
-
 .pg-project {
     height: 100px;
     width: 100%;
@@ -120,11 +103,6 @@
         padding: 50px 0;
         right: 50px;
         left: 50px;
-    }
-
-    .pg-section__title {
-        top: 50px;
-        right: 50px;
     }
 
     .pg-project {

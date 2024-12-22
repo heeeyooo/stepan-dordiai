@@ -12,13 +12,6 @@
     cursor: pointer;
 }
 
-@keyframes revealSkillContainer {
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
 .skill {
     display: grid;
     place-items: center;

@@ -80,16 +80,22 @@
 
 .github-link {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 50px;
+    right: 50px;
     color: var(--color);
+    opacity: 0;
+
+    animation: revealCloseBtn 0.5s 0.25s forwards;
 }
 
 .livesite-link {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 100px;
+    right: 50px;
     color: var(--color);
+    opacity: 0;
+
+    animation: revealCloseBtn 0.5s 0.25s forwards;
 }
 
 .project-container:not(.project-container:nth-last-of-type(1)) {
@@ -125,11 +131,11 @@
 }
 
 .project-right-section {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
+    /* height: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* column-gap: 10px; */
 }
 
 .project-title-name {

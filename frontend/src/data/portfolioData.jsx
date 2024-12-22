@@ -4,6 +4,14 @@ import cloudImg from "./img/projects/cloud-project.png";
 const portfolioData = [
     {
         id: 1,
+        title: "penguin",
+        titleName: "Portfolio website",
+        skills: [<i className="fa-brands fa-react"></i>],
+        githubRepo: "https://github.com/heeeyooo/penguin",
+        liveDemo: "https://penguin-project.netlify.app/",
+    },
+    {
+        id: 2,
         title: "Stepan Dordiai",
         titleName: "Portfolio website",
         skills: [
@@ -18,14 +26,6 @@ const portfolioData = [
         ],
         githubRepo: "https://github.com/heeeyooo/stepan-dordiai",
         extraClass: "link--none",
-    },
-    {
-        id: 2,
-        title: "penguin",
-        titleName: "Portfolio website",
-        skills: [<i className="fa-brands fa-react"></i>],
-        githubRepo: "https://github.com/heeeyooo/penguin",
-        liveDemo: "https://penguin-project.netlify.app/",
     },
     {
         id: 3,
