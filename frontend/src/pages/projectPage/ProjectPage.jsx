@@ -7,8 +7,8 @@ const ProjectPage = () => {
     const project = portfolioData[id];
     return (
         <div className="new-page">
-            <NavLink className="close-btn" to="/portfolio">
-                Back
+            <NavLink className="project-page__close-btn" to="/portfolio">
+                <i class="fa-solid fa-xmark"></i>
             </NavLink>
             <img className="frame" src={project.projectImg} alt="" />
             <a

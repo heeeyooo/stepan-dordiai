@@ -14,17 +14,17 @@
     width: 50%;
 }
 
-.close-btn {
+.project-page__close-btn {
     position: absolute;
     top: 50px;
-    left: 50px;
-    font-size: 16px;
+    right: 50px;
+    font-size: 24px;
     color: var(--color);
-    transition: color 150ms;
+    transition: opacity 150ms;
 }
 
-.close-btn:hover {
-    color: var(--semi-tp-50);
+.project-page__close-btn:hover {
+    opacity: 0.5;
 }
 
 .github-link {
@@ -64,9 +64,9 @@
         left: 25px;
     }
 
-    .close-btn {
+    .project-page__close-btn {
         top: 25px;
-        left: 25px;
+        right: 25px;
     }
 
     .frame {
