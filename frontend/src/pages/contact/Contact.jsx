@@ -85,7 +85,7 @@ function Contact() {
                                 onMouseLeave={makeCursorNormal}
                                 className="tel-link"
                             >
-                                +380 68 985 29 78
+                                +420 722 001 016
                             </a>
                             <span>|</span>
                             <button

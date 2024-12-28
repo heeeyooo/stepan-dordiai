@@ -1,12 +1,12 @@
-import { useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/UseLocalStorage";
-import "./DarkMode.css";
+import { useEffect, useRef } from "react";
 import {
     makeCursorActive,
     makeCursorNormal,
     showText,
 } from "../../utils/cursorState";
 import Resume from "../resume/Resume";
+import "./DarkMode.css";
 
 function DarkMode() {
     const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");
@@ -16,27 +16,7 @@ function DarkMode() {
     useEffect(() => {
         const variables = document.querySelector(":root");
 
-        if (lightMode === "dark") {
-            variables.style.setProperty("--bg-color", "var(--bg-color-dark)");
-            variables.style.setProperty("--color", "var(--color-light)");
-            variables.style.setProperty(
-                "--semi-tp-10",
-                "var(--semi-tp-10-light)"
-            );
-            variables.style.setProperty(
-                "--semi-tp-25",
-                "var(--semi-tp-25-light)"
-            );
-            variables.style.setProperty(
-                "--semi-tp-50",
-                "var(--semi-tp-50-light)"
-            );
-            variables.style.setProperty(
-                "--bg-semi-tp-50",
-                "var(--bg-semi-tp-50-dark)"
-            );
-            refBtn.current.textContent = "LIGHT";
-        } else {
+        if (lightMode === "light") {
             variables.style.setProperty("--bg-color", "var(--bg-color-light)");
             variables.style.setProperty("--color", "var(--color-dark)");
             variables.style.setProperty(
@@ -56,6 +36,26 @@ function DarkMode() {
                 "var(--bg-semi-tp-50-light)"
             );
             refBtn.current.textContent = "DARK";
+        } else {
+            variables.style.setProperty("--bg-color", "var(--bg-color-dark)");
+            variables.style.setProperty("--color", "var(--color-light)");
+            variables.style.setProperty(
+                "--semi-tp-10",
+                "var(--semi-tp-10-light)"
+            );
+            variables.style.setProperty(
+                "--semi-tp-25",
+                "var(--semi-tp-25-light)"
+            );
+            variables.style.setProperty(
+                "--semi-tp-50",
+                "var(--semi-tp-50-light)"
+            );
+            variables.style.setProperty(
+                "--bg-semi-tp-50",
+                "var(--bg-semi-tp-50-dark)"
+            );
+            refBtn.current.textContent = "LIGHT";
         }
     }, [lightMode]);
 

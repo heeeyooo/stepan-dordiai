@@ -17,6 +17,7 @@ import CustomCorners from "./components/customCorners/CustomCorners";
 import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
 // import CubeBackground from "./components/cubeBackground/CubeBackground";
 import "./App.css";
+import ProjectPage from "./pages/projectPage/ProjectPage";
 
 function App() {
     useEffect(() => {
@@ -46,6 +47,7 @@ function App() {
                         path="/memory-card-game"
                         element={<MemoryCardGame />}
                     />
+                    <Route path="/project-page/:id" element={<ProjectPage />} />
                 </Routes>
                 <Footer />
                 {/* <CubeBackground /> */}

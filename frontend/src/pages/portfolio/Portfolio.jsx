@@ -14,11 +14,11 @@ function Portfolio() {
             <section className="portfolio-section js-portfolio-section">
                 {portfolioData
                     .sort((a, b) => b.id - a.id)
-                    .map((project) => {
+                    .map((project, index) => {
                         return (
                             <Project
                                 key={project.id}
-                                id={"0" + project.id}
+                                id={project.id}
                                 title={project.title}
                                 titleName={project.titleName}
                                 skills={project.skills}
@@ -26,6 +26,8 @@ function Portfolio() {
                                 liveDemo={project.liveDemo}
                                 extraClass={project.extraClass}
                                 projectImg={project.projectImg}
+                                production={project.production}
+                                index={index}
                             />
                         );
                     })}

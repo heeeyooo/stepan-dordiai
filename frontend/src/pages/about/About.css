@@ -6,7 +6,7 @@
     width: calc(50% - 100px);
     text-align: right;
     color: var(--color);
-    font-size: clamp(10px, 3vw, 20px);
+    font-size: clamp(12px, 3vw, 16px);
     font-weight: 300;
 }
 

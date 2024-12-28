@@ -1,0 +1,75 @@
+.new-page {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame {
+    width: 50%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 16px;
+    color: var(--color);
+    transition: color 150ms;
+}
+
+.close-btn:hover {
+    color: var(--semi-tp-50);
+}
+
+.github-link {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: var(--color);
+    transition: color 150ms;
+}
+
+.github-link:hover {
+    color: var(--semi-tp-50);
+}
+
+.livesite-link {
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    color: var(--color);
+    transition: color 150ms;
+}
+
+.livesite-link:hover {
+    color: var(--semi-tp-50);
+}
+
+/* Hide Live demo in first project */
+.link--none {
+    display: none;
+}
+
+@media screen and (width < 1000px) {
+    .new-page {
+        top: 25px;
+        right: 25px;
+        bottom: 25px;
+        left: 25px;
+    }
+
+    .close-btn {
+        top: 25px;
+        left: 25px;
+    }
+
+    .frame {
+        width: 75%;
+    }
+}

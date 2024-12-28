@@ -41,7 +41,7 @@
 }
 
 .nav__header-logo {
-    font-size: clamp(12px, 3vw, 16px);
+    font-size: clamp(12px, 3vw, 18px);
     font-weight: 300;
     color: var(--color);
 }
