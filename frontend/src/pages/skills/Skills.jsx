@@ -12,6 +12,7 @@ function Skills() {
     return (
         <>
             <section className="skills-section js-skills-section">
+                <h4 className="skills-section__title">SKILL TREE</h4>
                 <div className="skills tree-level1">
                     {skillsData.slice(0, 1).map((skill) => {
                         return (
