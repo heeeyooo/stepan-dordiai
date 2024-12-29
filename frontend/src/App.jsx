@@ -18,6 +18,7 @@ import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
 // import CubeBackground from "./components/cubeBackground/CubeBackground";
 import "./App.css";
 import ProjectPage from "./pages/projectPage/ProjectPage";
+import InvadersGame from "./pages/invadersGame/InvadersGame";
 
 function App() {
     useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/project-page/:id" element={<ProjectPage />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/playground" element={<Playground />} />
                     <Route path="/games" element={<Games />} />
@@ -47,7 +49,7 @@ function App() {
                         path="/memory-card-game"
                         element={<MemoryCardGame />}
                     />
-                    <Route path="/project-page/:id" element={<ProjectPage />} />
+                    <Route path="/invaders-game" element={<InvadersGame />} />
                 </Routes>
                 <Footer />
                 {/* <CubeBackground /> */}

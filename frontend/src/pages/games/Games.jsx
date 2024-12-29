@@ -165,10 +165,10 @@ const Games = () => {
                             </div>
                         </div>
                         <NavLink
-                            className="game-container__start-btn inactive-btn"
-                            to="/"
+                            className="game-container__start-btn"
+                            to="/invaders-game"
                         >
-                            Coming soon...
+                            Start
                         </NavLink>
                     </div>
                 </div>
