@@ -1,1 +1,1 @@
-# Stepan Dordiai Portfolio
+# Stepan Dordiai
