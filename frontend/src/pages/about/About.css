@@ -1,20 +1,19 @@
 .about-section {
     position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     right: 100px;
-    bottom: 100px;
+    left: 100px;
     z-index: 1;
-    width: calc(50% - 100px);
-    text-align: right;
+    text-align: center;
     color: var(--color);
-    font-size: clamp(12px, 3vw, 16px);
+    font-size: clamp(12px, 4vw, 30px);
     font-weight: 300;
 }
 
 @media screen and (width < 1000px) {
     .about-section {
         right: 50px;
-        bottom: 50px;
         left: 50px;
-        width: calc(100% - 100px);
     }
 }

@@ -8,7 +8,7 @@ const ProjectPage = () => {
     return (
         <div className="new-page">
             <NavLink className="project-page__close-btn" to="/portfolio">
-                <i class="fa-solid fa-xmark"></i>
+                <i className="fa-solid fa-xmark"></i>
             </NavLink>
             <img className="frame" src={project.projectImg} alt="" />
             <a

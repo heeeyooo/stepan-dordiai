@@ -8,7 +8,7 @@ function About() {
         document.title = "Stepan Dordiai | About";
     }, []);
 
-    AnimateElements(".text-line", "revealTextLine 1s forwards", 20);
+    AnimateElements(".text-line", "revealTextLine 1s forwards", 50);
 
     return (
         <section className="about-section">

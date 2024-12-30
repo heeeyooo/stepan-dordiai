@@ -14,10 +14,11 @@
 
 .skills-section__title {
     color: var(--color);
-    font-size: clamp(24px, 4vw, 30px);
+    font-size: clamp(30px, 4vw, 72px);
     font-weight: 300;
     opacity: 0;
     margin-bottom: 50px;
+    margin-left: auto;
     animation: revealTitle 1s forwards;
 }
 
