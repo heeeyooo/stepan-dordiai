@@ -46,10 +46,6 @@
     color: var(--color);
 }
 
-.nav__header-logo span {
-    font-weight: 100;
-}
-
 .nav__list {
     position: absolute;
     top: 50%;

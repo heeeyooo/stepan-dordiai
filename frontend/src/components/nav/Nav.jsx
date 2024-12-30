@@ -45,9 +45,7 @@ function Nav() {
         >
             <BurgerBtn />
             <div className="nav__header">
-                <h1 className="nav__header-logo">
-                    STEPAN DORDIAI <span>PORTFOLIO</span>
-                </h1>
+                <h1 className="nav__header-logo">STEPAN DORDIAI</h1>
             </div>
             <ul className="nav__list">
                 <li>
