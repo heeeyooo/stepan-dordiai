@@ -1,38 +1,75 @@
 .home-section {
     position: fixed;
-    right: 100px;
+    right: 0;
     bottom: 100px;
-    text-align: right;
+    left: 0;
     z-index: 1;
 }
 
 .home-section__title {
-    font-size: clamp(12px, 5vw, 36px);
-    font-weight: 100;
+    font-size: clamp(72px, 8vw, 96px);
     color: var(--color);
+    font-weight: 400;
+    pointer-events: none;
+    user-select: none;
 }
 
-.home-section__title-name {
-    font-size: clamp(24px, 8vw, 64px);
-    font-weight: 300;
-    color: var(--color);
+.home-section__title span {
+    opacity: 0;
+}
+
+@keyframes revealChar {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Infinite scroller */
+.scroller__inner {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 8s)
+        var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller__inner:hover {
+    animation-play-state: paused;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 16s;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 5s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
 }
 
 @media screen and (width < 1000px) {
     .home-section {
         bottom: 50px;
-        right: 50px;
-    }
-}
-
-@media screen and (width < 360px) {
-    .home-section__title {
-        /* font-size: clamp(12px, 5vw, 36px); */
-        font-size: 5vw;
-    }
-
-    .home-section__title-name {
-        /* font-size: clamp(24px, 8vw, 64px); */
-        font-size: 8vw;
     }
 }

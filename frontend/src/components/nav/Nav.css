@@ -6,9 +6,9 @@
     z-index: 3;
     width: 25%;
     padding-left: 50px;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-    background-color: var(--bg-semi-tp-50);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* background-color: var(--bg-semi-tp-50); */
     transition: transform 0.5s ease, backdrop-filter 0.5s ease;
     animation: revealNav 1s forwards;
 }
@@ -28,8 +28,8 @@
 /* Works only on touch devices */
 .nav--active {
     transform: translateX(calc(100% - 25px));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
 }
 
 .nav__header {

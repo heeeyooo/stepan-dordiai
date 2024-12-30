@@ -10,6 +10,8 @@
     writing-mode: vertical-lr;
     text-orientation: upright;
     z-index: 2;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     animation: revealDarkModeContainer 1s forwards;
 }
 
