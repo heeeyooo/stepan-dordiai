@@ -1,4 +1,4 @@
-import "./CubeBackground.css";
+import "./CubeBackground.scss";
 
 const CubeBackground = () => {
     return (

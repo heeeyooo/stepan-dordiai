@@ -1,0 +1,17 @@
+@mixin glass-effect {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin top-right-bottom-left($top: "", $right: "", $bottom: "", $left: "") {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

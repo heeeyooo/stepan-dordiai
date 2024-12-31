@@ -21,13 +21,15 @@
     animation: rotateText 10s linear infinite;
 }
 
-.text span {
-    position: absolute;
-    left: 50%;
-    transform-origin: 0px 75px;
-    opacity: 0;
-    color: var(--bg-color);
-    font-weight: 300;
+.text {
+    span {
+        position: absolute;
+        left: 50%;
+        transform-origin: 0px 75px;
+        opacity: 0;
+        color: var(--bg-color);
+        font-weight: 300;
+    }
 }
 
 @keyframes revealChar {

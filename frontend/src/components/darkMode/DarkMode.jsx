@@ -6,7 +6,7 @@ import {
     showText,
 } from "../../utils/cursorState";
 import Resume from "../resume/Resume";
-import "./DarkMode.css";
+import "./DarkMode.scss";
 
 function DarkMode() {
     const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");

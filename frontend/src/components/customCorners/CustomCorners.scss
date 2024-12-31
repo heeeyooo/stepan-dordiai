@@ -1,7 +1,8 @@
+@import "./../../mixins";
+
 .corner-top-left {
     position: fixed;
-    top: 50px;
-    left: 50px;
+    @include top-right-bottom-left(50px, "", "", 50px);
     width: 0;
     aspect-ratio: 1 / 1;
     border-top: 5px solid var(--color);
@@ -14,8 +15,7 @@
 
 .corner-top-right {
     position: fixed;
-    top: 50px;
-    right: 50px;
+    @include top-right-bottom-left(50px, 50px, "", "");
     width: 0;
     aspect-ratio: 1 / 1;
     border-top: 5px solid var(--color);
@@ -28,8 +28,7 @@
 
 .corner-bottom-right {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    @include top-right-bottom-left("", 50px, 50px, "");
     width: 0;
     aspect-ratio: 1 / 1;
     border-bottom: 5px solid var(--color);
@@ -42,8 +41,7 @@
 
 .corner-bottom-left {
     position: fixed;
-    bottom: 50px;
-    left: 50px;
+    @include top-right-bottom-left("", "", 50px, 50px);
     width: 0;
     aspect-ratio: 1 / 1;
     border-bottom: 5px solid var(--color);
@@ -63,23 +61,19 @@
 
 @media screen and (width < 1000px) {
     .corner-top-left {
-        top: 25px;
-        left: 25px;
+        @include top-right-bottom-left(25px, "", "", 25px);
     }
 
     .corner-top-right {
-        top: 25px;
-        right: 25px;
+        @include top-right-bottom-left(25px, 25px, "", "");
     }
 
     .corner-bottom-right {
-        bottom: 25px;
-        right: 25px;
+        @include top-right-bottom-left("", 25px, 25px, "");
     }
 
     .corner-bottom-left {
-        bottom: 25px;
-        left: 25px;
+        @include top-right-bottom-left("", "", 25px, 25px);
     }
 
     @keyframes revealCorner {

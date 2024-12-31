@@ -1,7 +1,7 @@
 import AnimateElements from "../../utils/AnimateElements";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import { NavLink } from "react-router-dom";
-import "./Project.css";
+import "./Project.scss";
 
 function Project({ id, title, production, index }) {
     AnimateElements(".project-container", "revealProjectContainer 1s forwards");

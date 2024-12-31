@@ -11,6 +11,10 @@
     cursor: pointer;
 }
 
+.project-container:not(:nth-last-of-type(1)) {
+    border-bottom: 1px solid var(--semi-tp-50);
+}
+
 .project-link {
     position: absolute;
     top: 0;
@@ -19,20 +23,22 @@
     left: 0;
 }
 
-.project-container:hover .project-number {
-    opacity: 0.5;
+.project-container:hover {
+    .project-number {
+        opacity: 0.5;
+    }
 }
 
-.project-container:hover .project-title {
-    opacity: 0.5;
+.project-container:hover {
+    .project-title {
+        opacity: 0.5;
+    }
 }
 
-.project-container:hover .project-production {
-    opacity: 0.5;
-}
-
-.project-container:not(:nth-last-of-type(1)) {
-    border-bottom: 1px solid var(--semi-tp-50);
+.project-container:hover {
+    .project-production {
+        opacity: 0.5;
+    }
 }
 
 @keyframes revealProjectContainer {
@@ -42,7 +48,8 @@
     }
 }
 
-.project-number {
+.project-number,
+.project-title {
     font-size: clamp(24px, 4vw, 32px);
     font-weight: 300;
     color: var(--color);
@@ -54,14 +61,6 @@
     color: var(--semi-tp-50);
     font-weight: 300;
     font-size: clamp(12px, 2vw, 14px);
-    transition: opacity 0.15s;
-    pointer-events: none;
-}
-
-.project-title {
-    font-size: clamp(24px, 4vw, 32px);
-    font-weight: 300;
-    color: var(--color);
     transition: opacity 0.15s;
     pointer-events: none;
 }

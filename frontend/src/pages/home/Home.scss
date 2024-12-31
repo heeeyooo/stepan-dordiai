@@ -1,0 +1,33 @@
+@import "./../../mixins";
+@import "./../../global/InfiniteScroller.scss";
+
+.home-section {
+    position: fixed;
+    @include top-right-bottom-left("", "", 100px, "");
+    z-index: 1;
+    width: 100%;
+}
+
+.home-section__title {
+    font-size: clamp(72px, 8vw, 96px);
+    color: var(--color);
+    font-weight: 400;
+    pointer-events: none;
+    user-select: none;
+}
+
+.home-section__title span {
+    opacity: 0;
+}
+
+@keyframes revealChar {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .home-section {
+        @include top-right-bottom-left("", "", 50px, "");
+    }
+}

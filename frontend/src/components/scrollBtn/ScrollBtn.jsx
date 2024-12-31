@@ -1,5 +1,5 @@
-import "./ScrollBtn.css";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
+import "./ScrollBtn.scss";
 
 const ScrollBtn = ({ className }) => {
     let scrollUpInterval;

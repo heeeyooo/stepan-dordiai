@@ -1,3 +1,5 @@
+@import "./../../mixins";
+
 .game-1-section {
     position: fixed;
     top: 100px;
@@ -37,9 +39,7 @@
 
 .card {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     transform-style: preserve-3d;
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
@@ -169,9 +169,7 @@
     right: 100px;
     bottom: 100px;
     left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
     row-gap: 10px;
     opacity: 0;

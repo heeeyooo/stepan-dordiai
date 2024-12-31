@@ -1,6 +1,6 @@
-import "./ProjectPage.css";
 import portfolioData from "../../data/portfolioData";
 import { useParams, NavLink } from "react-router-dom";
+import "./ProjectPage.scss";
 
 const ProjectPage = () => {
     const { id } = useParams();

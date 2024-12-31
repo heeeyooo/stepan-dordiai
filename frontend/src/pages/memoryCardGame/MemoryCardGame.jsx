@@ -8,7 +8,7 @@ import img5 from "./images/node.svg";
 import img6 from "./images/git.svg";
 import img7 from "./images/sass.svg";
 import img8 from "./images/react.svg";
-import "./MemoryCardGame.css";
+import "./MemoryCardGame.scss";
 
 const MemoryCardGame = () => {
     const section = useRef(null);

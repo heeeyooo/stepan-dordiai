@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { isTouchDevice } from "../../utils/isTouchDevice";
 import { useEffect } from "react";
-import "./Games.css";
+import "./Games.scss";
 
 const Games = () => {
     useEffect(() => {

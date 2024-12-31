@@ -1,13 +1,10 @@
+@import "./../../mixins";
+
 .new-page {
     position: fixed;
-    top: 50px;
-    right: 50px;
-    bottom: 50px;
-    left: 50px;
+    @include top-right-bottom-left(50px, 50px, 50px, 50px);
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 
 .frame {
@@ -58,10 +55,7 @@
 
 @media screen and (width < 1000px) {
     .new-page {
-        top: 25px;
-        right: 25px;
-        bottom: 25px;
-        left: 25px;
+        @include top-right-bottom-left(25px, 25px, 25px, 25px);
     }
 
     .project-page__close-btn {

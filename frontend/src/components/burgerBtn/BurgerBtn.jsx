@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { isTouchDevice } from "../../utils/isTouchDevice";
-import "./BurgerBtn.css";
+import "./BurgerBtn.scss";
 
 function BurgerBtn() {
     const [burgerBtn, setBurgerBtn] = useState(false);

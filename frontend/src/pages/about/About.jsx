@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import "./About.css";
 import AnimateElements from "../../utils/AnimateElements";
-import "./../../global/textLineReveal.css";
+import "./../../global/textLineReveal.scss";
+import "./About.scss";
 
 function About() {
     useEffect(() => {

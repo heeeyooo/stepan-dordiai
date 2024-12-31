@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import "./InvadersGame.css";
 import shipPng from "./img/ship.png";
 import alienPng from "./img/alien.png";
+import "./InvadersGame.scss";
 
 const InvadersGame = () => {
     // board

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import portfolioData from "../../data/portfolioData";
 import Project from "../../components/project/Project";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
-import "./Portfolio.css";
+import "./Portfolio.scss";
 
 function Portfolio() {
     useEffect(() => {

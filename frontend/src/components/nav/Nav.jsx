@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../burgerBtn/BurgerBtn";
 import { isTouchDevice } from "../../utils/isTouchDevice";
-import "./Nav.css";
+import "./Nav.scss";
 
 function Nav() {
     function showNavMenu() {

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import projects from "./../../data/pgData.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
-import "./Playground.css";
+import "./Playground.scss";
 
 const Playground = () => {
     useEffect(() => {

@@ -1,12 +1,12 @@
+@import "./../../mixins";
+
 .header {
     position: fixed;
     top: 0;
     right: 50px;
     left: 50px;
     height: 50px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: var(--bg-semi-tp-50);
+    @include glass-effect;
     z-index: 2;
 }
 

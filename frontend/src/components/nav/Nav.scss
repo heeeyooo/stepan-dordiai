@@ -1,3 +1,5 @@
+@import "./../../mixins";
+
 .nav {
     position: fixed;
     top: 0;
@@ -6,9 +8,7 @@
     z-index: 3;
     width: 25%;
     padding-left: 50px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* background-color: var(--bg-semi-tp-50); */
+    @include glass-effect;
     transition: transform 0.5s ease, backdrop-filter 0.5s ease;
     animation: revealNav 1s forwards;
 }
@@ -19,17 +19,14 @@
     }
 }
 
+/* Works only on mouse devices */
 .nav--hover {
     transform: translateX(calc(100% - 50px));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 /* Works only on touch devices */
 .nav--active {
     transform: translateX(calc(100% - 25px));
-    /* backdrop-filter: blur(10px); */
-    /* -webkit-backdrop-filter: blur(10px); */
 }
 
 .nav__header {
@@ -68,11 +65,13 @@
     width: 100%;
 }
 
-.nav__link span {
-    background-color: var(--semi-tp-50);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.nav__link {
+    span {
+        background-color: var(--semi-tp-50);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .nav__link-extra-font {
@@ -93,14 +92,18 @@
     column-gap: 10px;
 }
 
-.nav__footer-list a {
-    color: var(--semi-tp-50);
-    font-size: 20px;
-    transition: all 0.15s;
+.nav__footer-list {
+    a {
+        color: var(--semi-tp-50);
+        font-size: 20px;
+        transition: all 0.15s;
+    }
 }
 
-.nav__footer-list a:hover {
-    color: var(--color);
+.nav__footer-list {
+    a:hover {
+        color: var(--color);
+    }
 }
 
 @media screen and (width < 1000px) {

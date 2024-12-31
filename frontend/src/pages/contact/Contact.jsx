@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import AnimateElements from "../../utils/AnimateElements";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
-import "./Contact.css";
-import "./../../global/textLineReveal.css";
+import "./../../global/textLineReveal.scss";
+import "./Contact.scss";
 
 function Contact() {
     useEffect(() => {

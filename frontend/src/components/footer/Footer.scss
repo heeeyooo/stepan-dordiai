@@ -1,3 +1,5 @@
+@import "./../../mixins";
+
 .footer {
     position: fixed;
     right: 50px;
@@ -7,9 +9,7 @@
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: var(--bg-semi-tp-50);
+    @include glass-effect;
     z-index: 2;
     animation: revealFooter 1s forwards;
 }

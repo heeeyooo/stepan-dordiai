@@ -1,4 +1,4 @@
-import "./CustomCorners.css";
+import "./CustomCorners.scss";
 
 const CustomCorners = () => {
     return (

@@ -2,7 +2,7 @@
     color: var(--color);
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
-    transition: opacity 0.15s;
+    transition: opacity 150ms;
 }
 
 .resume-link:hover {

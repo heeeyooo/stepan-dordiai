@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import skillsData from "./../../data/skillsData";
 import Skill from "../../components/skill/Skill";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
-import "./Skills.css";
+import "./Skills.scss";
 
 function Skills() {
     useEffect(() => {

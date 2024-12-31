@@ -1,5 +1,5 @@
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
-import "./Skill.css";
+import "./Skill.scss";
 // import AnimateElements from "../../utils/AnimateElements";
 
 function Skill({ icon, name }) {

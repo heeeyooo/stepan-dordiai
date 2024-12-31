@@ -1,5 +1,5 @@
 import resume from "../../pdf/stepan-dordiai-resume-v2.2.1.pdf";
-import "./Resume.css";
+import "./Resume.scss";
 
 const Resume = () => {
     return (
