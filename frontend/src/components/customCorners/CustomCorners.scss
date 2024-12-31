@@ -59,7 +59,7 @@
     }
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .corner-top-left {
         @include top-right-bottom-left(25px, "", "", 25px);
     }

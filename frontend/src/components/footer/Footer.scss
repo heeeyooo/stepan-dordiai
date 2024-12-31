@@ -27,7 +27,7 @@
     color: var(--semi-tp-50);
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .footer {
         right: 25px;
         bottom: -25px;

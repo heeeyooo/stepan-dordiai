@@ -11,7 +11,7 @@
     font-weight: 300;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .about-section {
         right: 50px;
         left: 50px;

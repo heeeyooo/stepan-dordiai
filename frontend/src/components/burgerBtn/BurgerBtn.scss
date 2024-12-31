@@ -54,7 +54,7 @@
     transform: translateY(0) rotate(-45deg);
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .burger-btn__container {
         width: 25px;
     }

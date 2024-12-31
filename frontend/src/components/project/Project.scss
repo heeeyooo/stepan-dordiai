@@ -65,7 +65,7 @@
     pointer-events: none;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .project-container {
         transform: translateY(25px);
     }

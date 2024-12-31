@@ -54,7 +54,7 @@
     color: var(--color);
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .mail-tel-container {
         top: 50px;
         right: 50px;

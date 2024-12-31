@@ -28,7 +28,7 @@
     transition: opacity 0.15s;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .dark-mode-container {
         top: 25px;
         right: -25px;

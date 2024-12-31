@@ -194,7 +194,7 @@
     text-align: center;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .game-1-section {
         top: 50px;
         right: 50px;

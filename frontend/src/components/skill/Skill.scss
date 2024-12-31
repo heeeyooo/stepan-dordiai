@@ -28,7 +28,7 @@
     width: 25%;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .skill-container {
         width: 75px;
     }

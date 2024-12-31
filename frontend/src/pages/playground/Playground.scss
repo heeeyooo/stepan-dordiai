@@ -88,7 +88,7 @@
     display: none;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .awaiting {
         right: 50px;
         bottom: 50px;

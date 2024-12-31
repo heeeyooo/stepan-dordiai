@@ -10,7 +10,7 @@
     overflow-y: scroll;
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .portfolio-section {
         padding: 50px 0;
         @include top-right-bottom-left(0, 50px, 0, 50px);

@@ -106,7 +106,7 @@
     }
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .nav {
         width: 50%;
         left: -50%;

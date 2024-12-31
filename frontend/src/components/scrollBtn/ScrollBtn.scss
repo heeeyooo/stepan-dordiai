@@ -32,7 +32,7 @@
     }
 }
 
-@media screen and (width < 1000px) {
+@media (max-width: 1000px) {
     .scroll__up-btn,
     .scroll__down-btn {
         display: none;
