@@ -1,6 +1,6 @@
 @import "./../../mixins";
 
-.new-page {
+.project-page {
     position: fixed;
     @include top-right-bottom-left(50px, 50px, 50px, 50px);
     z-index: 1;
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 1000px) {
-    .new-page {
+    .project-page {
         @include top-right-bottom-left(25px, 25px, 25px, 25px);
     }
 

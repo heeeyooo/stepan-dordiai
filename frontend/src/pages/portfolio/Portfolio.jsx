@@ -11,7 +11,7 @@ function Portfolio() {
 
     return (
         <>
-            <section className="portfolio-section js-portfolio-section">
+            <section className="portfolio js-portfolio">
                 {portfolioData
                     .sort((a, b) => b.id - a.id)
                     .map((project, index) => {
@@ -32,7 +32,7 @@ function Portfolio() {
                         );
                     })}
             </section>
-            <ScrollBtn className={".js-portfolio-section"} />
+            <ScrollBtn className={".js-portfolio"} />
         </>
     );
 }

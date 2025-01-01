@@ -1,7 +1,7 @@
 @import "./../../mixins";
 @import "./../../global/InfiniteScroller.scss";
 
-.home-section {
+.home {
     position: fixed;
     @include top-right-bottom-left("", "", 100px, "");
     z-index: 1;
@@ -27,7 +27,7 @@
 }
 
 @media (max-width: 1000px) {
-    .home-section {
+    .home {
         @include top-right-bottom-left("", "", 50px, "");
     }
 }

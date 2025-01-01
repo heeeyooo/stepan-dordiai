@@ -1,7 +1,7 @@
 @import "./../../global/InfiniteScroller.scss";
 @import "./../../mixins";
 
-.games-section {
+.games {
     position: fixed;
     @include top-right-bottom-left(0, 100px, 0, 100px);
     z-index: 1;
@@ -128,7 +128,7 @@
 }
 
 @media (max-width: 1000px) {
-    .games-section {
+    .games {
         @include top-right-bottom-left(0, 50px, 0, 50px);
         padding: 50px 0;
     }

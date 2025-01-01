@@ -11,24 +11,22 @@ const Games = () => {
     // I use useEffect to remove scroll to see the tilt effect on touch devices
     useEffect(() => {
         if (!isTouchDevice()) {
-            document.querySelector(".games-section").style.overflowY = "scroll";
+            document.querySelector(".games").style.overflowY = "scroll";
         } else {
-            document.querySelector(".games-section").style.overflowY = "hidden";
+            document.querySelector(".games").style.overflowY = "hidden";
         }
     }, []);
 
     useEffect(() => {
-        document
-            .querySelector(".games-section")
-            .addEventListener("scroll", () => {
-                if (document.querySelector(".games-section").scrollTop >= 100) {
-                    document.querySelector(".pag1").classList.remove("active");
-                    document.querySelector(".pag2").classList.add("active");
-                } else {
-                    document.querySelector(".pag1").classList.add("active");
-                    document.querySelector(".pag2").classList.remove("active");
-                }
-            });
+        document.querySelector(".games").addEventListener("scroll", () => {
+            if (document.querySelector(".games").scrollTop >= 100) {
+                document.querySelector(".pag1").classList.remove("active");
+                document.querySelector(".pag2").classList.add("active");
+            } else {
+                document.querySelector(".pag1").classList.add("active");
+                document.querySelector(".pag2").classList.remove("active");
+            }
+        });
     }, []);
 
     useEffect(() => {
@@ -55,11 +53,11 @@ const Games = () => {
     }
 
     function scrollPag1() {
-        document.querySelector(".games-section").scrollTop = 0;
+        document.querySelector(".games").scrollTop = 0;
     }
 
     function scrollPag2() {
-        document.querySelector(".games-section").scrollTop = 500;
+        document.querySelector(".games").scrollTop = 500;
     }
 
     //FIXME: className as a property?
@@ -95,7 +93,7 @@ const Games = () => {
 
     return (
         <>
-            <section className="games-section">
+            <section className="games">
                 <div
                     className="game-wrapper"
                     onMouseMove={() =>

@@ -47,7 +47,7 @@ const Playground = () => {
 
     return (
         <>
-            <section className="pg-section js-pg-section">
+            <section className="pg js-pg">
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
                     // I use sort for descending order
@@ -110,7 +110,7 @@ const Playground = () => {
                         }
                     )}
             </section>
-            <ScrollBtn className={".js-pg-section"} />
+            <ScrollBtn className={".js-pg"} />
         </>
     );
 };

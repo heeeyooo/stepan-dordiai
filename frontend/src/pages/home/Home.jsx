@@ -58,7 +58,7 @@ function Home() {
     }
 
     return (
-        <section className="home-section">
+        <section className="home">
             <div className="scroller" data-speed="slow" data-direction="left">
                 <div className="scroller__inner">
                     <p className="home-section__title">

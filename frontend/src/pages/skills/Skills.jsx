@@ -11,7 +11,7 @@ function Skills() {
 
     return (
         <>
-            <section className="skills-section js-skills-section">
+            <section className="skills js-skills">
                 <h4 className="skills-section__title">Skills</h4>
                 <div className="skills tree-level1">
                     {skillsData.slice(0, 1).map((skill) => {
@@ -109,7 +109,7 @@ function Skills() {
                     })}
                 </div>
             </section>
-            <ScrollBtn className={".js-skills-section"} />
+            <ScrollBtn className={".js-skills"} />
         </>
     );
 }

@@ -5,27 +5,24 @@ import "./ProjectPage.scss";
 const ProjectPage = () => {
     const { id } = useParams();
     const project = portfolioData[id];
+    const { projectImg, githubRepo, liveDemo, extraClass } = project;
     return (
-        <div className="new-page">
+        <section className="project-page">
             <NavLink className="project-page__close-btn" to="/portfolio">
                 <i className="fa-solid fa-xmark"></i>
             </NavLink>
-            <img className="frame" src={project.projectImg} alt="" />
-            <a
-                className="github-link"
-                href={project.githubRepo}
-                target="_blank"
-            >
+            <img className="frame" src={projectImg} alt="" />
+            <a className="github-link" href={githubRepo} target="_blank">
                 GitHub Repo
             </a>
             <a
-                className={`livesite-link ${project.extraClass}`}
-                href={project.liveDemo}
+                className={`livesite-link ${extraClass}`}
+                href={liveDemo}
                 target="_blank"
             >
                 Live Site
             </a>
-        </div>
+        </section>
     );
 };
 

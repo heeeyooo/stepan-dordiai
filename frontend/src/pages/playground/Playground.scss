@@ -18,7 +18,7 @@
     }
 }
 
-.pg-section {
+.pg {
     position: fixed;
     @include top-right-bottom-left(0, 100px, 0, 100px);
     padding: 100px 0;
@@ -96,7 +96,7 @@
         width: calc(100% - 100px);
     }
 
-    .pg-section {
+    .pg {
         @include top-right-bottom-left(0, 50px, 0, 50px);
         padding: 50px 0;
     }

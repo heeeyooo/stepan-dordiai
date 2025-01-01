@@ -1,6 +1,6 @@
 @import "./../../mixins";
 
-.portfolio-section {
+.portfolio {
     position: fixed;
     @include top-right-bottom-left(0, 100px, 0, 100px);
     z-index: 1;
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 1000px) {
-    .portfolio-section {
+    .portfolio {
         padding: 50px 0;
         @include top-right-bottom-left(0, 50px, 0, 50px);
     }

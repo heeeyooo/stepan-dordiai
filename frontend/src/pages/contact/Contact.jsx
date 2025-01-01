@@ -48,7 +48,7 @@ function Contact() {
     AnimateElements(".text-line", "revealTextLine 1s forwards");
 
     return (
-        <section className="contact-section">
+        <section className="contact">
             <div className="mail-tel-container">
                 <div className="text-line-container">
                     <div className="text-line">
