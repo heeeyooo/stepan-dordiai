@@ -121,6 +121,38 @@ function Contact() {
                         <div className="text-line">
                             <a
                                 onMouseEnter={() =>
+                                    makeCursorActive("Linkedin")
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                href="https://www.linkedin.com/in/stepan-dordiai"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() =>
+                                    makeCursorActive("Telegram")
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                href="https://t.me/heeeyooo"
+                                target="_blank"
+                            >
+                                <i className="fa-brands fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={() =>
                                     makeCursorActive("Instagram")
                                 }
                                 onMouseLeave={makeCursorNormal}
@@ -156,38 +188,6 @@ function Contact() {
                                 target="_blank"
                             >
                                 <i className="fa-brands fa-twitch"></i>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <a
-                                onMouseEnter={() =>
-                                    makeCursorActive("Linkedin")
-                                }
-                                onMouseLeave={makeCursorNormal}
-                                href="https://www.linkedin.com/in/stepan-dordiai-245715310"
-                                target="_blank"
-                            >
-                                <i className="fa-brands fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className="text-line-container">
-                        <div className="text-line">
-                            <a
-                                onMouseEnter={() =>
-                                    makeCursorActive("Telegram")
-                                }
-                                onMouseLeave={makeCursorNormal}
-                                href="https://t.me/heeeyooo"
-                                target="_blank"
-                            >
-                                <i className="fa-brands fa-telegram"></i>
                             </a>
                         </div>
                     </div>

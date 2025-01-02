@@ -86,17 +86,15 @@
 }
 
 .nav__footer-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
+    @include flex-center;
+    column-gap: 25px;
 }
 
 .nav__footer-list {
     a {
         color: var(--semi-tp-50);
         font-size: 20px;
-        transition: all 0.15s;
+        transition: all 150ms;
     }
 }
 

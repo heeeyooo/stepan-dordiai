@@ -141,11 +141,11 @@ function Nav() {
                     </li>
                     <li>
                         <a
-                            href="https://www.instagram.com/heeeyooo_"
+                            href="https://www.linkedin.com/in/stepan-dordiai"
                             target="_blank"
-                            title="Instagram"
+                            title="LinkedIn"
                         >
-                            <i className="fa-brands fa-instagram"></i>
+                            <i className="fa-brands fa-linkedin"></i>
                         </a>
                     </li>
                 </ul>
