@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 100%;
     aspect-ratio: 1 / 1;
     background-color: var(--semi-tp-10);
     @include glass-effect;
@@ -26,10 +26,4 @@
 
 .img-icon {
     width: 25%;
-}
-
-@media (max-width: 1000px) {
-    .skill-container {
-        width: 75px;
-    }
 }

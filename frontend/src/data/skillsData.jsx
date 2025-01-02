@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import tsIcon from "./img/icons/ts-icon.svg";
-import mongodbIcon from "./img/icons/mongodb-icon.svg";
+import tsIcon from "./images/ts-icon.svg";
+import mongodbIcon from "./images/mongodb-icon.svg";
 
 // I'm using uuid external library for unique id
 const skillsData = [

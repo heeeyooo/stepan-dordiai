@@ -1,9 +1,9 @@
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import "./Skill.scss";
-// import AnimateElements from "../../utils/AnimateElements";
+import AnimateElements from "../../utils/AnimateElements";
 
 function Skill({ icon, name }) {
-    // AnimateElements(".skill-container", "revealSkillContainer 1s forwards");
+    AnimateElements(".skill-container", "revealSkillContainer 1s forwards");
     return (
         <div
             onMouseEnter={() => makeCursorActive(name)}
