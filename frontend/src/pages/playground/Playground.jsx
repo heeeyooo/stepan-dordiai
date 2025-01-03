@@ -50,7 +50,7 @@ const Playground = () => {
             <section className="pg js-pg">
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
-                    // I use sort for descending order
+                    // I use sort method to show pg-project in order from new to old
                     .sort((a, b) => b.id - a.id)
                     .map(
                         ({

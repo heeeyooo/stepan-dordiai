@@ -18,6 +18,7 @@ function Portfolio() {
                             key={project.id}
                             title={project.title}
                             production={project.production}
+                            id={project.id}
                             index={index}
                         />
                     );

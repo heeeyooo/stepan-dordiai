@@ -3,7 +3,7 @@ import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import { NavLink } from "react-router-dom";
 import "./Project.scss";
 
-function Project({ title, production, index }) {
+function Project({ id, title, production, index }) {
     AnimateElements(".project", "revealProject 1s forwards");
 
     return (
@@ -17,9 +17,7 @@ function Project({ title, production, index }) {
                 className="project__link"
                 to={`/project-page/${index}`}
             ></NavLink>
-            <p className="project__number">
-                {index + 1 < 10 ? `0${index + 1}` : index + 1}
-            </p>
+            <p className="project__number">{id < 10 ? `0${id}` : id}</p>
             <p className="project__production">{production}</p>
             <h3 className="project__title">{title}</h3>
         </div>
