@@ -1,102 +1,70 @@
-import mongodbIcon from "./images/mongodb-icon.svg";
-import cloudImg from "./images/cloud.png";
-import yagodaKarpatVideo from "./videos/yagoda-karpat.mp4";
-import tastyBurgerImg from "./images/tasty-burger.png";
+import { v4 as uuidv4 } from "uuid";
 import penguinVideo from "./videos/penguin.mp4";
 import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
+import yagodaKarpatVideo from "./videos/yagoda-karpat.mp4";
+import cloudImg from "./images/cloud.png";
+import tastyBurgerImg from "./images/tasty-burger.png";
 
 const portfolioData = [
     {
-        id: 1,
+        id: uuidv4(),
         title: "penguin",
-        titleName: "Portfolio website",
-        skills: [<i className="fa-brands fa-react"></i>],
-        githubRepo: "https://github.com/heeeyooo/penguin",
-        liveDemo: "https://penguin-project.netlify.app/",
-        projectVideo: penguinVideo,
         production: "2023",
-        imgClass: "link--none",
+        titleDesc: "Portfolio website",
+        liveSite: "https://penguin-project.netlify.app/",
+        githubRepo: "https://github.com/heeeyooo/penguin",
+        projectVideo: penguinVideo,
+        imgNone: "none",
     },
     {
-        id: 2,
+        id: uuidv4(),
         title: "Stepan Dordiai",
-        titleName: "Portfolio website",
-        skills: [
-            <i className="fa-brands fa-react"></i>,
-            <i className="fa-brands fa-node"></i>,
-            <p style={{ height: 20, verticalAlign: "middle" }}>ex</p>,
-            <img
-                src={mongodbIcon}
-                style={{ height: 20, verticalAlign: "middle" }}
-                alt="Mongo DB"
-            />,
-        ],
+        production: "2024",
+        titleDesk: "Portfolio website",
         githubRepo: "https://github.com/heeeyooo/stepan-dordiai",
-        imgClass: "link--none",
         projectVideo: stepanDordiaiVideo,
-        production: "2024",
-        extraClass: "link--none",
+        imgNone: "none",
+        liveSiteNone: "none",
     },
     {
-        id: 3,
+        id: uuidv4(),
         title: "Yagoda Karpat",
-        titleName: "Business website",
-        skills: [<i className="fa-brands fa-react"></i>, <span>Swiper</span>],
+        production: "2024",
+        titleDesk: "Business website",
+        liveSite: "https://yagodakarpat.netlify.app/",
         githubRepo: "https://github.com/heeeyooo/yagoda-karpat",
-        liveDemo: "https://yagodakarpat.netlify.app/",
         projectVideo: yagodaKarpatVideo,
-        production: "2024",
-        imgClass: "link--none",
+        imgNone: "none",
     },
     {
-        id: 4,
+        id: uuidv4(),
         title: "cloud",
-        titleName: "Weather website",
-        skills: [
-            <i className="fa-brands fa-html5"></i>,
-            <i className="fa-brands fa-sass"></i>,
-            <i className="fa-brands fa-square-js"></i>,
-            <span>BEM</span>,
-            <span>Day.js</span>,
-        ],
+        production: "2024",
+        titleDesk: "Weather website",
+        liveSite: "https://cloud-project.netlify.app/",
         githubRepo: "https://github.com/heeeyooo/cloud",
-        liveDemo: "https://cloud-project.netlify.app/",
         projectImg: cloudImg,
-        production: "2024",
-        videoClass: "link--none",
+        videoNone: "none",
     },
     {
-        id: 5,
+        id: uuidv4(),
         title: "Coffeefy",
-        titleName: "E-commerce website",
-        skills: [
-            <i className="fa-brands fa-html5"></i>,
-            <i className="fa-brands fa-css3-alt"></i>,
-            <i className="fa-brands fa-square-js"></i>,
-            <span>BEM</span>,
-            <span>Day.js</span>,
-        ],
-        githubRepo: "https://github.com/heeeyooo/coffeefy",
-        liveDemo: "https://heeeyooo.github.io/coffeefy/",
         production: "2024",
-        imgClass: "link--none",
-        videoClass: "link--none",
+        titleDesk: "E-commerce website",
+        liveSite: "https://heeeyooo.github.io/coffeefy/",
+        githubRepo: "https://github.com/heeeyooo/coffeefy",
+        imgNone: "none",
+        videoNone: "none",
     },
     {
-        id: 6,
+        id: uuidv4(),
         title: "Tasty Burger",
-        titleName: "Special website",
-        skills: [
-            <i className="fa-brands fa-html5"></i>,
-            <i className="fa-brands fa-css3-alt"></i>,
-            <i className="fa-brands fa-square-js"></i>,
-            <span>BEM</span>,
-        ],
-        githubRepo: "https://github.com/heeeyooo/tasty-burger",
-        liveDemo: "https://heeeyooo.github.io/tasty-burger/",
-        projectImg: tastyBurgerImg,
         production: "2024",
-        videoClass: "link--none",
+        titleDesk: "Special website",
+        liveSite: "https://heeeyooo.github.io/tasty-burger/",
+        githubRepo: "https://github.com/heeeyooo/tasty-burger",
+        projectImg: tastyBurgerImg,
+        videoNone: "none",
     },
 ];
 

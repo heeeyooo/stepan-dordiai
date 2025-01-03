@@ -3,23 +3,25 @@ import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import { NavLink } from "react-router-dom";
 import "./Project.scss";
 
-function Project({ id, title, production, index }) {
-    AnimateElements(".project-container", "revealProjectContainer 1s forwards");
+function Project({ title, production, index }) {
+    AnimateElements(".project", "revealProject 1s forwards");
 
     return (
         <div
-            className="project-container"
+            className="project"
             onMouseEnter={() => makeCursorActive(title)}
             onMouseLeave={makeCursorNormal}
         >
             <NavLink
                 onClick={makeCursorNormal}
-                className="project-link"
+                className="project__link"
                 to={`/project-page/${index}`}
             ></NavLink>
-            <p className="project-number">{id < 10 ? `0${id}` : id}</p>
-            <p className="project-production">{production}</p>
-            <h3 className="project-title">{title}</h3>
+            <p className="project__number">
+                {index + 1 < 10 ? `0${index + 1}` : index + 1}
+            </p>
+            <p className="project__production">{production}</p>
+            <h3 className="project__title">{title}</h3>
         </div>
     );
 }

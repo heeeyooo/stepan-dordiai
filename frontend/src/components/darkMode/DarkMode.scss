@@ -1,3 +1,5 @@
+@import "./../../mixins";
+
 .dark-mode-container {
     position: fixed;
     top: 50px;
@@ -10,8 +12,7 @@
     writing-mode: vertical-lr;
     text-orientation: upright;
     z-index: 2;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    @include glass-effect;
     animation: revealDarkModeContainer 1s forwards;
 }
 

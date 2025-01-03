@@ -16,14 +16,7 @@ function Portfolio() {
                     return (
                         <Project
                             key={project.id}
-                            id={project.id}
                             title={project.title}
-                            titleName={project.titleName}
-                            skills={project.skills}
-                            githubRepo={project.githubRepo}
-                            liveDemo={project.liveDemo}
-                            extraClass={project.extraClass}
-                            projectImg={project.projectImg}
                             production={project.production}
                             index={index}
                         />

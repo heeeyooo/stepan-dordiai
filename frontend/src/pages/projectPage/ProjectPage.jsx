@@ -6,15 +6,15 @@ const ProjectPage = () => {
     const { id } = useParams();
     const project = portfolioData[id];
     const {
-        projectImg,
-        githubRepo,
-        liveDemo,
-        imgClass,
-        videoClass,
         title,
-        titleName,
+        titleDesk,
+        liveSite,
+        githubRepo,
         projectVideo,
-        extraClass,
+        projectImg,
+        videoNone,
+        imgNone,
+        liveSiteNone,
     } = project;
     return (
         <section className="project-page">
@@ -22,22 +22,22 @@ const ProjectPage = () => {
                 Back
             </NavLink>
             <video
-                className={`project-page__project-video ${videoClass}`}
+                className={`project-page__project-video ${videoNone}`}
                 src={projectVideo}
                 autoPlay={true}
                 loop={true}
                 playsInline={true}
             ></video>
             <img
-                className={`project-page__project-img ${imgClass}`}
+                className={`project-page__project-img ${imgNone}`}
                 src={projectImg}
                 alt=""
             />
             <div className="project-page__info">
                 <div className="project-page__links">
                     <a
-                        className={`project-page__livesite-link ${extraClass}`}
-                        href={liveDemo}
+                        className={`project-page__livesite-link ${liveSiteNone}`}
+                        href={liveSite}
                         target="_blank"
                     >
                         Live Site{" "}
@@ -53,7 +53,7 @@ const ProjectPage = () => {
                 </div>
                 <div>
                     <p className="project-page__project-title-name">
-                        {titleName}
+                        {titleDesk}
                     </p>
                     <p className="project-page__project-title">{title}</p>
                 </div>
