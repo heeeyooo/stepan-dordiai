@@ -69,7 +69,7 @@ function DarkMode() {
             document.querySelector(".text p").textContent =
                 refBtn.current.textContent;
             showText();
-        }, 1);
+        }, 0);
     };
 
     return (
