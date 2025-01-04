@@ -55,9 +55,7 @@
     margin: 5px 0;
     background-color: var(--color);
     width: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include bg-color-text-effect;
     transition: all 0.5s;
 }
 
@@ -68,9 +66,7 @@
 .nav__link {
     span {
         background-color: var(--semi-tp-50);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include bg-color-text-effect;
     }
 }
 
