@@ -1,4 +1,4 @@
-@import "./../../mixins";
+@use "./../../mixins" as *;
 
 .game-1-section {
     position: fixed;

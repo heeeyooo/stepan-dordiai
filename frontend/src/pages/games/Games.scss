@@ -1,5 +1,5 @@
-@import "./../../global/InfiniteScroller.scss";
-@import "./../../mixins";
+@use "./../../global/InfiniteScroller.scss";
+@use "./../../mixins" as *;
 
 .games {
     position: fixed;

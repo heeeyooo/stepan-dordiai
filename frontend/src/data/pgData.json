@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "title": "BTB Challenge",
+        "title": "Bed Adventures",
         "liveSite": "https://heeeyooo.github.io/break-the-bed-challenge/",
         "githubRepo": "https://github.com/heeeyooo/break-the-bed-challenge",
-        "telegramBot": "https://t.me/btb_challenge_bot"
+        "telegramNone": "none"
     },
     {
         "id": 2,
@@ -32,41 +32,41 @@
         "title": "countdown",
         "liveSite": "https://heeeyooo.github.io/countdown/",
         "githubRepo": "https://github.com/heeeyooo/countdown",
-        "extraClass": "link--none"
+        "telegramNone": "none"
     },
     {
         "id": 6,
         "title": "tiermaker",
         "liveSite": "https://heeeyooo.github.io/drag-n-drop-tier-list/",
         "githubRepo": "https://github.com/heeeyooo/drag-n-drop-tier-list",
-        "extraClass": "link--none"
+        "telegramNone": "none"
     },
     {
         "id": 7,
         "title": "gallery",
         "liveSite": "https://heeeyooo.github.io/gallery/",
         "githubRepo": "https://github.com/heeeyooo/gallery",
-        "extraClass": "link--none"
+        "telegramNone": "none"
     },
     {
         "id": 8,
         "title": "Calculator",
         "liveSite": "https://heeeyooo.github.io/calculator/",
         "githubRepo": "https://github.com/heeeyooo/calculator",
-        "extraClass": "link--none"
+        "telegramNone": "none"
     },
     {
         "id": 9,
         "title": "Image comparison",
         "liveSite": "https://heeeyooo.github.io/img-comparison/",
         "githubRepo": "https://github.com/heeeyooo/img-comparison",
-        "extraClass": "link--none"
+        "telegramNone": "none"
     },
     {
         "id": 10,
         "title": "Currency converter",
         "liveSite": "https://heeeyooo.github.io/currency-converter/",
         "githubRepo": "https://github.com/heeeyooo/currency-converter",
-        "extraClass": "link--none"
+        "telegramNone": "none"
     }
 ]

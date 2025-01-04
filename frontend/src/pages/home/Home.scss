@@ -1,5 +1,5 @@
-@import "./../../mixins";
-@import "./../../global/InfiniteScroller.scss";
+@use "./../../mixins" as *;
+@use "./../../global/InfiniteScroller.scss";
 
 .home {
     position: fixed;

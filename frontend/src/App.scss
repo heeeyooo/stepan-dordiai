@@ -1,6 +1,6 @@
-@import "fonts";
-@import "reset";
-@import "variables";
+@use "fonts" as *;
+@use "reset" as *;
+@use "variables" as *;
 
 body {
     font-family: "Inter", sans-serif;
