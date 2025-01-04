@@ -59,7 +59,7 @@ const Playground = () => {
                             liveSite,
                             githubRepo,
                             telegramBot,
-                            telegramNone,
+                            telegramBotNone,
                         }) => {
                             return (
                                 <div className="pg-project" key={id}>
@@ -93,7 +93,7 @@ const Playground = () => {
                                                     <i className="fa-brands fa-github"></i>
                                                 </a>
                                             </li>
-                                            <li className={telegramNone}>
+                                            <li className={telegramBotNone}>
                                                 <a
                                                     className="pg-project__link"
                                                     href={telegramBot}
