@@ -22,9 +22,13 @@ import "./App.scss";
 
 function App() {
     useEffect(() => {
-        setTimeout(() => {
-            document.querySelector(".wrapper").style.display = "initial";
-        }, 3000);
+        // setTimeout(() => {
+        document
+            .querySelector(".loading")
+            .addEventListener("animationend", () => {
+                document.querySelector(".wrapper").style.display = "initial";
+            });
+        // }, 3000);
     }, []);
 
     return (
