@@ -11,10 +11,16 @@ function Home() {
             if (
                 document.querySelector(".loading").style.display === "initial"
             ) {
-                setTimeout(() => {
-                    addAnimation();
-                    showText();
-                }, 3000);
+                // setTimeout(() => {
+                //     addAnimation();
+                //     showText();
+                // }, 3000);
+                document
+                    .querySelector(".loading")
+                    .addEventListener("animationend", () => {
+                        addAnimation();
+                        showText();
+                    });
             } else {
                 addAnimation();
                 showText();

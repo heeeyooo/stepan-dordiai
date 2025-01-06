@@ -37,10 +37,9 @@
     flex-shrink: 0;
     opacity: 0;
     transform: translateY(50px);
-}
-
-.pg-project:not(:nth-last-of-type(1)) {
-    border-bottom: 1px solid var(--semi-tp-50);
+    &:not(:nth-last-of-type(1)) {
+        border-bottom: 1px solid var(--semi-tp-50);
+    }
 }
 
 @keyframes revealPgProject {

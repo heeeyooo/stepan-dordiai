@@ -68,5 +68,12 @@
         "liveSite": "https://heeeyooo.github.io/currency-converter/",
         "githubRepo": "https://github.com/heeeyooo/currency-converter",
         "telegramBotNone": "none"
+    },
+    {
+        "id": 11,
+        "title": "Spin the Wheel!",
+        "liveSite": "https://heeeyooo.github.io/spin-the-wheel/",
+        "githubRepo": "https://github.com/heeeyooo/spin-the-wheel",
+        "telegramBot": "https://t.me/spinthe_wheel_bot"
     }
 ]
