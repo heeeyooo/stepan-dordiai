@@ -13,6 +13,7 @@
     color: var(--color);
     font-weight: 400;
     pointer-events: none;
+    -webkit-user-select: none;
     user-select: none;
 }
 

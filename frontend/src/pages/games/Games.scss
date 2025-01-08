@@ -34,13 +34,13 @@
     span {
         width: 5px;
         height: 25px;
-        background-color: var(--semi-tp-50);
+        background: var(--semi-tp-50);
         cursor: pointer;
     }
 }
 
 .active {
-    background-color: var(--color) !important;
+    background: var(--color) !important;
 }
 
 .game-wrapper {
@@ -58,7 +58,7 @@
     transform-style: preserve-3d;
     --tiltX: 0deg;
     --tiltY: 0deg;
-    background-color: var(--bg-semi-tp-50);
+    background: var(--bg-semi-tp-50);
     transform: rotateY(var(--tiltY)) rotateX(var(--tiltX));
     transition: transform 0.1s;
 }
@@ -67,7 +67,7 @@
     position: absolute;
     content: "";
     inset: 0rem;
-    background-color: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.25);
     opacity: 0;
     filter: blur(0);
     transform: translateZ(-49px);
