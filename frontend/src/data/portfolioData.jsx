@@ -27,7 +27,7 @@ const portfolioData = [
     },
     {
         id: 4,
-        title: "cloud",
+        title: "cloud.",
         production: "2024",
         titleDesk: "Weather website",
         liveSite: "https://cloud-project.netlify.app/",
