@@ -75,5 +75,12 @@
         "liveSite": "https://heeeyooo.github.io/spin-the-wheel/",
         "githubRepo": "https://github.com/heeeyooo/spin-the-wheel",
         "telegramBot": "https://t.me/spinthe_wheel_bot"
+    },
+    {
+        "id": 12,
+        "title": "Goals List",
+        "liveSite": "https://goalslist-pg-project.netlify.app/",
+        "githubRepo": "https://github.com/heeeyooo/goals-list",
+        "telegramBot": "https://t.me/goals_list_bot"
     }
 ]
