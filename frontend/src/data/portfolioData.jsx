@@ -3,8 +3,19 @@ import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
 import yagodaKarpatVideo from "./videos/yagoda-karpat.mp4";
 import cloudImg from "./images/cloud.png";
 import tastyBurgerImg from "./images/tasty-burger.png";
+import yagodaKarpatUAVideo from "./videos/yagoda-karpat-ua.mp4";
 
 const portfolioData = [
+    {
+        id: 7,
+        title: "Yagoda Karpat (UA)",
+        production: "2025",
+        titleDesk: "Business website",
+        liveSite: "https://yagodakarpat-ua.netlify.app/",
+        githubRepo: "https://github.com/heeeyooo/yagoda-karpat-ua",
+        projectVideo: yagodaKarpatUAVideo,
+        imgNone: "none",
+    },
     {
         id: 6,
         title: "Tasty Burger",

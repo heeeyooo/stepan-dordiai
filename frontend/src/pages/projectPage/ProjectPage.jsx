@@ -23,11 +23,13 @@ const ProjectPage = () => {
             </NavLink>
             <video
                 className={`project-page__project-video ${videoNone}`}
-                src={projectVideo}
                 autoPlay={true}
                 loop={true}
                 playsInline={true}
-            ></video>
+            >
+                <source src={projectVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             <img
                 className={`project-page__project-img ${imgNone}`}
                 src={projectImg}
