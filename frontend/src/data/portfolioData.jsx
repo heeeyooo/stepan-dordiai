@@ -1,15 +1,25 @@
 import penguinVideo from "./videos/penguin.mp4";
 import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
-import yagodaKarpatVideo from "./videos/yagoda-karpat.mp4";
+// import yagodaKarpatVideo from "./videos/yagoda-karpat.mp4";
 import cloudImg from "./images/cloud.png";
 import tastyBurgerImg from "./images/tasty-burger.png";
 import yagodaKarpatUAVideo from "./videos/yagoda-karpat-ua.mp4";
 
 const portfolioData = [
+    // {
+    //     id: 6,
+    //     title: "Bourek (CZ)",
+    //     production: "Jan | 25",
+    //     titleDesk: "Business website",
+    //     liveSite: "https://bourek-cz.netlify.app/",
+    //     githubRepo: "https://github.com/heeeyooo/bourek-cz",
+    //     videoNone: "none",
+    //     imgNone: "none",
+    // },
     {
-        id: 7,
+        id: 5,
         title: "Yagoda Karpat (UA)",
-        production: "2025",
+        production: "Jan | 25",
         titleDesk: "Business website",
         liveSite: "https://yagodakarpat-ua.netlify.app/",
         githubRepo: "https://github.com/heeeyooo/yagoda-karpat-ua",
@@ -17,7 +27,7 @@ const portfolioData = [
         imgNone: "none",
     },
     {
-        id: 6,
+        id: 4,
         title: "Tasty Burger",
         production: "2024",
         titleDesk: "Special website",
@@ -26,18 +36,18 @@ const portfolioData = [
         projectImg: tastyBurgerImg,
         videoNone: "none",
     },
+    // {
+    //     id: 5,
+    //     title: "Coffeefy",
+    //     production: "2024",
+    //     titleDesk: "E-commerce website",
+    //     liveSite: "https://heeeyooo.github.io/coffeefy/",
+    //     githubRepo: "https://github.com/heeeyooo/coffeefy",
+    //     imgNone: "none",
+    //     videoNone: "none",
+    // },
     {
-        id: 5,
-        title: "Coffeefy",
-        production: "2024",
-        titleDesk: "E-commerce website",
-        liveSite: "https://heeeyooo.github.io/coffeefy/",
-        githubRepo: "https://github.com/heeeyooo/coffeefy",
-        imgNone: "none",
-        videoNone: "none",
-    },
-    {
-        id: 4,
+        id: 3,
         title: "cloud.",
         production: "2024",
         titleDesk: "Weather website",
@@ -46,16 +56,16 @@ const portfolioData = [
         projectImg: cloudImg,
         videoNone: "none",
     },
-    {
-        id: 3,
-        title: "Yagoda Karpat",
-        production: "2024",
-        titleDesk: "Business website",
-        liveSite: "https://yagodakarpat.netlify.app/",
-        githubRepo: "https://github.com/heeeyooo/yagoda-karpat",
-        projectVideo: yagodaKarpatVideo,
-        imgNone: "none",
-    },
+    // {
+    //     id: 3,
+    //     title: "Yagoda Karpat",
+    //     production: "2024",
+    //     titleDesk: "Business website",
+    //     liveSite: "https://yagodakarpat.netlify.app/",
+    //     githubRepo: "https://github.com/heeeyooo/yagoda-karpat",
+    //     projectVideo: yagodaKarpatVideo,
+    //     imgNone: "none",
+    // },
     {
         id: 2,
         title: "Stepan Dordiai",
