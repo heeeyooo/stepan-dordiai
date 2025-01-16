@@ -18,8 +18,10 @@ function Project({ id, title, production, index }) {
                 to={`/project-page/${index}`}
             ></NavLink>
             <p className="project__number">{id < 10 ? `0${id}` : id}</p>
-            <p className="project__production">{production}</p>
-            <h3 className="project__title">{title}</h3>
+            <div>
+                <h3 className="project__title">{title}</h3>
+                <p className="project__production">{production}</p>
+            </div>
         </div>
     );
 }
