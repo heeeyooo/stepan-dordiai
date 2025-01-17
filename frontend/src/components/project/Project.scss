@@ -57,10 +57,10 @@
 
 .project__number,
 .project__title {
-    font-size: clamp(24px, 4vw, 32px);
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 300;
     color: var(--color);
-    transition: opacity 0.15s;
+    transition: opacity 150ms;
     pointer-events: none;
 }
 
@@ -68,7 +68,7 @@
     color: var(--semi-tp-50);
     font-weight: 300;
     font-size: clamp(12px, 2vw, 14px);
-    transition: opacity 0.15s;
+    transition: opacity 150ms;
     pointer-events: none;
 }
 

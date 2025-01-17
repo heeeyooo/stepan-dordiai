@@ -59,11 +59,12 @@
 
 .project-page__project-title {
     color: var(--color);
-    font-size: clamp(40px, 8vw, 60px);
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .project-page__project-title-name {
     color: var(--semi-tp-50);
+    font-weight: 300;
 }
 
 .project-page__github-link {

@@ -132,20 +132,20 @@ function Nav() {
                     </li>
                     <li>
                         <a
-                            href="https://t.me/heeeyooo"
-                            target="_blank"
-                            title="Telegram"
-                        >
-                            <i className="fa-brands fa-telegram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a
                             href="https://www.linkedin.com/in/stepan-dordiai"
                             target="_blank"
                             title="LinkedIn"
                         >
                             <i className="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://t.me/heeeyooo"
+                            target="_blank"
+                            title="Telegram"
+                        >
+                            <i className="fa-brands fa-telegram"></i>
                         </a>
                     </li>
                 </ul>

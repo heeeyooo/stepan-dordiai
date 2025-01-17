@@ -1,3 +1,5 @@
+@use "./../../mixins" as *;
+
 .mail-tel-container {
     position: fixed;
     top: 100px;
@@ -11,16 +13,14 @@
 }
 
 .mail-tel-container span {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--color);
 }
 
 .mail-container,
 .tel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     column-gap: 5px;
 }
 
@@ -28,7 +28,7 @@
 .tel-link,
 .mail-copy-btn,
 .tel-copy-btn {
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--color);
     font-weight: 300;
 }

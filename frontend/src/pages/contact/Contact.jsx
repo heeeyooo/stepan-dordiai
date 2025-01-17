@@ -78,7 +78,7 @@ function Contact() {
                     <div className="text-line">
                         <div className="tel-container">
                             <a
-                                href="tel:+380689852978"
+                                href="tel:+420722001016"
                                 onMouseEnter={() =>
                                     makeCursorActive("Phone number")
                                 }
@@ -106,7 +106,7 @@ function Contact() {
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
-                                onMouseEnter={() => makeCursorActive("Github")}
+                                onMouseEnter={() => makeCursorActive("GitHub")}
                                 onMouseLeave={makeCursorNormal}
                                 href="https://github.com/heeeyooo"
                                 target="_blank"
@@ -121,7 +121,7 @@ function Contact() {
                         <div className="text-line">
                             <a
                                 onMouseEnter={() =>
-                                    makeCursorActive("Linkedin")
+                                    makeCursorActive("LinkedIn")
                                 }
                                 onMouseLeave={makeCursorNormal}
                                 href="https://www.linkedin.com/in/stepan-dordiai"
