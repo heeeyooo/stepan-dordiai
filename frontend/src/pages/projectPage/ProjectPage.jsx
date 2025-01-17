@@ -7,7 +7,7 @@ const ProjectPage = () => {
     const project = portfolioData[id];
     const {
         title,
-        titleDesk,
+        titleDesc,
         liveSite,
         githubRepo,
         projectVideo,
@@ -55,7 +55,7 @@ const ProjectPage = () => {
                 </div>
                 <div>
                     <p className="project-page__project-title-name">
-                        {titleDesk}
+                        {titleDesc}
                     </p>
                     <p className="project-page__project-title">{title}</p>
                 </div>
