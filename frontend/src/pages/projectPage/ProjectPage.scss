@@ -1,9 +1,12 @@
 @use "./../../mixins" as *;
 
+.none {
+    display: none;
+}
+
 .project-page {
     position: fixed;
     @include top-right-bottom-left(50px, 50px, 50px, 50px);
-    z-index: 1;
     @include flex-center;
     opacity: 0;
     animation: revealProjectPage 1s forwards;
@@ -19,7 +22,6 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    z-index: 1;
     color: var(--color);
     transition: opacity 150ms;
 }
@@ -28,8 +30,8 @@
     opacity: 0.5;
 }
 
-.project-page__project-video,
-.project-page__project-img {
+.project-page__video,
+.project-page__img {
     position: absolute;
     top: 50%;
     right: 50px;
@@ -43,50 +45,33 @@
     left: 50px;
     bottom: 50px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
     row-gap: 25px;
 }
 
 .project-page__links {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
     row-gap: 25px;
+    font-weight: 300;
+    a {
+        color: var(--color);
+        transition: opacity 150ms;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }
 
-.project-page__project-title {
-    color: var(--color);
-    font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.project-page__project-title-name {
+.project-page__title-desc {
     color: var(--semi-tp-50);
     font-weight: 300;
 }
 
-.project-page__github-link {
+.project-page__title {
     color: var(--color);
-    transition: opacity 150ms;
-}
-
-.project-page__github-link:hover {
-    opacity: 0.5;
-}
-
-.project-page__livesite-link {
-    color: var(--color);
-    transition: opacity 150ms;
-}
-
-.project-page__livesite-link:hover {
-    opacity: 0.5;
-}
-
-.none {
-    display: none;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
 }
 
 @media (max-width: 1000px) {
@@ -99,13 +84,11 @@
         left: 25px;
     }
 
-    .project-page__project-video,
-    .project-page__project-img {
-        position: absolute;
+    .project-page__video,
+    .project-page__img {
         top: 40%;
         right: 0;
         left: 0;
-        transform: translateY(-50%);
         width: 100%;
     }
 

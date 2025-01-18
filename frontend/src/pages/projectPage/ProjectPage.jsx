@@ -22,7 +22,7 @@ const ProjectPage = () => {
                 Back
             </NavLink>
             <video
-                className={`project-page__project-video ${videoNone}`}
+                className={`project-page__video ${videoNone}`}
                 autoPlay={true}
                 loop={true}
                 playsInline={true}
@@ -31,33 +31,23 @@ const ProjectPage = () => {
                 Your browser does not support the video tag.
             </video>
             <img
-                className={`project-page__project-img ${imgNone}`}
+                className={`project-page__img ${imgNone}`}
                 src={projectImg}
                 alt={title}
             />
             <div className="project-page__info">
                 <div className="project-page__links">
-                    <a
-                        className={`project-page__livesite-link ${liveSiteNone}`}
-                        href={liveSite}
-                        target="_blank"
-                    >
+                    <a className={liveSiteNone} href={liveSite} target="_blank">
                         Live Site{" "}
                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-                    <a
-                        className="project-page__github-link"
-                        href={githubRepo}
-                        target="_blank"
-                    >
+                    <a href={githubRepo} target="_blank">
                         GitHub Repo <i className="fa-brands fa-github"></i>
                     </a>
                 </div>
                 <div>
-                    <p className="project-page__project-title-name">
-                        {titleDesc}
-                    </p>
-                    <p className="project-page__project-title">{title}</p>
+                    <p className="project-page__title-desc">{titleDesc}</p>
+                    <p className="project-page__title">{title}</p>
                 </div>
             </div>
         </section>
