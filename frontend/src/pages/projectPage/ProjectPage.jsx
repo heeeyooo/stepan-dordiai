@@ -15,7 +15,21 @@ const ProjectPage = () => {
         videoNone,
         imgNone,
         liveSiteNone,
+        qrIcon,
     } = project;
+
+    const img = document.createElement("img");
+
+    function showQr() {
+        img.src = qrIcon;
+        img.classList.add("project-page__qr-img");
+        document.querySelector(".project-page__qr").append(img);
+    }
+
+    function removeQr() {
+        img.remove();
+    }
+
     return (
         <section className="project-page">
             <NavLink className="project-page__back-btn" to="/portfolio">
@@ -36,6 +50,11 @@ const ProjectPage = () => {
                 alt={title}
             />
             <div className="project-page__info">
+                <div className="project-page__qr">
+                    <span onMouseEnter={showQr} onMouseLeave={removeQr}>
+                        QR-Code <i className="fa-solid fa-qrcode"></i>
+                    </span>
+                </div>
                 <div className="project-page__links">
                     <a className={liveSiteNone} href={liveSite} target="_blank">
                         Live Site{" "}

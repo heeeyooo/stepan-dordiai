@@ -3,6 +3,12 @@ import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
 import cloudImg from "./images/cloud.png";
 import tastyBurgerImg from "./images/tasty-burger.png";
 import yagodaKarpatUAVideo from "./videos/yagoda-karpat-ua.mp4";
+// Qr
+import yagodaKarpatUaQr from "./images/qr/yagoda-karpat-ua-qr.png";
+import tastyBurgerQr from "./images/qr/tasty-burger-qr.png";
+import cloudQr from "./images/qr/cloud-qr.png";
+import stepanDordiaiQr from "./images/qr/stepan-dordiai-qr.png";
+import penguinQr from "./images/qr/penguin-qr.png";
 
 const portfolioData = [
     {
@@ -14,6 +20,7 @@ const portfolioData = [
         githubRepo: "https://github.com/heeeyooo/yagoda-karpat-ua",
         projectVideo: yagodaKarpatUAVideo,
         imgNone: "none",
+        qrIcon: yagodaKarpatUaQr,
     },
     {
         id: 4,
@@ -24,6 +31,7 @@ const portfolioData = [
         githubRepo: "https://github.com/heeeyooo/tasty-burger",
         projectImg: tastyBurgerImg,
         videoNone: "none",
+        qrIcon: tastyBurgerQr,
     },
     {
         id: 3,
@@ -34,6 +42,7 @@ const portfolioData = [
         githubRepo: "https://github.com/heeeyooo/cloud",
         projectImg: cloudImg,
         videoNone: "none",
+        qrIcon: cloudQr,
     },
     {
         id: 2,
@@ -44,6 +53,7 @@ const portfolioData = [
         projectVideo: stepanDordiaiVideo,
         imgNone: "none",
         liveSiteNone: "none",
+        qrIcon: stepanDordiaiQr,
     },
     {
         id: 1,
@@ -54,6 +64,7 @@ const portfolioData = [
         githubRepo: "https://github.com/heeeyooo/penguin",
         projectVideo: penguinVideo,
         imgNone: "none",
+        qrIcon: penguinQr,
     },
 ];
 
