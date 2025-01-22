@@ -4,17 +4,11 @@ import "./Home.scss";
 function Home() {
     useEffect(() => {
         document.title = "Stepan Dordiai | Home";
-    }, []);
 
-    useEffect(() => {
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             if (
                 document.querySelector(".loading").style.display === "initial"
             ) {
-                // setTimeout(() => {
-                //     addAnimation();
-                //     showText();
-                // }, 3000);
                 document
                     .querySelector(".loading")
                     .addEventListener("animationend", () => {

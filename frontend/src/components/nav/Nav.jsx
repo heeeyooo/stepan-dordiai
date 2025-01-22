@@ -30,12 +30,12 @@ function Nav() {
     const inactiveLink = "nav__link";
 
     // Hide nav menu on page resize (when touch device rotates)
-    addEventListener("resize", () => {
-        document.querySelector(".nav").classList.remove("nav--active");
-        document
-            .querySelector(".burger-btn")
-            .classList.remove("burger-btn--active");
-    });
+    // addEventListener("resize", () => {
+    //     document.querySelector(".nav").classList.remove("nav--active");
+    //     document
+    //         .querySelector(".burger-btn")
+    //         .classList.remove("burger-btn--active");
+    // });
 
     return (
         <nav
@@ -50,9 +50,9 @@ function Nav() {
             <ul className="nav__list">
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/"
                     >
                         <span>HOME</span>
@@ -60,9 +60,9 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/about"
                     >
                         <span>ABOUT</span>
@@ -70,9 +70,9 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/skills"
                     >
                         <span>SKILLS</span>
@@ -80,9 +80,9 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/portfolio"
                     >
                         <span>PORTFOLIO</span>
@@ -90,9 +90,9 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/contact"
                     >
                         <span>CONTACT</span>
@@ -100,9 +100,9 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/playground"
                     >
                         <span>PLAYGROUND</span>
@@ -110,9 +110,9 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
-                        className={({ isActive }) => {
-                            return isActive ? activeLink : inactiveLink;
-                        }}
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/games"
                     >
                         <span className="nav__link-extra-font">GAMES</span>

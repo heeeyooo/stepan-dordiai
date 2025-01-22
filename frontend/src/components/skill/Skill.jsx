@@ -1,6 +1,6 @@
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
-import "./Skill.scss";
 import AnimateElements from "../../utils/AnimateElements";
+import "./Skill.scss";
 
 function Skill({ icon, name }) {
     AnimateElements(".skill-container", "revealSkillContainer 1s forwards");

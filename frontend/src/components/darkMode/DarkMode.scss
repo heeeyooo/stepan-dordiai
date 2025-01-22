@@ -1,6 +1,6 @@
 @use "./../../mixins" as *;
 
-.dark-mode-container {
+.dark-mode {
     position: fixed;
     top: 50px;
     right: -50px;
@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 1000px) {
-    .dark-mode-container {
+    .dark-mode {
         top: 25px;
         right: -25px;
         bottom: 25px;

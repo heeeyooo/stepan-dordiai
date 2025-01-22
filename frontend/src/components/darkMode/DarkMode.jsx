@@ -73,7 +73,7 @@ function DarkMode() {
     };
 
     return (
-        <div className="dark-mode-container">
+        <div className="dark-mode">
             <Resume />
             <button
                 ref={refBtn}

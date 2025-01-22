@@ -6,18 +6,14 @@ import "./Games.scss";
 const Games = () => {
     useEffect(() => {
         document.title = "Stepan Dordiai | Games";
-    }, []);
 
-    // I use useEffect to remove scroll to see the tilt effect on touch devices
-    useEffect(() => {
+        // I use useEffect to remove scroll to see the tilt effect on touch devices
         if (!isTouchDevice()) {
             document.querySelector(".games").style.overflowY = "scroll";
         } else {
             document.querySelector(".games").style.overflowY = "hidden";
         }
-    }, []);
 
-    useEffect(() => {
         document.querySelector(".games").addEventListener("scroll", () => {
             if (document.querySelector(".games").scrollTop >= 100) {
                 document.querySelector(".pag1").classList.remove("active");
@@ -27,9 +23,7 @@ const Games = () => {
                 document.querySelector(".pag2").classList.remove("active");
             }
         });
-    }, []);
 
-    useEffect(() => {
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             addAnimation();
         }

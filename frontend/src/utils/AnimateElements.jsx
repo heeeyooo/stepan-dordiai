@@ -14,9 +14,6 @@ function AnimateElements(className, animation, time = 100, projects) {
     useEffect(() => {
         // I check if preload is active (if it is i wait until it ends (duration 3 sec))
         if (document.querySelector(".loading").style.display === "initial") {
-            // setTimeout(() => {
-            // revealElements();
-            // }, 3000);
             document
                 .querySelector(".loading")
                 .addEventListener("animationend", () => {
