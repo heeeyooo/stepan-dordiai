@@ -82,5 +82,12 @@
         "liveSite": "https://goalslist-pg-project.netlify.app/",
         "githubRepo": "https://github.com/heeeyooo/goals-list",
         "telegramBot": "https://t.me/goals_list_bot"
+    },
+    {
+        "id": 13,
+        "title": "QRCG",
+        "liveSite": "https://qrcg-pg-project.netlify.app/",
+        "githubRepo": "https://github.com/heeeyooo/qrcg",
+        "telegramBotNone": "none"
     }
 ]
