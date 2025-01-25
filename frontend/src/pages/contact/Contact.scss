@@ -1,70 +1,66 @@
 @use "./../../mixins" as *;
 
-.mail-tel-container {
+.contact {
     position: fixed;
-    top: 100px;
-    right: 100px;
-    z-index: 1;
+    @include top-right-bottom-left(100px, 100px, 100px, 100px);
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     flex-direction: column;
+}
+
+.contacts {
+    display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-direction: column;
     row-gap: 50px;
 }
 
-.mail-tel-container span {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--color);
-}
-
-.mail-container,
-.tel-container {
+.mail,
+.tel {
     @include flex-center;
     column-gap: 5px;
+    span {
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--txt-clr);
+    }
 }
 
-.mail-link,
-.tel-link,
-.mail-copy-btn,
-.tel-copy-btn {
+.mail__link,
+.tel__link,
+.mail__copy-btn,
+.tel__copy-btn {
     font-size: 1rem;
-    color: var(--color);
+    color: var(--txt-clr);
     font-weight: 300;
 }
 
-.mail-copy-btn .dublicate,
-.tel-copy-btn .dublicate {
+.mail__copy-btn .dublicate,
+.tel__copy-btn .dublicate {
     display: none;
 }
 
-.socials-list {
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(50% - 100px);
+.socials {
+    @include flex-between;
+    width: 50%;
 }
 
-.socials-list a {
+.socials a {
     font-size: clamp(20px, 3vw, 24px);
-    color: var(--color);
+    color: var(--txt-clr);
 }
 
 @media (max-width: 1000px) {
-    .mail-tel-container {
-        top: 50px;
-        right: 50px;
+    .contact {
+        @include top-right-bottom-left(50px, 50px, 50px, 50px);
+    }
+    .contacts {
         row-gap: 25px;
     }
 
-    .socials-list {
-        bottom: 50px;
-        left: 50px;
-        right: 50px;
-        width: calc(100% - 100px);
+    .socials {
+        width: 100%;
     }
 }

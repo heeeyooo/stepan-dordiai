@@ -7,7 +7,7 @@
     left: 50px;
     height: 50px;
     @include glass-effect;
-    z-index: 2;
+    z-index: 1;
 }
 
 @media (max-width: 1000px) {

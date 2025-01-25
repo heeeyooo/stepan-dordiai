@@ -5,7 +5,7 @@
     top: 0;
     bottom: 0;
     left: -25%;
-    z-index: 3;
+    z-index: 2;
     width: 25%;
     padding-left: 50px;
     @include glass-effect;
@@ -40,7 +40,7 @@
 .nav__header-logo {
     font-size: clamp(12px, 3vw, 18px);
     font-weight: 300;
-    color: var(--color);
+    color: var(--txt-clr);
 }
 
 .nav__list {
@@ -53,9 +53,9 @@
     display: inline-block;
     font-weight: 500;
     margin: 5px 0;
-    background-color: var(--color);
+    background: var(--txt-clr);
     width: 0;
-    @include bg-color-text-effect;
+    @include bg-clr-txt-effect;
     transition: all 0.5s;
 }
 
@@ -65,8 +65,8 @@
 
 .nav__link {
     span {
-        background-color: var(--semi-tp-50);
-        @include bg-color-text-effect;
+        background: var(--semi-tp-50);
+        @include bg-clr-txt-effect;
     }
 }
 
@@ -96,7 +96,7 @@
 
 .nav__footer-list {
     a:hover {
-        color: var(--color);
+        color: var(--txt-clr);
     }
 }
 

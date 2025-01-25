@@ -7,27 +7,24 @@
     bottom: 100px;
     left: 100px;
     font-family: "Silkscreen", sans-serif;
-    display: flex;
+    @include flex-between;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     opacity: 0;
-    z-index: 1;
     animation: reveal 1s forwards;
 }
 
 .game-one__back-btn {
     align-self: flex-start;
-    color: var(--color);
+    color: var(--txt-clr);
 }
 
 .game-one__title-result {
-    color: var(--color);
+    color: var(--txt-clr);
     font-size: 1.5rem;
 }
 
 .game-one__lives {
-    color: var(--color);
+    color: var(--txt-clr);
 }
 
 .cards-grid {
@@ -43,7 +40,7 @@
     transform-style: preserve-3d;
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background: #fff;
 }
 
 .face {
@@ -58,7 +55,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background: white;
     backface-visibility: hidden;
     pointer-events: none;
 }
@@ -113,15 +110,13 @@
 
 .game-one__btn-container {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between;
     margin-top: 25px;
 }
 
 .game-one__btn {
     position: relative;
-    color: var(--color);
+    color: var(--txt-clr);
     padding: 10px 20px;
 }
 
@@ -132,8 +127,8 @@
     left: 0;
     width: 50%;
     height: 50%;
-    border-top: 2.5px solid var(--color);
-    border-left: 2.5px solid var(--color);
+    border-top: 2.5px solid var(--txt-clr);
+    border-left: 2.5px solid var(--txt-clr);
     transition: width 0.3s, height 0.3s;
 }
 
@@ -144,8 +139,8 @@
     bottom: 0;
     width: 50%;
     height: 50%;
-    border-right: 2.5px solid var(--color);
-    border-bottom: 2.5px solid var(--color);
+    border-right: 2.5px solid var(--txt-clr);
+    border-bottom: 2.5px solid var(--txt-clr);
     transition: width 0.3s, height 0.3s;
 }
 
@@ -185,11 +180,11 @@
 
 .rotate-font-img {
     font-size: 72px;
-    color: var(--color);
+    color: var(--txt-clr);
 }
 
 .rotate-title {
-    color: var(--color);
+    color: var(--txt-clr);
     font-weight: 300;
     text-align: center;
 }

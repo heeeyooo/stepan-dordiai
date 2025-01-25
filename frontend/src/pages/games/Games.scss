@@ -4,7 +4,6 @@
 .games {
     position: fixed;
     @include top-right-bottom-left(0, 100px, 0, 100px);
-    z-index: 1;
     padding: 100px 0;
     font-family: "Silkscreen", sans-serif;
     overflow-y: scroll;
@@ -40,7 +39,7 @@
 }
 
 .active {
-    background: var(--color) !important;
+    background: var(--txt-clr) !important;
 }
 
 .game-wrapper {
@@ -84,8 +83,8 @@
 }
 
 .game-container::after {
-    position: absolute;
     content: "";
+    position: absolute;
     background: linear-gradient(-90deg, #43c6ac, #f8ffae);
     inset: -1.25rem;
     transform: translateZ(-50px);
@@ -107,20 +106,20 @@
 }
 
 .game-container__number {
-    color: var(--color);
-    font-size: 34px;
+    color: var(--txt-clr);
+    font-size: 2rem;
 }
 
 .game-container__title {
-    color: var(--color);
-    font-size: 24px;
+    color: var(--txt-clr);
+    font-size: 1.5rem;
 }
 
 .game-container__start-btn {
     position: absolute;
     @include top-right-bottom-left("", 10px, 10px, "");
-    color: var(--color);
-    font-size: 24px;
+    color: var(--txt-clr);
+    font-size: 1.5rem;
 }
 
 .inactive-btn {
@@ -149,10 +148,10 @@
 
     .game-container__title,
     .game-container__start-btn {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .game-container__number {
-        font-size: 26px;
+        font-size: 1.5rem;
     }
 }

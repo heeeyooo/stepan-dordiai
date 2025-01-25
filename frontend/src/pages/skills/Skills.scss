@@ -3,12 +3,11 @@
 .skills {
     position: absolute;
     @include top-right-bottom-left(0, 100px, 0, 100px);
-    z-index: 1;
     padding: 100px 0;
     overflow-y: scroll;
 }
 
-.grid-container {
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 5px;
@@ -26,19 +25,19 @@
         @include top-right-bottom-left(0, 50px, 0, 50px);
         padding: 50px 0;
     }
-    .grid-container {
+    .skills-grid {
         grid-template-columns: repeat(7, 1fr);
     }
 }
 
 @media (max-width: 800px) {
-    .grid-container {
+    .skills-grid {
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    .grid-container {
+    .skills-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }

@@ -9,16 +9,16 @@ import Resume from "../resume/Resume";
 import "./DarkMode.scss";
 
 function DarkMode() {
-    const [lightMode, setLightMode] = useLocalStorage("darkMode", "light");
+    const [darkMode, setDarkMode] = useLocalStorage("darkMode", "dark");
 
     const refBtn = useRef(null);
 
     useEffect(() => {
         const variables = document.querySelector(":root");
 
-        if (lightMode === "light") {
-            variables.style.setProperty("--bg-color", "var(--bg-color-light)");
-            variables.style.setProperty("--color", "var(--color-dark)");
+        if (darkMode === "light") {
+            variables.style.setProperty("--bg-clr", "var(--bg-clr-light)");
+            variables.style.setProperty("--txt-clr", "var(--txt-clr-dark)");
             variables.style.setProperty(
                 "--semi-tp-10",
                 "var(--semi-tp-10-dark)"
@@ -37,8 +37,8 @@ function DarkMode() {
             );
             refBtn.current.textContent = "DARK";
         } else {
-            variables.style.setProperty("--bg-color", "var(--bg-color-dark)");
-            variables.style.setProperty("--color", "var(--color-light)");
+            variables.style.setProperty("--bg-clr", "var(--bg-clr-dark)");
+            variables.style.setProperty("--txt-clr", "var(--txt-clr-light)");
             variables.style.setProperty(
                 "--semi-tp-10",
                 "var(--semi-tp-10-light)"
@@ -57,11 +57,11 @@ function DarkMode() {
             );
             refBtn.current.textContent = "LIGHT";
         }
-    }, [lightMode]);
+    }, [darkMode]);
 
     const changeMode = () => {
-        setLightMode((currentMode) => {
-            return currentMode === "light" ? "dark" : "light";
+        setDarkMode((currentMode) => {
+            return currentMode === "dark" ? "light" : "dark";
         });
 
         // I added setTimeout to change text after a function was completed
@@ -77,7 +77,7 @@ function DarkMode() {
             <Resume />
             <button
                 ref={refBtn}
-                className="dark-mode-btn"
+                className="dark-mode__btn"
                 onClick={changeMode}
                 onMouseEnter={() =>
                     makeCursorActive(refBtn.current.textContent)

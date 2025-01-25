@@ -63,19 +63,16 @@ const Playground = () => {
                         }) => {
                             return (
                                 <div className="pg-project" key={id}>
-                                    <div className="pg-project__left-side">
-                                        <p className="pg-project__number">
-                                            {id < 10 ? `00${id}` : `0${id}`}
-                                        </p>
-                                    </div>
+                                    <p className="pg-project__number">
+                                        {id < 10 ? `00${id}` : `0${id}`}
+                                    </p>
                                     <div className="pg-project__right-side">
                                         <p className="pg-project__title">
                                             {title}
                                         </p>
-                                        <ul className="pg-project__links-list">
+                                        <ul className="pg-project__links">
                                             <li>
                                                 <a
-                                                    className="pg-project__link"
                                                     href={liveSite}
                                                     target="_blank"
                                                     title="Live Site"
@@ -85,7 +82,6 @@ const Playground = () => {
                                             </li>
                                             <li>
                                                 <a
-                                                    className="pg-project__link"
                                                     href={githubRepo}
                                                     target="_blank"
                                                     title="GitHub Repo"
@@ -95,7 +91,6 @@ const Playground = () => {
                                             </li>
                                             <li className={telegramBotNone}>
                                                 <a
-                                                    className="pg-project__link"
                                                     href={telegramBot}
                                                     target="_blank"
                                                     title="Telegram Bot"

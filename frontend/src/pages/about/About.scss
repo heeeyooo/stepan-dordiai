@@ -4,9 +4,8 @@
     transform: translateY(-50%);
     right: 100px;
     left: 100px;
-    z-index: 1;
-    text-align: center;
-    color: var(--color);
+    text-align: justify;
+    color: var(--txt-clr);
     font-size: clamp(12px, 4vw, 30px);
     font-weight: 300;
 }

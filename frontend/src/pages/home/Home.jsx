@@ -40,7 +40,7 @@ function Home() {
     }
 
     function showText() {
-        const text = document.querySelector(".home-section__title");
+        const text = document.querySelector(".js-home__title");
         let textHTML = "";
         text.innerHTML.split("").forEach((char) => {
             textHTML += `<span>${char}</span>`;
@@ -49,7 +49,7 @@ function Home() {
         text.innerHTML = textHTML;
 
         document
-            .querySelectorAll(".home-section__title span")
+            .querySelectorAll(".js-home__title span")
             .forEach((char, index) => {
                 setTimeout(() => {
                     char.style.animation = "revealChar 1s forwards";
@@ -61,9 +61,9 @@ function Home() {
         <section className="home">
             <div className="scroller" data-speed="slow" data-direction="left">
                 <div className="scroller__inner">
-                    <p className="home-section__title">
+                    <h1 className="home__title js-home__title">
                         STEPAN DORDIAI FRONT-END DEVELOPER
-                    </p>
+                    </h1>
                 </div>
             </div>
         </section>

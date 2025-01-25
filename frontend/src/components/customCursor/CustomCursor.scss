@@ -1,11 +1,11 @@
 #custom-cursor {
     position: fixed;
     top: -100px;
-    z-index: 5;
+    z-index: 3;
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: var(--color);
+    background: var(--txt-clr);
     width: 10px;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
@@ -27,7 +27,7 @@
         left: 50%;
         transform-origin: 0px 75px;
         opacity: 0;
-        color: var(--bg-color);
+        color: var(--bg-clr);
         font-weight: 300;
     }
 }

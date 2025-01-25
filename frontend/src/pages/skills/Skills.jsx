@@ -12,7 +12,7 @@ function Skills() {
     return (
         <>
             <section className="skills js-skills">
-                <div className="grid-container">
+                <div className="skills-grid">
                     {skillsData.map((skill) => {
                         return (
                             <Skill

@@ -12,7 +12,7 @@ function About() {
 
     return (
         <section className="about">
-            {"Self-taught Web developer with more than 2 years of diverse experience in designing and building responsive web pages and applications. Constantly seeking for new challenges and opportunities that will expand my skill set"
+            {`Self-taught Web developer with more than 2 years of diverse experience in designing and building responsive web pages and applications. Constantly seeking for new challenges and opportunities that will expand my skill set`
                 .split(` `)
                 .map((word, index) => {
                     return (

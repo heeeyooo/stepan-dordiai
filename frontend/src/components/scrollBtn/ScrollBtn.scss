@@ -2,8 +2,8 @@
     position: fixed;
     right: 50px;
     top: 45%;
-    font-size: 20px;
-    color: var(--color);
+    font-size: 1.5rem;
+    color: var(--txt-clr);
     opacity: 0;
     animation: revealUpBtn 1s forwards;
 }
@@ -19,8 +19,8 @@
     position: fixed;
     right: 50px;
     bottom: 45%;
-    font-size: 20px;
-    color: var(--color);
+    font-size: 1.5rem;
+    color: var(--txt-clr);
     opacity: 0;
     animation: revealDownBtn 1s forwards;
 }

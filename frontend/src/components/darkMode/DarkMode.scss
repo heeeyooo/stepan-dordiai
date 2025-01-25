@@ -6,12 +6,10 @@
     right: -50px;
     bottom: 50px;
     width: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    z-index: 2;
+    z-index: 1;
     @include glass-effect;
     animation: revealDarkModeContainer 1s forwards;
 }
@@ -22,11 +20,14 @@
     }
 }
 
-.dark-mode-btn {
-    color: var(--color);
+.dark-mode__btn {
+    color: var(--txt-clr);
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 300;
-    transition: opacity 0.15s;
+    transition: opacity 150ms;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 @media (max-width: 1000px) {

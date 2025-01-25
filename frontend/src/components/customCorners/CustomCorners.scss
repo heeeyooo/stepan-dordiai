@@ -3,52 +3,52 @@
 .corner-top-left {
     position: fixed;
     @include top-right-bottom-left(50px, "", "", 50px);
+    z-index: 1;
     width: 0;
     aspect-ratio: 1 / 1;
-    border-top: 5px solid var(--color);
-    border-left: 5px solid var(--color);
+    border-top: 5px solid var(--txt-clr);
+    border-left: 5px solid var(--txt-clr);
     pointer-events: none;
     opacity: 0;
-    z-index: 2;
     animation: revealCorner 1s forwards;
 }
 
 .corner-top-right {
     position: fixed;
     @include top-right-bottom-left(50px, 50px, "", "");
+    z-index: 1;
     width: 0;
     aspect-ratio: 1 / 1;
-    border-top: 5px solid var(--color);
-    border-right: 5px solid var(--color);
+    border-top: 5px solid var(--txt-clr);
+    border-right: 5px solid var(--txt-clr);
     pointer-events: none;
     opacity: 0;
-    z-index: 2;
     animation: revealCorner 1s forwards;
 }
 
 .corner-bottom-right {
     position: fixed;
     @include top-right-bottom-left("", 50px, 50px, "");
+    z-index: 1;
     width: 0;
     aspect-ratio: 1 / 1;
-    border-bottom: 5px solid var(--color);
-    border-right: 5px solid var(--color);
+    border-bottom: 5px solid var(--txt-clr);
+    border-right: 5px solid var(--txt-clr);
     pointer-events: none;
     opacity: 0;
-    z-index: 2;
     animation: revealCorner 1s forwards;
 }
 
 .corner-bottom-left {
     position: fixed;
     @include top-right-bottom-left("", "", 50px, 50px);
+    z-index: 1;
     width: 0;
     aspect-ratio: 1 / 1;
-    border-bottom: 5px solid var(--color);
-    border-left: 5px solid var(--color);
+    border-bottom: 5px solid var(--txt-clr);
+    border-left: 5px solid var(--txt-clr);
     pointer-events: none;
     opacity: 0;
-    z-index: 2;
     animation: revealCorner 1s forwards;
 }
 

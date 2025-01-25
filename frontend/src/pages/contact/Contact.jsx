@@ -10,37 +10,33 @@ function Contact() {
     }, []);
 
     function copyMail() {
-        const mailLink = document.querySelector(".mail-link");
+        const mailLink = document.querySelector(".js-mail__link");
         const mailContent = mailLink.textContent;
-        //
         navigator.clipboard.writeText(mailContent);
-        //
-        document.querySelector(".mail-copy-btn .dublicate").style.display =
+        document.querySelector(".mail__copy-btn .dublicate").style.display =
             "inline";
-        document.querySelector(".mail-copy-btn span").style.display = "none";
+        document.querySelector(".mail__copy-btn span").style.display = "none";
 
         setTimeout(() => {
-            document.querySelector(".mail-copy-btn .dublicate").style.display =
+            document.querySelector(".mail__copy-btn .dublicate").style.display =
                 "none";
-            document.querySelector(".mail-copy-btn span").style.display =
+            document.querySelector(".mail__copy-btn span").style.display =
                 "inline";
         }, 3000);
     }
 
     function copyTel() {
-        const telLink = document.querySelector(".tel-link");
+        const telLink = document.querySelector(".js-tel__link");
         const telContent = telLink.textContent;
-        //
         navigator.clipboard.writeText(telContent);
-        //
-        document.querySelector(".tel-copy-btn .dublicate").style.display =
+        document.querySelector(".tel__copy-btn .dublicate").style.display =
             "inline";
-        document.querySelector(".tel-copy-btn span").style.display = "none";
+        document.querySelector(".tel__copy-btn span").style.display = "none";
 
         setTimeout(() => {
-            document.querySelector(".tel-copy-btn .dublicate").style.display =
+            document.querySelector(".tel__copy-btn .dublicate").style.display =
                 "none";
-            document.querySelector(".tel-copy-btn span").style.display =
+            document.querySelector(".tel__copy-btn span").style.display =
                 "inline";
         }, 3000);
     }
@@ -49,21 +45,21 @@ function Contact() {
 
     return (
         <section className="contact">
-            <div className="mail-tel-container">
+            <div className="contacts">
                 <div className="text-line-container">
                     <div className="text-line">
-                        <div className="mail-container">
+                        <div className="mail">
                             <a
                                 onMouseEnter={() => makeCursorActive("Email")}
                                 onMouseLeave={makeCursorNormal}
-                                className="mail-link"
+                                className="mail__link js-mail__link"
                                 href="mailto:stepandordiai@gmail.com"
                             >
                                 stepandordiai@gmail.com
                             </a>
                             <span>|</span>
                             <button
-                                className="mail-copy-btn"
+                                className="mail__copy-btn"
                                 onMouseEnter={() => makeCursorActive("Copy")}
                                 onMouseLeave={makeCursorNormal}
                                 onClick={copyMail}
@@ -76,20 +72,20 @@ function Contact() {
                 </div>
                 <div className="text-line-container">
                     <div className="text-line">
-                        <div className="tel-container">
+                        <div className="tel">
                             <a
                                 href="tel:+420722001016"
                                 onMouseEnter={() =>
                                     makeCursorActive("Phone number")
                                 }
                                 onMouseLeave={makeCursorNormal}
-                                className="tel-link"
+                                className="tel__link js-tel__link"
                             >
                                 +420 722 001 016
                             </a>
                             <span>|</span>
                             <button
-                                className="tel-copy-btn"
+                                className="tel__copy-btn"
                                 onMouseEnter={() => makeCursorActive("Copy")}
                                 onMouseLeave={makeCursorNormal}
                                 onClick={copyTel}
@@ -101,7 +97,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <ul className="socials-list">
+            <ul className="socials">
                 <li>
                     <div className="text-line-container">
                         <div className="text-line">
