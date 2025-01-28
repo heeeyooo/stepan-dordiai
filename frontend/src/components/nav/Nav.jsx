@@ -123,7 +123,7 @@ function Nav() {
                 <ul className="nav__footer-list">
                     <li>
                         <a
-                            href="https://github.com/heeeyooo"
+                            href="https://github.com/stepandordiai"
                             target="_blank"
                             title="GitHub"
                         >

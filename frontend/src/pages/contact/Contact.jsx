@@ -104,7 +104,7 @@ function Contact() {
                             <a
                                 onMouseEnter={() => makeCursorActive("GitHub")}
                                 onMouseLeave={makeCursorNormal}
-                                href="https://github.com/heeeyooo"
+                                href="https://github.com/stepandordiai"
                                 target="_blank"
                             >
                                 <i className="fa-brands fa-github"></i>
