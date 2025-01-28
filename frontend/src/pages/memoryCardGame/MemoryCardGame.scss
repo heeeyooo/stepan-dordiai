@@ -16,6 +16,11 @@
 .game-one__back-btn {
     align-self: flex-start;
     color: var(--txt-clr);
+    transition: opacity 150ms;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .game-one__title-result {

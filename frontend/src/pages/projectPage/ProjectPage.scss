@@ -6,8 +6,10 @@
 
 .project-page {
     position: fixed;
-    @include top-right-bottom-left(50px, 50px, 50px, 50px);
-    @include flex-center;
+    @include top-right-bottom-left(100px, 100px, 100px, 100px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     opacity: 0;
     animation: revealProjectPage 1s forwards;
 }
@@ -20,65 +22,34 @@
 
 .project-page__back-btn {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 0;
+    left: 0;
     color: var(--txt-clr);
     transition: opacity 150ms;
-}
 
-.project-page__back-btn:hover {
-    opacity: 0.5;
-}
-
-.project-page__video,
-.project-page__img {
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    transform: translateY(-50%);
-    width: 50%;
-    border: 5px solid var(--semi-tp-10);
-}
-
-.project-page__info {
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    row-gap: 25px;
-}
-
-.project-page__qr {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column-reverse;
-
-    span {
-        font-weight: 300;
-        cursor: pointer;
-        transition: opacity 150ms;
-
-        &:hover {
-            opacity: 0.5;
-        }
+    &:hover {
+        opacity: 0.5;
     }
 }
 
-.project-page__qr-img {
-    width: 100px;
-    aspect-ratio: 1 / 1;
+.project-page__details {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 25px;
 }
 
 .project-page__links {
     display: flex;
     flex-direction: column;
     row-gap: 25px;
-    font-weight: 300;
 
     a {
+        font-weight: 300;
         color: var(--txt-clr);
         transition: opacity 150ms;
 
@@ -99,26 +70,21 @@
     font-weight: 300;
 }
 
+.project-page__video,
+.project-page__img {
+    width: clamp(450px, 45vw, 50%);
+    border: 5px solid var(--semi-tp-10);
+}
+
 @media (max-width: 1000px) {
     .project-page {
-        @include top-right-bottom-left(25px, 25px, 25px, 25px);
+        @include top-right-bottom-left(50px, 50px, 50px, 50px);
     }
+}
 
-    .project-page__back-btn {
-        top: 25px;
-        left: 25px;
-    }
-
+@media (max-width: 550px) {
     .project-page__video,
     .project-page__img {
-        top: 40%;
-        right: 0;
-        left: 0;
         width: 100%;
-    }
-
-    .project-page__info {
-        left: 25px;
-        bottom: 25px;
     }
 }

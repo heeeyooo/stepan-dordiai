@@ -15,46 +15,14 @@ const ProjectPage = () => {
         videoNone,
         imgNone,
         liveSiteNone,
-        qrIcon,
     } = project;
-
-    const img = document.createElement("img");
-
-    function showQr() {
-        img.src = qrIcon;
-        img.classList.add("project-page__qr-img");
-        document.querySelector(".project-page__qr").append(img);
-    }
-
-    function removeQr() {
-        img.remove();
-    }
 
     return (
         <section className="project-page">
             <NavLink className="project-page__back-btn" to="/portfolio">
                 Back
             </NavLink>
-            <video
-                className={`project-page__video ${videoNone}`}
-                autoPlay={true}
-                loop={true}
-                playsInline={true}
-            >
-                <source src={projectVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <img
-                className={`project-page__img ${imgNone}`}
-                src={projectImg}
-                alt={title}
-            />
-            <div className="project-page__info">
-                <div className="project-page__qr">
-                    <span onMouseEnter={showQr} onMouseLeave={removeQr}>
-                        QR-Code <i className="fa-solid fa-qrcode"></i>
-                    </span>
-                </div>
+            <div className="project-page__details">
                 <div className="project-page__links">
                     <a className={liveSiteNone} href={liveSite} target="_blank">
                         Live Site{" "}
@@ -69,6 +37,23 @@ const ProjectPage = () => {
                     <p className="project-page__title">{title}</p>
                 </div>
             </div>
+            {/* If there is a video tag, the img tag will not be displayed and vice versa */}
+            <video
+                className={`project-page__video ${videoNone}`}
+                autoPlay={true}
+                loop={true}
+                playsInline={true}
+                muted={true}
+            >
+                <source src={projectVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <img
+                className={`project-page__img ${imgNone}`}
+                src={projectImg}
+                alt={title}
+                loading="lazy"
+            />
         </section>
     );
 };

@@ -77,6 +77,7 @@ const Playground = () => {
                                                     target="_blank"
                                                     title="Live Site"
                                                 >
+                                                    Live{" "}
                                                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </li>
@@ -86,6 +87,7 @@ const Playground = () => {
                                                     target="_blank"
                                                     title="GitHub Repo"
                                                 >
+                                                    GitHub{" "}
                                                     <i className="fa-brands fa-github"></i>
                                                 </a>
                                             </li>
@@ -95,6 +97,7 @@ const Playground = () => {
                                                     target="_blank"
                                                     title="Telegram Bot"
                                                 >
+                                                    Telegram{" "}
                                                     <i className="fa-brands fa-telegram"></i>
                                                 </a>
                                             </li>
