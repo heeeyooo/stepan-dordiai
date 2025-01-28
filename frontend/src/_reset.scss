@@ -1,5 +1,7 @@
 /* Reset */
 * {
+    // Hide bg on tap for mobile
+    -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
