@@ -49,11 +49,11 @@ function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/playground" element={<Playground />} />
                     <Route path="/games" element={<Games />} />
-                    <Route
+                    {/* <Route
                         path="/memory-card-game"
                         element={<MemoryCardGame />}
                     />
-                    <Route path="/invaders-game" element={<InvadersGame />} />
+                    <Route path="/invaders-game" element={<InvadersGame />} /> */}
                 </Routes>
                 <Footer />
                 {/* <CubeBackground /> */}
