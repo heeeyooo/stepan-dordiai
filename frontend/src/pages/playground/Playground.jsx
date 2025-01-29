@@ -81,7 +81,7 @@ const Playground = () => {
                                                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                                 </a>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <a
                                                     href={githubRepo}
                                                     target="_blank"
@@ -90,8 +90,8 @@ const Playground = () => {
                                                     GitHub{" "}
                                                     <i className="fa-brands fa-github"></i>
                                                 </a>
-                                            </li>
-                                            <li className={telegramBotNone}>
+                                            </li> */}
+                                            {/* <li className={telegramBotNone}>
                                                 <a
                                                     href={telegramBot}
                                                     target="_blank"
@@ -100,7 +100,7 @@ const Playground = () => {
                                                     Telegram{" "}
                                                     <i className="fa-brands fa-telegram"></i>
                                                 </a>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </div>
                                 </div>

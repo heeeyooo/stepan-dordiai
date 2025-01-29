@@ -2,21 +2,21 @@
     {
         "id": 1,
         "title": "Bed Adventures",
-        "liveSite": "https://heeeyooo.github.io/bed-adventures/",
+        "liveSite": "https://stepandordiai.github.io/bed-adventures/",
         "githubRepo": "https://github.com/stepandordiai/bed-adventures",
         "telegramBotNone": "none"
     },
     {
         "id": 2,
         "title": "Rock Paper Scissors",
-        "liveSite": "https://heeeyooo.github.io/rock-paper-scissors/",
+        "liveSite": "https://stepandordiai.github.io/rock-paper-scissors/",
         "githubRepo": "https://github.com/stepandordiai/rock-paper-scissors",
         "telegramBot": "https://t.me/kcor_repap_srossics_bot"
     },
     {
         "id": 3,
         "title": "To Do List",
-        "liveSite": "https://heeeyooo.github.io/to-do-list/",
+        "liveSite": "https://stepandordiai.github.io/to-do-list/",
         "githubRepo": "https://github.com/stepandordiai/to-do-list",
         "telegramBot": "https://t.me/done_list_bot"
     },
@@ -30,49 +30,49 @@
     {
         "id": 5,
         "title": "countdown",
-        "liveSite": "https://heeeyooo.github.io/countdown/",
+        "liveSite": "https://stepandordiai.github.io/countdown/",
         "githubRepo": "https://github.com/stepandordiai/countdown",
         "telegramBotNone": "none"
     },
     {
         "id": 6,
         "title": "tiermaker",
-        "liveSite": "https://heeeyooo.github.io/drag-n-drop-tier-list/",
+        "liveSite": "https://stepandordiai.github.io/drag-n-drop-tier-list/",
         "githubRepo": "https://github.com/stepandordiai/drag-n-drop-tier-list",
         "telegramBotNone": "none"
     },
     {
         "id": 7,
         "title": "gallery",
-        "liveSite": "https://heeeyooo.github.io/gallery/",
+        "liveSite": "https://stepandordiai.github.io/gallery/",
         "githubRepo": "https://github.com/stepandordiai/gallery",
         "telegramBotNone": "none"
     },
     {
         "id": 8,
         "title": "Calculator",
-        "liveSite": "https://heeeyooo.github.io/calculator/",
+        "liveSite": "https://stepandordiai.github.io/calculator/",
         "githubRepo": "https://github.com/stepandordiai/calculator",
         "telegramBotNone": "none"
     },
     {
         "id": 9,
         "title": "Image comparison",
-        "liveSite": "https://heeeyooo.github.io/img-comparison/",
+        "liveSite": "https://stepandordiai.github.io/img-comparison/",
         "githubRepo": "https://github.com/stepandordiai/img-comparison",
         "telegramBotNone": "none"
     },
     {
         "id": 10,
         "title": "Currency converter",
-        "liveSite": "https://heeeyooo.github.io/currency-converter/",
+        "liveSite": "https://stepandordiai.github.io/currency-converter/",
         "githubRepo": "https://github.com/stepandordiai/currency-converter",
         "telegramBotNone": "none"
     },
     {
         "id": 11,
         "title": "Spin the Wheel!",
-        "liveSite": "https://heeeyooo.github.io/spin-the-wheel/",
+        "liveSite": "https://stepandordiai.github.io/spin-the-wheel/",
         "githubRepo": "https://github.com/stepandordiai/spin-the-wheel",
         "telegramBot": "https://t.me/spinthe_wheel_bot"
     },
