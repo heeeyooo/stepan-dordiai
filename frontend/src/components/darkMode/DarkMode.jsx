@@ -20,6 +20,10 @@ function DarkMode() {
             variables.style.setProperty("--bg-clr", "var(--bg-clr-light)");
             variables.style.setProperty("--txt-clr", "var(--txt-clr-dark)");
             variables.style.setProperty(
+                "--semi-tp-05",
+                "var(--semi-tp-05-dark)"
+            );
+            variables.style.setProperty(
                 "--semi-tp-10",
                 "var(--semi-tp-10-dark)"
             );
@@ -39,6 +43,10 @@ function DarkMode() {
         } else {
             variables.style.setProperty("--bg-clr", "var(--bg-clr-dark)");
             variables.style.setProperty("--txt-clr", "var(--txt-clr-light)");
+            variables.style.setProperty(
+                "--semi-tp-05",
+                "var(--semi-tp-05-light)"
+            );
             variables.style.setProperty(
                 "--semi-tp-10",
                 "var(--semi-tp-10-light)"
@@ -84,7 +92,7 @@ function DarkMode() {
                 }
                 onMouseLeave={makeCursorNormal}
             >
-                DARK
+                LIGHT
             </button>
         </div>
     );

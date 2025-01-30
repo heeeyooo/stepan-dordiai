@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../burgerBtn/BurgerBtn";
 import { isTouchDevice } from "../../utils/isTouchDevice";
+import portfolioData from "../../data/portfolioData";
+import pgData from "./../../data/pgData.json";
 import "./Nav.scss";
 
 function Nav() {
@@ -86,6 +88,9 @@ function Nav() {
                         to="/portfolio"
                     >
                         <span>PORTFOLIO</span>
+                        <span className="nav__list-qty">
+                            {portfolioData.length}
+                        </span>
                     </NavLink>
                 </li>
                 <li>
@@ -106,6 +111,7 @@ function Nav() {
                         to="/playground"
                     >
                         <span>PLAYGROUND</span>
+                        <span className="nav__list-qty">{pgData.length}</span>
                     </NavLink>
                 </li>
                 <li>
@@ -116,6 +122,9 @@ function Nav() {
                         to="/games"
                     >
                         <span className="nav__link-extra-font">GAMES</span>
+                        <span className="nav__list-qty nav__link-extra-font">
+                            2
+                        </span>
                     </NavLink>
                 </li>
             </ul>

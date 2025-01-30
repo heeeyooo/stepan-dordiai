@@ -32,14 +32,16 @@
 .games-section__pagination {
     span {
         width: 5px;
-        height: 25px;
+        height: 5px;
         background: var(--semi-tp-50);
         cursor: pointer;
+        transition: all 0.3s;
     }
 }
 
 .active {
     background: var(--txt-clr) !important;
+    height: 25px !important;
 }
 
 .game-wrapper {

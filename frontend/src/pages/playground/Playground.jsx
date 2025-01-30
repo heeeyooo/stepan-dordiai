@@ -67,21 +67,22 @@ const Playground = () => {
                                         {id < 10 ? `00${id}` : `0${id}`}
                                     </p>
                                     <div className="pg-project__right-side">
-                                        <p className="pg-project__title">
-                                            {title}
-                                        </p>
-                                        <ul className="pg-project__links">
-                                            <li>
-                                                <a
-                                                    href={liveSite}
-                                                    target="_blank"
-                                                    title="Live Site"
-                                                >
-                                                    Live{" "}
-                                                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                                                </a>
-                                            </li>
-                                            {/* <li>
+                                        <div>
+                                            <p className="pg-project__title">
+                                                {title}
+                                            </p>
+                                            <ul className="pg-project__links">
+                                                <li>
+                                                    <a
+                                                        href={liveSite}
+                                                        target="_blank"
+                                                        title="Live Site"
+                                                    >
+                                                        Live{" "}
+                                                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                                    </a>
+                                                </li>
+                                                {/* <li>
                                                 <a
                                                     href={githubRepo}
                                                     target="_blank"
@@ -91,7 +92,7 @@ const Playground = () => {
                                                     <i className="fa-brands fa-github"></i>
                                                 </a>
                                             </li> */}
-                                            {/* <li className={telegramBotNone}>
+                                                {/* <li className={telegramBotNone}>
                                                 <a
                                                     href={telegramBot}
                                                     target="_blank"
@@ -101,7 +102,9 @@ const Playground = () => {
                                                     <i className="fa-brands fa-telegram"></i>
                                                 </a>
                                             </li> */}
-                                        </ul>
+                                            </ul>
+                                        </div>
+                                        <video src=""></video>
                                     </div>
                                 </div>
                             );

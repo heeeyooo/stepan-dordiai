@@ -5,16 +5,18 @@
     top: 50px;
     right: -50px;
     bottom: 50px;
+    z-index: 1;
     width: 50px;
     @include flex-between;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    z-index: 1;
     @include glass-effect;
-    animation: revealDarkModeContainer 1s forwards;
+    background: var(--bg-semi-tp-50);
+    transition: background-color 0.3s;
+    animation: revealDarkMode 1s forwards;
 }
 
-@keyframes revealDarkModeContainer {
+@keyframes revealDarkMode {
     to {
         right: 0;
     }

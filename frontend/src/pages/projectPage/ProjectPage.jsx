@@ -48,12 +48,12 @@ const ProjectPage = () => {
                 <source src={projectVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <img
+            {/* <img
                 className={`project-page__img ${imgNone}`}
                 src={projectImg}
                 alt={title}
                 loading="lazy"
-            />
+            /> */}
         </section>
     );
 };

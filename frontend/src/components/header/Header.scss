@@ -7,7 +7,9 @@
     left: 50px;
     height: 50px;
     @include glass-effect;
+    background: var(--bg-semi-tp-50);
     z-index: 1;
+    transition: background-color 0.3s;
 }
 
 @media (max-width: 1000px) {

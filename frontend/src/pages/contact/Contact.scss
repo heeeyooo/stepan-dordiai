@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    row-gap: 50px;
+    // row-gap: 50px;
 }
 
 .mail,
@@ -35,6 +35,10 @@
     font-size: 1rem;
     color: var(--txt-clr);
     font-weight: 300;
+    transition: opacity 0.3s;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .mail__copy-btn .dublicate,
@@ -43,13 +47,22 @@
 }
 
 .socials {
-    @include flex-between;
-    width: 50%;
+    // @include flex-between;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    // row-gap: 5px;
+    // width: 50%;
 }
 
 .socials a {
-    font-size: clamp(20px, 3vw, 24px);
+    // font-size: clamp(20px, 3vw, 24px);
     color: var(--txt-clr);
+    transition: opacity 0.3s;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -57,10 +70,10 @@
         @include top-right-bottom-left(50px, 50px, 50px, 50px);
     }
     .contacts {
-        row-gap: 25px;
+        // row-gap: 25px;
     }
 
     .socials {
-        width: 100%;
+        // width: 100%;
     }
 }

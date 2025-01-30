@@ -1,8 +1,13 @@
 import penguinVideo from "./videos/penguin.mp4";
 import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
-import cloudImg from "./images/cloud.png";
-import tastyBurgerImg from "./images/tasty-burger.png";
+import cloudVideo from "./videos/cloud.mp4";
+import tastyBurgerVideo from "./videos/tasty-burger.mp4";
 import yagodaKarpatUAVideo from "./videos/yagoda-karpat-ua.mp4";
+import penguinPoster from "./images/penguin_Moment.jpg";
+import stepanDordiaiPoster from "./images/stepan-dordiai_Moment.jpg";
+import cloudPoster from "./images/cloud_Moment.jpg";
+import tastyBurgerPoster from "./images/tasty-burger_Moment.jpg";
+import yagodaKarpatPoster from "./images/yagoda-karpat-ua_Moment.jpg";
 
 const portfolioData = [
     {
@@ -13,7 +18,8 @@ const portfolioData = [
         liveSite: "https://yagodakarpat-ua.netlify.app/",
         githubRepo: "https://github.com/stepandordiai/yagoda-karpat-ua",
         projectVideo: yagodaKarpatUAVideo,
-        imgNone: "none",
+        projectVideoPoster: yagodaKarpatPoster,
+        // imgNone: "none",
     },
     {
         id: 4,
@@ -22,8 +28,10 @@ const portfolioData = [
         titleDesc: "Special website",
         liveSite: "https://heeeyooo.github.io/tasty-burger/",
         githubRepo: "https://github.com/stepandordiai/tasty-burger",
-        projectImg: tastyBurgerImg,
-        videoNone: "none",
+        projectVideo: tastyBurgerVideo,
+        projectVideoPoster: tastyBurgerPoster,
+        // projectImg: tastyBurgerImg,
+        // videoNone: "none",
     },
     {
         id: 3,
@@ -32,8 +40,10 @@ const portfolioData = [
         titleDesc: "Weather website",
         liveSite: "https://cloud-project.netlify.app/",
         githubRepo: "https://github.com/stepandordiai/cloud",
-        projectImg: cloudImg,
-        videoNone: "none",
+        projectVideo: cloudVideo,
+        projectVideoPoster: cloudPoster,
+        // projectImg: cloudImg,
+        // videoNone: "none",
     },
     {
         id: 2,
@@ -42,7 +52,8 @@ const portfolioData = [
         titleDesc: "Portfolio website",
         githubRepo: "https://github.com/stepandordiai/stepan-dordiai",
         projectVideo: stepanDordiaiVideo,
-        imgNone: "none",
+        projectVideoPoster: stepanDordiaiPoster,
+        // imgNone: "none",
         liveSiteNone: "none",
     },
     {
@@ -53,7 +64,8 @@ const portfolioData = [
         liveSite: "https://penguin-project.netlify.app/",
         githubRepo: "https://github.com/stepandordiai/penguin",
         projectVideo: penguinVideo,
-        imgNone: "none",
+        projectVideoPoster: penguinPoster,
+        // imgNone: "none",
     },
 ];
 

@@ -12,9 +12,9 @@ function Loading() {
 
     return (
         // I wrote inline style to check display in order to start animate elements
-        <h1 className="loading" style={{ display: "initial" }}>
+        <p className="loading" style={{ display: "initial" }}>
             STEPAN DORDIAI
-        </h1>
+        </p>
     );
 }
 

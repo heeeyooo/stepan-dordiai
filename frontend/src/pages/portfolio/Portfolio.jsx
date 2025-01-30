@@ -20,6 +20,8 @@ function Portfolio() {
                             production={project.production}
                             id={project.id}
                             index={index}
+                            projectVideo={project.projectVideo}
+                            projectVideoPoster={project.projectVideoPoster}
                         />
                     );
                 })}
