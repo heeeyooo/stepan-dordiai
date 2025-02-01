@@ -1,30 +1,30 @@
 [
     {
         "id": 1,
-        "title": "Bed Adventures",
+        "title": "Heart Clicker",
+        "liveSite": "https://heart-clicker-db68c.web.app/",
+        "githubRepo": "https://github.com/stepandordiai/heart-clicker",
+        "telegramBot": "https://t.me/heart_clicker_bot"
+    },
+    {
+        "id": 2,
+        "title": "Bed Adventures (18+)",
         "liveSite": "https://stepandordiai.github.io/bed-adventures/",
         "githubRepo": "https://github.com/stepandordiai/bed-adventures"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Rock Paper Scissors",
         "liveSite": "https://stepandordiai.github.io/rock-paper-scissors/",
         "githubRepo": "https://github.com/stepandordiai/rock-paper-scissors",
         "telegramBot": "https://t.me/kcor_repap_srossics_bot"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "To Do List",
         "liveSite": "https://stepandordiai.github.io/to-do-list/",
         "githubRepo": "https://github.com/stepandordiai/to-do-list",
         "telegramBot": "https://t.me/done_list_bot"
-    },
-    {
-        "id": 4,
-        "title": "Heart Clicker",
-        "liveSite": "https://heart-clicker-db68c.web.app/",
-        "githubRepo": "https://github.com/stepandordiai/heart-clicker",
-        "telegramBot": "https://t.me/heart_clicker_bot"
     },
     {
         "id": 5,
