@@ -82,26 +82,28 @@ const Playground = () => {
                                                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                                     </a>
                                                 </li>
-                                                {/* <li>
-                                                <a
-                                                    href={githubRepo}
-                                                    target="_blank"
-                                                    title="GitHub Repo"
-                                                >
-                                                    GitHub{" "}
-                                                    <i className="fa-brands fa-github"></i>
-                                                </a>
-                                            </li> */}
-                                                {/* <li className={telegramBotNone}>
-                                                <a
-                                                    href={telegramBot}
-                                                    target="_blank"
-                                                    title="Telegram Bot"
-                                                >
-                                                    Telegram{" "}
-                                                    <i className="fa-brands fa-telegram"></i>
-                                                </a>
-                                            </li> */}
+                                                <li>
+                                                    <a
+                                                        href={githubRepo}
+                                                        target="_blank"
+                                                        title="GitHub Repo"
+                                                    >
+                                                        GitHub{" "}
+                                                        <i className="fa-brands fa-github"></i>
+                                                    </a>
+                                                </li>
+                                                {telegramBot && (
+                                                    <li>
+                                                        <a
+                                                            href={telegramBot}
+                                                            target="_blank"
+                                                            title="Telegram Bot"
+                                                        >
+                                                            Telegram{" "}
+                                                            <i className="fa-brands fa-telegram"></i>
+                                                        </a>
+                                                    </li>
+                                                )}
                                             </ul>
                                         </div>
                                         <video src=""></video>

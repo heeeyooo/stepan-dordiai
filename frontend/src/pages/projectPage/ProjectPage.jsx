@@ -24,10 +24,13 @@ const ProjectPage = () => {
             </NavLink>
             <div className="project-page__details">
                 <div className="project-page__links">
-                    <a className={liveSiteNone} href={liveSite} target="_blank">
-                        Live Site{" "}
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
+                    {liveSite && (
+                        <a href={liveSite} target="_blank">
+                            Live Site{" "}
+                            <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    )}
+
                     <a href={githubRepo} target="_blank">
                         GitHub Repo <i className="fa-brands fa-github"></i>
                     </a>

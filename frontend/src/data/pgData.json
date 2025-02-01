@@ -3,8 +3,7 @@
         "id": 1,
         "title": "Bed Adventures",
         "liveSite": "https://stepandordiai.github.io/bed-adventures/",
-        "githubRepo": "https://github.com/stepandordiai/bed-adventures",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/bed-adventures"
     },
     {
         "id": 2,
@@ -31,43 +30,37 @@
         "id": 5,
         "title": "countdown",
         "liveSite": "https://stepandordiai.github.io/countdown/",
-        "githubRepo": "https://github.com/stepandordiai/countdown",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/countdown"
     },
     {
         "id": 6,
         "title": "tiermaker",
         "liveSite": "https://stepandordiai.github.io/drag-n-drop-tier-list/",
-        "githubRepo": "https://github.com/stepandordiai/drag-n-drop-tier-list",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/drag-n-drop-tier-list"
     },
     {
         "id": 7,
         "title": "gallery",
         "liveSite": "https://stepandordiai.github.io/gallery/",
-        "githubRepo": "https://github.com/stepandordiai/gallery",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/gallery"
     },
     {
         "id": 8,
         "title": "Calculator",
         "liveSite": "https://stepandordiai.github.io/calculator/",
-        "githubRepo": "https://github.com/stepandordiai/calculator",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/calculator"
     },
     {
         "id": 9,
         "title": "Image comparison",
         "liveSite": "https://stepandordiai.github.io/img-comparison/",
-        "githubRepo": "https://github.com/stepandordiai/img-comparison",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/img-comparison"
     },
     {
         "id": 10,
         "title": "Currency converter",
         "liveSite": "https://stepandordiai.github.io/currency-converter/",
-        "githubRepo": "https://github.com/stepandordiai/currency-converter",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/currency-converter"
     },
     {
         "id": 11,
@@ -87,7 +80,6 @@
         "id": 13,
         "title": "QRCG",
         "liveSite": "https://qrcg-pg-project.netlify.app/",
-        "githubRepo": "https://github.com/stepandordiai/qrcg",
-        "telegramBotNone": "none"
+        "githubRepo": "https://github.com/stepandordiai/qrcg"
     }
 ]

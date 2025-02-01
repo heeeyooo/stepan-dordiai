@@ -1,13 +1,14 @@
-import penguinVideo from "./videos/penguin.mp4";
-import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
-import cloudVideo from "./videos/cloud.mp4";
-import tastyBurgerVideo from "./videos/tasty-burger.mp4";
 import yagodaKarpatUAVideo from "./videos/yagoda-karpat-ua.mp4";
-import penguinPoster from "./images/penguin_Moment.jpg";
-import stepanDordiaiPoster from "./images/stepan-dordiai_Moment.jpg";
-import cloudPoster from "./images/cloud_Moment.jpg";
+import tastyBurgerVideo from "./videos/tasty-burger.mp4";
+import cloudVideo from "./videos/cloud.mp4";
+import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
+import penguinVideo from "./videos/penguin.mp4";
+
+import yagodaKarpatUAPoster from "./images/yagoda-karpat-ua_Moment.jpg";
 import tastyBurgerPoster from "./images/tasty-burger_Moment.jpg";
-import yagodaKarpatPoster from "./images/yagoda-karpat-ua_Moment.jpg";
+import cloudPoster from "./images/cloud_Moment.jpg";
+import stepanDordiaiPoster from "./images/stepan-dordiai_Moment.jpg";
+import penguinPoster from "./images/penguin_Moment.jpg";
 
 const portfolioData = [
     {
@@ -18,8 +19,7 @@ const portfolioData = [
         liveSite: "https://yagodakarpat-ua.netlify.app/",
         githubRepo: "https://github.com/stepandordiai/yagoda-karpat-ua",
         projectVideo: yagodaKarpatUAVideo,
-        projectVideoPoster: yagodaKarpatPoster,
-        // imgNone: "none",
+        projectVideoPoster: yagodaKarpatUAPoster,
     },
     {
         id: 4,
@@ -30,8 +30,6 @@ const portfolioData = [
         githubRepo: "https://github.com/stepandordiai/tasty-burger",
         projectVideo: tastyBurgerVideo,
         projectVideoPoster: tastyBurgerPoster,
-        // projectImg: tastyBurgerImg,
-        // videoNone: "none",
     },
     {
         id: 3,
@@ -42,19 +40,15 @@ const portfolioData = [
         githubRepo: "https://github.com/stepandordiai/cloud",
         projectVideo: cloudVideo,
         projectVideoPoster: cloudPoster,
-        // projectImg: cloudImg,
-        // videoNone: "none",
     },
     {
         id: 2,
-        title: "Stepan Dordiai",
+        title: "STEPAN DORDIAI",
         production: "July | 2024",
         titleDesc: "Portfolio website",
         githubRepo: "https://github.com/stepandordiai/stepan-dordiai",
         projectVideo: stepanDordiaiVideo,
         projectVideoPoster: stepanDordiaiPoster,
-        // imgNone: "none",
-        liveSiteNone: "none",
     },
     {
         id: 1,
@@ -65,7 +59,6 @@ const portfolioData = [
         githubRepo: "https://github.com/stepandordiai/penguin",
         projectVideo: penguinVideo,
         projectVideoPoster: penguinPoster,
-        // imgNone: "none",
     },
 ];
 
