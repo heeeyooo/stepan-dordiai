@@ -1,17 +1,18 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import skillsData from "./../../data/skillsData";
 import Skill from "../../components/skill/Skill";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Skills.scss";
 
 function Skills() {
-    useEffect(() => {
-        document.title = "Stepan Dordiai | Skills";
-    }, []);
+    const pageTitle = "Skills";
 
     return (
         <>
             <section className="skills js-skills">
+                <Helmet>
+                    <title>{pageTitle}</title>
+                </Helmet>
                 <div className="skills-grid">
                     {skillsData.map((skill) => {
                         return (

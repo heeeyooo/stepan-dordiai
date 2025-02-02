@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 // import axios from "axios";
 import projects from "./../../data/pgData.json";
 import AnimateElements from "../../utils/AnimateElements";
@@ -6,9 +6,7 @@ import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Playground.scss";
 
 const Playground = () => {
-    useEffect(() => {
-        document.title = "Stepan Dordiai | Playground";
-    }, []);
+    const pageTitle = "Playground";
 
     // const [projects, setProjects] = useState([]);
 
@@ -48,6 +46,9 @@ const Playground = () => {
     return (
         <>
             <section className="pg js-pg">
+                <Helmet>
+                    <title>{pageTitle}</title>
+                </Helmet>
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
                     // I use sort method to show pg-project in order from new to old

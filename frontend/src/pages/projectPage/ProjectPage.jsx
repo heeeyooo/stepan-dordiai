@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import portfolioData from "../../data/portfolioData";
 import { useParams, NavLink } from "react-router-dom";
 import "./ProjectPage.scss";
@@ -17,8 +18,13 @@ const ProjectPage = () => {
         liveSiteNone,
     } = project;
 
+    const pageTitle = `Project | ${title}`;
+
     return (
         <section className="project-page">
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <NavLink className="project-page__back-btn" to="/portfolio">
                 Back
             </NavLink>

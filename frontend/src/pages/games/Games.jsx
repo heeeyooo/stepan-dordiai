@@ -1,12 +1,13 @@
+import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
 import { isTouchDevice } from "../../utils/isTouchDevice";
 import { useEffect } from "react";
 import "./Games.scss";
 
 const Games = () => {
-    useEffect(() => {
-        document.title = "Stepan Dordiai | Games";
+    const pageTile = "Games";
 
+    useEffect(() => {
         // I use useEffect to remove scroll to see the tilt effect on touch devices
         if (!isTouchDevice()) {
             document.querySelector(".games").style.overflowY = "scroll";
@@ -88,6 +89,9 @@ const Games = () => {
     return (
         <>
             <section className="games">
+                <Helmet>
+                    <title>{pageTile}</title>
+                </Helmet>
                 <div
                     className="game-wrapper"
                     onMouseMove={() =>

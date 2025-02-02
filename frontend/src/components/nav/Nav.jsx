@@ -122,9 +122,6 @@ function Nav() {
                         to="/games"
                     >
                         <span className="nav__link-extra-font">GAMES</span>
-                        <span className="nav__list-qty nav__link-extra-font">
-                            2
-                        </span>
                     </NavLink>
                 </li>
             </ul>

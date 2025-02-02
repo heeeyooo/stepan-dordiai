@@ -1,9 +1,12 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import shipPng from "./img/ship.png";
 import alienPng from "./img/alien.png";
 import "./InvadersGame.scss";
 
 const InvadersGame = () => {
+    const pageTitle = "Invaders Game";
+
     // board
     let tileSize;
     let rows;
@@ -258,6 +261,9 @@ const InvadersGame = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <canvas id="board" className="board"></canvas>
             <div className="move-left-side js-move-left-side"></div>
             <div className="move-right-side js-move-right-side"></div>

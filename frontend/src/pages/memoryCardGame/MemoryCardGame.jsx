@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import img1 from "./images/css3.svg";
@@ -11,10 +12,11 @@ import img8 from "./images/react.svg";
 import "./MemoryCardGame.scss";
 
 const MemoryCardGame = () => {
+    const pageTitle = "Memory Card Game";
+
     const section = useRef(null);
 
     useEffect(() => {
-        document.title = "Stepan Dordiai | Memory Card Game";
         lives();
         cardGenerator();
         if (
@@ -254,6 +256,9 @@ const MemoryCardGame = () => {
     return (
         <>
             <section className="game-1-section">
+                <Helmet>
+                    <title>{pageTitle}</title>
+                </Helmet>
                 <NavLink className="game-one__back-btn" to="/games">
                     Back
                 </NavLink>

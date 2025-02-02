@@ -1,10 +1,11 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import "./Home.scss";
 
 function Home() {
-    useEffect(() => {
-        document.title = "Stepan Dordiai | Home";
+    const pageTitle = "STEPAN DORDIAI";
 
+    useEffect(() => {
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             if (
                 document.querySelector(".loading").style.display === "initial"
@@ -59,6 +60,9 @@ function Home() {
 
     return (
         <section className="home">
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <div className="scroller" data-speed="slow" data-direction="left">
                 <div className="scroller__inner">
                     <h1 className="home__title js-home__title">

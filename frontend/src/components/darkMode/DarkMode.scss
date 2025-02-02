@@ -25,8 +25,8 @@
 .dark-mode__btn {
     color: var(--txt-clr);
     font-size: clamp(12px, 2vw, 16px);
-    font-weight: 300;
-    transition: opacity 150ms;
+    transition: opacity 0.3s;
+
     &:hover {
         opacity: 0.5;
     }
