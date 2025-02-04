@@ -81,5 +81,11 @@
         "title": "QRCG",
         "liveSite": "https://qrcg-pg-project.netlify.app/",
         "githubRepo": "https://github.com/stepandordiai/qrcg"
+    },
+    {
+        "id": 14,
+        "title": "Days Together",
+        "liveSite": "https://stepandordiai.github.io/days-together/",
+        "githubRepo": "https://github.com/stepandordiai/days-together"
     }
 ]

@@ -4,23 +4,6 @@
     display: none;
 }
 
-// .awaiting {
-//     position: fixed;
-//     right: 100px;
-//     bottom: 100px;
-//     width: calc(50% - 100px);
-//     text-align: right;
-//     color: var(--color);
-//     font-weight: 300;
-//     animation: animateAwaiting 1s infinite;
-// }
-
-// @keyframes animateAwaiting {
-//     50% {
-//         opacity: 0.5;
-//     }
-// }
-
 .pg {
     position: fixed;
     @include top-right-bottom-left(0, 100px, 0, 100px);
@@ -36,7 +19,6 @@
     width: 100%;
     @include flex-between;
     flex-shrink: 0;
-    // opacity: 0;
     background: var(--semi-tp-05);
     padding: 5px;
     transition: background-color 0.3s;
@@ -47,9 +29,7 @@
 }
 
 .pg-project__right-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     column-gap: 25px;
     div {
         height: 100%;
@@ -63,26 +43,11 @@
     }
 }
 
-// @keyframes revealPgProject {
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
 .pg-project__number {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--txt-clr);
 }
-
-// .pg-project__right-side {
-//     height: 100%;
-//     display: flex;
-//     justify-content: space-evenly;
-//     align-items: flex-end;
-//     flex-direction: column;
-// }
 
 .pg-project__title {
     font-size: 1.5rem;
@@ -95,7 +60,7 @@
     column-gap: 25px;
     a {
         color: var(--txt-clr);
-        transition: opacity 150ms;
+        transition: opacity 0.3s;
         &:hover {
             opacity: 0.5;
         }
@@ -103,13 +68,6 @@
 }
 
 @media (max-width: 1000px) {
-    // .awaiting {
-    //     right: 50px;
-    //     bottom: 50px;
-    //     left: 50px;
-    //     width: calc(100% - 100px);
-    // }
-
     .pg {
         @include top-right-bottom-left(0, 50px, 0, 50px);
         padding: 50px 0;
@@ -124,20 +82,12 @@
     }
 
     .pg-project {
-        // height: 100px;
         height: 100%;
-        // @include flex-between;
         flex-direction: column;
         align-items: flex-start;
         flex-shrink: 0;
-        // opacity: 0;
-        // transform: translateY(25px);
         padding: 5px;
         scroll-snap-align: center;
-
-        // &:not(:nth-last-of-type(1)) {
-        //     border-bottom: 1px solid var(--semi-tp-50);
-        // }
     }
 
     .pg-project__right-side {
